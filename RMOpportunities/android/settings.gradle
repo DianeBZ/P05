@@ -1,0 +1,3 @@
+rootProject.name = 'RMOpportunities'
+
+include ':app'
