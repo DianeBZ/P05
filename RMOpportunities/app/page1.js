@@ -10,47 +10,72 @@ import {
   ToolbarAndroid,
   Picker,
   TextInput,
+  Dimensions,
 } from 'react-native';
 
-import EnTete from './enTete'
+var width_window = Dimensions.get('window').width; 
+var height_window = Dimensions.get('window').height;
+var selected = 'tlc';
+var textInput = 'TextInput';
 
 export default class AwesomeProject extends Component {
-	state = { 
-		selected1: 'java', 
-		selected2: 'js',
-		selected3: 'cpp',
-	};
-	
 	render() {
 		return (
 			<View style={styles.container}>
 			    <EnTete/>
 				<View style={styles.container}>
-					<Image source={require('../img/warehouse.jpg')} style={styles.image_background}>
-						<View style={styles.container_button}>
-							<Button onPress={onPressConnexion} title=" Connexion " style={{flexBasis: 70}} />
-							<Button onPress={onPressInscription} title="Inscription" color="#485FD1" style={{flexBasis: 70}} />
-						</View>
-						
-						
-						<View style={styles.container_picker}>
-							<Picker
-								  selectedValue={this.state.selected1}
-								  onValueChange={this.onValueChange.bind(this,'value')}
-								  style={styles.picker} >
-								  <Picker.Item label="Java" value="java" />
-								  <Picker.Item label="JavaScript" value="js" />
-								  <Picker.Item label="C++" value="cpp" />
-							</Picker>
-							<TextInput
-								  defaultValue={"trouver par nom, n CAS"}
-								  editable={true}
-								  style={{flexBasis: 150,}}
+					<Image source={require('../image/warehouse.jpg')} style={styles.imageBackground}>
+						<View style={styles.containerButton}>
+							<Button 
+								onPress={onPressConnexion} 
+								title=" Connexion " 
+								style={{flexBasis: 70}} 
+							/>
+							<Button 
+								onPress={onPressInscription} 
+								title="Inscription" 
+								color="#841584" 
+								style={{flexBasis: 70}} 
 							/>
 						</View>
 						
-						<View style={styles.container_button_r}>
-							<Button onPress={onPressRecherche} title="Recherche" color="#A4D04A" style={{flexBasis: 70}} />
+						
+						<View style={styles.containerPicker}>
+							<Picker
+								selectedValue={selected}
+								onValueChange={this.onValueChange.bind(this,'value')}
+								style={styles.picker} >
+								<Picker.Item label="Toutes les categories" value="tlc" />
+								<Picker.Item label="Produits pour la cosmetique, les aromes et parfums" value="Pcos" />
+								<Picker.Item label="Solvants" value="sol" />
+								<Picker.Item label="Solvants regeneres" value="sol_r" />
+								<Picker.Item label="Reactifs" value="rea" />
+								<Picker.Item label="Catalyseurs" value="cat" />
+								<Picker.Item label="Specialites chimiques" value="spe" />
+								<Picker.Item label="Intermediaires" value="int" />
+								<Picker.Item label="Intermediaires simples" value="int_s" />
+								<Picker.Item label="Acides" value="aci" />
+								<Picker.Item label="Bases" value="bas" />
+								<Picker.Item label="Acides amines" value="aci_a" />
+								<Picker.Item label="Vitamines" value="vit" />
+								<Picker.Item label="Autres" value="aut" />
+							</Picker>
+							<TextInput
+								defaultValue={"trouver par nom, n CAS"}
+								maxLength = {40}
+								editable={true}
+								style={styles.textInput}
+								onChangeText={onResponderEndEditing}
+							/>
+						</View>
+						
+						<View style={styles.containerButtonR}>
+							<Button
+								onPress={onPressRecherche} 
+								title="Recherche" 
+								color="#64FE2E" 
+								style={{flexBasis: 70}} 
+							/>
 						</View>
 					</Image>
 				</View>
@@ -59,24 +84,26 @@ export default class AwesomeProject extends Component {
 	}
   
 	onValueChange = (key: string, value: string) => {  
-		const newState = {};
-		newState[key] = value; 
-		this.setState(newState);
-		this.selectedValue = value;
+		selected = value; 
+		this.forceUpdate();
 	};
 }
 
 const onPressConnexion = () => {
-  Alert.alert('Button has been pressed!');
+	Alert.alert('Button has been pressed!');
 };
 
 const onPressInscription = () => {
-  Alert.alert('Button has been pressed!');
+	Alert.alert('Button has been pressed!');
 };
 
 const onPressRecherche = () => {
-	Alert.alert('Button has been pressed!');
+	Alert.alert(textInput);
 };
+
+const onResponderEndEditing = (text) => {
+	textInput = text;
+}
 
 const styles = StyleSheet.create({
 	  container: {
@@ -86,7 +113,7 @@ const styles = StyleSheet.create({
 			backgroundColor: '#F5FCFF',
 			flexDirection: 'column',
 	  },
-	  container_button: {
+	  containerButton: {
 			flexGrow: 0,
 			flexShrink: 0,
 			justifyContent: 'center',
@@ -95,7 +122,7 @@ const styles = StyleSheet.create({
 			height: 350,
 			alignSelf: 'center',
 	  },
-	  container_button_r: {
+	  containerButtonR: {
 			flexGrow: 0,
 			flexShrink: 0,
 			justifyContent: 'center',
@@ -103,7 +130,7 @@ const styles = StyleSheet.create({
 			flexDirection: 'column',
 			alignSelf: 'center',
 	  },
-	  container_picker: {
+	  containerPicker: {
 			flexGrow: 0,
 			flexShrink: 0,
 			justifyContent: 'center',
@@ -113,18 +140,17 @@ const styles = StyleSheet.create({
 			height:50,
 			alignSelf: 'center',
 	  },
-	  toolbar: {
-			backgroundColor: '#FFFFFF',
-			height: 50,
-			width: 400,
-	  },
-	  image_background: {
-			width: 400,
-			height: 515,
+	  imageBackground: {
+			width: width_window,
+			height: height_window*0.92,
 	  },
 	  picker: {
-			flexBasis: 90,
+			flexBasis: 120,
 			backgroundColor: '#FFFFFF',
 			padding:5,
 	  },
+	  textInput: {
+			flexBasis: 150,
+			backgroundColor: '#a9a9a9',
+	  }
 });
