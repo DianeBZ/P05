@@ -9,18 +9,12 @@ import {
   TextInput,
   Button,
   Alert,
-  Navigator,
+  TouchableHighlight,
   BackAndroid,
 } from 'react-native';
 
 import Empty from './empty';
 import EnTete from './enTete';
-
-function onButtonPress(){
-        return(
-            <Empty/>
-        );
-}
 
 var width = Dimensions.get('window').width; 
 var height = Dimensions.get('window').height; 
@@ -29,7 +23,7 @@ export default class Connexion extends Component {
   constructor(props){
 	  super(props);
   }
-  
+  _onPressButton() {Alert.alert("You tapped the button!"); }
   render() {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
 	return (
@@ -45,8 +39,13 @@ export default class Connexion extends Component {
                 <Text style={{color:'grey', marginTop:20}}>
                     Mot de passe oublié?
                 </Text>
-                <Button onPress={() => onButtonPress()} title="Se connecter" color="#A4D04A"/>
-                <Button onPress={onButtonPress} title="Se connecter avec Linkedin" color="#008CC9"/>
+                <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+                    <Text style={styles.buttonText}>Se connecter </Text>
+                </TouchableHighlight>
+                <Text style={{color:'grey', marginTop:20}}> OU </Text>
+                <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.65, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
+                    <Text style={styles.buttonText}>Se connecter avec Linkedin </Text>
+                </TouchableHighlight>
             </View>
           </View>
       </View>
@@ -68,23 +67,23 @@ export default class Connexion extends Component {
 const styles = StyleSheet.create({
   // bleu : '#485FD1'
    window:{
-     width: width,
-     height: height*0.93,
-     backgroundColor: '#F2F2F2',
-     alignItems: 'center',
+       width: width,
+       height: height*0.93,
+       backgroundColor: '#F2F2F2',
+       alignItems: 'center',
    },
    mainWindow:{
-     width: width*0.9,
-     height: height,
-     backgroundColor: "#FFFFFF",
-     alignItems: 'center',
+       width: width*0.9,
+       height: height,
+       backgroundColor: "#FFFFFF",
+       alignItems: 'center',
    },
    titre:{
-     fontSize: 32,
-     textAlign: 'center',
-     color: '#000000',
-     marginTop: 15,
-     marginBottom: 10
+       fontSize: 32,
+       textAlign: 'center',
+       color: '#000000',
+       marginTop: 15,
+       marginBottom: 10
    },
    textToFill:{
        width: width*0.8,
@@ -92,7 +91,17 @@ const styles = StyleSheet.create({
        borderColor: "#000000", 
        marginTop: 20,
        color: 'grey',
-   }       
+   },
+    button:{
+        height: width*0.08,
+        marginTop: 20,
+        justifyContent: 'center',
+    },
+    buttonText:{
+        color: "white",
+        textAlign: "center",
+        fontSize: 20,
+    }   
 });
 
 module.exports = Connexion;
