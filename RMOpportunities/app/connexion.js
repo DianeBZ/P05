@@ -8,7 +8,9 @@ import {
   Dimensions, 
   TextInput,
   Button,
-  Alert
+  Alert,
+  Navigator,
+  BackAndroid,
 } from 'react-native';
 
 import Empty from './empty';
@@ -24,8 +26,13 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height; 
 
 export default class Connexion extends Component {
+  constructor(props){
+	  super(props);
+  }
+  
   render() {
-    return (
+    BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
+	return (
       <View style={{flex:1}}>
           <EnTete/>
           <View style={styles.window}>
@@ -45,6 +52,17 @@ export default class Connexion extends Component {
       </View>
     );
   }
+  
+  onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({
@@ -76,3 +94,5 @@ const styles = StyleSheet.create({
        color: 'grey',
    }       
 });
+
+module.exports = Connexion;

@@ -1,4 +1,28 @@
-import {AppRegistry} from 'react-native'
-import Connexion from './app/page1'
+import {AppRegistry} from 'react-native';
+import {
+    View,
+    Navigator
+} from 'react-native';
+import Index from './app/page1'
+import React from 'react';
 
-AppRegistry.registerComponent('RMOpportunities', () => Connexion);
+export default class RMOpportunities extends React.Component {
+    render() {
+        let defaultName = 'Index';
+		let defaultComponent = Index;
+		return(
+			<Navigator
+				initialRoute = {{name: defaultName, component: defaultComponent}}
+				configureScene = {(route) => {
+					return Navigator.SceneConfigs.VerticalDownSwipeJump;
+				}}
+				renderScene = {(route, navigator) =>{
+					let Component = route.component;
+					return <Component {...route.params} navigator = {navigator} />
+				}} 
+			/>
+        );
+    }
+} 
+	
+AppRegistry.registerComponent('RMOpportunities', () => RMOpportunities);

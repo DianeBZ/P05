@@ -1,43 +1,52 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   Alert,
   StyleSheet,
   Text,
   Image,
   View,
   Button,
-  ToolbarAndroid,
   Picker,
   TextInput,
   Dimensions,
+  TouchableOpacity,
+  BackAndroid,
+  ToastAndroid,
+  Navigator,
 } from 'react-native';
 import EnTete from './enTete';
+import Connexion from './connexion';
 
 var width_window = Dimensions.get('window').width; 
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
+var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
 
-export default class AwesomeProject extends Component {
+export default class Index extends Component {
 	render() {
+		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
 			<View style={styles.container}>
 			    <EnTete/>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						<View style={styles.containerButton}>
-							<Button 
-								onPress={onPressConnexion} 
-								title=" Connexion " 
-								style={{flexBasis: 70}} 
-							/>
-							<Button 
-								onPress={onPressInscription} 
-								title="Inscription" 
-								color="#841584" 
-								style={{flexBasis: 70}} 
-							/>
+							<TouchableOpacity>
+								<Button 
+									onPress={this.onPressConnexion} 
+									title=" Connexion " 
+									style={{flexBasis: 70}} 
+								/>
+							</TouchableOpacity>
+							<TouchableOpacity>
+								<Button 
+									onPress={onPressInscription} 
+									title="Inscription" 
+									color="#841584" 
+									style={{flexBasis: 70}} 
+								/>
+							</TouchableOpacity>
 						</View>
 						
 						
@@ -71,12 +80,14 @@ export default class AwesomeProject extends Component {
 						</View>
 						
 						<View style={styles.containerButtonR}>
-							<Button
-								onPress={onPressRecherche} 
-								title="Recherche" 
-								color="#64FE2E" 
-								style={{flexBasis: 70}} 
-							/>
+							<TouchableOpacity>
+								<Button
+									onPress={onPressRecherche} 
+									title="Recherche" 
+									color="#64FE2E" 
+									style={{flexBasis: 70}} 
+								/>
+							</TouchableOpacity>
 						</View>
 					</Image>
 				</View>
@@ -85,14 +96,33 @@ export default class AwesomeProject extends Component {
 	}
   
 	onValueChange = (key: string, value: string) => {  
+		selectedKey = key;
 		selected = value; 
 		this.forceUpdate();
 	};
+	
+	onBackAndroid = () => {
+		if (this.lastBackPressed && this.lastBackPressed + 2000 >= Date.now()) 
+		{
+			BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+			return false;
+		}
+		this.lastBackPressed = Date.now();
+		ToastAndroid.show('Cliquer encore fois pour quitter.',ToastAndroid.SHORT);
+		return true;
+	};
+	
+	onPressConnexion = () => {
+		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+		const { navigator } = this.props;
+		if (navigator) {
+			navigator.push({
+				name: 'Connexion',
+				component: Connexion,
+			})
+		}
+	};
 }
-
-const onPressConnexion = () => {
-	Alert.alert('Button has been pressed!');
-};
 
 const onPressInscription = () => {
 	Alert.alert('Button has been pressed!');
@@ -137,7 +167,7 @@ const styles = StyleSheet.create({
 			justifyContent: 'center',
 			flexWrap: 'wrap',
 			flexDirection: 'row',
-			width: 300,
+			width: width_window,
 			height:50,
 			alignSelf: 'center',
 	  },
@@ -151,7 +181,9 @@ const styles = StyleSheet.create({
 			padding:5,
 	  },
 	  textInput: {
-			flexBasis: 150,
+			flexBasis: 215,
 			backgroundColor: '#a9a9a9',
 	  }
 });
+
+module.exports = Index;
