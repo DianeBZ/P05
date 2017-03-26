@@ -16,8 +16,9 @@ import {
 } from 'react-native';
 import EnTete from './enTete';
 import Connexion from './connexion';
+import inscription from './page3';
 
-var width_window = Dimensions.get('window').width; 
+var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
@@ -33,23 +34,23 @@ export default class Index extends Component {
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						<View style={styles.containerButton}>
 							<TouchableOpacity>
-								<Button 
-									onPress={this.onPressConnexion} 
-									title=" Connexion " 
-									style={{flexBasis: 70}} 
+								<Button
+									onPress={this.onPressConnexion}
+									title=" Connexion "
+									style={{flexBasis: 70}}
 								/>
 							</TouchableOpacity>
 							<TouchableOpacity>
-								<Button 
-									onPress={onPressInscription} 
-									title="Inscription" 
-									color="#841584" 
-									style={{flexBasis: 70}} 
+								<Button
+									onPress={this.onPressInscription}
+									title="Inscription"
+									color="#841584"
+									style={{flexBasis: 70}}
 								/>
 							</TouchableOpacity>
 						</View>
-						
-						
+
+
 						<View style={styles.containerPicker}>
 							<Picker
 								selectedValue={selected}
@@ -78,14 +79,14 @@ export default class Index extends Component {
 								onChangeText={onResponderEndEditing}
 							/>
 						</View>
-						
+
 						<View style={styles.containerButtonR}>
 							<TouchableOpacity>
 								<Button
-									onPress={onPressRecherche} 
-									title="Recherche" 
-									color="#64FE2E" 
-									style={{flexBasis: 70}} 
+									onPress={onPressRecherche}
+									title="Recherche"
+									color="#64FE2E"
+									style={{flexBasis: 70}}
 								/>
 							</TouchableOpacity>
 						</View>
@@ -94,15 +95,15 @@ export default class Index extends Component {
 			</View>
 		);
 	}
-  
-	onValueChange = (key: string, value: string) => {  
+
+	onValueChange = (key: string, value: string) => {
 		selectedKey = key;
-		selected = value; 
+		selected = value;
 		this.forceUpdate();
 	};
-	
+
 	onBackAndroid = () => {
-		if (this.lastBackPressed && this.lastBackPressed + 2000 >= Date.now()) 
+		if (this.lastBackPressed && this.lastBackPressed + 2000 >= Date.now())
 		{
 			BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 			return false;
@@ -111,7 +112,7 @@ export default class Index extends Component {
 		ToastAndroid.show('Cliquer encore fois pour quitter.',ToastAndroid.SHORT);
 		return true;
 	};
-	
+
 	onPressConnexion = () => {
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		const { navigator } = this.props;
@@ -122,11 +123,20 @@ export default class Index extends Component {
 			})
 		}
 	};
+
+  onPressInscription = () => {
+    BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+    const { navigator } = this.props;
+    if (navigator) {
+      navigator.push({
+        name: 'Inscription',
+        component: inscription,
+      })
+    }
+  };
 }
 
-const onPressInscription = () => {
-	Alert.alert('Button has been pressed!');
-};
+
 
 const onPressRecherche = () => {
 	Alert.alert(textInput);

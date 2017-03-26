@@ -5,14 +5,16 @@ import {
   Text,
   View,
   TouchableOpacity,
+  BackAndroid,
 } from 'react-native';
  import EnTete from './enTete';
- 
+
 export default class inscription extends Component {
   _onPressBouton(){
     console.log('press Linkedin');
   }
   render() {
+    BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
     return (
       <View style={styles.container1}>
         <EnTete/>
@@ -47,6 +49,17 @@ export default class inscription extends Component {
       </View>
     );
   }
+
+  onBackAndroid = () => {
+    const { navigator } = this.props;
+    if (navigator && navigator.getCurrentRoutes().length > 1) {
+      BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
+      navigator.pop();
+      return true;
+    } else {
+      return false;
+    }
+  };
 }
 
 const styles = StyleSheet.create({
