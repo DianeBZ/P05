@@ -6,7 +6,7 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
- import EnTete from './enTete'
+ import EnTete from './enTete';
  
 export default class inscription extends Component {
   _onPressBouton(){

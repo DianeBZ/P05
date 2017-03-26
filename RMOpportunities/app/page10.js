@@ -1,6 +1,6 @@
  import React, { Component } from 'react';
  import { AppRegistry, Text, Image, View, StyleSheet,ViewPagerAndroid, Dimensions, TouchableHighlight, Alert} from 'react-native';
- import EnTete from './enTete'
+ import EnTete from './enTete';
 
  var width = Dimensions.get('window').width;
  var height = Dimensions.get('window').height;

@@ -11,8 +11,8 @@ import {
   Alert
 } from 'react-native';
 
-import Empty from './empty'
-import EnTete from './enTete'
+import Empty from './empty';
+import EnTete from './enTete';
 
 function onButtonPress(){
         return(

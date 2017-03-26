@@ -12,6 +12,7 @@ import {
   TextInput,
   Dimensions,
 } from 'react-native';
+import EnTete from './enTete';
 
 var width_window = Dimensions.get('window').width; 
 var height_window = Dimensions.get('window').height;
@@ -24,7 +25,7 @@ export default class AwesomeProject extends Component {
 			<View style={styles.container}>
 			    <EnTete/>
 				<View style={styles.container}>
-					<Image source={require('../image/warehouse.jpg')} style={styles.imageBackground}>
+					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						<View style={styles.containerButton}>
 							<Button 
 								onPress={onPressConnexion} 

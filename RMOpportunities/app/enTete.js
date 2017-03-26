@@ -8,13 +8,13 @@ import {
   Dimensions, 
   TextInput,
   Button,
-  Alert
+  Alert,
 } from 'react-native';
 
 var width = Dimensions.get('window').width; 
 var height = Dimensions.get('window').height; 
 
-export default class enTete extends Component {
+export default class EnTete extends Component {
   render() {
       let pic1 = require('../img/logo_rmo.png');
       let pic2 = require('../img/menuButton.png');
@@ -45,3 +45,5 @@ export default class enTete extends Component {
         margin: 10,
      },
  });
+ 
+ module.exports = EnTete;

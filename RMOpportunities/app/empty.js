@@ -17,3 +17,5 @@ export default class Empty extends Component {
       );
   }
 }
+
+module.exports = Empty;
