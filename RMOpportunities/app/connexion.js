@@ -13,7 +13,6 @@ import {
   BackAndroid,
 } from 'react-native';
 
-import Empty from './empty';
 import EnTete from './enTete';
 
 var width = Dimensions.get('window').width; 
