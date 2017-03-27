@@ -3,7 +3,7 @@ import {
     View,
     Navigator
 } from 'react-native';
-import Index from './app/page1'
+import Index from './app/page10'
 import React from 'react';
 
 export default class RMOpportunities extends React.Component {
@@ -25,4 +25,4 @@ export default class RMOpportunities extends React.Component {
     }
 } 
 	
-AppRegistry.registerComponent('RMOpportunities', () => RMOpportunities);
+AppRegistry.registerComponent('RMOpportunities', () => Index);
