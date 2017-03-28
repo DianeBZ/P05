@@ -25,6 +25,13 @@ var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
 
 export default class Index extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			connexion: false
+		}
+	}
+	
 	render() {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
@@ -124,16 +131,16 @@ export default class Index extends Component {
 		}
 	};
 
-  onPressInscription = () => {
-    BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-    const { navigator } = this.props;
-    if (navigator) {
-      navigator.push({
-        name: 'Inscription',
-        component: inscription,
-      })
-    }
-  };
+	onPressInscription = () => {
+		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+		const { navigator } = this.props;
+		if (navigator) {
+			navigator.push({
+				name: 'Inscription',
+				component: inscription,
+			})
+		}
+	};
 }
 
 
