@@ -21,8 +21,15 @@ var height = Dimensions.get('window').height;
 export default class Connexion extends Component {
   constructor(props){
 	  super(props);
+	  this.state = {
+		  connexion: true
+	  }
   }
-  _onPressButton() {Alert.alert("You tapped the button!"); }
+  
+  _onPressButton() {
+	  Alert.alert("You tapped the button!"); 
+	}
+	
   render() {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
 	return (
@@ -52,6 +59,7 @@ export default class Connexion extends Component {
   }
   
   onBackAndroid = () => {
+		//this.props.getConnexion(true);
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {
 			BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
