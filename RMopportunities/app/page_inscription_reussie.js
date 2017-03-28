@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
   },
   
   sContainerPre:{
+	margin:0,
     backgroundColor:'#A4D04A',
     flex: 2,
   },
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
   sContainerBonton:{
     flex:3,
     justifyContent: 'flex-start',
-    alignItems: 'center',
+    alignItems: 'flex-end',
   },
   Bienvenue: {
 	color : '#A4D04A',
