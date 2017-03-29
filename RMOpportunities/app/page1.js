@@ -23,19 +23,25 @@ var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
+var connexion = false;
 
 export default class Index extends Component {
 	// Init this class and add 1 boolean value to check 
 	// if the user logined. We check this because when 
 	// users logined succesufully, two buttons should be hidden 
 	// in this page.
+	/*
 	constructor(props) {
 		super(props);
 		this.state = {
 			connexion: false
 		}
 	}
+	*/
 	
+	// Picker: Users can choose many catagories here.
+	// TextInput: Input Text, user input the key words that they want to search.
+	// Button('Recherche'): Start search!
 	render() {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
@@ -44,8 +50,8 @@ export default class Index extends Component {
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
-						//If user logined?
-						if (connexion)
+						// If user logined?
+						if (connexion == true)
 							return (
 								<View style={styles.containerButton} />
 							);
@@ -70,9 +76,8 @@ export default class Index extends Component {
 								</View>
 							);
 						})()}
-
-						<View style={styles.containerPicker}>
-							//Users can choose many catagories here.
+						
+						<View style={styles.containerPicker}>	
 							<Picker
 								selectedValue={selected}
 								onValueChange={this.onValueChange.bind(this,'value')}
@@ -92,7 +97,7 @@ export default class Index extends Component {
 								<Picker.Item label="Vitamines" value="vit" />
 								<Picker.Item label="Autres" value="aut" />
 							</Picker>
-							// Input Text, user input the key words that they want to search.  
+							
 							<TextInput
 								defaultValue={"trouver par nom, n CAS"}
 								maxLength = {40}
@@ -103,7 +108,6 @@ export default class Index extends Component {
 						</View>
 
 						<View style={styles.containerButtonR}>
-							//Start search!
 							<TouchableOpacity>
 								<Button
 									onPress={onPressRecherche}
@@ -135,7 +139,7 @@ export default class Index extends Component {
 			return false;
 		}
 		this.lastBackPressed = Date.now();
-		ToastAndroid.show('Cliquer encore fois pour quitter.',ToastAndroid.SHORT);
+		ToastAndroid.show('Cliquer deux fois pour quitter.',ToastAndroid.SHORT);
 		return true;
 	};
 
