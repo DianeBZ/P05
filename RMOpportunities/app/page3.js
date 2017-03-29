@@ -8,7 +8,7 @@ import {
   BackAndroid,
 } from 'react-native';
 import EnTete from './enTete';
-
+import Inscription from './inscription';
 //var connexion = flase;
 
 export default class inscription extends Component {
@@ -48,7 +48,7 @@ export default class inscription extends Component {
             <Text style={styles.textOu}>
             ou
             </Text>
-            <TouchableOpacity style={styles.boutonDemarrage}>
+            <TouchableOpacity style={styles.boutonDemarrage} onPress={this.onPressInscription}>
               <Text style={styles.textLinkedin}>
               Démarrer l{'\''}inscription en 3 étapes
               </Text>
@@ -70,6 +70,17 @@ export default class inscription extends Component {
       return false;
     }
   };
+  
+  onPressInscription = () => {
+		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+		const { navigator } = this.props;
+		if (navigator) {
+			navigator.push({
+				name: 'Inscription',
+				component: Inscription,
+			})
+		}
+	};
 }
 
 const styles = StyleSheet.create({

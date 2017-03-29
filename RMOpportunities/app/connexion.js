@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
        alignItems: 'center',
    },
    mainWindow:{
-       width: width*0.9,
+       width: width/**0.9*/,
        height: height,
        backgroundColor: "#FFFFFF",
        alignItems: 'center',
