@@ -59,7 +59,9 @@ export default class Connexion extends Component {
   }
   
   onBackAndroid = () => {
-		//this.props.getConnexion(true);
+		// this.props.getConnexion(true);
+		// Uncomment the above line will change the value of 'connexion'
+		// (Return 1 value to page 1)
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {
 			BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);

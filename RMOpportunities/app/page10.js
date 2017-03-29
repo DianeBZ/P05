@@ -43,7 +43,7 @@ class BloqueFonction extends Component{
 }
 
 
-export default class hello_word extends Component {
+export default class Benefices extends Component {
    render() {
      return (
        <View>
@@ -117,3 +117,5 @@ export default class hello_word extends Component {
    }
 
  });
+ 
+ module.exports = Benefices;
