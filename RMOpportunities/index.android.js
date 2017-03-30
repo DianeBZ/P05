@@ -13,7 +13,7 @@ import {
 // You change './app/page1' to look the pages that you wrote.
 // For example, you want to look page 10, so you change the under
 // string from './app/page1' to './app/page10'
-import Index from './app/page10';
+import Index from './app/creer_annonce';
 import React from 'react';
 
 // In generation, you shouldn't change the contents which are under this comment.
