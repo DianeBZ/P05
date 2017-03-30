@@ -22,7 +22,7 @@ var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
-var textInput = 'TextInput';
+var textInput = 'TextInput;
 var connexion = false;
 
 export default class Index extends Component {
@@ -46,7 +46,7 @@ export default class Index extends Component {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
 			<View style={styles.container}>
-			    <EnTete />
+			    <EnTete deconnexionEntete={(data)=>{this.deconnexionIndex(data)}}/>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
@@ -110,7 +110,7 @@ export default class Index extends Component {
 						<View style={styles.containerButtonR}>
 							<TouchableOpacity>
 								<Button
-									onPress={onPressRecherche}
+									onPress={this.onPressRecherche}
 									title="Recherche"
 									color="#64FE2E"
 									style={{flexBasis: 70}}
@@ -164,29 +164,31 @@ export default class Index extends Component {
 		}
 	};
 
-	onPressInscription = () => {
-		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-		// Create router and push page...
-		const { navigator } = this.props;
-		if (navigator) {
-			navigator.push({
-				name: 'Inscription',
-				component: inscription,
-			})
-		}
-	};
-	
-	// Get the key words from user's input. (key words of search)
-	onResponderEndEditing = (text) => {
-		textInput = text;
-	};
+  onPressInscription = () => {
+    BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+    const { navigator } = this.props;
+    if (navigator) {
+      navigator.push({
+        name: 'Inscription',
+        component: inscription,
+      })
+    }
+  };
+
+  deconnexionIndex(data)
+  {
+    connexion=data;
+  };
+
+  onPressRecherche = () => {
+  	Alert.alert(textInput+connexion);
+  };
+
 }
 
 
 
-const onPressRecherche = () => {
-	Alert.alert(textInput);
-};
+
 
 const styles = StyleSheet.create({
 	  container: {

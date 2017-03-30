@@ -3,30 +3,42 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View, 
+  View,
   Image,
-  Dimensions, 
+  Dimensions,
   TextInput,
   Button,
   Alert,
 } from 'react-native';
-
-var width = Dimensions.get('window').width; 
-var height = Dimensions.get('window').height; 
-
+import EnTeteClient from './enTeteClient';
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 export default class EnTete extends Component {
+  static props={
+    deconnexionCallbackEntete:null,
+  }
   render() {
       let pic1 = require('../img/logo_rmo.png');
       let pic2 = require('../img/menuButton.png');
+      let pic3=require('../img/client.png')
       return (
         <View style={styles.enTete}>
             <Image source={pic2} style={styles.menu} />
             <Image source={pic1} style={styles.logo} />
+            <EnTeteClient deconnexionCallback={(data)=>{this.deconnexionEntete(data)}}/>
         </View>
       );
     }
+    deconnexionEntete(data)
+    {
+      if(this.props.deconnexionEntete==null)
+      {
+        return;
+      }
+      this.props.deconnexionEntete(data);
+    }
  }
-          
+
  const styles = StyleSheet.create({
      enTete:{
          width: width,
@@ -44,6 +56,7 @@ export default class EnTete extends Component {
         height: 35,
         margin: 10,
      },
+
  });
- 
+
  module.exports = EnTete;
