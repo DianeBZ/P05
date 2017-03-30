@@ -3,9 +3,9 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View, 
+  View,
   Image,
-  Dimensions, 
+  Dimensions,
   TextInput,
   Button,
   Alert,
@@ -15,8 +15,9 @@ import {
 
 import EnTete from './enTete';
 
-var width = Dimensions.get('window').width; 
-var height = Dimensions.get('window').height; 
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
+var connexion=true;
 
 export default class Connexion extends Component {
   constructor(props){
@@ -25,11 +26,20 @@ export default class Connexion extends Component {
 		  connexion: true
 	  }
   }
-  
-  _onPressButton() {
-	  Alert.alert("You tapped the button!"); 
+
+  _onPressButton= () => {
+	  //Alert.alert("You tapped the button!");
+		this.props.getConnexion(true);
+    const { navigator } = this.props;
+    if (navigator && navigator.getCurrentRoutes().length > 1) {
+      BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
+      navigator.pop();
+      return true;
+    } else {
+      return false;
+    }
 	}
-	
+
   render() {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
 	return (
@@ -45,7 +55,7 @@ export default class Connexion extends Component {
                 <Text style={{color:'grey', marginTop:20}}>
                     Mot de passe oublié?
                 </Text>
-                <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+                <TouchableHighlight onPress={this._onPressButton.bind(this)} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
                     <Text style={styles.buttonText}>Se connecter </Text>
                 </TouchableHighlight>
                 <Text style={{color:'grey', marginTop:20}}> OU </Text>
@@ -57,9 +67,9 @@ export default class Connexion extends Component {
       </View>
     );
   }
-  
+
   onBackAndroid = () => {
-		// this.props.getConnexion(true);
+		//this.props.getConnexion(true);
 		// Uncomment the above line will change the value of 'connexion'
 		// (Return 1 value to page 1)
 		const { navigator } = this.props;
@@ -97,7 +107,7 @@ const styles = StyleSheet.create({
    textToFill:{
        width: width*0.8,
        borderWidth: 1,
-       borderColor: "#000000", 
+       borderColor: "#000000",
        marginTop: 20,
        color: 'grey',
    },
@@ -110,7 +120,7 @@ const styles = StyleSheet.create({
         color: "white",
         textAlign: "center",
         fontSize: 20,
-    }   
+    }
 });
 
 module.exports = Connexion;

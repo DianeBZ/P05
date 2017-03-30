@@ -23,21 +23,19 @@ var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
-var connexion = false;
+//var connexion = false;
 
 export default class Index extends Component {
 	// Init this class and add 1 boolean value to check
 	// if the user logined. We check this because when
 	// users logined succesufully, two buttons should be hidden
 	// in this page.
-	/*
 	constructor(props) {
 		super(props);
 		this.state = {
-			connexion: false
+      connexion: null
 		}
 	}
-  */
 
 	// Picker: Users can choose many catagories here.
 	// TextInput: Input Text, user input the key words that they want to search.
@@ -51,7 +49,7 @@ export default class Index extends Component {
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
 						// If user logined?
-						if (connexion == true)
+						if (this.state.connexion == true)
 							return (
 								<View style={styles.containerButton} />
 							);
@@ -144,7 +142,7 @@ export default class Index extends Component {
 	};
 
 	onPressConnexion = () => {
-		// let _this = this;
+		let _this = this;
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		// Create router and push page 'Connexion' into stack,
 		// this will lead us to page 'Connexion'.
@@ -153,13 +151,13 @@ export default class Index extends Component {
 			navigator.push({
 				name: 'Connexion',
 				component: Connexion,
-				/*
-				getConnexion: function(connexion) {
+				params:{
+          getConnexion: function(connexion) {
 					_this.setState({
 						connexion: connexion
 					})
 				}
-				*/
+      }
 			})
 		}
 	};
@@ -178,6 +176,7 @@ export default class Index extends Component {
   deconnexionIndex(data)
   {
     connexion=data;
+    this.setState({connexion : data});
   };
 
   onPressRecherche = () => {
