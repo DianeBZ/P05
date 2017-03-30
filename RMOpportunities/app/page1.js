@@ -22,10 +22,26 @@ var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
-var textInput = 'TextInput';
-var connexion=false;
+var textInput = 'TextInput;
+var connexion = false;
 
 export default class Index extends Component {
+	// Init this class and add 1 boolean value to check 
+	// if the user logined. We check this because when 
+	// users logined succesufully, two buttons should be hidden 
+	// in this page.
+	/*
+	constructor(props) {
+		super(props);
+		this.state = {
+			connexion: false
+		}
+	}
+	*/
+	
+	// Picker: Users can choose many catagories here.
+	// TextInput: Input Text, user input the key words that they want to search.
+	// Button('Recherche'): Start search!
 	render() {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
@@ -33,26 +49,35 @@ export default class Index extends Component {
 			    <EnTete deconnexionEntete={(data)=>{this.deconnexionIndex(data)}}/>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
-						<View style={styles.containerButton}>
-							<TouchableOpacity>
-								<Button
-									onPress={this.onPressConnexion}
-									title=" Connexion "
-									style={{flexBasis: 70}}
-								/>
-							</TouchableOpacity>
-							<TouchableOpacity>
-								<Button
-									onPress={this.onPressInscription}
-									title="Inscription"
-									color="#841584"
-									style={{flexBasis: 70}}
-								/>
-							</TouchableOpacity>
-						</View>
-
-
-						<View style={styles.containerPicker}>
+						{(() => {
+						// If user logined?
+						if (connexion == true)
+							return (
+								<View style={styles.containerButton} />
+							);
+						else
+							return (
+								<View style={styles.containerButton}>
+									<TouchableOpacity>
+										<Button
+											onPress={this.onPressConnexion}
+											title=" Connexion "
+											style={{flexBasis: 70}}
+										/>
+									</TouchableOpacity>
+									<TouchableOpacity>
+										<Button
+											onPress={this.onPressInscription}
+											title="Inscription"
+											color="#841584"
+											style={{flexBasis: 70}}
+										/>
+									</TouchableOpacity>
+								</View>
+							);
+						})()}
+						
+						<View style={styles.containerPicker}>	
 							<Picker
 								selectedValue={selected}
 								onValueChange={this.onValueChange.bind(this,'value')}
@@ -72,12 +97,13 @@ export default class Index extends Component {
 								<Picker.Item label="Vitamines" value="vit" />
 								<Picker.Item label="Autres" value="aut" />
 							</Picker>
+							
 							<TextInput
 								defaultValue={"trouver par nom, n CAS"}
 								maxLength = {40}
 								editable={true}
 								style={styles.textInput}
-								onChangeText={onResponderEndEditing}
+								onChangeText={this.onResponderEndEditing}
 							/>
 						</View>
 
@@ -96,31 +122,44 @@ export default class Index extends Component {
 			</View>
 		);
 	}
-
+	
+	//Get the key words from user's choice.(catagories)
 	onValueChange = (key: string, value: string) => {
+		// This value (selectedKey) is same as the catagorie selected.
 		selectedKey = key;
 		selected = value;
 		this.forceUpdate();
 	};
 
 	onBackAndroid = () => {
+		//If user touch the button back 2 times in 2s, he/she will quit our app
 		if (this.lastBackPressed && this.lastBackPressed + 2000 >= Date.now())
 		{
 			BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 			return false;
 		}
 		this.lastBackPressed = Date.now();
-		ToastAndroid.show('Cliquer encore fois pour quitter.',ToastAndroid.SHORT);
+		ToastAndroid.show('Cliquer deux fois pour quitter.',ToastAndroid.SHORT);
 		return true;
 	};
 
 	onPressConnexion = () => {
+		// let _this = this;
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+		// Create router and push page 'Connexion' into stack,
+		// this will lead us to page 'Connexion'.
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
 				name: 'Connexion',
 				component: Connexion,
+				/*
+				getConnexion: function(connexion) {
+					_this.setState({
+						connexion: connexion
+					})
+				}
+				*/
 			})
 		}
 	};
@@ -139,20 +178,17 @@ export default class Index extends Component {
   deconnexionIndex(data)
   {
     connexion=data;
-  }
+  };
 
   onPressRecherche = () => {
   	Alert.alert(textInput+connexion);
   };
+
 }
 
 
 
 
-
-const onResponderEndEditing = (text) => {
-	textInput = text;
-}
 
 const styles = StyleSheet.create({
 	  container: {

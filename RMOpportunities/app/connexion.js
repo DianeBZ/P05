@@ -13,7 +13,6 @@ import {
   BackAndroid,
 } from 'react-native';
 
-import Empty from './empty';
 import EnTete from './enTete';
 
 var width = Dimensions.get('window').width; 
@@ -22,8 +21,15 @@ var height = Dimensions.get('window').height;
 export default class Connexion extends Component {
   constructor(props){
 	  super(props);
+	  this.state = {
+		  connexion: true
+	  }
   }
-  _onPressButton() {Alert.alert("You tapped the button!"); }
+  
+  _onPressButton() {
+	  Alert.alert("You tapped the button!"); 
+	}
+	
   render() {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
 	return (
@@ -53,6 +59,9 @@ export default class Connexion extends Component {
   }
   
   onBackAndroid = () => {
+		// this.props.getConnexion(true);
+		// Uncomment the above line will change the value of 'connexion'
+		// (Return 1 value to page 1)
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {
 			BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
@@ -73,7 +82,7 @@ const styles = StyleSheet.create({
        alignItems: 'center',
    },
    mainWindow:{
-       width: width*0.9,
+       width: width/**0.9*/,
        height: height,
        backgroundColor: "#FFFFFF",
        alignItems: 'center',
