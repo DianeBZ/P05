@@ -14,6 +14,9 @@ import EnTeteClient from './enTeteClient';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 export default class EnTete extends Component {
+  static props={
+    deconnexionCallbackEntete:null,
+  }
   render() {
       let pic1 = require('../img/logo_rmo.png');
       let pic2 = require('../img/menuButton.png');
@@ -22,9 +25,17 @@ export default class EnTete extends Component {
         <View style={styles.enTete}>
             <Image source={pic2} style={styles.menu} />
             <Image source={pic1} style={styles.logo} />
-            <EnTeteClient/>
+            <EnTeteClient deconnexionCallback={(data)=>{this.deconnexionEntete(data)}}/>
         </View>
       );
+    }
+    deconnexionEntete(data)
+    {
+      if(this.props.deconnexionEntete==null)
+      {
+        return;
+      }
+      this.props.deconnexionEntete(data);
     }
  }
 

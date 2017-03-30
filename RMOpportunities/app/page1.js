@@ -25,11 +25,15 @@ var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
 
 export default class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {connexion: 0};
+  }
 	render() {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
 			<View style={styles.container}>
-			    <EnTete/>
+			    <EnTete deconnexionEntete={(data)=>{this.deconnexionIndex(data)}}/>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						<View style={styles.containerButton}>
@@ -83,7 +87,7 @@ export default class Index extends Component {
 						<View style={styles.containerButtonR}>
 							<TouchableOpacity>
 								<Button
-									onPress={onPressRecherche}
+									onPress={this.onPressRecherche}
 									title="Recherche"
 									color="#64FE2E"
 									style={{flexBasis: 70}}
@@ -134,13 +138,20 @@ export default class Index extends Component {
       })
     }
   };
+
+  deconnexionIndex(data)
+  {
+    this.setState({connexion:data});
+  }
+
+  onPressRecherche = () => {
+  	Alert.alert(textInput+this.state.connexion);
+  };
 }
 
 
 
-const onPressRecherche = () => {
-	Alert.alert(textInput);
-};
+
 
 const onResponderEndEditing = (text) => {
 	textInput = text;

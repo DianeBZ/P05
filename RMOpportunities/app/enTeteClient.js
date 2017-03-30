@@ -20,6 +20,9 @@ var selectedKey='P05';
 
 export default class EnTeteClient extends Component {
 
+  static props={
+    deconnexionCallback:null,
+  }
   render() {
       return (
             <View style={styles.viewContainer}>
@@ -46,7 +49,9 @@ export default class EnTeteClient extends Component {
         }
       else
       {
-        Alert.alert('deconnexion');
+        //Alert.alert('deconnexion');
+        if(this.props.deconnexionCallback==null)return;
+        this.props.deconnexionCallback(1);
       }
   	};
  }
