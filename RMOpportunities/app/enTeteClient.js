@@ -51,7 +51,7 @@ export default class EnTeteClient extends Component {
       {
         //Alert.alert('deconnexion');
         if(this.props.deconnexionCallback==null)return;
-        this.props.deconnexionCallback(1);
+        this.props.deconnexionCallback(true);
       }
   	};
  }

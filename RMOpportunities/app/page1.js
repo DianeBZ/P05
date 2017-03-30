@@ -23,12 +23,9 @@ var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
+var connexion=false;
 
 export default class Index extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {connexion: 0};
-  }
 	render() {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
@@ -141,11 +138,11 @@ export default class Index extends Component {
 
   deconnexionIndex(data)
   {
-    this.setState({connexion:data});
+    connexion=data;
   }
 
   onPressRecherche = () => {
-  	Alert.alert(textInput+this.state.connexion);
+  	Alert.alert(textInput+connexion);
   };
 }
 
