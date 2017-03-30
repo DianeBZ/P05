@@ -13,9 +13,10 @@ var heightWindow = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise 
 //the display of the list of factures when we need.
-var dataSource = null;
+var dataSourceVp = null;
+var dataSourceAp = null;
 
-export default class Historique extends Component {
+export default class MesAnnonces extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -23,46 +24,59 @@ export default class Historique extends Component {
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					Historique
+					Mes mises en relation
 				</Text>
 				<Text style = {styles.instructions}>
-					Visionner vos factures
+					Visionner les produites pour lesquels
+				</Text>
+				<Text style = {styles.instructions}>
+					votre entreprise a ete mise en relation
 				</Text>
 			</View>
 			
-			<View style = {styles.header}>
-				<View style = {styles.listHeader}>
-					<Text style = {{textAlign: 'center',}}>
-						Montant de la commission
-					</Text>
-				</View>
-				<View style = {styles.listHeader}>
-					<Text style = {{textAlign: 'center',}}>
-						Date de facturation
-					</Text>
-				</View>
-				<View style = {styles.listHeader}>
-					<Text style = {{textAlign: 'center',}}>
-						Date de paiement
-					</Text>
-				</View>
-				<View style = {styles.listHeader}>
-					<Text style = {{textAlign: 'center',}}>
-						Lien
-					</Text>
-				</View>
+			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
+				<Text style = {styles.titleAV}>
+						Ventes de produits
+				</Text>
 			</View>
 			
 			{(() => {
-				if (dataSource != null)
+				if (dataSourceVp != null)
 					return (
 						<ListView />
 					);
 				else
 					return (
-						<View style = {styles.containerFacture}>
+						<View style = {styles.containerVentes}>
 							<Text>
-								Aucune facture disponible.
+								Aucune mise en relation pour la
+							</Text>
+							<Text>
+								vente de produits.
+							</Text>
+						</View>
+					);
+			})()}
+			
+			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
+				<Text style = {styles.titleAV}>
+						Achats de produits
+				</Text>
+			</View>
+			
+			{(() => {
+				if (dataSourceAp != null)
+					return (
+						<ListView />
+					);
+				else
+					return (
+						<View style = {styles.containerAchats}>
+							<Text>
+								Aucune mise en relation pour
+							</Text>
+							<Text>
+								l'achat de produits.
 							</Text>
 						</View>
 					);
@@ -99,12 +113,12 @@ const styles = StyleSheet.create({
 	alignItems: 'center',
 	flexDirection: 'column',
 	width: widthWindow,
-	height: heightWindow * 0.37,
+	height: heightWindow * 0.30,
 	alignSelf: 'center',
   },
-  containerFacture: {
+  containerVentes: {
 	width: widthWindow,
-	height: heightWindow * 0.38,
+	height: heightWindow * 0.23,
 	flexGrow: 0,
 	flexShrink: 0,
 	justifyContent: 'center',
@@ -114,7 +128,23 @@ const styles = StyleSheet.create({
 	padding: 5,
 	borderWidth: 1,  
     borderRadius: 5,
-	margin: 10,
+	margin: 5,
+    borderColor: '#CCC',
+	width: 0.92 * widthWindow + 20,
+  },
+  containerAchats: {
+	width: widthWindow,
+	height: heightWindow * 0.23,
+	flexGrow: 0,
+	flexShrink: 0,
+	justifyContent: 'center',
+	alignItems: 'center',
+	alignSelf: 'center',
+	backgroundColor: '#F5FCFF',
+	padding: 5,
+	borderWidth: 1,  
+    borderRadius: 5,
+	margin: 5,
     borderColor: '#CCC',
 	width: 0.92 * widthWindow + 20,
   },
@@ -124,30 +154,16 @@ const styles = StyleSheet.create({
     margin: 10,
 	color: '#333333',
   },
+  titleAV: {
+	fontSize: 20,
+	color: '#333333',
+	textAlign: 'left',
+  },
   instructions: {
     fontSize: 15,
 	textAlign: 'center',
     marginBottom: 5,
   },
-  header: {
-	width: widthWindow,
-	height: heightWindow * 0.12,
-	alignItems: 'flex-end',
-	flexDirection: 'row',
-	justifyContent: 'center',
-  },
-  listHeader: {
-	justifyContent: 'center',
-	alignSelf: 'center',	
-    padding: 5,  
-    margin: 3,  
-    width: 0.23 * widthWindow,  
-    height: heightWindow * 0.12, 
-    alignItems: 'center',
-    borderWidth: 1,  
-    borderRadius: 5,  
-    borderColor: '#CCC',
-  },
 });
 
-module.exports = Historique;
+module.exports = MesAnnonces;

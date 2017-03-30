@@ -46,7 +46,7 @@ export default class MesAnnonces extends Component {
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
-					<Text style = {{textAlign: 'center',fontSize: 10}}>
+					<Text style = {{textAlign: 'center',}}>
 						Date de creation
 					</Text>
 				</View>
@@ -177,20 +177,19 @@ const styles = StyleSheet.create({
 	width: 0.92 * widthWindow + 20,
   },
   title: {
-    fontSize: 50,
+    fontSize: 40,
     textAlign: 'center',
     margin: 10,
 	color: '#333333',
   },
   titleOD: {
-	fontSize: 15,
+	fontSize: 20,
 	color: '#333333',
 	textAlign: 'left',
   },
   instructions: {
-    fontSize: 20,
+    fontSize: 15,
 	textAlign: 'center',
-    color: '#333333',
     marginBottom: 5,
   },
   header: {
