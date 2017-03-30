@@ -26,9 +26,9 @@ var textInput = 'TextInput';
 var connexion = false;
 
 export default class Index extends Component {
-	// Init this class and add 1 boolean value to check 
-	// if the user logined. We check this because when 
-	// users logined succesufully, two buttons should be hidden 
+	// Init this class and add 1 boolean value to check
+	// if the user logined. We check this because when
+	// users logined succesufully, two buttons should be hidden
 	// in this page.
 	/*
 	constructor(props) {
@@ -37,8 +37,8 @@ export default class Index extends Component {
 			connexion: false
 		}
 	}
-	*/
-	
+  */
+
 	// Picker: Users can choose many catagories here.
 	// TextInput: Input Text, user input the key words that they want to search.
 	// Button('Recherche'): Start search!
@@ -46,7 +46,7 @@ export default class Index extends Component {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
 			<View style={styles.container}>
-			    <EnTete />
+			    <EnTete deconnexionEntete={(data)=>{this.deconnexionIndex(data)}}/>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
@@ -76,8 +76,8 @@ export default class Index extends Component {
 								</View>
 							);
 						})()}
-						
-						<View style={styles.containerPicker}>	
+
+						<View style={styles.containerPicker}>
 							<Picker
 								selectedValue={selected}
 								onValueChange={this.onValueChange.bind(this,'value')}
@@ -97,7 +97,7 @@ export default class Index extends Component {
 								<Picker.Item label="Vitamines" value="vit" />
 								<Picker.Item label="Autres" value="aut" />
 							</Picker>
-							
+
 							<TextInput
 								defaultValue={"trouver par nom, n CAS"}
 								maxLength = {40}
@@ -110,7 +110,7 @@ export default class Index extends Component {
 						<View style={styles.containerButtonR}>
 							<TouchableOpacity>
 								<Button
-									onPress={onPressRecherche}
+									onPress={this.onPressRecherche}
 									title="Recherche"
 									color="#64FE2E"
 									style={{flexBasis: 70}}
@@ -122,7 +122,7 @@ export default class Index extends Component {
 			</View>
 		);
 	}
-	
+
 	//Get the key words from user's choice.(catagories)
 	onValueChange = (key: string, value: string) => {
 		// This value (selectedKey) is same as the catagorie selected.
@@ -164,29 +164,31 @@ export default class Index extends Component {
 		}
 	};
 
-	onPressInscription = () => {
-		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-		// Create router and push page...
-		const { navigator } = this.props;
-		if (navigator) {
-			navigator.push({
-				name: 'Inscription',
-				component: inscription,
-			})
-		}
-	};
-	
-	// Get the key words from user's input. (key words of search)
-	onResponderEndEditing = (text) => {
-		textInput = text;
-	};
+  onPressInscription = () => {
+    BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+    const { navigator } = this.props;
+    if (navigator) {
+      navigator.push({
+        name: 'Inscription',
+        component: inscription,
+      })
+    }
+  };
+
+  deconnexionIndex(data)
+  {
+    connexion=data;
+  };
+
+  onPressRecherche = () => {
+  	Alert.alert(textInput+connexion);
+  };
+
 }
 
 
 
-const onPressRecherche = () => {
-	Alert.alert(textInput);
-};
+
 
 const styles = StyleSheet.create({
 	  container: {
