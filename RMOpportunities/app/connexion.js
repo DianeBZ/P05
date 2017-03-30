@@ -34,7 +34,7 @@ export default class Connexion extends Component {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
 	return (
       <View style={{flex:1}}>
-          <EnTete/>
+          <View style={{height: height * 0.08}}/>
           <View style={styles.window}>
             <Text style={styles.titre}>
                 Connectez-vous

@@ -207,7 +207,7 @@ export default class Inscription extends Component {
     render(){
         return(
         <View style={{flex:1}}>
-            <EnTete/>
+            <View style={{height: height * 0.08}}/>
             <View style={styles.window}>
                 <Text style={styles.titre}>
                     Inscrivez-vous
