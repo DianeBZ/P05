@@ -18,8 +18,8 @@ import {
 import Index from './page1';
 import React from 'react';
 
-var width = Dimensions.get('window').width; 
-var height = Dimensions.get('window').height; 
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 // In generation, you shouldn't change the contents which are under this comment.
 export default class Navigation extends React.Component {
@@ -39,11 +39,11 @@ export default class Navigation extends React.Component {
 					let Component = route.component;
 					return <Component {...route.params} navigator = {navigator} />
 				}}
-                navigationBar={ <Navigator.NavigationBar routeMapper={{ 
-                LeftButton: (route, navigator, index, navState) => { return (<Image source={pic2} style={styles.menu}/>); }, 
-                RightButton: (route, navigator, index, navState) => { return (<Image source={pic3} style={styles.icone}/>); }, 
-                Title: (route, navigator, index, navState) => { return (<Image source={pic1} style={styles.title}/>); }, 
-                }} 
+                navigationBar={ <Navigator.NavigationBar routeMapper={{
+                LeftButton: (route, navigator, index, navState) => { return (<Image source={pic2} style={styles.menu}/>); },
+                RightButton: (route, navigator, index, navState) => { return (<Image source={pic3} style={styles.icone}/>); },
+                Title: (route, navigator, index, navState) => { return (<Image source={pic1} style={styles.title}/>); },
+                }}
                 style={{backgroundColor: '#F2F2F2', borderWidth: 1, borderColor: "#000000",width: width, height: height * 0.08,}}
                 />}
 			/>

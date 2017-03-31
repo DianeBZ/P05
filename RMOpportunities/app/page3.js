@@ -17,11 +17,11 @@ export default class inscription extends Component {
 	  super(props);
   }
   */
-  
+
   _onPressBouton(){
     console.log('press Linkedin');
   }
-  
+
   render() {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
     return (
@@ -70,7 +70,7 @@ export default class inscription extends Component {
       return false;
     }
   };
-  
+
   onPressInscription = () => {
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		const { navigator } = this.props;
@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
   textLinkedin:{
       textAlign:'center',
       color:'white',
+      fontSize:20,
     },
   textOu:{
     textAlign:"center",

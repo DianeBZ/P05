@@ -3,9 +3,9 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View, 
+  View,
   Image,
-  Dimensions, 
+  Dimensions,
   TextInput,
   Button,
   Alert,
@@ -16,8 +16,8 @@ import {
 import EnTete from './enTete'
 import InscriptionReussie from './page_inscription_reussie'
 
-var width = Dimensions.get('window').width; 
-var height = Dimensions.get('window').height; 
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 var clickedOn1 = 'false';
 var clickedOn2 = 'false';
@@ -26,7 +26,7 @@ var clickedOn3 = 'false';
 class MenuInscription extends Component{
     constructor(props){
         super(props);
-        this.state = { 
+        this.state = {
             nomEntreprise : '',
             adrEntreprise: '',
             complAdr: '',
@@ -40,7 +40,7 @@ class MenuInscription extends Component{
             motDePasse: '',
         };
     }
-    
+
     render(){
         return(
         <View>
@@ -78,7 +78,7 @@ class MenuInscription extends Component{
                         <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>Conditions d'utilisation</Text>
+                            <Text style={{color:'#000000', fontSize:24}}>Conditions d&#39;utilisation</Text>
                         </View>
                     </TouchableHighlight>
                         </View>);
@@ -110,7 +110,7 @@ class MenuInscription extends Component{
                         <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>Conditions d'utilisation</Text>
+                            <Text style={{color:'#000000', fontSize:24}}>Conditions d&#39;utilisation</Text>
                         </View>
                         </TouchableHighlight>
                         </View>
@@ -133,12 +133,12 @@ class MenuInscription extends Component{
                         <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>Conditions d'utilisation</Text>
+                            <Text style={{color:'#000000', fontSize:24}}>Conditions d&#39;utilisation</Text>
                         </View>
                         </TouchableHighlight>
                         <View style={{/*flexDirection:'row',*/ width:width*0.8}}>
                             <Text style={{color:'#000000'}}>Je confirme avoir lu et accepté les </Text>
-                            <Text style={{color:'#A4D04A'}}>Conditions d'utilisation de RMOpportunities </Text>
+                            <Text style={{color:'#A4D04A'}}>Conditions d&#39;utilisation de RMOpportunities </Text>
                             <Text style={{color:'#000000'}}>, que mes informations sont correctes et que je les maintiendrai à jour. </Text>
                         </View>
                         </View>
@@ -161,7 +161,7 @@ class MenuInscription extends Component{
                         <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>Conditions d'utilisation</Text>
+                            <Text style={{color:'#000000', fontSize:24}}>Conditions d&#39;utilisation</Text>
                         </View>
                         </TouchableHighlight>
                         </View>
@@ -215,14 +215,14 @@ export default class Inscription extends Component {
                 <View style={styles.mainWindow}>
                     <MenuInscription/>
                     <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
-                        <Text style={styles.buttonText}>S'inscrire </Text>
+                        <Text style={styles.buttonText}>S&#39;inscrire </Text>
                     </TouchableHighlight>
                 </View>
             </View>
-        </View>    
+        </View>
         );
     }
-    
+
     onPressInscription = () => {
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		const { navigator } = this.props;
@@ -256,9 +256,10 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     button:{
-        height: width*0.08,
+        height: width*0.09,
         marginTop: 20,
         justifyContent: 'center',
+        borderRadius:5,
     },
     buttonText:{
         color: "white",
@@ -266,16 +267,16 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     inscription:{
-        backgroundColor:'#FFFFFF', 
-        width:width*0.8, 
-        alignItems:'flex-start', 
+        backgroundColor:'#FFFFFF',
+        width:width*0.8,
+        alignItems:'flex-start',
         marginTop:20
     },
     textToFill:{
        width: width*0.8,
        height: width*0.1,
        borderWidth: 1,
-       borderColor: "#000000", 
+       borderColor: "#000000",
        marginTop: 15,
        color: 'grey',
    },
@@ -283,7 +284,7 @@ const styles = StyleSheet.create({
        width: width*0.35,
        height: width*0.1,
        borderWidth: 1,
-       borderColor: "#000000", 
+       borderColor: "#000000",
        marginTop: 15,
        marginRight: width*0.05,
        color: 'grey',
