@@ -11,7 +11,7 @@ import EnTete from './enTete';
 var widthWindow = Dimensions.get('window').width;
 var heightWindow = Dimensions.get('window').height;
 
-//We change this and add some foncs to realise 
+//We change this and add some foncs to realise
 //the display of the list of factures when we need.
 var dataSourceVp = null;
 var dataSourceAp = null;
@@ -33,13 +33,13 @@ export default class MesAnnonces extends Component {
 					votre entreprise a ete mise en relation
 				</Text>
 			</View>
-			
+
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
 						Ventes de produits
 				</Text>
 			</View>
-			
+
 			{(() => {
 				if (dataSourceVp != null)
 					return (
@@ -57,13 +57,13 @@ export default class MesAnnonces extends Component {
 						</View>
 					);
 			})()}
-			
+
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
 						Achats de produits
 				</Text>
 			</View>
-			
+
 			{(() => {
 				if (dataSourceAp != null)
 					return (
@@ -76,7 +76,7 @@ export default class MesAnnonces extends Component {
 								Aucune mise en relation pour
 							</Text>
 							<Text>
-								l'achat de produits.
+								l{'\''}achat de produits.
 							</Text>
 						</View>
 					);
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
 	backgroundColor: '#F5FCFF',
 	padding: 5,
-	borderWidth: 1,  
+	borderWidth: 1,
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
 	backgroundColor: '#F5FCFF',
 	padding: 5,
-	borderWidth: 1,  
+	borderWidth: 1,
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',

@@ -11,7 +11,7 @@ import EnTete from './enTete';
 var widthWindow = Dimensions.get('window').width;
 var heightWindow = Dimensions.get('window').height;
 
-//We change this and add some foncs to realise 
+//We change this and add some foncs to realise
 //the display of the list of factures when we need.
 var dataSourceOffres = null;
 var dataSourceDemandes = null;
@@ -33,7 +33,7 @@ export default class MesAnnonces extends Component {
 					visibles sur notre platforme
 				</Text>
 			</View>
-			
+
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleOD}>
 						Offres
@@ -42,7 +42,7 @@ export default class MesAnnonces extends Component {
 			<View style = {styles.header}>
 				<View style = {styles.listHeaderFirst}>
 					<Text style = {{textAlign: 'center',}}>
-						Numero d'identification (CAS ou EINECS)
+						Numero d{'\''}identification (CAS ou EINECS)
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
@@ -56,7 +56,7 @@ export default class MesAnnonces extends Component {
 					</Text>
 				</View>
 			</View>
-			
+
 			{(() => {
 				if (dataSourceOffres != null)
 					return (
@@ -71,7 +71,7 @@ export default class MesAnnonces extends Component {
 						</View>
 					);
 			})()}
-			
+
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleOD}>
 						Demandes
@@ -80,7 +80,7 @@ export default class MesAnnonces extends Component {
 			<View style = {styles.header}>
 				<View style = {styles.listHeaderFirst}>
 					<Text style = {{textAlign: 'center',}}>
-						Numero d'identification (CAS ou EINECS)
+						Numero d{'\''}identification (CAS ou EINECS)
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
@@ -94,7 +94,7 @@ export default class MesAnnonces extends Component {
 					</Text>
 				</View>
 			</View>
-			
+
 			{(() => {
 				if (dataSourceDemandes != null)
 					return (
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
 	backgroundColor: '#F5FCFF',
 	padding: 5,
-	borderWidth: 1,  
+	borderWidth: 1,
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
 	backgroundColor: '#F5FCFF',
 	padding: 5,
-	borderWidth: 1,  
+	borderWidth: 1,
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
@@ -201,38 +201,38 @@ const styles = StyleSheet.create({
   },
   listHeaderFirst: {
 	justifyContent: 'center',
-	alignSelf: 'center',	
-    padding: 5,  
-    margin: 3,  
-    width: 0.5 * widthWindow,  
-    height: heightWindow * 0.06, 
+	alignSelf: 'center',
+    padding: 5,
+    margin: 3,
+    width: 0.5 * widthWindow,
+    height: heightWindow * 0.06,
     alignItems: 'center',
-    borderWidth: 1,  
-    borderRadius: 5,  
+    borderWidth: 1,
+    borderRadius: 5,
     borderColor: '#CCC',
   },
   listHeaderSecond: {
 	justifyContent: 'center',
-	alignSelf: 'center',	
-    padding: 5,  
-    margin: 3,  
-    width: 0.30 * widthWindow,  
-    height: heightWindow * 0.06, 
+	alignSelf: 'center',
+    padding: 5,
+    margin: 3,
+    width: 0.30 * widthWindow,
+    height: heightWindow * 0.06,
     alignItems: 'center',
-    borderWidth: 1,  
-    borderRadius: 5,  
+    borderWidth: 1,
+    borderRadius: 5,
     borderColor: '#CCC',
   },
   listHeaderThird: {
 	justifyContent: 'center',
-	alignSelf: 'center',	
-    padding: 5,  
-    margin: 3,  
-    width: 0.14 * widthWindow,  
-    height: heightWindow * 0.06, 
+	alignSelf: 'center',
+    padding: 5,
+    margin: 3,
+    width: 0.14 * widthWindow,
+    height: heightWindow * 0.06,
     alignItems: 'center',
-    borderWidth: 1,  
-    borderRadius: 5,  
+    borderWidth: 1,
+    borderRadius: 5,
     borderColor: '#CCC',
   },
 });
