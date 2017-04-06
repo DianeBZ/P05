@@ -15,7 +15,7 @@ import {
 // You change './app/page1' to look the pages that you wrote.
 // For example, you want to look page 10, so you change the under
 // string from './app/page1' to './app/page10'
-import Index from './page1';
+import Index from './creer_annonce_fin';
 import React from 'react';
 
 var width = Dimensions.get('window').width;

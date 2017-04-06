@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight} from 'react-native';
+import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
 import EnTete from './enTete';
+import connexion_produit from './ajouter_produit_connexion';
+import connexion_demande from './ajouter_demande_connexion';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -25,13 +27,13 @@ export default class CreerAnnonce extends Component {
         <View style={styles.contH}>
           <View style={styles.contV}>
             <Image source={require('../img/ajouterDemande.png')} style={styles.ajouterImage}/>
-            <TouchableHighlight onPress={this.onButtonPress} style={styles.button} underlayColor="rgb(138,183,46)">
+            <TouchableHighlight onPress={this.onButtonPressDemande} style={styles.button} underlayColor="rgb(138,183,46)">
                 <Text style={styles.buttonText}>Ajouter une demande</Text>
             </TouchableHighlight>
           </View>
           <View style={styles.contV}>
             <Image source={require('../img/ajouterProduit.png')} style={styles.ajouterImage}/>
-            <TouchableHighlight onPress={this.onButtonPress} style={styles.button} underlayColor="rgb(138,183,46)">
+            <TouchableHighlight onPress={this.onButtonPressProduit} style={styles.button} underlayColor="rgb(138,183,46)">
                 <Text style={styles.buttonText}>Ajouter un produit </Text>
             </TouchableHighlight>
             </View>
@@ -39,9 +41,25 @@ export default class CreerAnnonce extends Component {
       </View>
     );
   }
-  onButtonPress = () => {
-     Alert.alert('Button has been pressed!'
-   );
+	onButtonPressDemande = () => {
+	 BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+	const { navigator } = this.props;
+	if (navigator) {
+	  navigator.push({
+		name: 'Connexion pour demande',
+		component: connexion_demande,
+	  })
+	}
+  };
+  onButtonPressProduit = () => {
+     BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+    const { navigator } = this.props;
+    if (navigator) {
+      navigator.push({
+        name: 'Connexion pour annonce',
+        component: connexion_produit,
+      })
+    }
   };
 }
 

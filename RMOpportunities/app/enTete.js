@@ -9,10 +9,13 @@ import {
   TextInput,
   Button,
   Alert,
+  TouchableHighlight,BackAndroid,Navigator
 } from 'react-native';
 import EnTeteClient from './enTeteClient';
+import accueil from './page1';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+
 export default class EnTete extends Component {
   static props={
     deconnexionCallbackEntete:null,
@@ -24,11 +27,23 @@ export default class EnTete extends Component {
       return (
         <View style={styles.enTete}>
             <Image source={pic2} style={styles.menu} />
-            <Image source={pic1} style={styles.logo} />
+			<TouchableHighlight onPress={this.onPressAccueil}>
+				<Image source={pic1} style={styles.logo} />
+			</TouchableHighlight>
             <EnTeteClient deconnexionCallback={(data)=>{this.deconnexionEntete(data)}}/>
         </View>
       );
     }
+	onPressAccueil = () => {
+		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+		const { navigator } = this.props;
+		if (navigator) {
+		  navigator.push({
+			name: 'Accueil',
+			component: accueil,
+		  })
+		}
+	  };
     deconnexionEntete(data)
     {
       if(this.props.deconnexionEntete==null)

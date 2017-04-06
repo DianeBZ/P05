@@ -8,14 +8,14 @@ var height = Dimensions.get('window').height;
 import Connexion from './connexion';
 import inscription from './page3';
 
-export default class CreerAnnonce extends Component {
+export default class AjouterProduitConnexion extends Component {
 
   render() {
     return(
       <View>
         <EnTete/>
         <View style={styles.intro}>
-          <Text style={styles.introTexte}>Déposer une annoce</Text>
+          <Text style={styles.introTexte}>Ajouter un produit</Text>
         </View>
 
         <View style={styles.corps}>
@@ -42,13 +42,6 @@ export default class CreerAnnonce extends Component {
 			navigator.push({
 				name: 'Connexion',
 				component: Connexion,
-				/*
-				getConnexion: function(connexion) {
-					_this.setState({
-						connexion: connexion
-					})
-				}
-				*/
 			})
 		}
 	};
