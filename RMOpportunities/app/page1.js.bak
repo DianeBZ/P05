@@ -10,6 +10,7 @@ import {
   TextInput,
   Dimensions,
   TouchableHighlight,
+  TouchableHighlight,
   BackAndroid,
   ToastAndroid,
   Navigator,

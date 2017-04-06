@@ -5,7 +5,7 @@ import {
   Text,
   View,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
   Dimensions,
   Picker,
   Alert,

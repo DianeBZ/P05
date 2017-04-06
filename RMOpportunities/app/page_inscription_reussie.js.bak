@@ -5,7 +5,7 @@ import
 	AppRegistry,
 	Text,
 	View,
-	TouchableHighlight,
+	TouchableOpacity,
 } from 'react-native';
 import EnTete from './enTete'
 
@@ -29,11 +29,11 @@ export default class EndRegistration extends Component {
 				</Text>
 			</View>
 			<View style={styles.sContainerBonton}>
-            <TouchableHighlight style={styles.BoutonAccueil} onPress={this._onPressBouton}>
+            <TouchableOpacity style={styles.BoutonAccueil} onPress={this._onPressBouton}>
               <Text style={styles.Accueil}>
 				Accueil
               </Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
 		</View>
       </View>

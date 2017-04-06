@@ -8,6 +8,8 @@ import {
    Alert,
    BackAndroid,
    TouchableHighlight,
+
+   TouchableOpacity,
    Navigator,
 
 
@@ -34,9 +36,9 @@ export default class ContenuMenu extends Component {
             </TouchableHighlight>
             <View style={styles.separation}></View>
 
-            <TouchableHighlight >
+            <TouchableOpacity >
                <Text style={styles.titreMenu}>Offres</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
             <TouchableHighlight >
                <Text style={styles.sousTitreMenu}>Voir les offres</Text>
             </TouchableHighlight>
@@ -116,9 +118,9 @@ export default class ContenuMenu extends Component {
 
          <View style={styles.separation}></View>
 
-         <TouchableHighlight onPress={this._onPressBouton}>
+         <TouchableOpacity onPress={this._onPressBouton}>
          <Text style={styles.titreMenu}>Offres</Text>
-         </TouchableHighlight>
+         </TouchableOpacity>
          <TouchableHighlight >
          <Text style={styles.sousTitreMenu}>Voir les offres</Text>
          </TouchableHighlight>
