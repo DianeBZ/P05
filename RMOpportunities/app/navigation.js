@@ -18,7 +18,6 @@ import {
 // string from './app/page1' to './app/page10'
 import Drawer from 'react-native-drawer';
 import ContenuMenu from './contenuMenu';
-import Index from './creer_annonce_connexion';
 import React from 'react';
 
 var width = Dimensions.get('window').width;
