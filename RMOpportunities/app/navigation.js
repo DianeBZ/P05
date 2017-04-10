@@ -18,6 +18,7 @@ import {
 // string from './app/page1' to './app/page10'
 import Drawer from 'react-native-drawer';
 import ContenuMenu from './contenuMenu';
+import Home from './page1';
 import Index from './page1';
 import React from 'react';
 
@@ -77,14 +78,26 @@ export default class Navigation extends React.Component {
                      </TouchableHighlight>
                   ); },
                   RightButton: (route, navigator, index, navState) => { return (<Image source={pic3} style={styles.icone}/>); },
-                  Title: (route, navigator, index, navState) => { return (<Image source={pic1} style={styles.title}/>); },
-               }}
-               style={{backgroundColor: '#F2F2F2', borderWidth: 1, borderColor: "#000000",width: width, height: height * 0.08,}}
-               />}
-               />
-         </Drawer>
-      );
+                  Title: (route, navigator, index, navState) => { return (  <TouchableHighlight onPress={()=>this.goToHomePage()}>
+                  <Image source={pic1} style={styles.title}/>
+               </TouchableHighlight>); },
+            }}
+            style={{backgroundColor: '#F2F2F2', borderWidth: 1, borderColor: "#000000",width: width, height: height * 0.08,}}
+            />}
+            />
+      </Drawer>
+   );
+}
+goToHomePage = () => {
+
+
+   if (this.refs.navigator) {
+      this.refs.navigator.push({
+         name: 'Home',
+         component: Home,
+      })
    }
+};
 }
 
 const styles = StyleSheet.create({
