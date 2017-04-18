@@ -17,12 +17,14 @@ import {
 import EnTete from './enTete';
 import Connexion from './connexion';
 import inscription from './page3';
+import FileSystem from 'react-native-filesystem';
 
 var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
+var customData = require('./statusConnexion.json');
 //var connexion = false;
 
 export default class Index extends Component {
@@ -57,23 +59,23 @@ export default class Index extends Component {
 							return (
 								<View style={styles.containerButton}>
 									<TouchableHighlight>
-                    <View>
-  										<Button
-  											onPress={this.onPressConnexion}
-  											title=" Connexion "
-  											style={{flexBasis: 70}}
-  										/>
-                    </View>
+										<View>
+											<Button
+												onPress={this.onPressConnexion}
+												title=" Connexion "
+												style={{flexBasis: 70}}
+											/>
+										</View>
 									</TouchableHighlight>
 									<TouchableHighlight>
-                    <View>
-  										<Button
-  											onPress={this.onPressInscription}
-  											title="Inscription"
-  											color="#841584"
-  											style={{flexBasis: 70}}
-  										/>
-                    </View>
+										<View>
+											<Button
+												onPress={this.onPressInscription}
+												title="Inscription"
+												color="#841584"
+												style={{flexBasis: 70}}
+											/>
+										</View>
 									</TouchableHighlight>
 								</View>
 							);
@@ -186,7 +188,21 @@ export default class Index extends Component {
   };
 
   onPressRecherche = () => {
-  	Alert.alert(textInput+connexion);
+  	  customData = require('./statusConnexion.json');
+	  Alert.alert(textInput+customData.connexion);
+	  if (!FileSystem.fileExists('./statusConnexion.json',"temporary"))
+	  {
+		d_s = FileSystem.delete('./statusConnexion.json',"temporary");
+	  }
+	  else
+		  Alert.alert("Shit");
+	  const fileContents = '{"connexion":0}';
+	  w_s = FileSystem.writeToFile('./statusConnexion.json', fileContents, "temporary");
+	  //Alert.alert(textInput+d_s+w_s);
+  };
+  
+  onResponderEndEditing = (text) => {
+	textInput = text;
   };
 
 }
