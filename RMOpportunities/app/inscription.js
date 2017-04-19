@@ -136,10 +136,12 @@ class MenuInscription extends Component{
                             <Text style={{color:'#000000', fontSize:24}}>Conditions d&#39;utilisation</Text>
                         </View>
                         </TouchableHighlight>
-                        <View style={{/*flexDirection:'row',*/ width:width*0.8}}>
+                        <View style={{alignItems:'center', width:width*0.9}}>
+                        <Text numberOfLines={4}>
                             <Text style={{color:'#000000'}}>Je confirme avoir lu et accepté les </Text>
                             <Text style={{color:'#A4D04A'}}>Conditions d&#39;utilisation de RMOpportunities </Text>
                             <Text style={{color:'#000000'}}>, que mes informations sont correctes et que je les maintiendrai à jour. </Text>
+                        </Text>
                         </View>
                         </View>
                     );

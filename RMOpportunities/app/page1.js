@@ -19,6 +19,11 @@ import Connexion from './connexion';
 import inscription from './page3';
 import FileSystem from 'react-native-filesystem';
 
+import Trad from './traduction';
+var lang = 'fr';
+var selected2 = 'fr';
+var selectedKey2 = 'Français';
+
 var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
@@ -57,7 +62,7 @@ export default class Index extends Component {
 										<View>
 											<Button
 												onPress={this.onPressConnexion}
-												title=" Connexion "
+												title={Trad[lang].connexion}
 												style={{flexBasis: 70}}
 											/>
 										</View>
@@ -66,7 +71,7 @@ export default class Index extends Component {
 										<View>
 											<Button
 												onPress={this.onPressInscription}
-												title="Inscription"
+												title={Trad[lang].inscription}
 												color="#841584"
 												style={{flexBasis: 70}}
 											/>
@@ -81,24 +86,24 @@ export default class Index extends Component {
 								selectedValue={selected}
 								onValueChange={this.onValueChange.bind(this,'value')}
 								style={styles.picker} >
-								<Picker.Item label="Toutes les categories" value="tlc" />
-								<Picker.Item label="Produits pour la cosmetique, les aromes et parfums" value="Pcos" />
-								<Picker.Item label="Solvants" value="sol" />
-								<Picker.Item label="Solvants regeneres" value="sol_r" />
-								<Picker.Item label="Reactifs" value="rea" />
-								<Picker.Item label="Catalyseurs" value="cat" />
-								<Picker.Item label="Specialites chimiques" value="spe" />
-								<Picker.Item label="Intermediaires" value="int" />
-								<Picker.Item label="Intermediaires simples" value="int_s" />
-								<Picker.Item label="Acides" value="aci" />
-								<Picker.Item label="Bases" value="bas" />
-								<Picker.Item label="Acides amines" value="aci_a" />
-								<Picker.Item label="Vitamines" value="vit" />
-								<Picker.Item label="Autres" value="aut" />
+								<Picker.Item label={Trad[lang].ttes_cat} value="tlc" />
+								<Picker.Item label={Trad[lang].cosm} value="Pcos" />
+								<Picker.Item label={Trad[lang].solv} value="sol" />
+								<Picker.Item label={Trad[lang].solv_reg} value="sol_r" />
+								<Picker.Item label={Trad[lang].react} value="rea" />
+								<Picker.Item label={Trad[lang].catal} value="cat" />
+								<Picker.Item label={Trad[lang].spe_chi} value="spe" />
+								<Picker.Item label={Trad[lang].interm} value="int" />
+								<Picker.Item label={Trad[lang].interm_simple} value="int_s" />
+								<Picker.Item label={Trad[lang].acides} value="aci" />
+								<Picker.Item label={Trad[lang].bases} value="bas" />
+								<Picker.Item label={Trad[lang].acid_ami} value="aci_a" />
+								<Picker.Item label={Trad[lang].vit} value="vit" />
+								<Picker.Item label={Trad[lang].autres} value="aut" />
 							</Picker>
 
 							<TextInput
-								defaultValue={"trouver par nom, n CAS"}
+								placeholder={Trad[lang].trouver_par}
 								maxLength = {40}
 								editable={true}
 								style={styles.textInput}
@@ -111,19 +116,33 @@ export default class Index extends Component {
 							 <View>
 								<Button
 									onPress={this.onPressRecherche}
-									title="Recherche"
+									title={Trad[lang].recherche}
 									color="#64FE2E"
 									style={{flexBasis: 70}}
 								/>
 							 </View>
 							</TouchableHighlight>
 						</View>
+                        <View style={styles.containerPicker}>
+                        <Picker
+							selectedValue={lang}
+							onValueChange={this._onLangChange.bind(this,'value')}
+							style={styles.picker} >
+							<Picker.Item label="Français" value='fr' />
+							<Picker.Item label="English" value='en' />  
+                        </Picker>
+                        </View>
 					</Image>
 				</View>
 			</View>
 		);
 	}
-
+    _onLangChange = (key: string, value: string) => {
+        lang = value;
+        selectedKey2 = key;
+		selected2 = value;
+		this.forceUpdate();
+    };
 	//Get the key words from user's choice.(catagories)
 	onValueChange = (key: string, value: string) => {
 		// This value (selectedKey) is same as the catagorie selected.
@@ -183,7 +202,7 @@ export default class Index extends Component {
 	  const fileContents = '{"connexion":0}';
 	  w_s = FileSystem.writeToFile('./statusConnexion.json', fileContents, "temporary");
 	  */
-	  //Alert.alert(textInput+d_s+w_s);
+      //Alert.alert(textInput+d_s+w_s);
   };
   
   onResponderEndEditing = (text) => {
