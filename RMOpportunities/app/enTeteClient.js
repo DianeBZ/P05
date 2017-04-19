@@ -9,6 +9,7 @@ import {
   Dimensions,
   Picker,
   Alert,
+  DeviceEventEmitter,
 } from 'react-native';
 
 var width = Dimensions.get('window').width;
@@ -20,22 +21,20 @@ var selectedKey='P05';
 
 export default class EnTeteClient extends Component {
 
-  static props={
-    deconnexionCallback:null,
-  }
   render() {
       return (
-            <View style={styles.viewContainer}>
-              <Picker
-                mode={'dropdown'}
-                style={styles.picker}
-                selectedValue={"key0"}
-								onValueChange={this.onValueChange.bind(this,'value')}>
-                <Picker.Item label='P05' value="key0" />
-                <Picker.Item label='Mon compte' value="key1" />
-                <Picker.Item label='deconnexion' value="key2" />
-              </Picker>
-            </View>
+            
+				<View style={styles.viewContainer}>
+				  <Image source={pic} style={styles.icone}>
+					  <Picker
+						mode={'dropdown'}
+						style={styles.picker}
+						onValueChange={this.onValueChange.bind(this,'value')}>
+						<Picker.Item label='Mon compte' value="key1" />
+						<Picker.Item label='deconnexion' value="key2" />
+					  </Picker>
+				  </Image>
+				</View>
       );
     }
 
@@ -47,23 +46,27 @@ export default class EnTeteClient extends Component {
         {
           Alert.alert('Mon compte');
         }
-      else
-      {
-        //Alert.alert('deconnexion');
-        if(this.props.deconnexionCallback==null)return;
-        this.props.deconnexionCallback(true);
-      }
+	  if(value=="key2")
+	   {
+		  connection=0;
+		  DeviceEventEmitter.emit('nvBar');
+	   }
   	};
  }
 
   const styles = StyleSheet.create({
     viewContainer:{
-      margin:5,
-      justifyContent:'flex-start',
-      alignItems:'flex-end',
+      width:width*0.07,
+	  height:height*0.08,
     },
     picker:{
-      width:100,
+      width:width*0.07,
+    },
+	icone:{
+	  marginTop: height*0.01,
+	  marginBottom: height*0.01,
+	  width: width*0.07,
+      height: height*0.06,
     },
 });
 

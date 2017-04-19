@@ -11,6 +11,7 @@ import {
   Alert,
   TouchableHighlight,
   BackAndroid,
+  DeviceEventEmitter,
 } from 'react-native';
 
 import EnTete from './enTete';
@@ -22,14 +23,12 @@ var connexion=true;
 export default class Connexion extends Component {
   constructor(props){
 	  super(props);
-	  this.state = {
-		  connexion: true
-	  }
   }
 
   _onPressButton= () => {
 	  //Alert.alert("You tapped the button!");
-		this.props.getConnexion(true);
+	connection=1;
+	DeviceEventEmitter.emit('nvBar');
     const { navigator } = this.props;
     if (navigator && navigator.getCurrentRoutes().length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);

@@ -25,7 +25,6 @@ var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
 var customData = require('./statusConnexion.json');
-//var connexion = false;
 
 export default class Index extends Component {
 	// Init this class and add 1 boolean value to check
@@ -34,9 +33,6 @@ export default class Index extends Component {
 	// in this page.
 	constructor(props) {
 		super(props);
-		this.state = {
-      connexion: null
-		}
 	}
 
 	// Picker: Users can choose many catagories here.
@@ -46,12 +42,11 @@ export default class Index extends Component {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
 			<View style={styles.container}>
-			    <EnTete deconnexionEntete={(data)=>{this.deconnexionIndex(data)}}/>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
 						// If user logined?
-						if (this.state.connexion == true)
+						if (connection == 1)
 							return (
 								<View style={styles.containerButton} />
 							);
@@ -160,11 +155,6 @@ export default class Index extends Component {
 				name: 'Connexion',
 				component: Connexion,
 				params:{
-          getConnexion: function(connexion) {
-					_this.setState({
-						connexion: connexion
-					})
-				}
       }
 			})
 		}
@@ -181,16 +171,10 @@ export default class Index extends Component {
     }
   };
 
-  deconnexionIndex(data)
-  {
-    connexion=data;
-    this.setState({connexion : data});
-  };
-
   onPressRecherche = () => {
-  	  customData = require('./statusConnexion.json');
-	  Alert.alert(textInput+customData.connexion);
-	  if (!FileSystem.fileExists('./statusConnexion.json',"temporary"))
+  	  //customData = require('./statusConnexion.json');
+	  Alert.alert(textInput);
+	  /*if (!FileSystem.fileExists('./statusConnexion.json',"temporary"))
 	  {
 		d_s = FileSystem.delete('./statusConnexion.json',"temporary");
 	  }
@@ -198,6 +182,7 @@ export default class Index extends Component {
 		  Alert.alert("Shit");
 	  const fileContents = '{"connexion":0}';
 	  w_s = FileSystem.writeToFile('./statusConnexion.json', fileContents, "temporary");
+	  */
 	  //Alert.alert(textInput+d_s+w_s);
   };
   
@@ -244,7 +229,7 @@ const styles = StyleSheet.create({
 	  },
 	  imageBackground: {
 			width: width_window,
-			height: height_window*0.92,
+			height: height_window,
 	  },
 	  picker: {
 			flexBasis: 120,

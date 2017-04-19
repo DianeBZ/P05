@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import EnTete from './enTete';
 import Inscription from './inscription';
-//var connexion = flase;
 
 export default class inscription extends Component {
   /*

@@ -25,140 +25,145 @@ export default class ContenuMenu extends Component {
    render() {
 
       return (
+		<View style={{flex:1, backgroundColor: '#fff'}}>
+		{(() => {
+			if (connection == 0)
+				return (
+					 // Non Connecté
+					 <View>
 
-         // Non Connecté
-         <View style={{flex:1, backgroundColor: '#fff'}}>
+						<TouchableHighlight onPress={()=>this.navigate('BeneficesEntreprise')} >
+						   <Text style={styles.titreMenu}>Pourquoi RMOpportunities ?</Text>
+						</TouchableHighlight>
+						<View style={styles.separation}></View>
 
-            <TouchableHighlight onPress={()=>this.navigate('BeneficesEntreprise')} >
-               <Text style={styles.titreMenu}>Pourquoi RMOpportunities ?</Text>
-            </TouchableHighlight>
-            <View style={styles.separation}></View>
+						<TouchableHighlight >
+						   <Text style={styles.titreMenu}>Offres</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Voir les offres</Text>
+						</TouchableHighlight>
+						<TouchableHighlight onPress={()=>this.navigate('CreerAnnonce')}>
+						   <Text style={styles.sousTitreMenu}>Proposer une offre</Text>
+						</TouchableHighlight>
 
-            <TouchableHighlight >
-               <Text style={styles.titreMenu}>Offres</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Voir les offres</Text>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={()=>this.navigate('CreerAnnonce')}>
-               <Text style={styles.sousTitreMenu}>Proposer une offre</Text>
-            </TouchableHighlight>
+						<View style={styles.separation}></View>
+						<Text style={styles.titreMenu}>Conseils</Text>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Acheter</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Vendre</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Réutiliser</Text>
+						</TouchableHighlight>
 
-            <View style={styles.separation}></View>
-            <Text style={styles.titreMenu}>Conseils</Text>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Acheter</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Vendre</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Réutiliser</Text>
-            </TouchableHighlight>
+						<View style={styles.separation}></View>
+						<Text style={styles.titreMenu}>A Propos</Text>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>L'équipe</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Nos Soutiens</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Presse</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Blog</Text>
+						</TouchableHighlight>
 
-            <View style={styles.separation}></View>
-            <Text style={styles.titreMenu}>A Propos</Text>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>L'équipe</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Nos Soutiens</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Presse</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Blog</Text>
-            </TouchableHighlight>
+						<View style={styles.separation}></View>
+						<Text style={styles.titreMenu}>Découvrir</Text>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Notre manifeste</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>Nos tarifs</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>FAQ</Text>
+						</TouchableHighlight>
 
-            <View style={styles.separation}></View>
-            <Text style={styles.titreMenu}>Découvrir</Text>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Notre manifeste</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>Nos tarifs</Text>
-            </TouchableHighlight>
-            <TouchableHighlight >
-               <Text style={styles.sousTitreMenu}>FAQ</Text>
-            </TouchableHighlight>
+						<View style={styles.separation}></View>
+						<TouchableHighlight >
+						   <Text style={styles.titreMenu}>Contact</Text>
+						</TouchableHighlight>
+					 </View>
+					);
+			else
+				return(
+				
+					 // Connecté
+					 <View>
 
-            <View style={styles.separation}></View>
-            <TouchableHighlight >
-               <Text style={styles.titreMenu}>Contact</Text>
-            </TouchableHighlight>
-         </View>
+						 <TouchableHighlight onPress={this.onPressInscription} >
+						 <Text style={styles.titreMenu}>Mon Compte</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Mes alertes produits</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Mes annonces</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Mes négociations</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Mes mises en relation</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Mes factures</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Modifier mon compte</Text>
+						 </TouchableHighlight>
 
-         // Connecté
-         /*<View style={{flex:1, backgroundColor: '#fff'}}>
+						 <View style={styles.separation}></View>
 
-         <TouchableHighlight onPress={this.onPressInscription} >
-         <Text style={styles.titreMenu}>Mon Compte</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Mes alertes produits</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Mes annonces</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Mes négociations</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Mes mises en relation</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Mes factures</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Modifier mon compte</Text>
-         </TouchableHighlight>
+						 <TouchableHighlight onPress={this._onPressBouton}>
+						 <Text style={styles.titreMenu}>Offres</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Voir les offres</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Proposer une offre</Text>
+						 </TouchableHighlight>
 
-         <View style={styles.separation}></View>
+						 <View style={styles.separation}></View>
+						 <Text style={styles.titreMenu}>Conseils</Text>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Acheter</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Vendre</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Réutiliser</Text>
+						 </TouchableHighlight>
 
-         <TouchableHighlight onPress={this._onPressBouton}>
-         <Text style={styles.titreMenu}>Offres</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Voir les offres</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Proposer une offre</Text>
-         </TouchableHighlight>
+						 <View style={styles.separation}></View>
+						 <Text style={styles.titreMenu}>Découvrir</Text>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>Nos tarifs</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>FAQ</Text>
+						 </TouchableHighlight>
 
-         <View style={styles.separation}></View>
-         <Text style={styles.titreMenu}>Conseils</Text>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Acheter</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Vendre</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Réutiliser</Text>
-         </TouchableHighlight>
+						 <View style={styles.separation}></View>
+						 <Text style={styles.titreMenu}>A Propos</Text>
 
-         <View style={styles.separation}></View>
-         <Text style={styles.titreMenu}>Découvrir</Text>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>Nos tarifs</Text>
-         </TouchableHighlight>
-         <TouchableHighlight >
-         <Text style={styles.sousTitreMenu}>FAQ</Text>
-         </TouchableHighlight>
-
-         <View style={styles.separation}></View>
-         <Text style={styles.titreMenu}>A Propos</Text>
-
-
-
-
-         <View style={styles.separation}></View>
-         <TouchableHighlight >
-         <Text style={styles.titreMenu}>Contact</Text>
-         </TouchableHighlight>
-         </View>*/
-
+						 <View style={styles.separation}></View>
+						 <TouchableHighlight >
+						 <Text style={styles.titreMenu}>Contact</Text>
+						 </TouchableHighlight>
+					 </View>
+				);
+		 })()}
+		 </View>
       );
    }
    navigate(property) {
