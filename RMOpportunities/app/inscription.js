@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     mainWindow:{
-        width: width/**0.9*/,
+        width: width,
         height: height,
         backgroundColor: "#FFFFFF",
         alignItems: 'center',

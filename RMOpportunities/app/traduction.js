@@ -18,6 +18,19 @@ export default{
         "vit": "Vitamines",
         "autres": "Autres",
         "trouver_par": "trouver par nom, n° CAS",
+        
+        "connect": "Connectez-vous",
+        "se_co": "Se connecter",
+        "nom_mail": "Nom ou e-mail entreprise",
+        "mdp": "Mot de passe",
+        "mdp_oublie": "Mot de passe oublié?",
+        "co_linkedin": "Se connecter avec Linkedin",
+        "ou": "OU",
+        
+        "inscript": "Inscrivez-vous",
+        "text_ins": "L'inscription de votre société sur RMOpportunities est simple, rapide et gratuite",
+        "ins_linkedin": "S'inscrire avec Linkedin",
+        "ins3etapes": "Démarrer l'inscription en 3 étapes"
     },
     en: {
         "connexion": "Login",
@@ -38,5 +51,18 @@ export default{
         "vit": "Vitamins",
         "autres": "Others",
         "trouver_par": "search by name, CAS number",
+        
+        "connect": "Log in",
+        "se_co": "Log in",
+        "nom_mail": "Company name or representative email address",
+        "mdp": "Password",
+        "mdp_oublie": "Forgot your password?",
+        "co_linkedin": "Sign in with Linkedin",
+        "ou": "OR",
+        
+        "inscript": "Sign up",
+        "text_ins": "Create an account of your company on RMOpportunities is easy, quick and free",
+        "ins_linkedin": "Sign up with Linkedin",
+        "ins3etapes": "Sign up in 3 steps"
     }
 }

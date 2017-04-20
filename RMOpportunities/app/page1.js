@@ -14,15 +14,13 @@ import {
   ToastAndroid,
   Navigator,
 } from 'react-native';
-import EnTete from './enTete';
 import Connexion from './connexion';
 import inscription from './page3';
 import FileSystem from 'react-native-filesystem';
 
 import Trad from './traduction';
-var lang = 'fr';
-var selected2 = 'fr';
-var selectedKey2 = 'Français';
+var selected2 = global.lang;
+var selectedKey2 /*= 'Français'*/;
 
 var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
@@ -58,25 +56,12 @@ export default class Index extends Component {
 						else
 							return (
 								<View style={styles.containerButton}>
-									<TouchableHighlight>
-										<View>
-											<Button
-												onPress={this.onPressConnexion}
-												title={Trad[lang].connexion}
-												style={{flexBasis: 70}}
-											/>
-										</View>
-									</TouchableHighlight>
-									<TouchableHighlight>
-										<View>
-											<Button
-												onPress={this.onPressInscription}
-												title={Trad[lang].inscription}
-												color="#841584"
-												style={{flexBasis: 70}}
-											/>
-										</View>
-									</TouchableHighlight>
+                                    <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width_window*0.4, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
+                                        <Text style={[styles.buttonText, {color:'black'}]}>{Trad[lang].connexion}</Text>
+                                    </TouchableHighlight>
+                                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width_window*0.4, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
+                                        <Text style={styles.buttonText}>{Trad[lang].inscription}</Text>
+                                    </TouchableHighlight>
 								</View>
 							);
 						})()}
@@ -112,16 +97,9 @@ export default class Index extends Component {
 						</View>
 
 						<View style={styles.containerButtonR}>
-							<TouchableHighlight>
-							 <View>
-								<Button
-									onPress={this.onPressRecherche}
-									title={Trad[lang].recherche}
-									color="#64FE2E"
-									style={{flexBasis: 70}}
-								/>
-							 </View>
-							</TouchableHighlight>
+                            <TouchableHighlight onPress={this.onPressRecherche} style={{height: width_window*0.09, width: width_window*0.3, backgroundColor:'#A4D04A', justifyContent:'center'}} underlayColor="rgb(138,183,46)">
+                                <Text style={styles.buttonText}>{Trad[lang].recherche}</Text>
+                            </TouchableHighlight>
 						</View>
                         <View style={styles.containerPicker}>
                         <Picker
@@ -212,14 +190,14 @@ export default class Index extends Component {
 }
 
 const styles = StyleSheet.create({
-	  container: {
+	container: {
 			flex: 1,
 			justifyContent: 'center',
 			alignItems: 'center',
 			backgroundColor: '#F5FCFF',
 			flexDirection: 'column',
-	  },
-	  containerButton: {
+	},
+	containerButton: {
 			flexGrow: 0,
 			flexShrink: 0,
 			justifyContent: 'center',
@@ -227,16 +205,16 @@ const styles = StyleSheet.create({
 			flexDirection: 'column',
 			height: 350,
 			alignSelf: 'center',
-	  },
-	  containerButtonR: {
+	},
+	containerButtonR: {
 			flexGrow: 0,
 			flexShrink: 0,
 			justifyContent: 'center',
 			alignItems: 'center',
 			flexDirection: 'column',
 			alignSelf: 'center',
-	  },
-	  containerPicker: {
+	},
+	containerPicker: {
 			flexGrow: 0,
 			flexShrink: 0,
 			justifyContent: 'center',
@@ -245,20 +223,31 @@ const styles = StyleSheet.create({
 			width: width_window,
 			height:50,
 			alignSelf: 'center',
-	  },
-	  imageBackground: {
+	},
+	imageBackground: {
 			width: width_window,
 			height: height_window,
-	  },
-	  picker: {
+	},
+	picker: {
 			flexBasis: 120,
 			backgroundColor: '#FFFFFF',
 			padding:5,
-	  },
-	  textInput: {
+	},
+	textInput: {
 			flexBasis: 215,
 			backgroundColor: '#a9a9a9',
-	  }
+	},
+    button:{
+        height: width_window*0.09,
+        marginTop: 20,
+        justifyContent: 'center',
+        borderRadius:5,
+    },
+    buttonText:{
+        color: "white",
+        textAlign: "center",
+        fontSize: 20,
+    },
 });
 
 module.exports = Index;

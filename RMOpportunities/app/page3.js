@@ -6,16 +6,15 @@ import {
   View,
   TouchableHighlight,
   BackAndroid,
+  Dimensions,
 } from 'react-native';
-import EnTete from './enTete';
+import Trad from './traduction';
 import Inscription from './inscription';
 
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
+
 export default class inscription extends Component {
-  /*
-  constructor(props) {
-	  super(props);
-  }
-  */
 
   _onPressBouton(){
     console.log('press Linkedin');
@@ -25,31 +24,29 @@ export default class inscription extends Component {
     BackAndroid.addEventListener('backToIndex', this.onBackAndroid);
     return (
       <View style={styles.container1}>
-        <EnTete/>
-        <Text style={styles.inscrire}>
-          Inscrivez-vous
+        <View style={{height: height * 0.08}}/>
+        <Text style={styles.titre}>
+            {Trad[lang].inscript}
         </Text>
         <View style={styles.subContainer}>
           <View style={styles.sContainerPre}>
             <Text style={styles.presentation}>
-              L{'\''}inscription de votre société
-              sur RMOpportunities est
-              simple,rapide et gratuite.
+                {Trad[lang].text_ins}
             </Text>
           </View>
           <View style={styles.sContainerSpace}/>
           <View style={styles.sContainerBontons}>
-            <TouchableHighlight style={styles.boutonLinkedin} onPress={this._onPressBouton}>
+            <TouchableHighlight style={styles.boutonLinkedin} onPress={this._onPressBouton} underlayColor="rgb(0,140,201)">
               <Text style={styles.textLinkedin}>
-              S{'\''}inscrire avec Linkedin
+                  {Trad[lang].ins_linkedin}
               </Text>
             </TouchableHighlight>
-            <Text style={styles.textOu}>
-            ou
+            <Text style={{color:'grey', marginTop:20}}>
+                {Trad[lang].ou}
             </Text>
-            <TouchableHighlight style={styles.boutonDemarrage} onPress={this.onPressInscription}>
+            <TouchableHighlight style={styles.boutonDemarrage} onPress={this.onPressInscription} underlayColor="rgb(138,183,46)">
               <Text style={styles.textLinkedin}>
-              Démarrer l{'\''}inscription en 3 étapes
+                  {Trad[lang].ins3etapes}
               </Text>
             </TouchableHighlight>
           </View>
@@ -90,12 +87,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F2F2',
   },
   subContainer:{
-    margin:10,
+    //margin:10,
     backgroundColor:'#FFFFFF',
     flex: 1,
   },
   sContainerPre:{
-    backgroundColor:'#D3E9A5',
+    backgroundColor:'#A4D04A',
     flex: 2,
   },
   sContainerSpace:{
@@ -106,11 +103,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
-  inscrire: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
+   titre:{
+       fontSize: 32,
+       textAlign: 'center',
+       color: '#000000',
+       marginTop: 15,
+       marginBottom: 10
+   },
 
   presentation: {
     marginTop:  50,
@@ -122,7 +121,7 @@ const styles = StyleSheet.create({
     height:40,
     width:300,
     borderRadius:5,
-    backgroundColor:'#008CC9',
+    backgroundColor:'rgb(0,160,220)',
     justifyContent:'center',
   },
 
@@ -131,12 +130,6 @@ const styles = StyleSheet.create({
       color:'white',
       fontSize:20,
     },
-  textOu:{
-    textAlign:"center",
-    color:'black',
-    fontSize:15,
-    marginTop:20,
-  },
 
   boutonDemarrage:{
     marginTop:20,

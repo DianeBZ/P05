@@ -26,7 +26,9 @@ import EnTeteClient from './enTeteClient';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+
 global.connection = 0;//this is a global value which determines if the state is connected or not(0:not connected,1:connected).
+global.lang = 'fr';
 
 // In generation, you shouldn't change the contents which are under this comment.
 export default class Navigation extends React.Component {

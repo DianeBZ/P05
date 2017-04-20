@@ -14,7 +14,7 @@ import {
   DeviceEventEmitter,
 } from 'react-native';
 
-import EnTete from './enTete';
+import Trad from './traduction';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -46,20 +46,20 @@ export default class Connexion extends Component {
           <View style={{height: height * 0.08}}/>
           <View style={styles.window}>
             <Text style={styles.titre}>
-                Connectez-vous
+                {Trad[lang].connect}
             </Text>
             <View style={styles.mainWindow}>
-                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder="Nom ou e-mail entreprise" />
-                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder="Mot de passe" />
+                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Trad[lang].nom_mail} />
+                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Trad[lang].mdp} />
                 <Text style={{color:'grey', marginTop:20}}>
-                    Mot de passe oublié?
+                    {Trad[lang].mdp_oublie}
                 </Text>
                 <TouchableHighlight onPress={this._onPressButton.bind(this)} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
-                    <Text style={styles.buttonText}>Se connecter </Text>
+                    <Text style={styles.buttonText}>{Trad[lang].se_co}</Text>
                 </TouchableHighlight>
-                <Text style={{color:'grey', marginTop:20}}> OU </Text>
+                <Text style={{color:'grey', marginTop:20}}>{Trad[lang].ou}</Text>
                 <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.65, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
-                    <Text style={styles.buttonText}>Se connecter avec Linkedin </Text>
+                    <Text style={styles.buttonText}>{Trad[lang].co_linkedin}</Text>
                 </TouchableHighlight>
             </View>
           </View>
