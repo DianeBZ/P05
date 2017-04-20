@@ -9,21 +9,18 @@ import {
    BackAndroid,
    TouchableHighlight,
    Navigator,
-
-
+   Picker,
 } from 'react-native';
-
-
-
+var width_window = Dimensions.get('window').width;
 import Index from './page1';
 
 import BeneficesEntreprise from './page10';
 import CreerAnnonce from './creer_annonce';
+
+var selectedKey;
+
 export default class ContenuMenu extends Component {
-
-
    render() {
-
       return (
 		<View style={{flex:1, backgroundColor: '#fff'}}>
 		{(() => {
@@ -90,6 +87,16 @@ export default class ContenuMenu extends Component {
 						<TouchableHighlight >
 						   <Text style={styles.titreMenu}>Contact</Text>
 						</TouchableHighlight>
+                        
+                        <View>
+                        <Picker
+							selectedValue={lang}
+							onValueChange={this._onLangChange.bind(this,'value')}
+							style={styles.picker} >
+							<Picker.Item label="Français" value='fr' />
+							<Picker.Item label="English" value='en' />  
+                        </Picker>
+                        </View>
 					 </View>
 					);
 			else
@@ -160,12 +167,28 @@ export default class ContenuMenu extends Component {
 						 <TouchableHighlight >
 						 <Text style={styles.titreMenu}>Contact</Text>
 						 </TouchableHighlight>
+                         
+                         <View>
+                        <Picker
+							selectedValue={lang}
+							onValueChange={this._onLangChange.bind(this,'value')}
+							style={styles.picker} >
+							<Picker.Item label="Français" value='fr' />
+							<Picker.Item label="English" value='en' />  
+                        </Picker>
+                        </View>
 					 </View>
 				);
 		 })()}
 		 </View>
       );
    }
+    _onLangChange = (key: string, value: string) => {
+        lang = value;
+        selectedKey = key;
+		this.forceUpdate();
+        this.props.closeDrawer();
+    };
    navigate(property) {
       console.log(property)
       this.props.closeDrawer();
@@ -223,4 +246,14 @@ const styles = StyleSheet.create({
       marginLeft:20,
       borderTopColor:"#A4D04A",
    },
+   	containerPicker: {
+			flexGrow: 0,
+			flexShrink: 0,
+			justifyContent: 'center',
+			flexWrap: 'wrap',
+			flexDirection: 'row',
+			width: width_window,
+			height:50,
+			alignSelf: 'center',
+	},
 });

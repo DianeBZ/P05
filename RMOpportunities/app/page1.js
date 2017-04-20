@@ -13,14 +13,14 @@ import {
   BackAndroid,
   ToastAndroid,
   Navigator,
+  ScrollView,
 } from 'react-native';
 import Connexion from './connexion';
 import inscription from './page3';
 import FileSystem from 'react-native-filesystem';
 
 import Trad from './traduction';
-var selected2 = global.lang;
-var selectedKey2 /*= 'Français'*/;
+var selectedKey2;
 
 var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
@@ -44,7 +44,7 @@ export default class Index extends Component {
 	render() {
 		BackAndroid.addEventListener('Exit',this.onBackAndroid);
 		return (
-			<View style={styles.container}>
+			<ScrollView>
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
@@ -101,24 +101,14 @@ export default class Index extends Component {
                                 <Text style={styles.buttonText}>{Trad[lang].recherche}</Text>
                             </TouchableHighlight>
 						</View>
-                        <View style={styles.containerPicker}>
-                        <Picker
-							selectedValue={lang}
-							onValueChange={this._onLangChange.bind(this,'value')}
-							style={styles.picker} >
-							<Picker.Item label="Français" value='fr' />
-							<Picker.Item label="English" value='en' />  
-                        </Picker>
-                        </View>
 					</Image>
 				</View>
-			</View>
+			</ScrollView>
 		);
 	}
     _onLangChange = (key: string, value: string) => {
         lang = value;
         selectedKey2 = key;
-		selected2 = value;
 		this.forceUpdate();
     };
 	//Get the key words from user's choice.(catagories)
