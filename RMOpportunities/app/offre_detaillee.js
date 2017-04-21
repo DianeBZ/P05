@@ -12,13 +12,19 @@ var produit = 'false';
 var info = 'false';
 var description = 'false';
 
+export default class Offres extends Component {
 
-
-class InformationOffre extends Component{
-
- render(){
-     return(
-       <View>
+  render() {
+    return(
+		<ScrollView>
+			<EnTete/>
+			<View style={styles.corps}>
+				<Text style={styles.titre}>Benzoate de sodium</Text>
+				<Text style={styles.depot}>Déposée le : 2nov.2016</Text>
+				<Image source={require('../img/depot_annonce.jpg')} style = {styles.img} />
+				<Text>Note du créateur : 4.5/5 (2notes)</Text>
+			</View>
+			<View>
        {(() => {
            if (produit==='true'){
              return(
@@ -96,9 +102,18 @@ class InformationOffre extends Component{
 								</View>
 								
 								<View style={styles.largeur}>
-									<TouchableHighlight onPress={this._onPressProduit}>
-										<Text style={styles.info}>Se connecter</Text>
-									</TouchableHighlight>
+								{(() => {
+									if (connection === 0)
+										return (
+											<TouchableHighlight onPress={this._onPressNC}>
+												<Text style={[styles.info, {color:'#A4D04A'}]}>Se connecter</Text>
+											</TouchableHighlight>
+										);
+									else
+										return(
+											<Text style={styles.info}>35euro</Text>
+										);
+								})()}		
 								</View>
 								<View style={styles.largeur}>	
 									<Text style={styles.info}>1 janv. 2019</Text>
@@ -158,10 +173,65 @@ class InformationOffre extends Component{
              }
        })()}
        </View>
-     );
- }
-
-
+			{(() => {
+			if (connection === 0)
+				return (
+					<View style={styles.containerButton}>
+					<TouchableHighlight onPress={this._onPressNC} style={[styles.button, {backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+							<Text style={styles.buttonText}>Plus d information </Text>
+					</TouchableHighlight>
+					<View style={styles.espace}></View>
+					<TouchableHighlight onPress={this._onPressNC} style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
+							<Text style={styles.buttonText}>Commencer les négociations</Text>
+					</TouchableHighlight>
+			</View>
+				);
+			else
+				return(
+					<View style={styles.containerButton}>
+					<TouchableHighlight onPress={this._onPressPlusInfoC} style={[styles.button, {backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+							<Text style={styles.buttonText}>Plus d information </Text>
+					</TouchableHighlight>
+					<View style={styles.espace}></View>
+					<TouchableHighlight onPress={this._onPressNegociationC} style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
+							<Text style={styles.buttonText}>Commencer les négociations</Text>
+					</TouchableHighlight>
+			</View>
+			);
+			})()}
+		</ScrollView>
+	);
+  }
+_onPressNC = () => {
+	BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+	const { navigator } = this.props;
+	if (navigator) {
+		navigator.push({
+			name: 'SeConnecter',
+			component: SeConnecter,
+		})
+	}
+};
+_onPressPlusInfoC = () => {
+	BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+	const { navigator } = this.props;
+	if (navigator) {
+		navigator.push({
+			name: 'SeConnecter',
+			component: SeConnecter,
+		})
+	}
+};
+_onPressNegociationC = () => {
+	BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+	const { navigator } = this.props;
+	if (navigator) {
+		navigator.push({
+			name: 'SeConnecter',
+			component: SeConnecter,
+		})
+	}
+};
 _onPressProduit = () =>{
  if(produit === 'true'){
    produit = 'false';
@@ -192,37 +262,6 @@ _onPressDescription = () =>{
  }
  this.forceUpdate();
 };
-
-
-
-}
-
-export default class Offres extends Component {
-
-  render() {
-    return(
-		<ScrollView>
-			<EnTete/>
-			<View style={styles.corps}>
-				<Text style={styles.titre}>Benzoate de sodium</Text>
-				<Text style={styles.depot}>Déposée le : 2nov.2016</Text>
-				<Image source={require('../img/depot_annonce.jpg')} style = {styles.img} />
-				<Text>Note du créateur : 4.5/5 (2notes)</Text>
-			</View>
-			<InformationOffre/>
-			<View style={styles.containerButton}>
-				<TouchableHighlight onPress={this._onPressPlusInfo} style={[styles.button, {backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
-						<Text style={styles.buttonText}>Plus d information </Text>
-				</TouchableHighlight>
-				<View style={styles.espace}></View>
-				<TouchableHighlight onPress={this._onPressNegociation} style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
-						<Text style={styles.buttonText}>Commencer les négociations</Text>
-				</TouchableHighlight>
-			</View>
-		</ScrollView>
-	);
-  }
- 
 }
 
 const styles = StyleSheet.create({
