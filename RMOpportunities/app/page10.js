@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,ViewPagerAndroid, Dimensions, TouchableHighlight, Alert} from 'react-native';
+import { AppRegistry, Text, Image, View,ScrollView, StyleSheet,ViewPagerAndroid, Dimensions, TouchableHighlight, Alert} from 'react-native';
 import EnTete from './enTete';
 
 var width = Dimensions.get('window').width;
@@ -218,7 +218,7 @@ class BloqueFonction extends Component{
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
-                 <View style = {styles.cliqueDecoupage}>
+                 <View style = {[styles.cliqueDecoupage, {marginBottom: width *0.1}]}>
                    <View style = {styles.cliqueTitre}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
                      <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
@@ -347,11 +347,11 @@ export default class BeneficesEntreprise extends Component {
    };
 
     return (
-      <View>
+      <ScrollView>
        <EnTete/>
        <Text style={styles.intro}>Les bénéfices pour votre entreprises :</Text>
        <BloqueFonction/>
-     </View>
+     </ScrollView>
     );
   }
 }
@@ -392,7 +392,7 @@ const styles = StyleSheet.create({
 
   cliqueDecoupage: {
     width: height*0.38,
-    height:height*0.3,
+    height:height*0.27,
     borderWidth:1,
     borderColor: '#A4D04A',
     backgroundColor:'white',
