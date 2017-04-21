@@ -1,5 +1,8 @@
 export default{
     fr: {
+        "compte": "Mon compte",
+        "deco": "Déconnexion",
+        
         "connexion": "Connexion",
         "inscription": "Inscription",
         "recherche": "Recherche",
@@ -38,6 +41,9 @@ export default{
         "choix_gallerie": "Choisir depuis la gallerie"
     },
     en: {
+        "compte": "My account",
+        "deco": "Sign out",
+        
         "connexion": "Login",
         "inscription": "Sign Up",
         "recherche": "Search",

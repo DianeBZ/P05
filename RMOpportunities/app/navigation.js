@@ -95,12 +95,12 @@ export default class Navigation extends React.Component {
 									<Image source={pic2} style={styles.menu}/>
 								 </TouchableHighlight>
 							  ); },
-							  RightButton: (route, navigator, index, navState) => { return (<EnTeteClient style={styles.icone}/>);},
+							  RightButton: (route, navigator, index, navState) => { return (<EnTeteClient/>);},
 							  Title: (route, navigator, index, navState) => { return (  <TouchableHighlight onPress={()=>this.goToHomePage()}>
 							  <Image source={pic1} style={styles.title}/>
 						   </TouchableHighlight>); },
 						   }}
-						   style={{backgroundColor: '#F2F2F2', borderWidth: 1, borderColor: "#000000",width: width, height: height * 0.08,}}
+						   style={{backgroundColor: '#F2F2F2', borderBottomWidth: 1, borderBottomColor: "#000000",width: width, height: height * 0.08,}}
 						   />} 
 						/>
 					);
@@ -128,7 +128,7 @@ export default class Navigation extends React.Component {
 							  <Image source={pic1} style={styles.title}/>
 						   </TouchableHighlight>); },
 						   }}
-						   style={{backgroundColor: '#F2F2F2', borderWidth: 1, borderColor: "#000000",width: width, height: height * 0.08,}}
+						   style={{backgroundColor: '#F2F2F2', borderBottomWidth: 1, borderBottomColor: "#000000",width: width, height: height * 0.08,}}
 						   />} 
 						/>
 					);
@@ -155,18 +155,17 @@ export default class Navigation extends React.Component {
 
 const styles = StyleSheet.create({
    title: {
-	  marginTop:15,
-      width: width*0.7,
-      height: height*0.07,
+      marginTop: 17,
+      width: width*0.6,
+      height: height*0.05,
+      
    },
    menu:{
-	  marginLeft:10,
-	  marginTop:3,
-      width: width*0.08,
-      height: height*0.07, 
-   },
-   icone:{
-      width: width*0.1,
-      height: height*0.08,
+      //width: 25,
+      //height: 35,
+      marginLeft:15,
+	  marginTop:15,
+      width: width*0.065,
+      height: height*0.04, 
    }
 });

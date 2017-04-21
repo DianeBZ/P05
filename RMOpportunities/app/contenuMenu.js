@@ -10,6 +10,7 @@ import {
    TouchableHighlight,
    Navigator,
    Picker,
+   DeviceEventEmitter,
 } from 'react-native';
 var width_window = Dimensions.get('window').width;
 import Index from './page1';
@@ -188,6 +189,7 @@ export default class ContenuMenu extends Component {
         selectedKey = key;
 		this.forceUpdate();
         this.props.closeDrawer();
+        DeviceEventEmitter.emit('nvBar');
     };
    navigate(property) {
       console.log(property)

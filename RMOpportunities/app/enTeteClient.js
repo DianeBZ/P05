@@ -11,13 +11,13 @@ import {
   Alert,
   DeviceEventEmitter,
 } from 'react-native';
+import Trad from './traduction';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 let pic=require('../img/client.png');
 var selected='key0';
-var selectedKey='P05';
 
 export default class EnTeteClient extends Component {
 
@@ -30,8 +30,8 @@ export default class EnTeteClient extends Component {
 						mode={'dropdown'}
 						style={styles.picker}
 						onValueChange={this.onValueChange.bind(this,'value')}>
-						<Picker.Item label='Mon compte' value="key1" />
-						<Picker.Item label='deconnexion' value="key2" />
+						<Picker.Item label={Trad[lang].compte} value="key1" />
+						<Picker.Item label={Trad[lang].deco} value="key2" />
 					  </Picker>
 				  </Image>
 				</View>
@@ -39,9 +39,6 @@ export default class EnTeteClient extends Component {
     }
 
     onValueChange = (key: string, value: string) => {
-  		//selectedKey = key;
-  		//selected = value;
-  		//this.forceUpdate();
       if(value=="key1")
         {
           Alert.alert('Mon compte');
@@ -56,16 +53,16 @@ export default class EnTeteClient extends Component {
 
   const styles = StyleSheet.create({
     viewContainer:{
-      width:width*0.07,
+      width:width*0.15,
 	  height:height*0.08,
     },
     picker:{
       width:width*0.07,
     },
 	icone:{
-	  marginTop: height*0.01,
-	  marginBottom: height*0.01,
-	  width: width*0.07,
+      marginTop: 5,
+	  marginLeft: 10,
+      width: width*0.11,
       height: height*0.06,
     },
 });
