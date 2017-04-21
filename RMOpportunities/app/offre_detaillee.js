@@ -96,9 +96,9 @@ class InformationOffre extends Component{
 								</View>
 								
 								<View style={styles.largeur}>
-									
-									<Text style={styles.info}>Se connecter </Text>
-									
+									<TouchableHighlight onPress={this._onPressProduit}>
+										<Text style={styles.info}>Se connecter</Text>
+									</TouchableHighlight>
 								</View>
 								<View style={styles.largeur}>	
 									<Text style={styles.info}>1 janv. 2019</Text>

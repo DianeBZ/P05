@@ -16,7 +16,7 @@ import Index from './page1';
 
 import BeneficesEntreprise from './page10';
 import CreerAnnonce from './creer_annonce';
-
+import VoirOffres from'./voir_offres';
 var selectedKey;
 
 export default class ContenuMenu extends Component {
@@ -37,7 +37,7 @@ export default class ContenuMenu extends Component {
 						<TouchableHighlight >
 						   <Text style={styles.titreMenu}>Offres</Text>
 						</TouchableHighlight>
-						<TouchableHighlight >
+						<TouchableHighlight onPress={()=>this.navigate('VoirOffres')}>
 						   <Text style={styles.sousTitreMenu}>Voir les offres</Text>
 						</TouchableHighlight>
 						<TouchableHighlight onPress={()=>this.navigate('CreerAnnonce')}>
@@ -206,7 +206,12 @@ export default class ContenuMenu extends Component {
                name: 'CreerAnnonce',
                component: CreerAnnonce,
             })
-         }else {
+         }else if (property==='VoirOffres') {
+            navigator.push({
+               name: 'VoirOffres',
+               component: VoirOffres,
+            })
+		 }else {
             {
                   console.log('Je suis pas rentré dans la condition');
 
