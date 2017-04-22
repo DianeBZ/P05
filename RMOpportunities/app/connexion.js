@@ -29,6 +29,7 @@ export default class Connexion extends Component {
 	  //Alert.alert("You tapped the button!");
 	connection=1;
 	DeviceEventEmitter.emit('nvBar');
+  // // emit the signal'nvBar' when the bouton is clicked.A listener in page1 will react
     const { navigator } = this.props;
     if (navigator && navigator.getCurrentRoutes().length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);

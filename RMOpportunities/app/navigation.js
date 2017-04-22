@@ -34,12 +34,13 @@ global.lang = 'fr';
 export default class Navigation extends React.Component {
    componentWillUnmount(){
 	   DeviceEventEmitter.remove();
-   }
-   
+   }// delete  DeviceEventEmitter
+
    componentDidMount(){
 	   DeviceEventEmitter.addListener('nvBar',this.update);
-   }
-   
+   }// add a event listener which will execute this.update() fonction in order to
+    // update the look of page1 when receiving the signal'nvBar'.
+
    closeDrawer = () => {
       this._drawer.close()
    };
@@ -47,7 +48,7 @@ export default class Navigation extends React.Component {
    openDrawer = () => {
       this._drawer.open()
    };
-   
+
    render() {
       let pic1 = require('../img/logo_rmo.png');
       let pic2 = require('../img/menuButton.png');
@@ -59,7 +60,7 @@ export default class Navigation extends React.Component {
          drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3},
          main: {paddingLeft: 3},
       }
-	  
+
       return(
          <Drawer
             ref={(ref) => this._drawer = ref}
@@ -88,7 +89,7 @@ export default class Navigation extends React.Component {
 							  let Component = route.component;
 							  return <Component {...route.params} navigator = {navigator} />
 						   }}
-						   
+
 						   navigationBar={ <Navigator.NavigationBar routeMapper={{
 							  LeftButton: (route, navigator, index, navState) => { return (
 								 <TouchableHighlight  onPress={()=>this.openDrawer()}>
@@ -101,7 +102,7 @@ export default class Navigation extends React.Component {
 						   </TouchableHighlight>); },
 						   }}
 						   style={{backgroundColor: '#F2F2F2', borderBottomWidth: 1, borderBottomColor: "#000000",width: width, height: height * 0.08,}}
-						   />} 
+						   />}
 						/>
 					);
 				else
@@ -116,7 +117,7 @@ export default class Navigation extends React.Component {
 							  let Component = route.component;
 							  return <Component {...route.params} navigator = {navigator} />
 						   }}
-						   
+
 						   navigationBar={ <Navigator.NavigationBar routeMapper={{
 							  LeftButton: (route, navigator, index, navState) => { return (
 								 <TouchableHighlight  onPress={()=>this.openDrawer()}>
@@ -129,7 +130,7 @@ export default class Navigation extends React.Component {
 						   </TouchableHighlight>); },
 						   }}
 						   style={{backgroundColor: '#F2F2F2', borderBottomWidth: 1, borderBottomColor: "#000000",width: width, height: height * 0.08,}}
-						   />} 
+						   />}
 						/>
 					);
 			})()}
@@ -158,7 +159,7 @@ const styles = StyleSheet.create({
       marginTop: 17,
       width: width*0.6,
       height: height*0.05,
-      
+
    },
    menu:{
       //width: 25,
@@ -166,6 +167,6 @@ const styles = StyleSheet.create({
       marginLeft:15,
 	  marginTop:15,
       width: width*0.065,
-      height: height*0.04, 
+      height: height*0.04,
    }
 });

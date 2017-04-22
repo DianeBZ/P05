@@ -88,21 +88,21 @@ export default class ContenuMenu extends Component {
 						<TouchableHighlight >
 						   <Text style={styles.titreMenu}>Contact</Text>
 						</TouchableHighlight>
-                        
+
                         <View>
                         <Picker
 							selectedValue={lang}
 							onValueChange={this._onLangChange.bind(this,'value')}
 							style={styles.picker} >
 							<Picker.Item label="Français" value='fr' />
-							<Picker.Item label="English" value='en' />  
+							<Picker.Item label="English" value='en' />
                         </Picker>
                         </View>
 					 </View>
 					);
 			else
 				return(
-				
+
 					 // Connecté
 					 <View>
 
@@ -168,14 +168,14 @@ export default class ContenuMenu extends Component {
 						 <TouchableHighlight >
 						 <Text style={styles.titreMenu}>Contact</Text>
 						 </TouchableHighlight>
-                         
+
                          <View>
                         <Picker
 							selectedValue={lang}
 							onValueChange={this._onLangChange.bind(this,'value')}
 							style={styles.picker} >
 							<Picker.Item label="Français" value='fr' />
-							<Picker.Item label="English" value='en' />  
+							<Picker.Item label="English" value='en' />
                         </Picker>
                         </View>
 					 </View>
@@ -187,7 +187,7 @@ export default class ContenuMenu extends Component {
     _onLangChange = (key: string, value: string) => {
         lang = value;
         selectedKey = key;
-		this.forceUpdate();
+		    this.forceUpdate();
         this.props.closeDrawer();
         DeviceEventEmitter.emit('nvBar');
     };

@@ -23,7 +23,7 @@ export default class EnTeteClient extends Component {
 
   render() {
       return (
-            
+
 				<View style={styles.viewContainer}>
 				  <Image source={pic} style={styles.icone}>
 					  <Picker
@@ -47,6 +47,7 @@ export default class EnTeteClient extends Component {
 	   {
 		  connection=0;
 		  DeviceEventEmitter.emit('nvBar');
+      // emit the signal'nvBar' when the bouton is clicked.A listener in page1 will react
 	   }
   	};
  }

@@ -17,7 +17,6 @@ import {
 } from 'react-native';
 import Connexion from './connexion';
 import inscription from './page3';
-import FileSystem from 'react-native-filesystem';
 
 import Trad from './traduction';
 var selectedKey2;
@@ -27,7 +26,6 @@ var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
 var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
-var customData = require('./statusConnexion.json');
 
 export default class Index extends Component {
 	// Init this class and add 1 boolean value to check
@@ -159,20 +157,9 @@ export default class Index extends Component {
   };
 
   onPressRecherche = () => {
-  	  //customData = require('./statusConnexion.json');
 	  Alert.alert(textInput);
-	  /*if (!FileSystem.fileExists('./statusConnexion.json',"temporary"))
-	  {
-		d_s = FileSystem.delete('./statusConnexion.json',"temporary");
-	  }
-	  else
-		  Alert.alert("Shit");
-	  const fileContents = '{"connexion":0}';
-	  w_s = FileSystem.writeToFile('./statusConnexion.json', fileContents, "temporary");
-	  */
-      //Alert.alert(textInput+d_s+w_s);
   };
-  
+
   onResponderEndEditing = (text) => {
 	textInput = text;
   };
