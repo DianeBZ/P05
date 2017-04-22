@@ -11,6 +11,7 @@ var height = Dimensions.get('window').height;
 export default class CreerAnnonce extends Component {
 
   render() {
+      BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
       <View>
         <EnTete/>
@@ -51,6 +52,7 @@ export default class CreerAnnonce extends Component {
 	  })
 	}
   };
+  
   onButtonPressProduit = () => {
      BackAndroid.removeEventListener('Exit',this.onBackAndroid);
     const { navigator } = this.props;
@@ -60,6 +62,17 @@ export default class CreerAnnonce extends Component {
         component: connexion_produit,
       })
     }
+  };
+  
+  onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
   };
 }
 

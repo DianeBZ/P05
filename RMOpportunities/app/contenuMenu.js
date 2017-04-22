@@ -13,8 +13,8 @@ import {
    DeviceEventEmitter,
 } from 'react-native';
 var width_window = Dimensions.get('window').width;
+import Trad from './traduction';
 import Index from './page1';
-
 import BeneficesEntreprise from './page10';
 import CreerAnnonce from './creer_annonce';
 import VoirOffres from'./voir_offres';
@@ -31,64 +31,68 @@ export default class ContenuMenu extends Component {
 					 <View>
 
 						<TouchableHighlight onPress={()=>this.navigate('BeneficesEntreprise')} >
-						   <Text style={styles.titreMenu}>Pourquoi RMOpportunities ?</Text>
+						   <Text style={styles.titreMenu}>{Trad[lang].pk}</Text>
 						</TouchableHighlight>
 						<View style={styles.separation}></View>
 
 						<TouchableHighlight >
-						   <Text style={styles.titreMenu}>Offres</Text>
+						   <Text style={styles.titreMenu}>{Trad[lang].offres}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight onPress={()=>this.navigate('VoirOffres')}>
-						   <Text style={styles.sousTitreMenu}>Voir les offres</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].voir_offres}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight onPress={()=>this.navigate('CreerAnnonce')}>
-						   <Text style={styles.sousTitreMenu}>Proposer une offre</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].aj_offre}</Text>
 						</TouchableHighlight>
 
 						<View style={styles.separation}></View>
-						<Text style={styles.titreMenu}>Conseils</Text>
+						<Text style={styles.titreMenu}>{Trad[lang].conseils}</Text>
 						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Acheter</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].acheter}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Vendre</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].vendre}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Réutiliser</Text>
-						</TouchableHighlight>
-
-						<View style={styles.separation}></View>
-						<Text style={styles.titreMenu}>A Propos</Text>
-						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>L'équipe</Text>
-						</TouchableHighlight>
-						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Nos Soutiens</Text>
-						</TouchableHighlight>
-						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Presse</Text>
-						</TouchableHighlight>
-						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Blog</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].reutil}</Text>
 						</TouchableHighlight>
 
 						<View style={styles.separation}></View>
-						<Text style={styles.titreMenu}>Découvrir</Text>
+						<Text style={styles.titreMenu}>{Trad[lang].a_propos}</Text>
 						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Notre manifeste</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].equipe}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>Nos tarifs</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].soutiens}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight >
-						   <Text style={styles.sousTitreMenu}>FAQ</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].presse}</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].blog}</Text>
+						</TouchableHighlight>
+
+						<View style={styles.separation}></View>
+						<Text style={styles.titreMenu}>{Trad[lang].decouvrir}</Text>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].manifeste}</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].tarifs}</Text>
+						</TouchableHighlight>
+						<TouchableHighlight >
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].faq}</Text>
 						</TouchableHighlight>
 
 						<View style={styles.separation}></View>
 						<TouchableHighlight >
-						   <Text style={styles.titreMenu}>Contact</Text>
+						   <Text style={styles.titreMenu}>{Trad[lang].contact}</Text>
 						</TouchableHighlight>
-
+                        
+                        <View style={styles.separation}></View>
+						<TouchableHighlight >
+						<Text style={styles.titreMenu}>{Trad[lang].langue}</Text>
+						</TouchableHighlight>
                         <View>
                         <Picker
 							selectedValue={lang}
@@ -102,74 +106,72 @@ export default class ContenuMenu extends Component {
 					);
 			else
 				return(
-
 					 // Connecté
 					 <View>
-
+                         <View style={styles.separation}></View>
 						 <TouchableHighlight onPress={this.onPressInscription} >
-						 <Text style={styles.titreMenu}>Mon Compte</Text>
+						 <Text style={styles.titreMenu}>{Trad[lang].compte}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Mes alertes produits</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].alertes}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Mes annonces</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].annonces}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Mes négociations</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].nego}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Mes mises en relation</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].mises_en_rel}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Mes factures</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].factures}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Modifier mon compte</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].modif_compte}</Text>
 						 </TouchableHighlight>
 
 						 <View style={styles.separation}></View>
 
 						 <TouchableHighlight onPress={this._onPressBouton}>
-						 <Text style={styles.titreMenu}>Offres</Text>
+						 <Text style={styles.titreMenu}>{Trad[lang].offres}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Voir les offres</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].voir_offres}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Proposer une offre</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].aj_offre}</Text>
 						 </TouchableHighlight>
 
 						 <View style={styles.separation}></View>
-						 <Text style={styles.titreMenu}>Conseils</Text>
+						 <Text style={styles.titreMenu}>{Trad[lang].conseils}</Text>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Acheter</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].acheter}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Vendre</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].vendre}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Réutiliser</Text>
-						 </TouchableHighlight>
-
-						 <View style={styles.separation}></View>
-						 <Text style={styles.titreMenu}>Découvrir</Text>
-						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>Nos tarifs</Text>
-						 </TouchableHighlight>
-						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>FAQ</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].reutil}</Text>
 						 </TouchableHighlight>
 
 						 <View style={styles.separation}></View>
-						 <Text style={styles.titreMenu}>A Propos</Text>
-
-						 <View style={styles.separation}></View>
+						 <Text style={styles.titreMenu}>{Trad[lang].decouvrir}</Text>
+                         <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].manifeste}</Text>
+						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.titreMenu}>Contact</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].tarifs}</Text>
+						 </TouchableHighlight>
+						 <TouchableHighlight >
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].faq}</Text>
 						 </TouchableHighlight>
 
-                         <View>
+                         <View style={styles.separation}></View>
+						 <TouchableHighlight >
+						 <Text style={styles.titreMenu}>{Trad[lang].langue}</Text>
+						 </TouchableHighlight>
+                         <View style={{justifyContent:'flex-start'}}>
                         <Picker
 							selectedValue={lang}
 							onValueChange={this._onLangChange.bind(this,'value')}
@@ -187,7 +189,6 @@ export default class ContenuMenu extends Component {
     _onLangChange = (key: string, value: string) => {
         lang = value;
         selectedKey = key;
-		    this.forceUpdate();
         this.props.closeDrawer();
         DeviceEventEmitter.emit('nvBar');
     };
@@ -195,9 +196,7 @@ export default class ContenuMenu extends Component {
       console.log(property)
       this.props.closeDrawer();
       const { navigator } = this.props.navigator.refs;
-
       if (navigator) {
-         //console.log('Je suis dans la condition');
          if (property==='BeneficesEntreprise'){
             navigator.push({
                name: 'BeneficesEntreprise',

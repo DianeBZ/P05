@@ -39,11 +39,11 @@ export default class EnTeteClient extends Component {
     }
 
     onValueChange = (key: string, value: string) => {
-      if(value=="key1")
+      if(value==="key1")
         {
           Alert.alert('Mon compte');
         }
-	  if(value=="key2")
+	  if(value==="key2")
 	   {
 		  connection=0;
 		  DeviceEventEmitter.emit('nvBar');

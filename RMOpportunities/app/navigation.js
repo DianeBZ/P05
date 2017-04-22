@@ -12,6 +12,7 @@ import {
    Dimensions,
    TouchableHighlight,
    DeviceEventEmitter,
+   BackAndroid,
 } from 'react-native';
 
 // You change './app/page1' to look the pages that you wrote.
@@ -42,12 +43,16 @@ export default class Navigation extends React.Component {
     // update the look of page1 when receiving the signal'nvBar'.
 
    closeDrawer = () => {
+       BackAndroid.removeEventListener('closeDrawer',this.closeDrawer);
       this._drawer.close()
    };
 
    openDrawer = () => {
+       BackAndroid.addEventListener('closeDrawer', this.closeDrawer);
       this._drawer.open()
    };
+   
+   
 
    render() {
       let pic1 = require('../img/logo_rmo.png');

@@ -12,6 +12,7 @@ import Offres from './offres';
 export default class VoirOffres extends Component {
 
   render() {
+      BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
 		<View>
 			<EnTete/>
@@ -61,6 +62,17 @@ export default class VoirOffres extends Component {
 			name: 'Offres',
 			component: Offres,
 		  })
+		}
+  };
+  
+  onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
 		}
   };
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View,ScrollView, StyleSheet,ViewPagerAndroid, Dimensions, TouchableHighlight, Alert} from 'react-native';
-import EnTete from './enTete';
+import { AppRegistry, Text, Image, View,ScrollView, StyleSheet, ViewPagerAndroid, Dimensions, TouchableHighlight, Alert, BackAndroid} from 'react-native';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -339,21 +338,26 @@ _onPressEnvironnement = () =>{
 
 export default class BeneficesEntreprise extends Component {
   render() {
-   let pic = {
-     uri:'https://www.rmopportunities.eu/assets/img/rmopportunities_logo.png'
-   };
-   let pic2 = {
-     uri:'http://1.bp.blogspot.com/-1RVv5r7RPUo/Vo0gNtlp6LI/AAAAAAAAAgk/jbj0epxy654/s200/menu-alt-512.png'
-   };
-
+    BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
       <ScrollView>
-       <EnTete/>
+       <View style={{height:height*0.08}}/>
        <Text style={styles.intro}>Les bénéfices pour votre entreprises :</Text>
        <BloqueFonction/>
      </ScrollView>
     );
   }
+  
+  onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 const styles = StyleSheet.create({
 
