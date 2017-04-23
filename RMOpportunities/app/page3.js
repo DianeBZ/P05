@@ -34,18 +34,17 @@ export default class inscription extends Component {
                 {Trad[lang].text_ins}
             </Text>
           </View>
-          <View style={styles.sContainerSpace}/>
-          <View style={styles.sContainerBontons}>
-            <TouchableHighlight style={styles.boutonLinkedin} onPress={this._onPressBouton} underlayColor="rgb(0,140,201)">
-              <Text style={styles.textLinkedin}>
+          <View style={styles.sContainerBoutons}>
+            <TouchableHighlight style={[styles.button, {width: width *0.85, backgroundColor:'rgb(0,160,220)'}]} onPress={this._onPressBouton} underlayColor="rgb(0,140,201)">
+              <Text style={styles.buttonText}>
                   {Trad[lang].ins_linkedin}
               </Text>
             </TouchableHighlight>
             <Text style={{color:'grey', marginTop:20}}>
                 {Trad[lang].ou}
             </Text>
-            <TouchableHighlight style={styles.boutonDemarrage} onPress={this.onPressInscription} underlayColor="rgb(138,183,46)">
-              <Text style={styles.textLinkedin}>
+            <TouchableHighlight style={[styles.button, {width: width *0.85, backgroundColor:'#A4D04A'}]} onPress={this.onPressInscription} underlayColor="rgb(138,183,46)">
+              <Text style={styles.buttonText}>
                   {Trad[lang].ins3etapes}
               </Text>
             </TouchableHighlight>
@@ -56,7 +55,6 @@ export default class inscription extends Component {
   }
 
   onBackAndroid = () => {
-    //this.props.getConnexion(connexion);
 	const { navigator } = this.props;
     if (navigator && navigator.getCurrentRoutes().length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
@@ -87,19 +85,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F2F2',
   },
   subContainer:{
-    //margin:10,
     backgroundColor:'#FFFFFF',
     flex: 1,
   },
   sContainerPre:{
     backgroundColor:'#A4D04A',
-    flex: 2,
+    height: height*0.16,
   },
-  sContainerSpace:{
-    flex:1,
-  },
-  sContainerBontons:{
-    flex:3,
+  sContainerBoutons:{
+    marginTop: height*0.06,
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
@@ -108,35 +102,23 @@ const styles = StyleSheet.create({
        textAlign: 'center',
        color: '#000000',
        marginTop: 15,
-       marginBottom: 10
+       marginBottom: 15
    },
-
   presentation: {
-    marginTop:  50,
+    marginTop: 20,
     textAlign: 'center',
     color:"black",
+    fontSize: 20,
   },
-
-  boutonLinkedin:{
-    height:40,
-    width:300,
-    borderRadius:5,
-    backgroundColor:'rgb(0,160,220)',
-    justifyContent:'center',
-  },
-
-  textLinkedin:{
-      textAlign:'center',
-      color:'white',
-      fontSize:20,
+  button:{
+        height: height*0.05,
+        marginTop: 20,
+        borderRadius:5,
+        justifyContent: 'center',
     },
-
-  boutonDemarrage:{
-    marginTop:20,
-    height:40,
-    width:300,
-    borderRadius:5,
-    backgroundColor:'#A4D04A',
-    justifyContent:'center',
-  },
+    buttonText:{
+        color: "white",
+        textAlign: "center",
+        fontSize: 20,
+    }
 });

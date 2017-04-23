@@ -18,7 +18,6 @@ import Trad from './traduction';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
-var connexion=true;
 
 export default class Connexion extends Component {
   constructor(props){
@@ -26,7 +25,6 @@ export default class Connexion extends Component {
   }
 
   _onPressButton= () => {
-	  //Alert.alert("You tapped the button!");
 	connection=1;
 	DeviceEventEmitter.emit('nvBar');
   // // emit the signal'nvBar' when the bouton is clicked.A listener in page1 will react
@@ -59,7 +57,7 @@ export default class Connexion extends Component {
                     <Text style={styles.buttonText}>{Trad[lang].se_co}</Text>
                 </TouchableHighlight>
                 <Text style={{color:'grey', marginTop:20}}>{Trad[lang].ou}</Text>
-                <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.65, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
+                <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.75, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
                     <Text style={styles.buttonText}>{Trad[lang].co_linkedin}</Text>
                 </TouchableHighlight>
             </View>
@@ -69,9 +67,6 @@ export default class Connexion extends Component {
   }
 
   onBackAndroid = () => {
-		//this.props.getConnexion(true);
-		// Uncomment the above line will change the value of 'connexion'
-		// (Return 1 value to page 1)
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {
 			BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
@@ -92,7 +87,7 @@ const styles = StyleSheet.create({
        alignItems: 'center',
    },
    mainWindow:{
-       width: width/**0.9*/,
+       width: width,
        height: height,
        backgroundColor: "#FFFFFF",
        alignItems: 'center',
@@ -105,14 +100,16 @@ const styles = StyleSheet.create({
        marginBottom: 10
    },
    textToFill:{
+       height: height* 0.06,
        width: width*0.8,
        borderWidth: 1,
        borderColor: "#000000",
        marginTop: 20,
        color: 'grey',
+       borderRadius:3,
    },
     button:{
-        height: width*0.09,
+        height: height*0.05,
         marginTop: 20,
         borderRadius:5,
         justifyContent: 'center',
