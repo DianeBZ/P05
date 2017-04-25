@@ -5,9 +5,10 @@ export default{
         
         "langue": "Langue",
         "pk": "Pourquoi RMOpportunities?",
-        "offres": "Offres",
+        "annonces": "Annonces",
         "voir_offres": "Voir les offres",
-        "aj_offre": "Ajouter une offre",
+		"voir_demande":"Voir les demandes",
+        "aj_annonce": "Ajouter une annonce",
         "conseils": "Conseils",
         "acheter": "Acheter",
         "vendre": "Vendre",
@@ -23,7 +24,7 @@ export default{
         "faq": "FAQ",
         "contact": "Contact",
         "alertes": "Mes alertes produits",
-        "annonces": "Mes annonces",
+        "mes_annonces": "Mes annonces",
         "nego": "Mes négociations",
         "mises_en_rel": "Mes mises en relation",
         "factures": "Mes factures",
@@ -81,17 +82,25 @@ export default{
         "choix_img":"Choisissez une image" ,
         "annuler": "Annuler",
         "prendre_photo": "Prendre une photo",
-        "choix_gallerie": "Choisir depuis la gallerie"
-    },
+        "choix_gallerie": "Choisir depuis la gallerie",
+		
+		"creer_ann":"Créer une annonce",
+		"commencer":"Commencer à vendre vos produits",
+		"depot_ann":"Dépôt d'annonce",
+		"texte_depot":"Vous pouvez déposer une annonce pour des produits qui n'ont jamais été utilisés et dont l'emballage n'a jamais été ouvert. Une fois le dépôt effectué, notre équipe va vérifier les informations avant de mettre en ligne le ou les produits.",
+		"aj_offre":"Ajouter une offre",
+		"aj_demande":"Ajouter une demande"
+	},
     en: {
         "compte": "My Account",
         "deco": "Sign out",
         
         "langue": "Language",
         "pk": "Why RMOpportunities?",
-        "offres": "Offers",
+        "annonces": "Classifieds",
         "voir_offres": "See offers",
-        "aj_offre": "Add an offer",
+		"voir_demande":"See demands",
+        "aj_annonce": "Add a classified",
         "conseils": "Advice",
         "acheter": "Buy",
         "vendre": "Sell",
@@ -107,7 +116,7 @@ export default{
         "faq": "FAQ",
         "contact": "Contact",
         "alertes": "My products alerts",
-        "annonces": "My classifieds",
+        "mes_annonces": "My classifieds",
         "nego": "My negotiations",
         "mises_en_rel": "My connections",
         "factures": "My invoices",
@@ -166,5 +175,12 @@ export default{
       "annuler": "Cancel",
       "prendre_photo": "Take a picture",
       "choix_gallerie": "Choose from gallery"
+	  
+	  "creer_ann":"Start creating a classified",
+	  "commencer":"Classified creation",
+	  "depot_ann":"Add a classified",
+	  "texte_depot":"Once the process of creation is over, our team will verify the information before publishing it online.",
+	  "aj_offre":"Add an offer",
+	  "aj_demande":"Add a classified"
     }
 }

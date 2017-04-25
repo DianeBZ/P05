@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
-
 import connexion_produit from './ajouter_produit_connexion';
 import connexion_demande from './ajouter_demande_connexion';
+import Trad from './traduction'
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -11,31 +11,30 @@ var height = Dimensions.get('window').height;
 export default class CreerAnnonce extends Component {
 
   render() {
-      BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
       <View>
-        <View style={{height:height*0.08}}/>
+        <View style = {{height : height*0.08}}/>
         <View style={styles.intro}>
-          <Text style={styles.introTexte}>Créer une annonce</Text>
+          <Text style={styles.introTexte}>{Trad[lang].creer_ann}</Text>
         </View>
         <View>
-          <Text style={styles.introCommencer}>Commencer à vendre vos produits</Text>
+          <Text style={styles.introCommencer}>{Trad[lang].commencer}</Text>
         </View>
         <View style={styles.depotAnnonce}>
-          <Text style={styles.depotTitre}>Dépôt d&#39;annonce</Text>
-          <Text style={styles.depotTexte}>Vous pouvez déposer une annonce pour des produits qui n&#39;ont jamais été utilisés et dont l&#39;emballage n&#39;a jamais été ouvert. Une fois le dépôt effectué, notre équipe va vérifier les informations avant de mettre en ligne le ou les produits. </Text>
+          <Text style={styles.depotTitre}>{Trad[lang].depot_ann}</Text>
+          <Text style={styles.depotTexte}>{Trad[lang].texte_depot} </Text>
         </View>
         <View style={styles.contH}>
           <View style={styles.contV}>
             <Image source={require('../img/ajouterDemande.png')} style={styles.ajouterImage}/>
             <TouchableHighlight onPress={this.onButtonPressDemande} style={styles.button} underlayColor="rgb(138,183,46)">
-                <Text style={styles.buttonText}>Ajouter une demande</Text>
+                <Text style={styles.buttonText}>{Trad[lang].aj_demande}</Text>
             </TouchableHighlight>
           </View>
           <View style={styles.contV}>
             <Image source={require('../img/ajouterProduit.png')} style={styles.ajouterImage}/>
             <TouchableHighlight onPress={this.onButtonPressProduit} style={styles.button} underlayColor="rgb(138,183,46)">
-                <Text style={styles.buttonText}>Ajouter un produit </Text>
+                <Text style={styles.buttonText}>{Trad[lang].aj_offre} </Text>
             </TouchableHighlight>
             </View>
         </View>
@@ -52,7 +51,6 @@ export default class CreerAnnonce extends Component {
 	  })
 	}
   };
-  
   onButtonPressProduit = () => {
      BackAndroid.removeEventListener('Exit',this.onBackAndroid);
     const { navigator } = this.props;
@@ -63,24 +61,11 @@ export default class CreerAnnonce extends Component {
       })
     }
   };
-  
-  onBackAndroid = () => {
-		const { navigator } = this.props;
-		if (navigator && navigator.getCurrentRoutes().length > 1) {
-			BackAndroid.removeEventListener('Back', this.onBackAndroid);
-			navigator.pop();
-			return true;
-		} else {
-			return false;
-		}
-  };
 }
 
 const styles = StyleSheet.create({
   intro:{
-    backgroundColor: '#F2F2F2',
-    borderTopColor: '#000',
-    borderTopWidth:1,
+    backgroundColor: '#F2F2F2'
 
   },
   introTexte:{
