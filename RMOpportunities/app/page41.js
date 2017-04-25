@@ -6,7 +6,6 @@ import {
   Dimensions,
   TouchableHighlight,
 } from 'react-native';
-import EnTete from './enTete';
 
 var widthWindow = Dimensions.get('window').width;
 var heightWindow = Dimensions.get('window').height;
@@ -21,7 +20,7 @@ export default class ModificationCompte extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <EnTete />
+        <View style={{height:height*0.08}}/>
           <View style={styles.containerMain}>
             <View style = {styles.containerText}>
               <Text style = {styles.title}>

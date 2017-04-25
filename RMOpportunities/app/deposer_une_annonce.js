@@ -14,8 +14,6 @@ import {
   ScrollView
 } from 'react-native';
 
-import EnTete from './enTete'
-
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 

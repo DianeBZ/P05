@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
-import EnTete from './enTete';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -15,7 +14,7 @@ export default class VoirOffres extends Component {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
 		<View>
-			<EnTete/>
+			<View style={{height:height*0.08}}/>
 			<View style = {styles.tableau}>
 				<TouchableHighlight onPress={this.onPressTTCategories} style={[styles.button, { backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)" >
 					<Text style={styles.buttonTextTTCategorie}>Toutes catégories </Text>

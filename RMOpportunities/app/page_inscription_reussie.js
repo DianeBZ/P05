@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
-import 
-{
+import {
 	StyleSheet,
 	AppRegistry,
 	Text,
 	View,
 	TouchableHighlight,
 } from 'react-native';
-import EnTete from './enTete'
-
 
 export default class EndRegistration extends Component {
   render() 
   {
     return (
       <View style={styles.container1}>
-		<EnTete/>
+		<View style={{height:height*0.08}}/>
         <Text style={styles.Inscription}>
 			Inscription réussie !
 		</Text>

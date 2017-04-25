@@ -159,7 +159,6 @@ export default class AjouterOffre extends Component{
 const styles = StyleSheet.create({
    window:{
        width: width,
-       //height: height*0.93,
        backgroundColor: '#F2F2F2',
        alignItems: 'center',
    },

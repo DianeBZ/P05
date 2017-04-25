@@ -35,14 +35,17 @@ export default class ContenuMenu extends Component {
 						</TouchableHighlight>
 						<View style={styles.separation}></View>
 
-						<TouchableHighlight >
-						   <Text style={styles.titreMenu}>{Trad[lang].offres}</Text>
+						<TouchableHighlight>
+						   <Text style={styles.titreMenu}>{Trad[lang].annonces}</Text>
 						</TouchableHighlight>
 						<TouchableHighlight onPress={()=>this.navigate('VoirOffres')}>
 						   <Text style={styles.sousTitreMenu}>{Trad[lang].voir_offres}</Text>
 						</TouchableHighlight>
+                        <TouchableHighlight>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].voir_demande}</Text>
+						</TouchableHighlight>
 						<TouchableHighlight onPress={()=>this.navigate('CreerAnnonce')}>
-						   <Text style={styles.sousTitreMenu}>{Trad[lang].aj_offre}</Text>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].aj_annonce}</Text>
 						</TouchableHighlight>
 
 						<View style={styles.separation}></View>
@@ -116,7 +119,7 @@ export default class ContenuMenu extends Component {
 						 <Text style={styles.sousTitreMenu}>{Trad[lang].alertes}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>{Trad[lang].annonces}</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].mes_annonces}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
 						 <Text style={styles.sousTitreMenu}>{Trad[lang].nego}</Text>
@@ -134,13 +137,16 @@ export default class ContenuMenu extends Component {
 						 <View style={styles.separation}></View>
 
 						 <TouchableHighlight onPress={this._onPressBouton}>
-						 <Text style={styles.titreMenu}>{Trad[lang].offres}</Text>
+						 <Text style={styles.titreMenu}>{Trad[lang].annonces}</Text>
 						 </TouchableHighlight>
 						 <TouchableHighlight >
 						 <Text style={styles.sousTitreMenu}>{Trad[lang].voir_offres}</Text>
 						 </TouchableHighlight>
+                         <TouchableHighlight>
+						   <Text style={styles.sousTitreMenu}>{Trad[lang].voir_demande}</Text>
+						</TouchableHighlight>
 						 <TouchableHighlight >
-						 <Text style={styles.sousTitreMenu}>{Trad[lang].aj_offre}</Text>
+						 <Text style={styles.sousTitreMenu}>{Trad[lang].aj_annonce}</Text>
 						 </TouchableHighlight>
 
 						 <View style={styles.separation}></View>

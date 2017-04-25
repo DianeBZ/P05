@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
-import EnTete from './enTete';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -13,7 +12,7 @@ export default class Offres extends Component {
   render() {
     return(
 		<View>
-			<EnTete/>
+			<View style={{height:height*0.08}}/>
 			<View style={styles.titre}>
 				<Text style={styles.textTitre}> Toutes catégories </Text>
 			</View>

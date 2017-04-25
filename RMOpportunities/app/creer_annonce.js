@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
-import EnTete from './enTete';
+
 import connexion_produit from './ajouter_produit_connexion';
 import connexion_demande from './ajouter_demande_connexion';
 
@@ -14,7 +14,7 @@ export default class CreerAnnonce extends Component {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
       <View>
-        <EnTete/>
+        <View style={{height:height*0.08}}/>
         <View style={styles.intro}>
           <Text style={styles.introTexte}>Créer une annonce</Text>
         </View>
