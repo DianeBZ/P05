@@ -3,9 +3,11 @@ import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,To
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+var p = "!";
 
 import Connexion from './connexion';
 import inscription from './page3';
+import Trad from './traduction';
 
 export default class AjouterProduitConnexion extends Component {
 
@@ -14,18 +16,18 @@ export default class AjouterProduitConnexion extends Component {
       <View>
         <View style={{height:height*0.08}}/>
         <View style={styles.intro}>
-          <Text style={styles.introTexte}>Ajouter un produit</Text>
+          <Text style={styles.titre}>{Trad[lang].aj_offre}</Text>
         </View>
 
         <View style={styles.corps}>
-          <Text style={styles.texte}>Veuillez vous connecter pour continuer</Text>
+          <Text style={styles.texte}>{Trad[lang].pls_co}</Text>
           <TouchableHighlight onPress={this.onPressConnexion} style={styles.button} underlayColor="rgb(138,183,46)">
-              <Text style={styles.buttonText}>Se connecter </Text>
+              <Text style={styles.buttonText}>{Trad[lang].se_co}</Text>
           </TouchableHighlight>
-          <Text style={styles.textePasCompte}> Pas de compte ? </Text>
-          <Text style={styles.texteInscrivez}>  Inscrivez vous ! </Text>
-          <TouchableHighlight onPress={this.onPressInscription} style={styles.buttonInscription} underlayColor="rgb(138,183,46)">
-              <Text style={styles.buttonText}>S&#39;inscrire </Text>
+          <Text style={styles.textePasCompte}>{Trad[lang].pas_compte}</Text>
+          <Text style={styles.texteInscrivez}>{Trad[lang].inscript + p}</Text>
+          <TouchableHighlight onPress={this.onPressInscription} style={styles.buttonInscription} underlayColor="rgb(44,67,177)">
+              <Text style={styles.buttonText}>{Trad[lang].inscription}</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -59,15 +61,14 @@ export default class AjouterProduitConnexion extends Component {
 const styles = StyleSheet.create({
   intro:{
     backgroundColor: '#F2F2F2',
-    borderTopColor: '#000',
-    borderTopWidth:1,
-
   },
-  introTexte:{
-    fontSize:25,
-    textAlign:'center',
-    margin: height*0.05,
-  },
+  titre:{
+       fontSize: 32,
+       textAlign: 'center',
+       color: '#000000',
+       marginTop: 15,
+       marginBottom: 10
+   },
   corps:{
     alignItems:'center',
   },
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
     height: width*0.09,
     width: width *0.5,
     borderRadius:5,
-    backgroundColor:'#008CC9',
+    backgroundColor:'rgb(71,95,209)',
     justifyContent:'center',
   },
   buttonText:{
