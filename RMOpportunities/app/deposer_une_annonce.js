@@ -14,11 +14,15 @@ import {
   ScrollView
 } from 'react-native';
 
+import Trad from './traduction';
+
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 var Etape1 = true;
 var Etape2 = false;
+
+var star = "*";
 
 class MenuDepotAnnonce extends Component
 {
@@ -45,7 +49,7 @@ class MenuDepotAnnonce extends Component
                     <View>
                         <View style={{flexDirection:'row', justifyContent:'flex-start', width:width}}>
                             <View style={{borderWidth:1, borderColor:'#A4D04A', height:height*0.05}}>
-                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>Etape 1: Informations produit</Text>
+                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>{Trad[lang].etape1}</Text>
                             </View>
                             <View style={{borderWidth:1, borderColor:'#A4D04A', height:height*0.05, backgroundColor:"#F2F2F2"}}>
                                 <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>2</Text>
@@ -53,19 +57,19 @@ class MenuDepotAnnonce extends Component
                             <View style={{flex:1, backgroundColor:'#F2F2F2'}}/>
                         </View>
                         <View style={{alignItems:'center'}}>
-                            <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder="Numéro d'identification*" onChangeText={(numID) => this.setState({numID})} value={this.state.numID}/>
+                            <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Trad[lang].num_id + star} onChangeText={(numID) => this.setState({numID})} value={this.state.numID}/>
                             <View style={{flexDirection:'row'}}>
-                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder="Nom*" onChangeText={(nom) => this.setState({nom})} value={this.state.nom}/>
-                                <TextInput style={styles.textToFill2} underlineColorAndroid={'transparent'} placeholder="Numéro REACH" onChangeText={(numReach) => this.setState({numReach})} value={this.state.numReach}/>
+                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder={Trad[lang].nom_prod}  onChangeText={(nom) => this.setState({nom})} value={this.state.nom}/>
+                                <TextInput style={styles.textToFill2} underlineColorAndroid={'transparent'} placeholder={Trad[lang].num_reach} onChangeText={(numReach) => this.setState({numReach})} value={this.state.numReach}/>
                             </View>
                             <View style={{flexDirection:'row'}}>
-                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder="Nomenclature douanière" onChangeText={(nomenc) => this.setState({nomenc})} value={this.state.nomenc}/>
-                                <TextInput style={styles.textToFill2} underlineColorAndroid={'transparent'} placeholder="Catégorie*" onChangeText={(categorie) => this.setState({categorie})} value={this.state.categorie}/>
+                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder={Trad[lang].nom_douane} onChangeText={(nomenc) => this.setState({nomenc})} value={this.state.nomenc}/>
+                                <TextInput style={styles.textToFill2} underlineColorAndroid={'transparent'} placeholder={Trad[lang].categorie + star} onChangeText={(categorie) => this.setState({categorie})} value={this.state.categorie}/>
                             </View>
                         </View>
                         <View style={{alignItems:'center'}}>
                             <TouchableHighlight onPress={this._changeStep} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
-                                <Text style={styles.buttonText}>Suivant</Text>
+                                <Text style={styles.buttonText}>{Trad[lang].suivant}</Text>
                             </TouchableHighlight>
                         </View>
                     </View>
@@ -78,44 +82,44 @@ class MenuDepotAnnonce extends Component
                                 <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>1</Text>
                             </View>
                             <View style={{borderWidth:1, borderColor:'#A4D04A', height:height*0.05}}>
-                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>Etape 2: Détails de l'annonce</Text>
+                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>{Trad[lang].etape2}</Text>
                             </View>
                             <View style={{flex:1, backgroundColor:'#F2F2F2'}}/>
                         </View>
 						<Text style={[styles.sousTitre, {marginLeft:12}]}>
-							Description*
+							{Trad[lang].description + star}
 						</Text>
 						<View style={{alignItems:'center'}}>
-                            <TextInput style={styles.textToFill3} underlineColorAndroid={'transparent'} placeholder="Vous pouvez indiquer ici les volumes des contenants, les prix liés au transport..." onChangeText={(description) => this.setState({description})} value={this.state.description}/>
+                            <TextInput style={styles.textToFill3} underlineColorAndroid={'transparent'} placeholder={Trad[lang].det_desc} onChangeText={(description) => this.setState({description})} value={this.state.description}/>
                         <Text numberOfLines={3}>
 							{this.state.description}
 						</Text>
 						</View>
 						
 						<Text style={[styles.sousTitre, {marginLeft:12}]}>
-							Quantité souhaitée*
+							{Trad[lang].qtte_souh + star}
 						</Text>
 						<View style={{flexDirection:'row'}}>
-                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder="Quantité" onChangeText={(qtteSouhaitee) => this.setState({qtteSouhaitee})} value={this.state.qtteSouhaitee}/>                                
+                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder={Trad[lang].qtte} onChangeText={(qtteSouhaitee) => this.setState({qtteSouhaitee})} value={this.state.qtteSouhaitee}/>                                
                         </View>
                        
 						<View style={{alignItems:'center'}}>
 						<Text numberOfLines={4}>
-                            <Text style={{color:'#000000'}}>Je confirme avoir lu et accepté les </Text>
-							<Text selectable={true} style={{color:'#A4D04A'}}>Conditions d&#39;utilisation de RMOpportunities</Text>
-							<Text style={{color:'#000000'}}>, que mes informations sont correctes et que je les maintiendrai à jour.</Text>
+                            <Text style={{color:'#000000'}}>{Trad[lang].texte_cgu1} </Text>
+							<Text selectable={true} style={{color:'#A4D04A'}}>{Trad[lang].texte_cgu2}</Text>
+							<Text style={{color:'#000000'}}>{Trad[lang].texte_cgu3}</Text>
 						</Text>
                         </View>
 						
 						<View style={{flexDirection:'row', justifyContent:'center'}}>
                             <TouchableHighlight onPress={this._changeStep} style={[styles.button, {width: width *0.27, backgroundColor:'white', borderWidth:1, borderColor:'#A4D04A'}]}>
-                                <Text style={{color:'#A4D04A', fontSize:20, textAlign:'center'}}>Précédent</Text>
+                                <Text style={{color:'#A4D04A', fontSize:20, textAlign:'center'}}>{Trad[lang].precedent}</Text>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={this._onPressSuivant2} style={[styles.button, {width: width *0.27, backgroundColor:'#A4D04A', marginLeft:10}]} underlayColor="rgb(138,183,46)">
-                                <Text style={styles.buttonText}>Terminer</Text>
+                                <Text style={styles.buttonText}>{Trad[lang].terminer}</Text>
                             </TouchableHighlight>
 							<TouchableHighlight onPress={this._onPressAnnuler} style={[styles.button, {width: width *0.27, backgroundColor:'red', marginLeft:10}]} underlayColor="rgb(138,183,46)">
-                                <Text style={styles.buttonText}>Annuler</Text>
+                                <Text style={styles.buttonText}>{Trad[lang].annuler}</Text>
                             </TouchableHighlight>
 						</View>
                         
