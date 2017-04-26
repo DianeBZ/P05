@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View,ScrollView, StyleSheet, ViewPagerAndroid, Dimensions, TouchableHighlight, Alert, BackAndroid} from 'react-native';
 
+import Trad from './traduction';
+
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
@@ -25,15 +27,15 @@ class BloqueFonction extends Component{
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Valoriser vos stocks</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
                        </View>
-                       <Text style = {styles.cliqueTexte}>Vendez vos stocks dormants, stocks morts, surstocks, stocks sans emploi, slow moving stocks. Libérez de la trésorerie et faites de la place dans vos entrepôts</Text>
+                       <Text style = {styles.cliqueTexte}>{Trad[lang].text_val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.cliqueDecoupageStatique}>
                        <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Achetez aux meilleurs prix</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -41,20 +43,20 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Gagnez du temps</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>Profitez d&#39;une grande visibilité</Text>
+                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
+                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -66,16 +68,16 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.cliqueDecoupageStatique}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Valoriser vos stocks</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Achetez aux meilleurs prix</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
                        </View>
-                       <Text style = {styles.cliqueTexte}>Trouvez des produits chimiques de qualité, de base ou de spécialité, encore dans leur emballage d&#39;origine. Comparez de nombreux stocks ni entamés ni utilisés</Text>
+                       <Text style = {styles.cliqueTexte}>{Trad[lang].text_meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -83,20 +85,20 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Gagnez du temps</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>Profitez d&#39;une grande visibilité</Text>
+                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
+                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -108,13 +110,13 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Valoriser vos stocks</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Achetez aux meilleurs prix</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -123,22 +125,22 @@ class BloqueFonction extends Component{
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Gagnez du temps</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
                        </View>
-                       <Text style = {styles.cliqueTexte}>RMOpportunities est la référence en terme de valorisation en Europe. Ne cherchez plus vos acheteurs, mettez vos stocks en ligne simplement et gratuitement</Text>
+                       <Text style = {styles.cliqueTexte}>{Trad[lang].text_gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.cliqueDecoupageStatique}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>Profitez d&#39;une grande visibilité</Text>
+                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
+                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -150,13 +152,13 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Valoriser vos stocks</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Achetez aux meilleurs prix</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -164,23 +166,23 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.cliqueDecoupageStatique}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Gagnez du temps</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.cliqueDecoupage}>
                      <View style = {styles.cliqueTitre}>
                        <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Profitez d&#39;une grande visibilité</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
                      </View>
-                     <Text style = {styles.cliqueTexte}>Chimie fine, pharma, biocide, peinture, cosmétique... tous les acteurs de la chimie sont présents. Vos stocks sont visibles par des centaines d&#39;entreprises de façon anonyme</Text>
+                     <Text style = {styles.cliqueTexte}>{Trad[lang].text_gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
+                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -192,13 +194,13 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Valoriser vos stocks</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>Achetez aux meilleurs prix</Text>
+                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -206,13 +208,13 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Gagnez du temps</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>Profitez d&#39;une grande visibilité</Text>
+                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
@@ -220,9 +222,9 @@ class BloqueFonction extends Component{
                  <View style = {[styles.cliqueDecoupage, {marginBottom: width *0.1}]}>
                    <View style = {styles.cliqueTitre}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
+                     <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
                    </View>
-                   <Text style = {styles.cliqueTexte}>Réduisez votre empreinte carbone en trouvant des stocks proches de chez vous. Participez à une économie moins consommatrice en ressources et donc plus circulaire</Text>
+                   <Text style = {styles.cliqueTexte}>{Trad[lang].text_prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -234,13 +236,13 @@ class BloqueFonction extends Component{
                      <TouchableHighlight onPress={this._onPressValoriserStocks}>
                        <View style = {styles.decoupage}>
                            <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                           <Text style = {styles.texteCarreau}>Valoriser vos stocks</Text>
+                           <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
                        </View>
                      </TouchableHighlight>
                      <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Achetez aux meilleurs prix</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
                      </View>
                      </TouchableHighlight>
                    </View>
@@ -248,20 +250,20 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Gagnez du temps</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
                      </View>
                      </TouchableHighlight>
                      <TouchableHighlight onPress={this._onPressVisibilite}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>Profitez d&#39;une grande visibilité</Text>
+                       <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
                      </View>
                      </TouchableHighlight>
                    </View>
                    <TouchableHighlight onPress={this._onPressEnvironnement}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>Protégez l&#39;environnement</Text>
+                     <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
@@ -342,7 +344,7 @@ export default class BeneficesEntreprise extends Component {
     return (
       <ScrollView>
        <View style={{height:height*0.08}}/>
-       <Text style={styles.intro}>Les bénéfices pour votre entreprises :</Text>
+       <Text style={styles.intro}>{Trad[lang].benef}</Text>
        <BloqueFonction/>
      </ScrollView>
     );
