@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
 
 import accueil from './page1';
-
+import Trad from './traduction';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
@@ -14,11 +14,11 @@ export default class CreerAnnonceFin extends Component {
 		<View>
 			<View style={{height:height*0.08}}/>
 			<View style={styles.corps}>
-				<Text style={styles.merci}>Merci !</Text>
+				<Text style={styles.merci}>{Trad[lang].merci}</Text>
 				<Image source={require('../img/merci.png')} style={styles.merciImage}/>
-				<Text style={styles.merciTexte}>L&#39;annonce a bien été créée, elle sera contrôlée par notre équipe dans les plus brefs délais</Text>
+				<Text style={styles.merciTexte}>{Trad[lang].mess_merci}</Text>
 				<TouchableHighlight onPress={this.onPressAccueil} style={styles.button} underlayColor="rgb(138,183,46)">
-					<Text style={styles.buttonText}>Accueil </Text>
+					<Text style={styles.buttonText}>{Trad[lang].retour_acc}</Text>
 				</TouchableHighlight>
 			</View>
 		</View>
@@ -38,14 +38,16 @@ export default class CreerAnnonceFin extends Component {
 
 const styles = StyleSheet.create({
 	corps:{
+		backgroundColor:"#F2F2F2",
 		alignItems:'center',
 		justifyContent: 'center',
 		
 	},
 	merci:{
+		color:"black",
 		fontSize:40,
 		textAlign:'center',
-		marginTop : width*0.19,
+		marginTop : width*0.15,
 	},
 	merciImage:{
 		height: width*0.4,
@@ -53,12 +55,13 @@ const styles = StyleSheet.create({
 		marginTop : width*0.15,
 	},
 	merciTexte:{
-		marginTop : width*0.15,
+		color:"black",
+		marginTop : width*0.1,
 		margin:width*0.05,
 		fontSize:18,
 	},
 	button:{
-		marginTop : width*0.10,
+		marginTop : 5,
 		height: width*0.09,
 		width: width *0.5,
 		borderRadius:5,

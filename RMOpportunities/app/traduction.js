@@ -90,6 +90,9 @@ export default{
 		"texte_depot":"Vous pouvez déposer une annonce pour des produits qui n'ont jamais été utilisés et dont l'emballage n'a jamais été ouvert. Une fois le dépôt effectué, notre équipe va vérifier les informations avant de mettre en ligne le ou les produits.",
 		"aj_offre":"Ajouter une offre",
 		"aj_demande":"Ajouter une demande",
+		"mess_merci":"L'annonce a bien été créée, elle sera contrôlée par notre équipe dans les plus brefs délais.",
+		"merci":"Merci !",
+		"retour_acc":"Acceuil",
 	},
     en: {
         "compte": "My Account",
@@ -182,5 +185,8 @@ export default{
 	  "texte_depot":"Once the process of creation is over, our team will verify the information before publishing it online.",
 	  "aj_offre":"Add an offer",
 	  "aj_demande":"Add a classified",
+	  "mess_merci":"Offer successfully created, it will be controlled by our team as soon as possible.",
+	  "merci":"Thank you !",
+	  "retour_acc":"Back to home page",
     }
 }

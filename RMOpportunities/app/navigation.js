@@ -21,7 +21,7 @@ import {
 import Drawer from 'react-native-drawer';
 import ContenuMenu from './contenuMenu';
 import Home from './page1';
-import Index from './page1';
+import Index from './creer_annonce_fin';
 import React from 'react';
 import EnTeteClient from './enTeteClient';
 
