@@ -89,7 +89,7 @@ export default{
 		"depot_ann":"Dépôt d'annonce",
 		"texte_depot":"Vous pouvez déposer une annonce pour des produits qui n'ont jamais été utilisés et dont l'emballage n'a jamais été ouvert. Une fois le dépôt effectué, notre équipe va vérifier les informations avant de mettre en ligne le ou les produits.",
 		"aj_offre":"Ajouter une offre",
-		"aj_demande":"Ajouter une demande"
+		"aj_demande":"Ajouter une demande",
 	},
     en: {
         "compte": "My Account",
@@ -174,13 +174,13 @@ export default{
         "choix_img":"Choose an image" ,
       "annuler": "Cancel",
       "prendre_photo": "Take a picture",
-      "choix_gallerie": "Choose from gallery"
+      "choix_gallerie": "Choose from gallery",
 	  
 	  "creer_ann":"Start creating a classified",
 	  "commencer":"Classified creation",
 	  "depot_ann":"Add a classified",
 	  "texte_depot":"Once the process of creation is over, our team will verify the information before publishing it online.",
 	  "aj_offre":"Add an offer",
-	  "aj_demande":"Add a classified"
+	  "aj_demande":"Add a classified",
     }
 }

@@ -11,6 +11,7 @@ import {
    Navigator,
    Picker,
    DeviceEventEmitter,
+   ScrollView,
 } from 'react-native';
 var width_window = Dimensions.get('window').width;
 import Trad from './traduction';
@@ -23,7 +24,7 @@ var selectedKey;
 export default class ContenuMenu extends Component {
    render() {
       return (
-		<View style={{flex:1, backgroundColor: '#fff'}}>
+		<ScrollView style={{backgroundColor:'white'}}>
 		{(() => {
 			if (connection == 0)
 				return (
@@ -139,13 +140,13 @@ export default class ContenuMenu extends Component {
 						 <TouchableHighlight onPress={this._onPressBouton}>
 						 <Text style={styles.titreMenu}>{Trad[lang].annonces}</Text>
 						 </TouchableHighlight>
-						 <TouchableHighlight >
+						 <TouchableHighlight onPress={()=>this.navigate('VoirOffres')}>
 						 <Text style={styles.sousTitreMenu}>{Trad[lang].voir_offres}</Text>
 						 </TouchableHighlight>
                          <TouchableHighlight>
 						   <Text style={styles.sousTitreMenu}>{Trad[lang].voir_demande}</Text>
 						</TouchableHighlight>
-						 <TouchableHighlight >
+						 <TouchableHighlight onPress={()=>this.navigate('CreerAnnonce')}>
 						 <Text style={styles.sousTitreMenu}>{Trad[lang].aj_annonce}</Text>
 						 </TouchableHighlight>
 
@@ -177,19 +178,19 @@ export default class ContenuMenu extends Component {
 						 <TouchableHighlight >
 						 <Text style={styles.titreMenu}>{Trad[lang].langue}</Text>
 						 </TouchableHighlight>
-                         <View style={{justifyContent:'flex-start'}}>
-                        <Picker
-							selectedValue={lang}
-							onValueChange={this._onLangChange.bind(this,'value')}
-							style={styles.picker} >
-							<Picker.Item label="Français" value='fr' />
-							<Picker.Item label="English" value='en' />
-                        </Picker>
+                         <View>
+                            <Picker
+                                selectedValue={lang}
+                                onValueChange={this._onLangChange.bind(this,'value')}
+                                style={styles.picker} >
+                                <Picker.Item label="Français" value='fr' />
+                                <Picker.Item label="English" value='en' />
+                            </Picker>
                         </View>
 					 </View>
 				);
 		 })()}
-		 </View>
+		 </ScrollView>
       );
    }
     _onLangChange = (key: string, value: string) => {
