@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
 import connexion_produit from './ajouter_produit_connexion';
 import connexion_demande from './ajouter_demande_connexion';
+import ajouter_offre from './ajouterOffre';
+import ajouter_demande from './deposer_une_annonce';
 import Trad from './traduction'
 
 var width = Dimensions.get('window').width;
@@ -11,68 +13,93 @@ var height = Dimensions.get('window').height;
 export default class CreerAnnonce extends Component {
 
   render() {
-    return(
-      <View>
-        <View style = {{height : height*0.08}}/>
-        <View style={styles.intro}>
-          <Text style={styles.introTexte}>{Trad[lang].creer_ann}</Text>
-        </View>
+      BackAndroid.addEventListener('Back',this.onBackAndroid);
+        return(
         <View>
-          <Text style={styles.introCommencer}>{Trad[lang].commencer}</Text>
-        </View>
-        <View style={styles.depotAnnonce}>
-          <Text style={styles.depotTitre}>{Trad[lang].depot_ann}</Text>
-          <Text style={styles.depotTexte}>{Trad[lang].texte_depot} </Text>
-        </View>
-        <View style={styles.contH}>
-          <View style={styles.contV}>
-            <Image source={require('../img/ajouterDemande.png')} style={styles.ajouterImage}/>
-            <TouchableHighlight onPress={this.onButtonPressDemande} style={styles.button} underlayColor="rgb(138,183,46)">
-                <Text style={styles.buttonText}>{Trad[lang].aj_demande}</Text>
-            </TouchableHighlight>
-          </View>
-          <View style={styles.contV}>
-            <Image source={require('../img/ajouterProduit.png')} style={styles.ajouterImage}/>
-            <TouchableHighlight onPress={this.onButtonPressProduit} style={styles.button} underlayColor="rgb(138,183,46)">
-                <Text style={styles.buttonText}>{Trad[lang].aj_offre} </Text>
-            </TouchableHighlight>
+            <View style = {{height : height*0.08}}/>
+            <View style={styles.intro}>
+              <Text style={styles.titre}>{Trad[lang].creer_ann}</Text>
+            </View>
+            <View>
+              <Text style={styles.introCommencer}>{Trad[lang].commencer}</Text>
+            </View>
+            <View style={styles.depotAnnonce}>
+              <Text style={styles.presentation}>{Trad[lang].texte_depot} </Text>
+            </View>
+            <View style={styles.contH}>
+              <View style={styles.contV}>
+                <Image source={require('../img/ajouterDemande.png')} style={styles.ajouterImage}/>
+                <TouchableHighlight onPress={this.onButtonPressDemande} style={styles.button} underlayColor="rgb(138,183,46)">
+                    <Text style={styles.buttonText}>{Trad[lang].aj_demande}</Text>
+                </TouchableHighlight>
+              </View>
+              <View style={styles.contV}>
+                <Image source={require('../img/ajouterProduit.png')} style={styles.ajouterImage}/>
+                <TouchableHighlight onPress={this.onButtonPressProduit} style={styles.button} underlayColor="rgb(138,183,46)">
+                    <Text style={styles.buttonText}>{Trad[lang].aj_offre} </Text>
+                </TouchableHighlight>
+                </View>
             </View>
         </View>
-      </View>
     );
   }
 	onButtonPressDemande = () => {
 	 BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 	const { navigator } = this.props;
 	if (navigator) {
-	  navigator.push({
-		name: 'Connexion pour demande',
-		component: connexion_demande,
-	  })
+        if (connection===0){
+            navigator.push({
+                name: 'Connexion pour demande',
+                component: connexion_demande,
+            })
+        }else if (connection===1){
+            navigator.push({
+                name: 'Deposer demande',
+                component: ajouter_demande,
+            })
+        }
 	}
   };
   onButtonPressProduit = () => {
      BackAndroid.removeEventListener('Exit',this.onBackAndroid);
     const { navigator } = this.props;
     if (navigator) {
-      navigator.push({
-        name: 'Connexion pour annonce',
-        component: connexion_produit,
-      })
+        if (connection===0){
+            navigator.push({
+                name: 'Connexion pour offre',
+                component: connexion_produit,
+            })
+        }else if (connection===1){
+            navigator.push({
+                name: 'Deposer offre',
+                component: ajouter_offre,
+            })
+        }
     }
+  };
+  onBackAndroid = () => {
+      const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
   };
 }
 
 const styles = StyleSheet.create({
   intro:{
     backgroundColor: '#F2F2F2'
-
   },
-  introTexte:{
-    fontSize:25,
-    textAlign:'center',
-    margin: height*0.05,
-  },
+  titre:{
+       fontSize: 32,
+       textAlign: 'center',
+       color: '#000000',
+       marginTop: 15,
+       marginBottom: 10
+   },
   introCommencer:{
     fontSize:20,
     textAlign:'center',
@@ -81,14 +108,12 @@ const styles = StyleSheet.create({
   depotAnnonce:{
     backgroundColor: '#A4D04A',
   },
-  depotTitre:{
-    fontSize:18,
-    textAlign:'center',
-    marginTop: height*0.01,
-    fontWeight:'bold',
-  },
-  depotTexte:{
-    margin: width*0.05,
+  presentation: {
+    marginTop: 20,
+    marginBottom: 15,
+    textAlign: 'center',
+    color:"black",
+    fontSize: 18,
   },
   contH: {
     alignItems:'center',
@@ -106,7 +131,7 @@ const styles = StyleSheet.create({
     margin:width*0.05,
   },
   button:{
-      height: width*0.15,
+      height: height*0.1,
       width: width *0.3,
       justifyContent: 'center',
       backgroundColor:'#A4D04A',

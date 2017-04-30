@@ -59,7 +59,7 @@ class MenuDepotAnnonce extends Component
                         <View style={{alignItems:'center'}}>
                             <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Trad[lang].num_id + star} onChangeText={(numID) => this.setState({numID})} value={this.state.numID}/>
                             <View style={{flexDirection:'row'}}>
-                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder={Trad[lang].nom_prod}  onChangeText={(nom) => this.setState({nom})} value={this.state.nom}/>
+                                <TextInput style={[styles.textToFill2, {width:width*0.4}]} underlineColorAndroid={'transparent'} placeholder={Trad[lang].nom_prod + star}  onChangeText={(nom) => this.setState({nom})} value={this.state.nom}/>
                                 <TextInput style={styles.textToFill2} underlineColorAndroid={'transparent'} placeholder={Trad[lang].num_reach} onChangeText={(numReach) => this.setState({numReach})} value={this.state.numReach}/>
                             </View>
                             <View style={{flexDirection:'row'}}>
@@ -148,7 +148,7 @@ export default class DeposerUneAnnonce extends Component
             <View style={{height: height * 0.08}}/>
             <View style={styles.window}>
                 <Text style={styles.titre}>
-                    Déposer une annonce
+                    {Trad[lang].aj_demande}
                 </Text>
                 <View style={styles.mainWindow}>
                     <MenuDepotAnnonce/>
