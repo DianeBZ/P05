@@ -16,39 +16,30 @@ import Trad from './traduction';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-let pic=require('../img/client.png');
+let pic=require('../img/deconnexion.png');
 var selected='key0';
 
 export default class EnTeteClient extends Component {
 
   render() {
       return (
-
-				<View style={styles.viewContainer}>
-				  <Image source={pic} style={styles.icone}>
-					  <Picker
-						mode={'dropdown'}
-						style={styles.picker}
-						onValueChange={this.onValueChange.bind(this,'value')}>
-						<Picker.Item label={Trad[lang].compte} value="key1" />
-						<Picker.Item label={Trad[lang].deco} value="key2" />
-					  </Picker>
-				  </Image>
+				<View>
+					<TouchableHighlight style={styles.touchableButton}onPress={this.onPressDeconnexion}>
+						<Image source={pic} style={styles.icone}/>
+					</TouchableHighlight>
 				</View>
       );
     }
 
-    onValueChange = (key: string, value: string) => {
-      if(value==="key1")
-        {
-          Alert.alert('Mon compte');
-        }
-	  if(value==="key2")
-	   {
-		  connection=0;
-		  DeviceEventEmitter.emit('nvBar');
-      // emit the signal'nvBar' when the bouton is clicked.A listener in page1 will react
-	   }
+    onPressDeconnexion = () => {
+		Alert.alert(
+			'Deconnexion',
+			'Voulez-vous vraiment deconnecter?',
+			[
+				{text:'Oui',onPress: () => {connection=0;DeviceEventEmitter.emit('nvBar');}},
+				{text:'Non',onPress: () => {}},
+			],
+			)
   	};
  }
 
@@ -61,11 +52,18 @@ export default class EnTeteClient extends Component {
       width:width*0.07,
     },
 	icone:{
-      marginTop: 5,
-	  marginLeft: 10,
+      //marginTop: 5,
+	  //marginLeft: 10,
       width: width*0.11,
       height: height*0.06,
     },
+	touchableButton:{
+	  marginTop: 5,
+	  marginRight: 10,
+      width: width*0.11,
+      height: height*0.06,
+	  backgroundColor: '#F2F2F2',
+	}
 });
 
 module.exports=EnTeteClient;
