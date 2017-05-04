@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
   sContainerPre:{
     backgroundColor:'#A4D04A',
     height: height*0.16,
+    justifyContent: 'center',
   },
   sContainerBoutons:{
     marginTop: height*0.06,
@@ -105,7 +106,6 @@ const styles = StyleSheet.create({
        marginBottom: 15
    },
   presentation: {
-    marginTop: 20,
     textAlign: 'center',
     color:"black",
     fontSize: 20,

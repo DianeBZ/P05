@@ -139,10 +139,8 @@ class MenuDepotAnnonce extends Component
     };
 }
 	
-export default class DeposerUneAnnonce extends Component
-{
-    render()
-	{
+export default class DeposerUneAnnonce extends Component{
+    render(){
         return(
         <ScrollView>
             <View style={{height: height * 0.08}}/>
@@ -154,7 +152,8 @@ export default class DeposerUneAnnonce extends Component
                     <MenuDepotAnnonce/>
                 </View>
             </View>
-        </ScrollView>);
+        </ScrollView>
+        );
     }
 }
 const styles = StyleSheet.create({

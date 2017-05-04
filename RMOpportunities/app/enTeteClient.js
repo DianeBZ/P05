@@ -23,7 +23,7 @@ export default class EnTeteClient extends Component {
   render() {
       return (
 				<View>
-					<TouchableHighlight style={styles.touchableButton}onPress={this.onPressDeconnexion}>
+					<TouchableHighlight underlayColor="#F2F2F2" style={styles.touchableButton}onPress={this.onPressDeconnexion}>
 						<Image source={pic} style={styles.icone}/>
 					</TouchableHighlight>
 				</View>

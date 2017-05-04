@@ -14,6 +14,7 @@ var description = 'false';
 export default class Offres extends Component {
 
   render() {
+      BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
 		<ScrollView>
 			<View style={{height:height*0.08}}/>
@@ -261,6 +262,17 @@ _onPressDescription = () =>{
  }
  this.forceUpdate();
 };
+
+onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({

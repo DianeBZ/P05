@@ -19,10 +19,10 @@ import Index from './page1';
 import BeneficesEntreprise from './page10';
 import CreerAnnonce from './creer_annonce';
 import VoirOffres from'./voir_offres';
-var selectedKey;
 
 export default class ContenuMenu extends Component {
    render() {
+       //BackAndroid.addEventListener('closeDrawer', this.onBackAndroid);
       return (
 		<ScrollView style={{backgroundColor:'white'}}>
 		{(() => {
@@ -193,44 +193,39 @@ export default class ContenuMenu extends Component {
 		 </ScrollView>
       );
    }
+   
+   onBackAndroid = () => {
+       BackAndroid.removeEventListener('closeDrawer', this.onBackAndroid);
+       this.props.closeDrawer();
+   };
     _onLangChange = (key: string, value: string) => {
         lang = value;
-        selectedKey = key;
         this.props.closeDrawer();
         DeviceEventEmitter.emit('nvBar');
     };
+    
    navigate(property) {
-      console.log(property)
       this.props.closeDrawer();
       const { navigator } = this.props.navigator.refs;
       if (navigator) {
-         if (property==='BeneficesEntreprise'){
-            navigator.push({
-               name: 'BeneficesEntreprise',
-               component: BeneficesEntreprise,
-            })
-         }else if (property==='CreerAnnonce') {
-            navigator.push({
-               name: 'CreerAnnonce',
-               component: CreerAnnonce,
-            })
-         }else if (property==='VoirOffres') {
-            navigator.push({
-               name: 'VoirOffres',
-               component: VoirOffres,
-            })
-		 }else {
-            {
-                  console.log('Je suis pas rentré dans la condition');
-
+            if (property==='BeneficesEntreprise'){
+                navigator.push({
+                   name: 'BeneficesEntreprise',
+                   component: BeneficesEntreprise,
+                })
+            }else if (property==='CreerAnnonce') {
+                navigator.push({
+                   name: 'CreerAnnonce',
+                   component: CreerAnnonce,
+                })
+            }else if (property==='VoirOffres') {
+                navigator.push({
+                   name: 'VoirOffres',
+                   component: VoirOffres,
+                })
             }
-         }
-      }else{
-         console.log('Je suis pas rentré');
-      }
-
-
-   };
+        }
+    };
 
 }
 

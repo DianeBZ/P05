@@ -177,6 +177,7 @@ class MenuInscription extends Component{
         </View>
         );
     }
+    
     _onPressInfoEntreprise = () =>{
     if(clickedOn1 === 'true'){
       clickedOn1 = 'false';
@@ -187,6 +188,7 @@ class MenuInscription extends Component{
     }
     this.forceUpdate();
   };
+  
   _onPressInfoContact = () =>{
     if(clickedOn2 === 'true'){
       clickedOn2 = 'false';
@@ -197,6 +199,7 @@ class MenuInscription extends Component{
     }
     this.forceUpdate();
   };
+  
   _onPressCondit = () =>{
     if(clickedOn3 === 'true'){
       clickedOn3 = 'false';
@@ -211,6 +214,7 @@ class MenuInscription extends Component{
 
 export default class Inscription extends Component {
     render(){
+        BackAndroid.addEventListener('Back',this.onBackAndroid);
         return(
         <View style={{flex:1}}>
             <View style={{height: height * 0.08}}/>
@@ -239,6 +243,17 @@ export default class Inscription extends Component {
 			})
 		}
 	};
+    
+    onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({

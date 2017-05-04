@@ -10,6 +10,7 @@ import OffreDetaillee from './offre_detaillee';
 export default class Offres extends Component {
 
   render() {
+      BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
 		<View>
 			<View style={{height:height*0.08}}/>
@@ -39,6 +40,17 @@ onPressOffreDetaillee = () => {
 			name: 'OffreDetaillee',
 			component: OffreDetaillee,
 		  })
+		}
+  };
+  
+  onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
 		}
   };
 }

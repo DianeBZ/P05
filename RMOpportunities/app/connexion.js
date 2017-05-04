@@ -35,12 +35,12 @@ export default class Connexion extends Component {
     if (navigator && length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
       if (navigator.getCurrentRoutes()[length-2].name === 'Connexion pour demande'){
-          navigator.push({
+          navigator.replacePreviousAndPop({
                 name: 'Deposer demande',
                 component: ajouter_demande,
             })
       }else if (navigator.getCurrentRoutes()[length-2].name === 'Connexion pour offre'){
-          navigator.push({
+          navigator.replacePreviousAndPop({
                 name: 'Deposer offre',
                 component: ajouter_offre,
             })

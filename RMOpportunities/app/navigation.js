@@ -20,7 +20,6 @@ import {
 // string from './app/page1' to './app/page10'
 import Drawer from 'react-native-drawer';
 import ContenuMenu from './contenuMenu';
-import Home from './page1';
 import Index from './page1';
 import React from 'react';
 import EnTeteClient from './enTeteClient';
@@ -52,8 +51,6 @@ export default class Navigation extends React.Component {
       this._drawer.open()
    };
    
-   
-
    render() {
       let pic1 = require('../img/logo_rmo.png');
       let pic2 = require('../img/menuButton.png');
@@ -97,12 +94,12 @@ export default class Navigation extends React.Component {
 
 						   navigationBar={ <Navigator.NavigationBar routeMapper={{
 							  LeftButton: (route, navigator, index, navState) => { return (
-								 <TouchableHighlight  onPress={()=>this.openDrawer()}>
+								 <TouchableHighlight underlayColor="#F2F2F2" onPress={()=>this.openDrawer()}>
 									<Image source={pic2} style={styles.menu}/>
 								 </TouchableHighlight>
 							  ); },
 							  RightButton: (route, navigator, index, navState) => { return (<EnTeteClient/>);},
-							  Title: (route, navigator, index, navState) => { return (  <TouchableHighlight onPress={()=>this.goToHomePage()}>
+							  Title: (route, navigator, index, navState) => { return (  <TouchableHighlight underlayColor="#F2F2F2" onPress={()=>this.goToHomePage()}>
 							  <Image source={pic1} style={styles.title}/>
 						   </TouchableHighlight>); },
 						   }}
@@ -125,12 +122,12 @@ export default class Navigation extends React.Component {
 
 						   navigationBar={ <Navigator.NavigationBar routeMapper={{
 							  LeftButton: (route, navigator, index, navState) => { return (
-								 <TouchableHighlight  onPress={()=>this.openDrawer()}>
+								 <TouchableHighlight underlayColor="#F2F2F2" onPress={()=>this.openDrawer()}>
 									<Image source={pic2} style={styles.menu}/>
 								 </TouchableHighlight>
 							  ); },
 							  RightButton: (route, navigator, index, navState) => { return (<View/>);},
-							  Title: (route, navigator, index, navState) => { return (  <TouchableHighlight onPress={()=>this.goToHomePage()}>
+							  Title: (route, navigator, index, navState) => { return (  <TouchableHighlight underlayColor="#F2F2F2" onPress={()=>this.goToHomePage()}>
 							  <Image source={pic1} style={styles.title}/>
 						   </TouchableHighlight>); },
 						   }}
@@ -148,13 +145,8 @@ export default class Navigation extends React.Component {
 	}
 
 	goToHomePage = () => {
-
-
 	   if (this.refs.navigator) {
-		  this.refs.navigator.push({
-			 name: 'Home',
-			 component: Home,
-		  })
+		  this.refs.navigator.popToTop();
 	   }
 	};
 }

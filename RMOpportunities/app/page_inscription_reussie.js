@@ -5,7 +5,11 @@ import {
 	Text,
 	View,
 	TouchableHighlight,
+    Dimensions,
 } from 'react-native';
+
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 export default class EndRegistration extends Component {
   render() 
@@ -13,21 +17,21 @@ export default class EndRegistration extends Component {
     return (
       <View style={styles.container1}>
 		<View style={{height:height*0.08}}/>
-        <Text style={styles.Inscription}>
+        <Text style={styles.titre}>
 			Inscription réussie !
 		</Text>
 		<View style={styles.subContainer}>
-			<Text style={styles.Bienvenue}>
+			<Text style={styles.bienvenue}>
 				Bienvenue sur RMOpportunities
 			</Text>
 			<View style={styles.sContainerPre}>
-				<Text style={styles.Achetez}>
+				<Text style={styles.presentation}>
 					Achetez et vendez des surplus de stocks de produits chimiques
 				</Text>
 			</View>
-			<View style={styles.sContainerBonton}>
-            <TouchableHighlight style={styles.BoutonAccueil} onPress={this._onPressBouton}>
-              <Text style={styles.Accueil}>
+			<View style={styles.sContainerBouton}>
+            <TouchableHighlight style={[styles.button, {width: width *0.25, backgroundColor:'#A4D04A'}]} onPress={this._onPressBouton} underlayColor="rgb(138,183,46)">
+              <Text style={styles.buttonText}>
 				Accueil
               </Text>
             </TouchableHighlight>
@@ -35,6 +39,13 @@ export default class EndRegistration extends Component {
 		</View>
       </View>
     );
+  }
+  
+  _onPressBouton = () => {
+      const { navigator } = this.props;
+        if (navigator) {
+            navigator.popToTop();
+        }
   }
 }
 
@@ -46,58 +57,50 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F2F2F2',
   },
-  
-  Inscription: {
-    color: 'black',
-    fontWeight: 'bold',
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 20,
-  },
+  titre:{
+       fontSize: 32,
+       textAlign: 'center',
+       color: '#000000',
+       marginTop: 15,
+       marginBottom: 15
+   },
   subContainer:{
-    margin:10,
     backgroundColor:'#FFFFFF',
     flex: 1,
   },
-  
   sContainerPre:{
-	margin:0,
     backgroundColor:'#A4D04A',
-    flex: 2,
+    height: height*0.16,
+    justifyContent:'center',
   },
-  
-  sContainerBonton:{
-    flex:3,
+  sContainerBouton:{
+    flex:1,
     justifyContent: 'flex-start',
     alignItems: 'flex-end',
   },
-  Bienvenue: {
+  bienvenue: {
 	color : '#A4D04A',
 	fontWeight:'bold',
 	textAlign:'center',
 	fontSize: 25,
 	margin:10,
   },
-  Achetez:{
-    marginTop:  50,
+  presentation: {
     textAlign: 'center',
     color:"black",
-	fontWeight:'bold',
-	fontSize: 20,
+    fontSize: 20,
   },
-  BoutonAccueil:{
-	marginTop:20,
-	height:40,
-	width:75,
-	borderRadius:5,
-	backgroundColor:'#A4D04A',
-	justifyContent:'center'
-  },
-  
-  Accueil:{
-    textAlign:'center',
-    color:'white',
+  button:{
+        height: height*0.05,
+        marginTop: 20,
+        borderRadius:5,
+        justifyContent: 'center',
     },
+  buttonText:{
+        color: "white",
+        textAlign: "center",
+        fontSize: 20,
+    }
 });
 
 module.exports = EndRegistration;
