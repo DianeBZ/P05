@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -24,7 +26,7 @@ export default class AlertProduits extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <View style={{height:height*0.08}}/>
+        <View style={{height:heightWindow*0.08}}/>
         <View style={styles.containerMain}>
           <View style = {styles.containerText}>
             <Text style = {styles.title}>

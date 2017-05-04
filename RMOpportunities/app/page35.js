@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -21,30 +23,30 @@ export default class Informations extends Component {
   var ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   var ds3 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   this.state = {
-    dataSource1: ds1.cloneWithRows(['Dénomination', 'Adresse',"Numéro de TVA\nintracommunautaire"]),
+    dataSource1: ds1.cloneWithRows([Trad[lang].denomination, Trad[lang].adresse , Trad[lang].num_tva_inter]),
     dataSource2: ds1.cloneWithRows(['NULL1', 'NULL2',"NULL3"]),
-    dataSource3: ds1.cloneWithRows(['Nom', 'Adresse email',"Numéro de téléphone"]),
+    dataSource3: ds1.cloneWithRows([Trad[lang].nom_info , Trad[lang].ad_mail , Trad[lang].num_tel]),
   };
 }
   render() {
     return (
       <View style={styles.container}>
-        <View style={{height:height*0.08}}/>
+        <View style={{height:heightWindow*0.08}}/>
     		<View style={styles.containerMain}>
 
     			<View style = {styles.containerText}>
     				<Text style = {styles.title}>
-    					Informations
+    					{Trad[lang].info}
     				</Text>
     				<Text style = {styles.instructions}>
-    					Visionner les inforations relatives à votre compte
+    					{Trad[lang].text_info}
     				</Text>
     			</View>
 
 
           <View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start',marginLeft:5}}>
             <Text style = {styles.titleAV}>
-                Entreprise
+                {Trad[lang].entreprise}
             </Text>
           </View>
           <View style={styles.containerEntreprise}>
@@ -64,7 +66,7 @@ export default class Informations extends Component {
 
           <View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start',marginLeft:5}}>
             <Text style = {styles.titleAV}>
-                Représentant
+                {Trad[lang].representant}
             </Text>
           </View>
           <View style={styles.containerEntreprise}>

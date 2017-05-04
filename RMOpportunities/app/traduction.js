@@ -157,6 +157,17 @@ export default{
         "bigbag": "Big-Bag",
         "plast": "Fût plastique",
         "metal": "Fût métallique",
+		
+		"info":"Informations",
+		"text_info":"Visionner les informations relatives à votre compte",
+		"entreprise":"Entreprise",
+		"representant":"Représentant",
+		"denomination":"Dénomination",
+		"adresse":"Adresse",
+		"num_tva_inter":"Numéro de TVA\intracommunautaire",
+		"nom_info":"Nom", 
+		"ad_mail":"Adresse email",
+		"num_tel":"Numéro de téléphone",
 	},
     en: {
         "compte": "My Account",
@@ -316,5 +327,17 @@ export default{
         "bigbag": "Big-Bag",
         "plast": "Plastic drum",
         "metal": "Metal drum",
+		
+		"info":"Information",
+		"text_info":"View your account related information",
+		"entreprise":"Company",
+		"representant":"Representative",
+		"denomination":"Name",
+		"adresse":"Address",
+		"num_tva_inter":"VAT identification number",
+		"nom_info":"Name", 
+		"ad_mail":"Email address",
+		"num_tel":"Phone number",
+		
     }
 }

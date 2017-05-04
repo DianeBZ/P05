@@ -19,7 +19,7 @@ export default class MesAnnonces extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{height:height*0.08}}/>
+        <View style={{height:heightWindow*0.08}}/>
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
