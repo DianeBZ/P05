@@ -168,6 +168,57 @@ export default{
 		"nom_info":"Nom", 
 		"ad_mail":"Adresse email",
 		"num_tel":"Numéro de téléphone",
+		
+		"mdp":"Mot de passe",
+		"text_mdp":"Modifier votre mot de passe",
+		"mdp_act":"Mot de passe actuel",
+		"mdp_nouveau":"Nouveau mot de passe",
+		"mdp_nouveau2":"Répéter le nouveau mot de passe",
+		"enregistrer":"Enregistrer les modifications",
+		
+		"al_prod":"Alertes produits",
+		"al_prod_text":"Ajouter une alerte avec un numéro d'indentification afin d'être notifié dès la mise en ligne d'un produit spécifique",
+		"num_id":"Numéro d'indentification (CAS ou EINECS)",
+		"aj":"Ajouter",
+		"al_def":"Alertes définies",
+		"activer":"Activer",
+		"supprimer":"Supprimer",
+		
+		"montant_com":"Montant de la commission",
+		"histo":"Historique",
+		"visio_factures":"Visionner vos factures",
+		"date_fact":"Date de facturation",
+		"date_paie":"Date de paiement",
+		"lien":"Lien",
+		"aucune_fact":"Aucune facture disponible.",
+		
+		"visio_annonces":"Visionner vos annonces, visibles sur notre platforme",
+		"offres":"Offres",
+		"date_crea":"Date de creation",
+		"aucune_ann":"Aucune annonce de offre disponible",
+		
+		"mise_en_relation":"Mes mises en relation",
+		"visio_prod1":"Visionner les produits pour lesquels",
+		"visio_prod2":"votre entreprise a été mise en relation",
+		"vente_prod":"Ventes de produits",
+		"aucune_rel_vente1":"Aucune mise en relation pour la",
+		"aucune_rel_vente2":"vente de produits.",
+		"achat_prod":"Achats de produits",
+		"aucune_rel_achat1":"Aucune mise en relation pour",
+		"aucune_rel_achat2":"l'achat de produits.",
+		
+		"modif_compte":"Modification de votre compte",
+		"modif_infos":"Modifer les informations relatives à votre compte",
+		"contact_text":"Pour toute modification de votre compte,veuillez nous contacter à l'adresse suivante:",
+		"mail_contact":"contact@rmopportunities.eu",
+		
+		"nego_text1":"Visionner vos négociations en cours",
+		"vente_cours":"Ventes en cours",
+		"aucune_vente":"Aucune vente",
+		"achat_cours":"Achats en cours",
+		"aucun_achat":"Aucun achat",
+		
+		
 	},
     en: {
         "compte": "My Account",
@@ -338,6 +389,55 @@ export default{
 		"nom_info":"Name", 
 		"ad_mail":"Email address",
 		"num_tel":"Phone number",
+		
+		"mdp":"Password",
+		"text_mdp":"Update your password",
+		"mdp_act":"Current password",
+		"mdp_nouveau":"New password",
+		"mdp_nouveau2":"Repeat new password",
+		"enregistrer":"Save changes",
+		
+		"al_prod":"Product alerts",
+		"al_prod_text":"Add an alert on a product in order to be notified when it appears on the plateform",
+		"num_id":"Registry number (CAS or EC)",
+		"aj":"Add",
+		"al_def":"Existing alerts",
+		"activer":"Activate",
+		"supprimer":"Delete",
+		
+		"montant_com":"Commission amount",
+		"histo":"History",
+		"visio_factures":"View your invoices",
+		"date_fact":"Billing date",
+		"date_paie":"Payment date",
+		"lien":"Link",
+		"aucune_fact":"No invoice available",
+		
+		"visio_annonces":"View your online offers",
+		"offres":"Offers",
+		"date_crea":"Creation date",
+		"aucune_ann":"No offer available",
+		
+		"mise_en_relation":"My connections",
+		"visio_prod1":"View the products for which",
+		"visio_prod2":"your company has been linked to other ones",
+		"vente_prod":"Sales",
+		"aucune_rel_vente1":"No sold",
+		"aucune_rel_vente2":"products.",
+		"achat_prod":"Purchases",
+		"aucune_rel_achat1":"No purchased",
+		"aucune_rel_achat2":"products.",
+		
+		"modif_compte":"Update your account",
+		"modif_infos":"Update your account information",
+		"contact_text":"In order to update your account information, please send us an email at :",
+		"mail_contact":"contact@rmopportunities.eu",
+		
+		"nego_text1":"View your ongoing negotiations",
+		"vente_cours":"Ongoing sales",
+		"aucune_vente":"No sales",
+		"achat_cours":"Ongoing purchasing",
+		"aucun_achat":"No purchases",
 		
     }
 }

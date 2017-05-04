@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -24,20 +26,20 @@ export default class ModificationCompte extends Component{
           <View style={styles.containerMain}>
             <View style = {styles.containerText}>
               <Text style = {styles.title}>
-                Modification de votre compte
+                {Trad[lang].modif_compte}
               </Text>
               <Text style = {styles.instructions}>
-                Modifer les inforations relatives à votre compte
+                {Trad[lang].modif_infos}
               </Text>
             </View>
             <View>
               <Text style = {styles.titleAV}>
-                  Pour toute modification de votre compte,veuillez nous contacter à l'addresse suivante:
+                  {Trad[lang].contact_text}
               </Text>
             </View>
             <TouchableHighlight style={{marginTop:10}}>
               <Text style={{fontSize:20,color:'#A4D04A'}} onPress={this.contactPress.bind(this)}>
-                contact@rmopportunities.eu
+                {Trad[lang].mail_contact}
               </Text>
             </TouchableHighlight>
           </View>

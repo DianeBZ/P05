@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -23,19 +25,16 @@ export default class MesAnnonces extends Component {
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					Négociations
+					{Trad[lang].nego}
 				</Text>
 				<Text style = {styles.instructions}>
-					Visionner vos négociations en
-				</Text>
-				<Text style = {styles.instructions}>
-					cours
+					{Trad[lang].nego_text1}
 				</Text>
 			</View>
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
-						Ventes en cours
+						{Trad[lang].vente_cours}
 				</Text>
 			</View>
 
@@ -48,7 +47,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerVentes}>
 							<Text>
-								Aucune vente
+								{Trad[lang].aucune_vente}
 							</Text>
 						</View>
 					);
@@ -56,7 +55,7 @@ export default class MesAnnonces extends Component {
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
-						Achats en cours
+						{Trad[lang].achat_cours}
 				</Text>
 			</View>
 
@@ -69,7 +68,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerAchats}>
 							<Text>
-								Aucun achat
+								{Trad[lang].aucun_achat}
 							</Text>
 						</View>
 					);

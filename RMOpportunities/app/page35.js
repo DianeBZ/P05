@@ -22,12 +22,15 @@ export default class Informations extends Component {
   var ds1 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   var ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   var ds3 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+  
   this.state = {
-    dataSource1: ds1.cloneWithRows([Trad[lang].denomination, Trad[lang].adresse , Trad[lang].num_tva_inter]),
+	dataSource1: ds1.cloneWithRows([Trad[lang].denomination, Trad[lang].adresse , Trad[lang].num_tva_inter]),
     dataSource2: ds1.cloneWithRows(['NULL1', 'NULL2',"NULL3"]),
-    dataSource3: ds1.cloneWithRows([Trad[lang].nom_info , Trad[lang].ad_mail , Trad[lang].num_tel]),
+	dataSource3: ds1.cloneWithRows([Trad[lang].nom_info , Trad[lang].ad_mail , Trad[lang].num_tel]),
   };
+
 }
+	  
   render() {
     return (
       <View style={styles.container}>
@@ -93,6 +96,7 @@ export default class Informations extends Component {
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {

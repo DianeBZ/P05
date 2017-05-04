@@ -30,44 +30,42 @@ export default class AlertProduits extends Component{
         <View style={styles.containerMain}>
           <View style = {styles.containerText}>
             <Text style = {styles.title}>
-              Alertes produits
+				{Trad[lang].al_prod}
             </Text>
             <Text style = {styles.instructions}>
-              ajouter une alerte avec un numéro {'\n'}
-              d{'\''}indentification afin d{'\''}être notifié dès la{'\n'}
-              mise en ligne d'un produit spécifique
+			  {Trad[lang].al_prod_text}
             </Text>
           </View>
           <View style={styles.containerAjouteAlerte}>
             <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'}
-            placeholder="Numéro d'indentification (CAS ou EINECS)"
+            placeholder={Trad[lang].num_id}
             onChangeText={(text) => this.setState({text})}
             />
             <TouchableHighlight style={styles.bouton}>
               <Text style={{fontSize:heightWindow*0.03,color:'white'}} onPress={this.search.bind(this)}>
-                ajouter
+				  {Trad[lang].aj}
               </Text>
             </TouchableHighlight>
           </View>
           <View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start',marginLeft:5}}>
             <Text style = {styles.titleAV}>
-                Alertes définies
+                {Trad[lang].al_def}
             </Text>
           </View>
           <View style = {styles.header}>
             <View style = {styles.listHeaderFirst}>
               <Text style = {{textAlign: 'center',fontSize:10,}}>
-                Numéro d{'\''}indentification {'\n'}(CAS ou EINECS)
+                {Trad[lang].num_id}
               </Text>
             </View>
             <View style = {styles.listHeader}>
               <Text style = {{textAlign: 'center',fontSize:10,}}>
-                Activer
+				  {Trad[lang].activer}
               </Text>
             </View>
             <View style = {styles.listHeader}>
               <Text style = {{textAlign: 'center',fontSize:10,}}>
-                Supprimer
+				  {Trad[lang].supprimer}
               </Text>
             </View>
           </View>

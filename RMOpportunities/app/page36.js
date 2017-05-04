@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -12,6 +14,7 @@ import {
 
 var widthWindow = Dimensions.get('window').width;
 var heightWindow = Dimensions.get('window').height;
+var star = '*';
 
 export default class MotPasse extends Component{
   constructor(props) {
@@ -35,16 +38,16 @@ export default class MotPasse extends Component{
         <View style={styles.containerMain}>
           <View style={styles.containerText}>
             <Text style={styles.title}>
-              Mot de passe
+              {Trad[lang].mdp}
             </Text>
             <Text style={styles.instructions}>
-              modifier votre mot de passe
+              {Trad[lang].text_mdp}
             </Text>
           </View>
           <View style={styles.containerBas}>
             <View style={styles.containerItems}>
               <Text style={styles.titleAV}>
-                Mot de passe actuel*
+                {Trad[lang].mdp_act + star}
               </Text>
               <TextInput
               style={styles.textToFill} underlineColorAndroid={'transparent'} secureTextEntry={true}
@@ -53,7 +56,7 @@ export default class MotPasse extends Component{
             </View>
             <View style={styles.containerItems}>
               <Text style={styles.titleAV}>
-                Nouveau mot de passe*
+                {Trad[lang].mdp_nouveau + star}
               </Text>
               <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} secureTextEntry={true}
               onChange={(passChange)=>this.setState({passChange})}
@@ -61,7 +64,7 @@ export default class MotPasse extends Component{
             </View>
             <View style={styles.containerItems}>
               <Text style={styles.titleAV}>
-                Répéter le nouveau mot de passe*
+                {Trad[lang].mdp_nouveau2 + star}
               </Text>
               <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} secureTextEntry={true}
               onChange={(passChangeRepete)=>this.setState({passChangeRepete})}
@@ -69,7 +72,7 @@ export default class MotPasse extends Component{
             </View>
             <TouchableHighlight style={styles.bouton} onPress={this.enregistrerPress.bind(this)}>
               <Text style={{fontSize:heightWindow*0.03,color:'white'}}>
-                Enregistrer les modifications
+				  {Trad[lang].enregistrer}
               </Text>
             </TouchableHighlight>
           </View>

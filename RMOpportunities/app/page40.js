@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -23,19 +25,19 @@ export default class MesAnnonces extends Component {
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					Mes mises en relation
+					{Trad[lang].mise_en_relation}
 				</Text>
 				<Text style = {styles.instructions}>
-					Visionner les produites pour lesquels
+					{Trad[lang].visio_prod1}
 				</Text>
 				<Text style = {styles.instructions}>
-					votre entreprise a ete mise en relation
+					{Trad[lang].visio_prod2}
 				</Text>
 			</View>
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
-						Ventes de produits
+						{Trad[lang].vente_prod}
 				</Text>
 			</View>
 
@@ -48,10 +50,10 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerVentes}>
 							<Text>
-								Aucune mise en relation pour la
+								{Trad[lang].aucune_rel_vente1}
 							</Text>
 							<Text>
-								vente de produits.
+								{Trad[lang].aucune_rel_vente2}
 							</Text>
 						</View>
 					);
@@ -59,7 +61,7 @@ export default class MesAnnonces extends Component {
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
-						Achats de produits
+						{Trad[lang].achat_prod}
 				</Text>
 			</View>
 
@@ -72,10 +74,10 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerAchats}>
 							<Text>
-								Aucune mise en relation pour
+								{Trad[lang].aucune_rel_achat1}
 							</Text>
 							<Text>
-								l{'\''}achat de produits.
+								{Trad[lang].aucune_rel_achat2}
 							</Text>
 						</View>
 					);

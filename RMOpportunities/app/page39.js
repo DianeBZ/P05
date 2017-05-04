@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -23,35 +25,32 @@ export default class MesAnnonces extends Component {
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					Mes annonces
+					{Trad[lang].mes_annonces}
 				</Text>
 				<Text style = {styles.instructions}>
-					Visionner vos annonces
-				</Text>
-				<Text style = {styles.instructions}>
-					visibles sur notre platforme
+					{Trad[lang].visio_annonces}
 				</Text>
 			</View>
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleOD}>
-						Offres
+						{Trad[lang].offres}
 				</Text>
 			</View>
 			<View style = {styles.header}>
 				<View style = {styles.listHeaderFirst}>
 					<Text style = {{textAlign: 'center',}}>
-						Numero d{'\''}identification (CAS ou EINECS)
+						{Trad[lang].num_id}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
 					<Text style = {{textAlign: 'center',}}>
-						Date de creation
+						{Trad[lang].date_crea}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderThird}>
 					<Text style = {{textAlign: 'center',}}>
-						Lien
+						{Trad[lang].lien}
 					</Text>
 				</View>
 			</View>
@@ -65,7 +64,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerOffres}>
 							<Text>
-								Aucune annonce de offre disponible.
+								{Trad[lang].aucune_ann}
 							</Text>
 						</View>
 					);
@@ -79,17 +78,17 @@ export default class MesAnnonces extends Component {
 			<View style = {styles.header}>
 				<View style = {styles.listHeaderFirst}>
 					<Text style = {{textAlign: 'center',}}>
-						Numero d{'\''}identification (CAS ou EINECS)
+						{Trad[lang].num_id}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
 					<Text style = {{textAlign: 'center',}}>
-						Date de creation
+						{Trad[lang].date_crea}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderThird}>
 					<Text style = {{textAlign: 'center',}}>
-						Lien
+						{Trad[lang].lien}
 					</Text>
 				</View>
 			</View>
@@ -103,7 +102,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerDemandes}>
 							<Text>
-								Aucune annonce de demande disponible.
+								{Trad[lang].aucune_ann}
 							</Text>
 						</View>
 					);

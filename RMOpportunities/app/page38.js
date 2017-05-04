@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Trad from './traduction';
+
 import {
   StyleSheet,
   Text,
@@ -22,32 +24,32 @@ export default class Historique extends Component {
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					Historique
+					{Trad[lang].histo}
 				</Text>
 				<Text style = {styles.instructions}>
-					Visionner vos factures
+					{Trad[lang].visio_factures}
 				</Text>
 			</View>
 			
 			<View style = {styles.header}>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						Montant de la commission
+						{Trad[lang].montant_com}
 					</Text>
 				</View>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						Date de facturation
+						{Trad[lang].date_fact}
 					</Text>
 				</View>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						Date de paiement
+						{Trad[lang].date_paie}
 					</Text>
 				</View>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						Lien
+						{Trad[lang].lien}
 					</Text>
 				</View>
 			</View>
@@ -61,7 +63,7 @@ export default class Historique extends Component {
 					return (
 						<View style = {styles.containerFacture}>
 							<Text>
-								Aucune facture disponible.
+								{Trad[lang].aucune_fact}
 							</Text>
 						</View>
 					);
