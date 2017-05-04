@@ -15,6 +15,8 @@ import {
 } from 'react-native';
 
 import Trad from './traduction';
+import ajouter_offre from './ajouterOffre';
+import ajouter_demande from './deposer_une_annonce';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -29,9 +31,22 @@ export default class Connexion extends Component {
 	DeviceEventEmitter.emit('nvBar');
   // // emit the signal'nvBar' when the bouton is clicked.A listener in page1 will react
     const { navigator } = this.props;
-    if (navigator && navigator.getCurrentRoutes().length > 1) {
+    var length = navigator.getCurrentRoutes().length;
+    if (navigator && length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
-      navigator.pop();
+      if (navigator.getCurrentRoutes()[length-2].name === 'Connexion pour demande'){
+          navigator.push({
+                name: 'Deposer demande',
+                component: ajouter_demande,
+            })
+      }else if (navigator.getCurrentRoutes()[length-2].name === 'Connexion pour offre'){
+          navigator.push({
+                name: 'Deposer offre',
+                component: ajouter_offre,
+            })
+      }else{
+        navigator.pop();
+      }
       return true;
     } else {
       return false;

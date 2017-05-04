@@ -17,7 +17,6 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 let pic=require('../img/deconnexion.png');
-var selected='key0';
 
 export default class EnTeteClient extends Component {
 
@@ -52,8 +51,6 @@ export default class EnTeteClient extends Component {
       width:width*0.07,
     },
 	icone:{
-      //marginTop: 5,
-	  //marginLeft: 10,
       width: width*0.11,
       height: height*0.06,
     },

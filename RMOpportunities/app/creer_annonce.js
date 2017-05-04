@@ -4,6 +4,7 @@ import connexion_produit from './ajouter_produit_connexion';
 import connexion_demande from './ajouter_demande_connexion';
 import ajouter_offre from './ajouterOffre';
 import ajouter_demande from './deposer_une_annonce';
+import depot_demande from './depot_demande';
 import Trad from './traduction'
 
 var width = Dimensions.get('window').width;
