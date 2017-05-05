@@ -54,50 +54,52 @@ export default class Index extends Component {
 						else
 							return (
 								<View style={styles.containerButton}>
-                                    <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width_window*0.4, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
+                                    <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width_window*0.5, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
                                         <Text style={[styles.buttonText, {color:'black'}]}>{Trad[lang].connexion}</Text>
                                     </TouchableHighlight>
-                                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width_window*0.4, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
+                                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width_window*0.5, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
                                         <Text style={styles.buttonText}>{Trad[lang].inscription}</Text>
                                     </TouchableHighlight>
 								</View>
 							);
 						})()}
+						<View style={styles.mainContainer}>
+							<View style={styles.containerPicker}>
+								<Picker
+									selectedValue={selected}
+									onValueChange={this.onValueChange.bind(this,'value')}
+									style={styles.picker} >
+									<Picker.Item label={Trad[lang].ttes_cat} value="tlc" />
+									<Picker.Item label={Trad[lang].cosm} value="Pcos" />
+									<Picker.Item label={Trad[lang].solv} value="sol" />
+									<Picker.Item label={Trad[lang].solv_reg} value="sol_r" />
+									<Picker.Item label={Trad[lang].react} value="rea" />
+									<Picker.Item label={Trad[lang].catal} value="cat" />
+									<Picker.Item label={Trad[lang].spe_chi} value="spe" />
+									<Picker.Item label={Trad[lang].interm} value="int" />
+									<Picker.Item label={Trad[lang].interm_simple} value="int_s" />
+									<Picker.Item label={Trad[lang].acides} value="aci" />
+									<Picker.Item label={Trad[lang].bases} value="bas" />
+									<Picker.Item label={Trad[lang].acid_ami} value="aci_a" />
+									<Picker.Item label={Trad[lang].vit} value="vit" />
+									<Picker.Item label={Trad[lang].autres} value="aut" />
+								</Picker>
+							</View>
+							<View style={styles.contTexte}>
 
-						<View style={styles.containerPicker}>
-							<Picker
-								selectedValue={selected}
-								onValueChange={this.onValueChange.bind(this,'value')}
-								style={styles.picker} >
-								<Picker.Item label={Trad[lang].ttes_cat} value="tlc" />
-								<Picker.Item label={Trad[lang].cosm} value="Pcos" />
-								<Picker.Item label={Trad[lang].solv} value="sol" />
-								<Picker.Item label={Trad[lang].solv_reg} value="sol_r" />
-								<Picker.Item label={Trad[lang].react} value="rea" />
-								<Picker.Item label={Trad[lang].catal} value="cat" />
-								<Picker.Item label={Trad[lang].spe_chi} value="spe" />
-								<Picker.Item label={Trad[lang].interm} value="int" />
-								<Picker.Item label={Trad[lang].interm_simple} value="int_s" />
-								<Picker.Item label={Trad[lang].acides} value="aci" />
-								<Picker.Item label={Trad[lang].bases} value="bas" />
-								<Picker.Item label={Trad[lang].acid_ami} value="aci_a" />
-								<Picker.Item label={Trad[lang].vit} value="vit" />
-								<Picker.Item label={Trad[lang].autres} value="aut" />
-							</Picker>
-
-							<TextInput
-								placeholder={Trad[lang].trouver_par}
-								maxLength = {40}
-								editable={true}
-								style={styles.textInput}
-								onChangeText={this.onResponderEndEditing}
-							/>
-						</View>
-
-						<View style={styles.containerButtonR}>
-                            <TouchableHighlight onPress={this.onPressRecherche} style={{height: width_window*0.09, width: width_window*0.3, backgroundColor:'#A4D04A', justifyContent:'center'}} underlayColor="rgb(138,183,46)">
-                                <Text style={styles.buttonText}>{Trad[lang].recherche}</Text>
-                            </TouchableHighlight>
+								<TextInput
+									placeholder={Trad[lang].trouver_par}
+									maxLength = {40}
+									editable={true}
+									style={styles.textInput}
+									onChangeText={this.onResponderEndEditing}
+								/>
+							</View>
+							<View style={styles.containerButtonR}>
+								<TouchableHighlight onPress={this.onPressRecherche} style={{height: height_window*0.05, width: width_window*0.7, backgroundColor:'#A4D04A', justifyContent:'center'}} underlayColor="rgb(138,183,46)">
+									<Text style={styles.buttonText}>{Trad[lang].recherche}</Text>
+								</TouchableHighlight>
+							</View>
 						</View>
 					</Image>
 				</View>
@@ -183,39 +185,47 @@ const styles = StyleSheet.create({
 			height: 350,
 			alignSelf: 'center',
 	},
+	mainContainer:{
+		flexDirection: 'column',
+	},
 	containerButtonR: {
-			flexGrow: 0,
-			flexShrink: 0,
+			width: width_window*0.7,
+			height:height_window*0.05,
 			justifyContent: 'center',
 			alignItems: 'center',
 			flexDirection: 'column',
 			alignSelf: 'center',
 	},
 	containerPicker: {
-			flexGrow: 0,
-			flexShrink: 0,
-			justifyContent: 'center',
-			flexWrap: 'wrap',
-			flexDirection: 'row',
-			width: width_window,
-			height:50,
-			alignSelf: 'center',
+		justifyContent: 'center',
+		width: width_window*0.7,
+		height:height_window*0.05,
+		alignSelf: 'center',
+
+	},
+	contTexte:{
+		justifyContent: 'center',
+		flexDirection: 'column',
+		width: width_window*0.7,
+		height:height_window*0.07,
+		alignSelf: 'center',
 	},
 	imageBackground: {
 			width: width_window,
 			height: height_window,
 	},
 	picker: {
-			flexBasis: 120,
-			backgroundColor: '#FFFFFF',
-			padding:5,
+			//flexBasis: 120,
+			
+		backgroundColor: '#FFFFFF',
+		padding:5,
 	},
 	textInput: {
-			flexBasis: 215,
+			//flexBasis: 215,
 			backgroundColor: '#a9a9a9',
 	},
     button:{
-        height: width_window*0.09,
+        height: height_window*0.05,
         marginTop: 20,
         justifyContent: 'center',
         borderRadius:5,

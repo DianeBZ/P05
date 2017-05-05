@@ -90,14 +90,14 @@ const styles = StyleSheet.create({
     marginBottom: height*0.05,
   },
   button:{
-    height: width*0.09,
+    height:height*0.05,
     width: width *0.5,
     borderRadius:5,
     backgroundColor:'#A4D04A',
     justifyContent:'center',
   },
   buttonInscription:{
-    height: width*0.09,
+    height: height*0.05,
     width: width *0.5,
     borderRadius:5,
     backgroundColor:'rgb(71,95,209)',
