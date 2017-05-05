@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 import Trad from './traduction';
+import connexion_demande from './ajouter_demande_connexion';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -140,6 +141,23 @@ class MenuDepotAnnonce extends Component
 }
 	
 export default class DeposerUneAnnonce extends Component{
+    
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            var i = 0;
+            while(navigator.getCurrentRoutes()[i].name != 'Deposer demande'){
+                i=i+1;
+            }
+            if (navigator){
+                navigator.replaceAtIndex({
+                    name: 'Connexion pour demande',
+                    component: connexion_demande,
+                }, i)
+            }
+        }
+    }
+    
     render(){
         return(
         <ScrollView>
