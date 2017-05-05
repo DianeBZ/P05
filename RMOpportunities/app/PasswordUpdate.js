@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
-
 import {
   StyleSheet,
   Text,
   View,
   Dimensions,
-  ListView,
   TextInput,
   TouchableHighlight,
   Alert,
 } from 'react-native';
+import Translation from './Translation';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 var star = '*';
 
-export default class MotPasse extends Component{
+export default class PasswordUpdate extends Component{
   constructor(props) {
     super(props);
     this.state = {passAcien: '',passChange:'',passChangeRepete:''};
@@ -34,20 +32,20 @@ export default class MotPasse extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <View style={{height:heightWindow*0.08}}/>
+        <View style={{height:height*0.08}}/>
         <View style={styles.containerMain}>
           <View style={styles.containerText}>
             <Text style={styles.title}>
-              {Trad[lang].mdp}
+              {Translation[lang].mdp}
             </Text>
             <Text style={styles.instructions}>
-              {Trad[lang].text_mdp}
+              {Translation[lang].text_mdp}
             </Text>
           </View>
           <View style={styles.containerBas}>
             <View style={styles.containerItems}>
               <Text style={styles.titleAV}>
-                {Trad[lang].mdp_act + star}
+                {Translation[lang].mdp_act + star}
               </Text>
               <TextInput
               style={styles.textToFill} underlineColorAndroid={'transparent'} secureTextEntry={true}
@@ -56,7 +54,7 @@ export default class MotPasse extends Component{
             </View>
             <View style={styles.containerItems}>
               <Text style={styles.titleAV}>
-                {Trad[lang].mdp_nouveau + star}
+                {Translation[lang].mdp_nouveau + star}
               </Text>
               <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} secureTextEntry={true}
               onChange={(passChange)=>this.setState({passChange})}
@@ -64,15 +62,15 @@ export default class MotPasse extends Component{
             </View>
             <View style={styles.containerItems}>
               <Text style={styles.titleAV}>
-                {Trad[lang].mdp_nouveau2 + star}
+                {Translation[lang].mdp_nouveau2 + star}
               </Text>
               <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} secureTextEntry={true}
               onChange={(passChangeRepete)=>this.setState({passChangeRepete})}
               />
             </View>
             <TouchableHighlight style={styles.bouton} onPress={this.enregistrerPress.bind(this)}>
-              <Text style={{fontSize:heightWindow*0.03,color:'white'}}>
-				  {Trad[lang].enregistrer}
+              <Text style={{fontSize:height*0.03,color:'white'}}>
+				  {Translation[lang].enregistrer}
               </Text>
             </TouchableHighlight>
           </View>
@@ -96,8 +94,8 @@ const styles = StyleSheet.create({
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
-  width: widthWindow,
-  height: heightWindow * 0.89,
+  width: width,
+  height: height * 0.89,
   alignSelf: 'center',
   },
   containerText: {
@@ -107,8 +105,8 @@ const styles = StyleSheet.create({
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
-  width: widthWindow,
-  height: heightWindow * 0.28,
+  width: width,
+  height: height * 0.28,
   alignSelf: 'center',
   },
   title: {
@@ -140,8 +138,8 @@ const styles = StyleSheet.create({
   },
   textToFill:{
     marginTop:5,
-    width:widthWindow*0.8,
-    height:heightWindow*0.05,
+    width:width*0.8,
+    height:height*0.05,
     padding:5,
     borderRadius:5,
     borderWidth:1,
@@ -149,12 +147,11 @@ const styles = StyleSheet.create({
   },
   bouton:{
     marginTop:20,
-    width:widthWindow*0.7,
-    height:heightWindow*0.08,
+    width:width*0.7,
+    height:height*0.08,
     backgroundColor:'#A4D04A',
     borderRadius:5,
     alignItems:'center',
     justifyContent:'center',
   }
 })
-module.exports = MotPasse;

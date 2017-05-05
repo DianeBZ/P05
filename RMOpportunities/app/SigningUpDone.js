@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
 	StyleSheet,
-	AppRegistry,
 	Text,
 	View,
 	TouchableHighlight,
@@ -11,7 +10,7 @@ import {
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-export default class EndRegistration extends Component {
+export default class SigningUpDone extends Component {
   render() 
   {
     return (
@@ -102,7 +101,3 @@ const styles = StyleSheet.create({
         fontSize: 20,
     }
 });
-
-module.exports = EndRegistration;
-
-

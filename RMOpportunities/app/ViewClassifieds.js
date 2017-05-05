@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
-
 import {
   StyleSheet,
   Text,
@@ -8,55 +6,56 @@ import {
   Dimensions,
   ListView,
 } from 'react-native';
+import Translation from './Translation';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise
 //the display of the list of factures when we need.
-var dataSourceOffres = null;
-var dataSourceDemandes = null;
+var dataSourceOffers = null;
+var dataSourceDemands = null;
 
-export default class MesAnnonces extends Component {
+export default class ViewClassifieds extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{height:heightWindow*0.08}}/>
+        <View style={{height:height*0.08}}/>
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					{Trad[lang].mes_annonces}
+					{Translation[lang].mes_annonces}
 				</Text>
 				<Text style = {styles.instructions}>
-					{Trad[lang].visio_annonces}
+					{Translation[lang].visio_annonces}
 				</Text>
 			</View>
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleOD}>
-						{Trad[lang].offres}
+						{Translation[lang].offres}
 				</Text>
 			</View>
 			<View style = {styles.header}>
 				<View style = {styles.listHeaderFirst}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].num_id}
+						{Translation[lang].num_id}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].date_crea}
+						{Translation[lang].date_crea}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderThird}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].lien}
+						{Translation[lang].lien}
 					</Text>
 				</View>
 			</View>
 
 			{(() => {
-				if (dataSourceOffres != null)
+				if (dataSourceOffers != null)
 					return (
 						<ListView />
 					);
@@ -64,7 +63,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerOffres}>
 							<Text>
-								{Trad[lang].aucune_ann}
+								{Translation[lang].aucune_ann}
 							</Text>
 						</View>
 					);
@@ -78,23 +77,23 @@ export default class MesAnnonces extends Component {
 			<View style = {styles.header}>
 				<View style = {styles.listHeaderFirst}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].num_id}
+						{Translation[lang].num_id}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderSecond}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].date_crea}
+						{Translation[lang].date_crea}
 					</Text>
 				</View>
 				<View style = {styles.listHeaderThird}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].lien}
+						{Translation[lang].lien}
 					</Text>
 				</View>
 			</View>
 
 			{(() => {
-				if (dataSourceDemandes != null)
+				if (dataSourceDemands != null)
 					return (
 						<ListView />
 					);
@@ -102,7 +101,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerDemandes}>
 							<Text>
-								{Trad[lang].aucune_ann}
+								{Translation[lang].aucune_ann}
 							</Text>
 						</View>
 					);
@@ -127,8 +126,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.89,
+	width: width,
+	height: height * 0.89,
 	alignSelf: 'center',
   },
   containerText: {
@@ -138,13 +137,13 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.25,
+	width: width,
+	height: height * 0.25,
 	alignSelf: 'center',
   },
   containerOffres: {
-	width: widthWindow,
-	height: heightWindow * 0.19,
+	width: width,
+	height: height * 0.19,
 	flexGrow: 0,
 	flexShrink: 0,
 	justifyContent: 'center',
@@ -156,11 +155,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
-	width: 0.92 * widthWindow + 20,
+	width: 0.92 * width + 20,
   },
   containerDemandes: {
-	width: widthWindow,
-	height: heightWindow * 0.19,
+	width: width,
+	height: height * 0.19,
 	flexGrow: 0,
 	flexShrink: 0,
 	justifyContent: 'center',
@@ -172,7 +171,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
-	width: 0.92 * widthWindow + 20,
+	width: 0.92 * width + 20,
   },
   title: {
     fontSize: 40,
@@ -191,8 +190,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   header: {
-	width: widthWindow,
-	height: heightWindow * 0.06,
+	width: width,
+	height: height * 0.06,
 	alignItems: 'flex-end',
 	flexDirection: 'row',
 	justifyContent: 'center',
@@ -202,8 +201,8 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
     padding: 5,
     margin: 3,
-    width: 0.5 * widthWindow,
-    height: heightWindow * 0.06,
+    width: 0.5 * width,
+    height: height * 0.06,
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 5,
@@ -214,8 +213,8 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
     padding: 5,
     margin: 3,
-    width: 0.30 * widthWindow,
-    height: heightWindow * 0.06,
+    width: 0.30 * width,
+    height: height * 0.06,
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 5,
@@ -226,13 +225,11 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',
     padding: 5,
     margin: 3,
-    width: 0.14 * widthWindow,
-    height: heightWindow * 0.06,
+    width: 0.14 * width,
+    height: height * 0.06,
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#CCC',
   },
 });
-
-module.exports = MesAnnonces;

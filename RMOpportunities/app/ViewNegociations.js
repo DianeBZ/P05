@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
-
 import {
   StyleSheet,
   Text,
@@ -9,32 +7,34 @@ import {
   ListView,
 } from 'react-native';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+import Translation from './Translation';
+
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise
 //the display of the list of factures when we need.
 var dataSourceVp = null;
 var dataSourceAp = null;
 
-export default class MesAnnonces extends Component {
+export default class ViewNegociations extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{height:heightWindow*0.08}}/>
+        <View style={{height:height*0.08}}/>
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					{Trad[lang].nego}
+					{Translation[lang].nego}
 				</Text>
 				<Text style = {styles.instructions}>
-					{Trad[lang].nego_text1}
+					{Translation[lang].nego_text1}
 				</Text>
 			</View>
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
-						{Trad[lang].vente_cours}
+						{Translation[lang].vente_cours}
 				</Text>
 			</View>
 
@@ -47,7 +47,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerVentes}>
 							<Text>
-								{Trad[lang].aucune_vente}
+								{Translation[lang].aucune_vente}
 							</Text>
 						</View>
 					);
@@ -55,7 +55,7 @@ export default class MesAnnonces extends Component {
 
 			<View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start'}}>
 				<Text style = {styles.titleAV}>
-						{Trad[lang].achat_cours}
+						{Translation[lang].achat_cours}
 				</Text>
 			</View>
 
@@ -68,7 +68,7 @@ export default class MesAnnonces extends Component {
 					return (
 						<View style = {styles.containerAchats}>
 							<Text>
-								{Trad[lang].aucun_achat}
+								{Translation[lang].aucun_achat}
 							</Text>
 						</View>
 					);
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.89,
+	width: width,
+	height: height * 0.89,
 	alignSelf: 'center',
   },
   containerText: {
@@ -104,13 +104,13 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.30,
+	width: width,
+	height: height * 0.30,
 	alignSelf: 'center',
   },
   containerVentes: {
-	width: widthWindow,
-	height: heightWindow * 0.23,
+	width: width,
+	height: height * 0.23,
 	flexGrow: 0,
 	flexShrink: 0,
 	justifyContent: 'center',
@@ -122,11 +122,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
-	width: 0.92 * widthWindow + 20,
+	width: 0.92 * width + 20,
   },
   containerAchats: {
-	width: widthWindow,
-	height: heightWindow * 0.23,
+	width: width,
+	height: height * 0.23,
 	flexGrow: 0,
 	flexShrink: 0,
 	justifyContent: 'center',
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
 	margin: 5,
     borderColor: '#CCC',
-	width: 0.92 * widthWindow + 20,
+	width: 0.92 * width + 20,
   },
   title: {
     fontSize: 40,
@@ -157,5 +157,3 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-
-module.exports = MesAnnonces;

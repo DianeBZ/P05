@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator,ScrollView} from 'react-native';
+import {Text, Image, View, StyleSheet, Dimensions, TouchableHighlight, BackAndroid, ScrollView} from 'react-native';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
-import Index from './page1';
 
-import SeConnecter from './connexion';
+import Connection from './Connection';
 
-var produit = 'false';
+var product = 'false';
 var info = 'false';
 var description = 'false';
 
-export default class Offres extends Component {
-
+export default class OfferInformation extends Component {
   render() {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
@@ -26,7 +24,7 @@ export default class Offres extends Component {
 			</View>
 			<View>
        {(() => {
-           if (produit==='true'){
+           if (product==='true'){
              return(
 				<View>
 					<View>
@@ -207,8 +205,8 @@ _onPressNC = () => {
 	const { navigator } = this.props;
 	if (navigator) {
 		navigator.push({
-			name: 'SeConnecter',
-			component: SeConnecter,
+			name: 'Connection',
+			component: Connection,
 		})
 	}
 };
@@ -217,8 +215,8 @@ _onPressPlusInfoC = () => {
 	const { navigator } = this.props;
 	if (navigator) {
 		navigator.push({
-			name: 'SeConnecter',
-			component: SeConnecter,
+			name: 'Connection',
+			component: Connection,
 		})
 	}
 };
@@ -227,16 +225,16 @@ _onPressNegociationC = () => {
 	const { navigator } = this.props;
 	if (navigator) {
 		navigator.push({
-			name: 'SeConnecter',
-			component: SeConnecter,
+			name: 'Connection',
+			component: Connection,
 		})
 	}
 };
 _onPressProduit = () =>{
- if(produit === 'true'){
-   produit = 'false';
+ if(product === 'true'){
+   product = 'false';
  }else{
-   produit ='true';
+   product ='true';
    info = 'false';
    description ='false';
  }
@@ -246,7 +244,7 @@ _onPressInfo = () =>{
  if(info === 'true'){
    info = 'false';
  }else{
-   produit ='false';
+   product ='false';
    info = 'true';
    description ='false';
  }
@@ -256,7 +254,7 @@ _onPressDescription = () =>{
  if(description === 'true'){
    description = 'false';
  }else{
-   produit ='false';
+   product ='false';
    info = 'false';
    description ='true';
  }

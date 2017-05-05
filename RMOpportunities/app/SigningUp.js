@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
@@ -8,13 +7,13 @@ import {
   BackAndroid,
   Dimensions,
 } from 'react-native';
-import Trad from './traduction';
-import Inscription from './inscription';
+import Translation from './Translation';
+import SigningUpThreeSteps from './SigningUpThreeSteps';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-export default class inscription extends Component {
+export default class SigningUp extends Component {
 
   _onPressBouton(){
     console.log('press Linkedin');
@@ -26,26 +25,26 @@ export default class inscription extends Component {
       <View style={styles.container1}>
         <View style={{height: height * 0.08}}/>
         <Text style={styles.titre}>
-            {Trad[lang].inscript}
+            {Translation[lang].inscript}
         </Text>
         <View style={styles.subContainer}>
           <View style={styles.sContainerPre}>
             <Text style={styles.presentation}>
-                {Trad[lang].text_ins}
+                {Translation[lang].text_ins}
             </Text>
           </View>
           <View style={styles.sContainerBoutons}>
             <TouchableHighlight style={[styles.button, {width: width *0.85, backgroundColor:'rgb(0,160,220)'}]} onPress={this._onPressBouton} underlayColor="rgb(0,140,201)">
               <Text style={styles.buttonText}>
-                  {Trad[lang].ins_linkedin}
+                  {Translation[lang].ins_linkedin}
               </Text>
             </TouchableHighlight>
             <Text style={{color:'grey', marginTop:20}}>
-                {Trad[lang].ou}
+                {Translation[lang].ou}
             </Text>
             <TouchableHighlight style={[styles.button, {width: width *0.85, backgroundColor:'#A4D04A'}]} onPress={this.onPressInscription} underlayColor="rgb(138,183,46)">
               <Text style={styles.buttonText}>
-                  {Trad[lang].ins3etapes}
+                  {Translation[lang].ins3etapes}
               </Text>
             </TouchableHighlight>
           </View>
@@ -70,8 +69,8 @@ export default class inscription extends Component {
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
-				name: 'Inscription',
-				component: Inscription,
+				name: 'SigningUpThreeSteps',
+				component: SigningUpThreeSteps,
 			})
 		}
 	};

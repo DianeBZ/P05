@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
+import {Text, View, StyleSheet, Dimensions, TouchableHighlight, BackAndroid} from 'react-native';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-import Connexion from './connexion';
-import Offres from './offres';
+import Offers from './Offers';
 
-
-export default class VoirOffres extends Component {
-
+export default class OffersCategory extends Component {
   render() {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
@@ -58,8 +55,8 @@ export default class VoirOffres extends Component {
 		const { navigator } = this.props;
 		if (navigator) {
 		  navigator.push({
-			name: 'Offres',
-			component: Offres,
+			name: 'Offers',
+			component: Offers,
 		  })
 		}
   };

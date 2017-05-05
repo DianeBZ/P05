@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
-
 import {
   StyleSheet,
   Text,
   View,
   Dimensions,
-  ListView,
   TextInput,
   TouchableHighlight,
 } from 'react-native';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+import Translation from './Translation';
 
-export default class AlertProduits extends Component{
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
+export default class ProductAlerts extends Component{
   constructor(props) {
     super(props);
     this.state = {text: ''};
@@ -26,46 +24,46 @@ export default class AlertProduits extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <View style={{height:heightWindow*0.08}}/>
+        <View style={{height:height*0.08}}/>
         <View style={styles.containerMain}>
           <View style = {styles.containerText}>
             <Text style = {styles.title}>
-				{Trad[lang].al_prod}
+				{Translation[lang].al_prod}
             </Text>
             <Text style = {styles.instructions}>
-			  {Trad[lang].al_prod_text}
+			  {Translation[lang].al_prod_text}
             </Text>
           </View>
           <View style={styles.containerAjouteAlerte}>
             <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'}
-            placeholder={Trad[lang].num_id}
+            placeholder={Translation[lang].num_id}
             onChangeText={(text) => this.setState({text})}
             />
             <TouchableHighlight style={styles.bouton}>
-              <Text style={{fontSize:heightWindow*0.03,color:'white'}} onPress={this.search.bind(this)}>
-				  {Trad[lang].aj}
+              <Text style={{fontSize:height*0.03,color:'white'}} onPress={this.search.bind(this)}>
+				  {Translation[lang].aj}
               </Text>
             </TouchableHighlight>
           </View>
           <View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start',marginLeft:5}}>
             <Text style = {styles.titleAV}>
-                {Trad[lang].al_def}
+                {Translation[lang].al_def}
             </Text>
           </View>
           <View style = {styles.header}>
             <View style = {styles.listHeaderFirst}>
               <Text style = {{textAlign: 'center',fontSize:10,}}>
-                {Trad[lang].num_id}
+                {Translation[lang].num_id}
               </Text>
             </View>
             <View style = {styles.listHeader}>
               <Text style = {{textAlign: 'center',fontSize:10,}}>
-				  {Trad[lang].activer}
+				  {Translation[lang].activer}
               </Text>
             </View>
             <View style = {styles.listHeader}>
               <Text style = {{textAlign: 'center',fontSize:10,}}>
-				  {Trad[lang].supprimer}
+				  {Translation[lang].supprimer}
               </Text>
             </View>
           </View>
@@ -92,8 +90,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.89,
+	width: width,
+	height: height * 0.89,
 	alignSelf: 'center',
   },
   containerText: {
@@ -103,8 +101,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.28,
+	width: width,
+	height: height * 0.28,
 	alignSelf: 'center',
   },
   title: {
@@ -123,16 +121,16 @@ const styles = StyleSheet.create({
     flexDirection:'row',
   },
   textToFill:{
-    width:widthWindow*0.6,
-    height:heightWindow*0.05,
+    width:width*0.6,
+    height:height*0.05,
     fontSize:11,
     padding:5,
     borderWidth:1,
     borderColor:'#CCC',
   },
   bouton:{
-    width:widthWindow*0.2,
-    height:heightWindow*0.05,
+    width:width*0.2,
+    height:height*0.05,
     backgroundColor:'#A4D04A',
     alignItems:'center',
     justifyContent:'center',
@@ -143,8 +141,8 @@ const styles = StyleSheet.create({
   textAlign: 'left',
   },
   header: {
-  width: widthWindow,
-  //height: heightWindow * 0.12,
+  width: width,
+  //height: height * 0.12,
   //alignItems: 'flex-end',
   flexDirection: 'row',
   justifyContent: 'center',
@@ -153,8 +151,8 @@ const styles = StyleSheet.create({
   justifyContent: 'center',
   alignSelf: 'center',
     padding: 5,
-    width: 0.16 * widthWindow,
-    height: heightWindow * 0.05,
+    width: 0.16 * width,
+    height: height * 0.05,
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 5,
@@ -165,17 +163,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     padding: 5,
-    width: 0.4 * widthWindow,
-    height: heightWindow * 0.05,
+    width: 0.4 * width,
+    height: height * 0.05,
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#CCC',
   },
   containerContenu: {
-  width: widthWindow*0.72,
+  width: width*0.72,
   flexDirection:'row',
-  height: heightWindow * 0.23,
+  height: height * 0.23,
   backgroundColor: '#F5FCFF',
   padding: 5,
   borderWidth: 1,
