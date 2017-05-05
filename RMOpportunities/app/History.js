@@ -9,8 +9,8 @@ import {
   ListView,
 } from 'react-native';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise 
 //the display of the list of factures when we need.
@@ -20,7 +20,7 @@ export default class History extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{height:heightWindow*0.08}}/>
+        <View style={{height:height*0.08}}/>
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.89,
+	width: width,
+	height: height * 0.89,
 	alignSelf: 'center',
   },
   containerText: {
@@ -99,13 +99,13 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.37,
+	width: width,
+	height: height * 0.37,
 	alignSelf: 'center',
   },
   containerFacture: {
-	width: widthWindow,
-	height: heightWindow * 0.38,
+	width: width,
+	height: height * 0.38,
 	flexGrow: 0,
 	flexShrink: 0,
 	justifyContent: 'center',
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
 	margin: 10,
     borderColor: '#CCC',
-	width: 0.92 * widthWindow + 20,
+	width: 0.92 * width + 20,
   },
   title: {
     fontSize: 40,
@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   header: {
-	width: widthWindow,
-	height: heightWindow * 0.12,
+	width: width,
+	height: height * 0.12,
 	alignItems: 'flex-end',
 	flexDirection: 'row',
 	justifyContent: 'center',
@@ -142,13 +142,11 @@ const styles = StyleSheet.create({
 	alignSelf: 'center',	
     padding: 5,  
     margin: 3,  
-    width: 0.23 * widthWindow,  
-    height: heightWindow * 0.12, 
+    width: 0.23 * width,  
+    height: height * 0.12, 
     alignItems: 'center',
     borderWidth: 1,  
     borderRadius: 5,  
     borderColor: '#CCC',
   },
 });
-
-module.exports = Historique;

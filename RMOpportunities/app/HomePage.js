@@ -20,8 +20,8 @@ import SigningUp from './SigningUp';
 
 import Translation from './Translation';
 
-var width_window = Dimensions.get('window').width;
-var height_window = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 var selected = 'tlc';
 var textInput = 'TextInput';
 
@@ -52,10 +52,10 @@ export default class HomePage extends Component {
 						else
 							return (
 								<View style={styles.containerButton}>
-                                    <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width_window*0.5, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
+                                    <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width*0.5, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
                                         <Text style={[styles.buttonText, {color:'black'}]}>{Translation[lang].connexion}</Text>
                                     </TouchableHighlight>
-                                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width_window*0.5, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
+                                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width*0.5, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
                                         <Text style={styles.buttonText}>{Translation[lang].inscription}</Text>
                                     </TouchableHighlight>
 								</View>
@@ -94,7 +94,7 @@ export default class HomePage extends Component {
 								/>
 							</View>
 							<View style={styles.containerButtonR}>
-								<TouchableHighlight onPress={this.onPressRecherche} style={{height: height_window*0.05, width: width_window*0.7, backgroundColor:'#A4D04A', justifyContent:'center'}} underlayColor="rgb(138,183,46)">
+								<TouchableHighlight onPress={this.onPressRecherche} style={{height: height*0.05, width: width*0.7, backgroundColor:'#A4D04A', justifyContent:'center'}} underlayColor="rgb(138,183,46)">
 									<Text style={styles.buttonText}>{Translation[lang].recherche}</Text>
 								</TouchableHighlight>
 							</View>
@@ -185,8 +185,8 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 	},
 	containerButtonR: {
-			width: width_window*0.7,
-			height:height_window*0.05,
+			width: width*0.7,
+			height:height*0.05,
 			justifyContent: 'center',
 			alignItems: 'center',
 			flexDirection: 'column',
@@ -194,21 +194,21 @@ const styles = StyleSheet.create({
 	},
 	containerPicker: {
 		justifyContent: 'center',
-		width: width_window*0.7,
-		height:height_window*0.05,
+		width: width*0.7,
+		height:height*0.05,
 		alignSelf: 'center',
 
 	},
 	contTexte:{
 		justifyContent: 'center',
 		flexDirection: 'column',
-		width: width_window*0.7,
-		height:height_window*0.07,
+		width: width*0.7,
+		height:height*0.07,
 		alignSelf: 'center',
 	},
 	imageBackground: {
-			width: width_window,
-			height: height_window,
+			width: width,
+			height: height,
 	},
 	picker: {
 			//flexBasis: 120,
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
 			backgroundColor: '#a9a9a9',
 	},
     button:{
-        height: height_window*0.05,
+        height: height*0.05,
         marginTop: 20,
         justifyContent: 'center',
         borderRadius:5,
@@ -232,5 +232,3 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
 });
-
-module.exports = Index;

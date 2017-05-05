@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Translation from './translation';
+import Translation from './Translation';
 
 import {
   StyleSheet,
@@ -9,8 +9,8 @@ import {
   ListView
 } from 'react-native';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise
 //the display of the list of factures when we need.
@@ -34,7 +34,7 @@ export default class AccountInformation extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{height:heightWindow*0.08}}/>
+        <View style={{height:height*0.08}}/>
     		<View style={styles.containerMain}>
 
     			<View style = {styles.containerText}>
@@ -112,8 +112,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.89,
+	width: width,
+	height: height * 0.89,
 	alignSelf: 'center',
   },
   containerText: {
@@ -123,8 +123,8 @@ const styles = StyleSheet.create({
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
-	width: widthWindow,
-	height: heightWindow * 0.28,
+	width: width,
+	height: height * 0.28,
 	alignSelf: 'center',
   },
   title: {
@@ -144,9 +144,9 @@ const styles = StyleSheet.create({
   textAlign: 'left',
   },
   containerEntreprise: {
-  //width: widthWindow,
+  //width: width,
   flexDirection:'row',
-  height: heightWindow * 0.23,
+  height: height * 0.23,
   //justifyContent: 'space-around',
   //alignItems: 'stretch',
   backgroundColor: '#F5FCFF',
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   borderRadius: 5,
   margin: 5,
   borderColor: '#CCC',
-  width: 0.92 * widthWindow + 20,
+  width: 0.92 * width + 20,
   },
   containerEntrepriseGauche:{
       flex:1,
@@ -168,4 +168,3 @@ const styles = StyleSheet.create({
       alignItems:'flex-end'
   }
 });
-module.exports = Informations;

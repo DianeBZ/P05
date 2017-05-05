@@ -10,7 +10,7 @@ import {
   Picker
 } from 'react-native';
 
-import Translation from './translation';
+import Translation from './Translation';
 import ProductConnection from './AddProductConnection';
 
 var width = Dimensions.get('window').width;
@@ -190,7 +190,7 @@ export default class AddOffer extends Component{
         if (connection===0){
             const {navigator} = this.props;
             var i = 0;
-            while(navigator.getCurrentRoutes()[i].name != 'Add offer'){
+            while(navigator.getCurrentRoutes()[i].name != 'AddOffer'){
                 i=i+1;
             }
             if (navigator){
@@ -211,7 +211,7 @@ export default class AddOffer extends Component{
                     {Translation[lang].aj_offre}
                 </Text>
                 <View style={styles.mainWindow}>
-                    <AjouterOffreEtapes/>
+                    <AddOfferSteps/>
                 </View>
             </View>
         </ScrollView>

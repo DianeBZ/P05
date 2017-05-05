@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, View,ScrollView, Dimensions, TouchableHighlight, BackAndroid} from 'react-native';
+import { Text, Image, StyleSheet, View,ScrollView, Dimensions, TouchableHighlight, BackAndroid} from 'react-native';
 
 import Translation from './Translation';
 
@@ -145,7 +145,7 @@ class BlockFunction extends Component{
                  </TouchableHighlight>
                </View>
              );
-           }else if(visibilite === 'true'){
+           }else if(visibility === 'true'){
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
@@ -345,7 +345,7 @@ export default class Benefits extends Component {
       <ScrollView>
        <View style={{height:height*0.08}}/>
        <Text style={styles.intro}>{Translation[lang].benef}</Text>
-       <BloqueFonction/>
+       <BlockFunction/>
      </ScrollView>
     );
   }
@@ -425,5 +425,3 @@ const styles = StyleSheet.create({
   },
 
 });
-
-module.exports = BeneficesEntreprise;

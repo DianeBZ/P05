@@ -6,8 +6,8 @@ var height = Dimensions.get('window').height;
 var p = "!";
 
 import Connection from './Connection';
-import SigningUp from './signingUp';
-import Translation from './translation';
+import SigningUp from './SigningUp';
+import Translation from './Translation';
 
 export default class AddDemandConnectioon extends Component {
 

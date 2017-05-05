@@ -5,9 +5,9 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 var p = "!";
 
-import Connection from './connection';
-import SigningUp from './signingUp';
-import Translation from './translation';
+import Connection from './Connection';
+import SigningUp from './SigningUp';
+import Translation from './Translation';
 
 export default class AddProductConnection extends Component {
 
@@ -41,8 +41,8 @@ export default class AddProductConnection extends Component {
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
-				name: 'Connexion',
-				component: Connexion,
+				name: 'Connection',
+				component: Connection,
 			})
 		}
 	};

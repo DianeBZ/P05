@@ -9,7 +9,7 @@ import {
   ScrollView
 } from 'react-native';
 
-import Translation from './translation';
+import Translation from './Translation';
 import DemandConnection from './AddDemandConnection';
 
 var width = Dimensions.get('window').width;
@@ -45,7 +45,7 @@ class MenuAddDemand extends Component
                     <View>
                         <View style={{flexDirection:'row', justifyContent:'flex-start', width:width}}>
                             <View style={{borderWidth:1, borderColor:'#A4D04A', height:height*0.05}}>
-                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>{Translation[lang].Step1}</Text>
+                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>{Translation[lang].etape1}</Text>
                             </View>
                             <View style={{borderWidth:1, borderColor:'#A4D04A', height:height*0.05, backgroundColor:"#F2F2F2"}}>
                                 <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>2</Text>
@@ -78,7 +78,7 @@ class MenuAddDemand extends Component
                                 <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>1</Text>
                             </View>
                             <View style={{borderWidth:1, borderColor:'#A4D04A', height:height*0.05}}>
-                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>{Translation[lang].Step2}</Text>
+                                <Text style={{fontSize:22, marginLeft:15, marginRight:15, color:"#000000"}}>{Translation[lang].etape2}</Text>
                             </View>
                             <View style={{flex:1, backgroundColor:'#F2F2F2'}}/>
                         </View>
@@ -141,7 +141,7 @@ export default class AddDemand extends Component{
         if (connection===0){
             const {navigator} = this.props;
             var i = 0;
-            while(navigator.getCurrentRoutes()[i].name != 'Add demand'){
+            while(navigator.getCurrentRoutes()[i].name != 'AddDemand'){
                 i=i+1;
             }
             if (navigator){
@@ -162,7 +162,7 @@ export default class AddDemand extends Component{
                     {Translation[lang].aj_demande}
                 </Text>
                 <View style={styles.mainWindow}>
-                    <MenuDepotAnnonce/>
+                    <MenuAddDemand/>
                 </View>
             </View>
         </ScrollView>
