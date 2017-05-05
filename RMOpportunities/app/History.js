@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
+import Translation from './Translation';
 
 import {
   StyleSheet,
@@ -16,7 +16,7 @@ var heightWindow = Dimensions.get('window').height;
 //the display of the list of factures when we need.
 var dataSource = null;
 
-export default class Historique extends Component {
+export default class History extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -24,32 +24,32 @@ export default class Historique extends Component {
 		<View style={styles.containerMain}>
 			<View style = {styles.containerText}>
 				<Text style = {styles.title}>
-					{Trad[lang].histo}
+					{Translation[lang].histo}
 				</Text>
 				<Text style = {styles.instructions}>
-					{Trad[lang].visio_factures}
+					{Translation[lang].visio_factures}
 				</Text>
 			</View>
 			
 			<View style = {styles.header}>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].montant_com}
+						{Translation[lang].montant_com}
 					</Text>
 				</View>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].date_fact}
+						{Translation[lang].date_fact}
 					</Text>
 				</View>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].date_paie}
+						{Translation[lang].date_paie}
 					</Text>
 				</View>
 				<View style = {styles.listHeader}>
 					<Text style = {{textAlign: 'center',}}>
-						{Trad[lang].lien}
+						{Translation[lang].lien}
 					</Text>
 				</View>
 			</View>
@@ -63,7 +63,7 @@ export default class Historique extends Component {
 					return (
 						<View style = {styles.containerFacture}>
 							<Text>
-								{Trad[lang].aucune_fact}
+								{Translation[lang].aucune_fact}
 							</Text>
 						</View>
 					);

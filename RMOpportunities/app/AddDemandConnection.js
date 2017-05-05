@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
+import { Text,View, StyleSheet,Dimensions, TouchableHighlight,BackAndroid,Navigator} from 'react-native';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 var p = "!";
 
-import Connexion from './connexion';
-import inscription from './page3';
-import Trad from './traduction';
+import Connection from './Connection';
+import SigningUp from './signingUp';
+import Translation from './translation';
 
-export default class AjouterDemandeConnexion extends Component {
+export default class AddDemandConnectioon extends Component {
 
   render() {
     return(
       <View>
         <View style={{height:height*0.08}}/>
         <View style={styles.intro}>
-          <Text style={styles.titre}>{Trad[lang].aj_demande}</Text>
+          <Text style={styles.titre}>{Translation[lang].aj_demande}</Text>
         </View>
 
         <View style={styles.corps}>
-          <Text style={styles.texte}>{Trad[lang].pls_co}</Text>
+          <Text style={styles.texte}>{Translation[lang].pls_co}</Text>
           <TouchableHighlight onPress={this.onPressConnexion} style={styles.button} underlayColor="rgb(138,183,46)">
-              <Text style={styles.buttonText}>{Trad[lang].se_co}</Text>
+              <Text style={styles.buttonText}>{Translation[lang].se_co}</Text>
           </TouchableHighlight>
-          <Text style={styles.textePasCompte}>{Trad[lang].pas_compte}</Text>
-          <Text style={styles.texteInscrivez}>{Trad[lang].inscript + p}</Text>
+          <Text style={styles.textePasCompte}>{Translation[lang].pas_compte}</Text>
+          <Text style={styles.texteInscrivez}>{Translation[lang].inscript + p}</Text>
           <TouchableHighlight onPress={this.onPressInscription} style={styles.buttonInscription} underlayColor="rgb(44,67,177)">
-              <Text style={styles.buttonText}>{Trad[lang].inscription}</Text>
+              <Text style={styles.buttonText}>{Translation[lang].inscription}</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -41,8 +41,8 @@ export default class AjouterDemandeConnexion extends Component {
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
-				name: 'Connexion',
-				component: Connexion,
+				name: 'Connection',
+				component: Connection,
 			})
 		}
 	};
@@ -51,8 +51,8 @@ export default class AjouterDemandeConnexion extends Component {
     const { navigator } = this.props;
     if (navigator) {
       navigator.push({
-        name: 'Inscription',
-        component: inscription,
+        name: 'SigningUp',
+        component: SigningUp,
       })
     }
   };

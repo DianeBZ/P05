@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
-  Image,
   Dimensions,
   TextInput,
-  Button,
-  Alert,
   TouchableHighlight,
   BackAndroid,
   DeviceEventEmitter,
 } from 'react-native';
 
-import Trad from './traduction';
-import ajouter_offre from './ajouterOffre';
-import ajouter_demande from './deposer_une_annonce';
+import Translation from './Translation';
+import AddOffer from './AddOffer';
+import AddDemand from './AddDemand';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-export default class Connexion extends Component {
+export default class Connection extends Component {
   constructor(props){
 	  super(props);
   }
@@ -34,15 +30,15 @@ export default class Connexion extends Component {
     var length = navigator.getCurrentRoutes().length;
     if (navigator && length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
-      if (navigator.getCurrentRoutes()[length-2].name === 'Connexion pour demande'){
+      if (navigator.getCurrentRoutes()[length-2].name === 'AddDemandConnection'){
           navigator.replacePreviousAndPop({
-                name: 'Deposer demande',
-                component: ajouter_demande,
+                name: 'AddDemand',
+                component: AddDemand,
             })
-      }else if (navigator.getCurrentRoutes()[length-2].name === 'Connexion pour offre'){
+      }else if (navigator.getCurrentRoutes()[length-2].name === 'AddProductConnection'){
           navigator.replacePreviousAndPop({
-                name: 'Deposer offre',
-                component: ajouter_offre,
+                name: 'AddOffer',
+                component: AddOffer,
             })
       }else{
         navigator.pop();
@@ -60,20 +56,20 @@ export default class Connexion extends Component {
           <View style={{height: height * 0.08}}/>
           <View style={styles.window}>
             <Text style={styles.titre}>
-                {Trad[lang].connect}
+                {Translation[lang].connect}
             </Text>
             <View style={styles.mainWindow}>
-                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Trad[lang].nom_mail} />
-                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Trad[lang].mdp} />
+                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Translation[lang].nom_mail} />
+                <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Translation[lang].mdp} />
                 <Text style={{color:'grey', marginTop:20}}>
-                    {Trad[lang].mdp_oublie}
+                    {Translation[lang].mdp_oublie}
                 </Text>
                 <TouchableHighlight onPress={this._onPressButton.bind(this)} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
-                    <Text style={styles.buttonText}>{Trad[lang].se_co}</Text>
+                    <Text style={styles.buttonText}>{Translation[lang].se_co}</Text>
                 </TouchableHighlight>
-                <Text style={{color:'grey', marginTop:20}}>{Trad[lang].ou}</Text>
+                <Text style={{color:'grey', marginTop:20}}>{Translation[lang].ou}</Text>
                 <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.75, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
-                    <Text style={styles.buttonText}>{Trad[lang].co_linkedin}</Text>
+                    <Text style={styles.buttonText}>{Translation[lang].co_linkedin}</Text>
                 </TouchableHighlight>
             </View>
           </View>
@@ -135,5 +131,3 @@ const styles = StyleSheet.create({
         fontSize: 20,
     }
 });
-
-module.exports = Connexion;

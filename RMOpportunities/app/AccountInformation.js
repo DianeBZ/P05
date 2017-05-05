@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
+import Translation from './translation';
 
 import {
   StyleSheet,
   Text,
   View,
   Dimensions,
-  ListView,
+  ListView
 } from 'react-native';
 
 var widthWindow = Dimensions.get('window').width;
@@ -16,7 +16,7 @@ var heightWindow = Dimensions.get('window').height;
 //the display of the list of factures when we need.
 var dataSource = null;
 
-export default class Informations extends Component {
+export default class AccountInformation extends Component {
   constructor(props) {
   super(props);
   var ds1 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -24,9 +24,9 @@ export default class Informations extends Component {
   var ds3 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   
   this.state = {
-	dataSource1: ds1.cloneWithRows([Trad[lang].denomination, Trad[lang].adresse , Trad[lang].num_tva_inter]),
+	dataSource1: ds1.cloneWithRows([Translation[lang].denomination, Translation[lang].adresse , Translation[lang].num_tva_inter]),
     dataSource2: ds1.cloneWithRows(['NULL1', 'NULL2',"NULL3"]),
-	dataSource3: ds1.cloneWithRows([Trad[lang].nom_info , Trad[lang].ad_mail , Trad[lang].num_tel]),
+	dataSource3: ds1.cloneWithRows([Translation[lang].nom_info , Translation[lang].ad_mail , Translation[lang].num_tel]),
   };
 
 }
@@ -39,17 +39,17 @@ export default class Informations extends Component {
 
     			<View style = {styles.containerText}>
     				<Text style = {styles.title}>
-    					{Trad[lang].info}
+    					{Translation[lang].info}
     				</Text>
     				<Text style = {styles.instructions}>
-    					{Trad[lang].text_info}
+    					{Translation[lang].text_info}
     				</Text>
     			</View>
 
 
           <View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start',marginLeft:5}}>
             <Text style = {styles.titleAV}>
-                {Trad[lang].entreprise}
+                {Translation[lang].entreprise}
             </Text>
           </View>
           <View style={styles.containerEntreprise}>
@@ -69,7 +69,7 @@ export default class Informations extends Component {
 
           <View style = {{justifyContent: 'flex-start',alignSelf: 'flex-start',marginLeft:5}}>
             <Text style = {styles.titleAV}>
-                {Trad[lang].representant}
+                {Translation[lang].representant}
             </Text>
           </View>
           <View style={styles.containerEntreprise}>

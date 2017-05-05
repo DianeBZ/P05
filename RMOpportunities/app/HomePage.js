@@ -15,19 +15,17 @@ import {
   Navigator,
   ScrollView,
 } from 'react-native';
-import Connexion from './connexion';
-import inscription from './page3';
+import Connection from './Connection';
+import SigningUp from './SigningUp';
 
-import Trad from './traduction';
-var selectedKey2;
+import Translation from './Translation';
 
 var width_window = Dimensions.get('window').width;
 var height_window = Dimensions.get('window').height;
 var selected = 'tlc';
-var selectedKey = 'Toutes les categories';
 var textInput = 'TextInput';
 
-export default class Index extends Component {
+export default class HomePage extends Component {
 	// Init this class and add 1 boolean value to check
 	// if the user logined. We check this because when
 	// users logined succesufully, two buttons should be hidden
@@ -55,10 +53,10 @@ export default class Index extends Component {
 							return (
 								<View style={styles.containerButton}>
                                     <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width_window*0.5, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
-                                        <Text style={[styles.buttonText, {color:'black'}]}>{Trad[lang].connexion}</Text>
+                                        <Text style={[styles.buttonText, {color:'black'}]}>{Translation[lang].connexion}</Text>
                                     </TouchableHighlight>
                                     <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width_window*0.5, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
-                                        <Text style={styles.buttonText}>{Trad[lang].inscription}</Text>
+                                        <Text style={styles.buttonText}>{Translation[lang].inscription}</Text>
                                     </TouchableHighlight>
 								</View>
 							);
@@ -69,26 +67,26 @@ export default class Index extends Component {
 									selectedValue={selected}
 									onValueChange={this.onValueChange.bind(this,'value')}
 									style={styles.picker} >
-									<Picker.Item label={Trad[lang].ttes_cat} value="tlc" />
-									<Picker.Item label={Trad[lang].cosm} value="Pcos" />
-									<Picker.Item label={Trad[lang].solv} value="sol" />
-									<Picker.Item label={Trad[lang].solv_reg} value="sol_r" />
-									<Picker.Item label={Trad[lang].react} value="rea" />
-									<Picker.Item label={Trad[lang].catal} value="cat" />
-									<Picker.Item label={Trad[lang].spe_chi} value="spe" />
-									<Picker.Item label={Trad[lang].interm} value="int" />
-									<Picker.Item label={Trad[lang].interm_simple} value="int_s" />
-									<Picker.Item label={Trad[lang].acides} value="aci" />
-									<Picker.Item label={Trad[lang].bases} value="bas" />
-									<Picker.Item label={Trad[lang].acid_ami} value="aci_a" />
-									<Picker.Item label={Trad[lang].vit} value="vit" />
-									<Picker.Item label={Trad[lang].autres} value="aut" />
+									<Picker.Item label={Translation[lang].ttes_cat} value="tlc" />
+									<Picker.Item label={Translation[lang].cosm} value="Pcos" />
+									<Picker.Item label={Translation[lang].solv} value="sol" />
+									<Picker.Item label={Translation[lang].solv_reg} value="sol_r" />
+									<Picker.Item label={Translation[lang].react} value="rea" />
+									<Picker.Item label={Translation[lang].catal} value="cat" />
+									<Picker.Item label={Translation[lang].spe_chi} value="spe" />
+									<Picker.Item label={Translation[lang].interm} value="int" />
+									<Picker.Item label={Translation[lang].interm_simple} value="int_s" />
+									<Picker.Item label={Translation[lang].acides} value="aci" />
+									<Picker.Item label={Translation[lang].bases} value="bas" />
+									<Picker.Item label={Translation[lang].acid_ami} value="aci_a" />
+									<Picker.Item label={Translation[lang].vit} value="vit" />
+									<Picker.Item label={Translation[lang].autres} value="aut" />
 								</Picker>
 							</View>
 							<View style={styles.contTexte}>
 
 								<TextInput
-									placeholder={Trad[lang].trouver_par}
+									placeholder={Translation[lang].trouver_par}
 									maxLength = {40}
 									editable={true}
 									style={styles.textInput}
@@ -97,7 +95,7 @@ export default class Index extends Component {
 							</View>
 							<View style={styles.containerButtonR}>
 								<TouchableHighlight onPress={this.onPressRecherche} style={{height: height_window*0.05, width: width_window*0.7, backgroundColor:'#A4D04A', justifyContent:'center'}} underlayColor="rgb(138,183,46)">
-									<Text style={styles.buttonText}>{Trad[lang].recherche}</Text>
+									<Text style={styles.buttonText}>{Translation[lang].recherche}</Text>
 								</TouchableHighlight>
 							</View>
 						</View>
@@ -108,13 +106,11 @@ export default class Index extends Component {
 	}
     _onLangChange = (key: string, value: string) => {
         lang = value;
-        selectedKey2 = key;
 		this.forceUpdate();
     };
 	//Get the key words from user's choice.(catagories)
 	onValueChange = (key: string, value: string) => {
 		// This value (selectedKey) is same as the catagorie selected.
-		selectedKey = key;
 		selected = value;
 		this.forceUpdate();
 	};
@@ -139,8 +135,8 @@ export default class Index extends Component {
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
-				name: 'Connexion',
-				component: Connexion,
+				name: 'Connection',
+				component: Connection,
 				params:{
       }
 			})
@@ -152,8 +148,8 @@ export default class Index extends Component {
     const { navigator } = this.props;
     if (navigator) {
       navigator.push({
-        name: 'Inscription',
-        component: inscription,
+        name: 'SigningUp',
+        component: SigningUp,
       })
     }
   };

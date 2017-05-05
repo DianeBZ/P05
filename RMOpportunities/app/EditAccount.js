@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Trad from './traduction';
+import Translation from './Translation';
 
 import {
   StyleSheet,
@@ -17,7 +17,7 @@ var heightWindow = Dimensions.get('window').height;
 //the display of the list of factures when we need.
 var dataSource = null;
 
-export default class ModificationCompte extends Component{
+export default class EditAccount extends Component{
 
   render(){
     return(
@@ -26,20 +26,20 @@ export default class ModificationCompte extends Component{
           <View style={styles.containerMain}>
             <View style = {styles.containerText}>
               <Text style = {styles.title}>
-                {Trad[lang].modif_compte}
+                {Translation[lang].modif_compte}
               </Text>
               <Text style = {styles.instructions}>
-                {Trad[lang].modif_infos}
+                {Translation[lang].modif_infos}
               </Text>
             </View>
             <View>
               <Text style = {styles.titleAV}>
-                  {Trad[lang].contact_text}
+                  {Translation[lang].contact_text}
               </Text>
             </View>
             <TouchableHighlight style={{marginTop:10}}>
               <Text style={{fontSize:20,color:'#A4D04A'}} onPress={this.contactPress.bind(this)}>
-                {Trad[lang].mail_contact}
+                {Translation[lang].mail_contact}
               </Text>
             </TouchableHighlight>
           </View>

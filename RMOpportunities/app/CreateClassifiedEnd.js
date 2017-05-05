@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
+import { Text, Image, View, StyleSheet,Dimensions,TouchableHighlight,BackAndroid,Navigator} from 'react-native';
 
-import accueil from './page1';
-import Trad from './traduction';
+import HomePage from './HomePage';
+import Translation from './Translation';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 
-export default class CreerAnnonceFin extends Component {
+export default class CreateClassifiedEnd extends Component {
 
   render() {
 	return(
 		<View>
 			<View style={{height:height*0.08}}/>
 			<View style={styles.corps}>
-				<Text style={styles.merci}>{Trad[lang].merci}</Text>
+				<Text style={styles.merci}>{Translation[lang].merci}</Text>
 				<Image source={require('../img/merci.png')} style={styles.merciImage}/>
-				<Text style={styles.merciTexte}>{Trad[lang].mess_merci}</Text>
+				<Text style={styles.merciTexte}>{Translation[lang].mess_merci}</Text>
 				<TouchableHighlight onPress={this.onPressAccueil} style={styles.button} underlayColor="rgb(138,183,46)">
-					<Text style={styles.buttonText}>{Trad[lang].retour_acc}</Text>
+					<Text style={styles.buttonText}>{Translation[lang].retour_acc}</Text>
 				</TouchableHighlight>
 			</View>
 		</View>
@@ -29,8 +29,8 @@ export default class CreerAnnonceFin extends Component {
     const { navigator } = this.props;
     if (navigator) {
       navigator.push({
-        name: 'Accueil',
-        component: accueil,
+        name: 'HomePage',
+        component: HomePage,
       })
     }
   };

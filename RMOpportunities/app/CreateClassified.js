@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View, StyleSheet,Dimensions, Button, Alert,TouchableHighlight,BackAndroid,ToastAndroid,Navigator} from 'react-native';
-import connexion_produit from './ajouter_produit_connexion';
-import connexion_demande from './ajouter_demande_connexion';
-import ajouter_offre from './ajouterOffre';
-import ajouter_demande from './deposer_une_annonce';
+import { Text, Image, View, StyleSheet,Dimensions,TouchableHighlight,BackAndroid,Navigator} from 'react-native';
 
-import Trad from './traduction'
+import AddProductConnection from './AddProductConnection';
+import AddDemandConnection from './AddDemandConnection';
+import AddOffer from './AddOffer';
+import AddDemand from './AddDemand';
+
+import Translation from './Translation';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 
-export default class CreerAnnonce extends Component {
+export default class CreateClassified extends Component {
 
   render() {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
@@ -19,25 +20,25 @@ export default class CreerAnnonce extends Component {
         <View>
             <View style = {{height : height*0.08}}/>
             <View style={styles.intro}>
-              <Text style={styles.titre}>{Trad[lang].creer_ann}</Text>
+              <Text style={styles.titre}>{Translation[lang].creer_ann}</Text>
             </View>
             <View>
-              <Text style={styles.introCommencer}>{Trad[lang].commencer}</Text>
+              <Text style={styles.introCommencer}>{Translation[lang].commencer}</Text>
             </View>
             <View style={styles.depotAnnonce}>
-              <Text style={styles.presentation}>{Trad[lang].texte_depot} </Text>
+              <Text style={styles.presentation}>{Translation[lang].texte_depot} </Text>
             </View>
             <View style={styles.contH}>
               <View style={styles.contV}>
                 <Image source={require('../img/ajouterDemande.png')} style={styles.ajouterImage}/>
                 <TouchableHighlight onPress={this.onButtonPressDemande} style={styles.button} underlayColor="rgb(138,183,46)">
-                    <Text style={styles.buttonText}>{Trad[lang].aj_demande}</Text>
+                    <Text style={styles.buttonText}>{Translation[lang].aj_demande}</Text>
                 </TouchableHighlight>
               </View>
               <View style={styles.contV}>
                 <Image source={require('../img/ajouterProduit.png')} style={styles.ajouterImage}/>
                 <TouchableHighlight onPress={this.onButtonPressProduit} style={styles.button} underlayColor="rgb(138,183,46)">
-                    <Text style={styles.buttonText}>{Trad[lang].aj_offre} </Text>
+                    <Text style={styles.buttonText}>{Translation[lang].aj_offre} </Text>
                 </TouchableHighlight>
                 </View>
             </View>
@@ -50,13 +51,13 @@ export default class CreerAnnonce extends Component {
 	if (navigator) {
         if (connection===0){
             navigator.push({
-                name: 'Connexion pour demande',
-                component: connexion_demande,
+                name: 'AddDemandConnection',
+                component: AddDemandConnection,
             })
         }else if (connection===1){
             navigator.push({
-                name: 'Deposer demande',
-                component: ajouter_demande,
+                name: 'AddDemand',
+                component: AddDemand,
             })
         }
 	}
@@ -67,13 +68,13 @@ export default class CreerAnnonce extends Component {
     if (navigator) {
         if (connection===0){
             navigator.push({
-                name: 'Connexion pour offre',
-                component: connexion_produit,
+                name: 'AddProductConnection',
+                component: AddProductConnection,
             })
         }else if (connection===1){
             navigator.push({
-                name: 'Deposer offre',
-                component: ajouter_offre,
+                name: 'AddOffer',
+                component: AddOffer,
             })
         }
     }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
@@ -11,14 +10,14 @@ import {
   Alert,
   DeviceEventEmitter,
 } from 'react-native';
-import Trad from './traduction';
+import Translation from './Translation';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 let pic=require('../img/deconnexion.png');
 
-export default class EnTeteClient extends Component {
+export default class LogOutButton extends Component {
 
   render() {
       return (
@@ -33,7 +32,7 @@ export default class EnTeteClient extends Component {
     onPressDeconnexion = () => {
 		Alert.alert(
 			'Deconnexion',
-			'Voulez-vous vraiment deconnecter?',
+			'Voulez-vous vraiment vous déconnecter?',
 			[
 				{text:'Oui',onPress: () => {connection=0;DeviceEventEmitter.emit('nvBar');}},
 				{text:'Non',onPress: () => {}},
@@ -63,4 +62,3 @@ export default class EnTeteClient extends Component {
 	}
 });
 
-module.exports=EnTeteClient;

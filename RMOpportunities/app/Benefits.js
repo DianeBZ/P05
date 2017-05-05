@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, Image, View,ScrollView, StyleSheet, ViewPagerAndroid, Dimensions, TouchableHighlight, Alert, BackAndroid} from 'react-native';
+import { Text, Image, View,ScrollView, Dimensions, TouchableHighlight, BackAndroid} from 'react-native';
 
-import Trad from './traduction';
+import Translation from './Translation';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-var valoriser = 'false';
-var prix = 'false';
-var temps = 'false';
-var visibilite = 'false';
-var environnement = 'false';
+var valorize = 'false';
+var price = 'false';
+var time = 'false';
+var visibility = 'false';
+var environment = 'false';
 
 
-class BloqueFonction extends Component{
+class BlockFunction extends Component{
 
  render(){
      return(
        <View>
        {(() => {
-           if (valoriser==='true'){
+           if (valorize==='true'){
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
@@ -27,15 +27,15 @@ class BloqueFonction extends Component{
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                        </View>
-                       <Text style = {styles.cliqueTexte}>{Trad[lang].text_val_stock}</Text>
+                       <Text style = {styles.cliqueTexte}>{Translation[lang].text_val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.cliqueDecoupageStatique}>
                        <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -43,41 +43,41 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
+                     <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
+                   <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
              );
-           }else if(prix === 'true'){
+           }else if(price === 'true'){
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.cliqueDecoupageStatique}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
                        </View>
-                       <Text style = {styles.cliqueTexte}>{Trad[lang].text_meill_prix}</Text>
+                       <Text style = {styles.cliqueTexte}>{Translation[lang].text_meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -85,38 +85,38 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
+                     <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
+                   <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
              );
-           }else if(temps === 'true'){
+           }else if(time === 'true'){
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -125,22 +125,22 @@ class BloqueFonction extends Component{
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                        </View>
-                       <Text style = {styles.cliqueTexte}>{Trad[lang].text_gagner_tps}</Text>
+                       <Text style = {styles.cliqueTexte}>{Translation[lang].text_gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.cliqueDecoupageStatique}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
+                     <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
+                   <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -152,13 +152,13 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -166,41 +166,41 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.cliqueDecoupageStatique}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.cliqueDecoupage}>
                      <View style = {styles.cliqueTitre}>
                        <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                      </View>
-                     <Text style = {styles.cliqueTexte}>{Trad[lang].text_gde_visib}</Text>
+                     <Text style = {styles.cliqueTexte}>{Translation[lang].text_gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
                  <TouchableHighlight onPress={this._onPressEnvironnement}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                   <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
+                   <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
              );
-           }else if(environnement === 'true'){
+           }else if(environment === 'true'){
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
                    <TouchableHighlight onPress={this._onPressValoriserStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                         <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
+                         <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
                      </View>
                    </TouchableHighlight>
                  </View>
@@ -208,13 +208,13 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
                    <TouchableHighlight onPress={this._onPressVisibilite}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
+                     <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
@@ -222,9 +222,9 @@ class BloqueFonction extends Component{
                  <View style = {[styles.cliqueDecoupage, {marginBottom: width *0.1}]}>
                    <View style = {styles.cliqueTitre}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
+                     <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
                    </View>
-                   <Text style = {styles.cliqueTexte}>{Trad[lang].text_prot_env}</Text>
+                   <Text style = {styles.cliqueTexte}>{Translation[lang].text_prot_env}</Text>
                  </View>
                  </TouchableHighlight>
                </View>
@@ -236,13 +236,13 @@ class BloqueFonction extends Component{
                      <TouchableHighlight onPress={this._onPressValoriserStocks}>
                        <View style = {styles.decoupage}>
                            <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
-                           <Text style = {styles.texteCarreau}>{Trad[lang].val_stock}</Text>
+                           <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                        </View>
                      </TouchableHighlight>
                      <TouchableHighlight onPress={this._onPressPrix}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].meill_prix}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
                      </View>
                      </TouchableHighlight>
                    </View>
@@ -250,20 +250,20 @@ class BloqueFonction extends Component{
                    <TouchableHighlight onPress={this._onPressTemps}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gagner_tps}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                      </TouchableHighlight>
                      <TouchableHighlight onPress={this._onPressVisibilite}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
-                       <Text style = {styles.texteCarreau}>{Trad[lang].gde_visib}</Text>
+                       <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                      </View>
                      </TouchableHighlight>
                    </View>
                    <TouchableHighlight onPress={this._onPressEnvironnement}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
-                     <Text style = {styles.texteCarreau}>{Trad[lang].prot_env}</Text>
+                     <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
@@ -276,75 +276,75 @@ class BloqueFonction extends Component{
 
 
 _onPressValoriserStocks = () =>{
- if(valoriser === 'true'){
-   valoriser = 'false';
+ if(valorize === 'true'){
+   valorize = 'false';
  }else{
-   valoriser ='true';
-   prix = 'false';
-   temps ='false';
-   visibilite ='false';
-   environnement = 'false';
+   valorize ='true';
+   price = 'false';
+   time ='false';
+   visibility ='false';
+   environment = 'false';
  }
  this.forceUpdate();
 };
 _onPressPrix = () =>{
- if(prix === 'true'){
-   prix = 'false';
+ if(price === 'true'){
+   price = 'false';
  }else{
-   valoriser ='false';
-   prix = 'true';
-   temps ='false';
-   visibilite ='false';
-   environnement = 'false';
+   valorize ='false';
+   price = 'true';
+   time ='false';
+   visibility ='false';
+   environment = 'false';
  }
  this.forceUpdate();
 };
 _onPressTemps = () =>{
- if(temps === 'true'){
-   temps = 'false';
+ if(time === 'true'){
+   time = 'false';
  }else{
-   valoriser ='false';
-   prix = 'false';
-   temps ='true';
-   visibilite ='false';
-   environnement = 'false';
+   valorize ='false';
+   price = 'false';
+   time ='true';
+   visibility ='false';
+   environment = 'false';
  }
  this.forceUpdate();
 };
 _onPressVisibilite = () =>{
- if(visibilite === 'true'){
-   visibilite = 'false';
+ if(visibility === 'true'){
+   visibility = 'false';
  }else{
-   valoriser ='false';
-   prix = 'false';
-   temps ='false';
-   visibilite ='true';
-   environnement = 'false';
+   valorize ='false';
+   price = 'false';
+   time ='false';
+   visibility ='true';
+   environment = 'false';
  }
  this.forceUpdate();
 };
 _onPressEnvironnement = () =>{
- if(environnement === 'true'){
-   environnement = 'false';
+ if(environment === 'true'){
+   environment = 'false';
  }else{
-   valoriser ='false';
-   prix = 'false';
-   temps ='false';
-   visibilite ='false';
-   environnement = 'true';
+   valorize ='false';
+   price = 'false';
+   time ='false';
+   visibility ='false';
+   environment = 'true';
  }
  this.forceUpdate();
 };
 }
 
 
-export default class BeneficesEntreprise extends Component {
+export default class Benefits extends Component {
   render() {
     BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
       <ScrollView>
        <View style={{height:height*0.08}}/>
-       <Text style={styles.intro}>{Trad[lang].benef}</Text>
+       <Text style={styles.intro}>{Translation[lang].benef}</Text>
        <BloqueFonction/>
      </ScrollView>
     );
