@@ -6,6 +6,7 @@ import {
   Dimensions,
   TextInput,
   TouchableHighlight,
+  BackAndroid,
   Alert,
 } from 'react-native';
 import Translation from './Translation';
@@ -30,6 +31,7 @@ export default class PasswordUpdate extends Component{
     }
   }
   render(){
+	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
       <View style={styles.container}>
         <View style={{height:height*0.08}}/>
@@ -78,6 +80,16 @@ export default class PasswordUpdate extends Component{
       </View>
     )
   }
+    onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({

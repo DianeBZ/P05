@@ -4,6 +4,7 @@ import {
   Text,
   View,
   Dimensions,
+  BackAndroid,
   ListView,
 } from 'react-native';
 import Translation from './Translation';
@@ -18,6 +19,7 @@ var dataSourceDemands = null;
 
 export default class ViewClassifieds extends Component {
   render() {
+	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
       <View style={styles.container}>
         <View style={{height:height*0.08}}/>
@@ -110,6 +112,16 @@ export default class ViewClassifieds extends Component {
       </View>
     );
   }
+      onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({

@@ -3,6 +3,7 @@ import Translation from './Translation';
 
 import {
   StyleSheet,
+  BackAndroid,
   Text,
   View,
   Dimensions,
@@ -20,6 +21,7 @@ var dataSource = null;
 export default class EditAccount extends Component{
 
   render(){
+	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
       <View style={styles.container}>
         <View style={{height:heightWindow*0.08}}/>
@@ -51,6 +53,16 @@ export default class EditAccount extends Component{
     contactPress=()=>{
 
     }
+  onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({

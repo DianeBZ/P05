@@ -6,6 +6,7 @@ import {
   Dimensions,
   TextInput,
   TouchableHighlight,
+  BackAndroid,
 } from 'react-native';
 
 import Translation from './Translation';
@@ -22,6 +23,7 @@ export default class ProductAlerts extends Component{
       alert(this.state.text+' a été bien ajouté');
     }
   render(){
+	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
       <View style={styles.container}>
         <View style={{height:height*0.08}}/>
@@ -74,6 +76,16 @@ export default class ProductAlerts extends Component{
       </View>
     )
   }
+      onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 }
 
 const styles = StyleSheet.create({
