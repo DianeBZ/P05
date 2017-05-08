@@ -7,6 +7,7 @@ import {
    Dimensions,
    ScrollView,
    TouchableHighlight,
+   BackAndroid,
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -26,6 +27,7 @@ export default class Reuse extends Component {
 		super(props);
 	}
    render() {
+       BackAndroid.addEventListener('Back',this.onBackAndroid);
       return (
          <View style={styles.container}>
             <View style={styles.header} >
@@ -151,6 +153,16 @@ export default class Reuse extends Component {
       );
    }
 
+   onBackAndroid = () => {
+		const { navigator } = this.props;
+		if (navigator && navigator.getCurrentRoutes().length > 1) {
+			BackAndroid.removeEventListener('Back', this.onBackAndroid);
+			navigator.pop();
+			return true;
+		} else {
+			return false;
+		}
+  };
 
    _onPressStep1 = () =>{
       if(step1 === 'true'){

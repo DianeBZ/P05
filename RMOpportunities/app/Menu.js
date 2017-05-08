@@ -18,6 +18,14 @@ import OffersCategory from'./OffersCategory';
 import Buy from'./Buy';
 import Sell from'./Sell';
 import Reuse from'./Reuse';
+import AccountInformation from './AccountInformation';
+import EditAccount from './EditAccount';
+import History from './History';
+import PasswordUpdate from './PasswordUpdate';
+import ProductAlerts from './ProductAlerts';
+import ViewClassifieds from './ViewClassifieds';
+import ViewConnections from './ViewConnections';
+import ViewNegociations from './ViewNegociations';
 
 var width = Dimensions.get('window').width;
 
@@ -117,22 +125,28 @@ export default class ContenuMenu extends Component {
                      <TouchableHighlight onPress={this.onPressInscription} >
                         <Text style={styles.titreMenu}>{Translation[lang].compte}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight  onPress={()=>this.navigate('AccountInformation')}>
+                        <Text style={styles.sousTitreMenu}>{Translation[lang].voir_compte}</Text>
+                     </TouchableHighlight>
+                     <TouchableHighlight  onPress={()=>this.navigate('PasswordUpdate')}>
+                        <Text style={styles.sousTitreMenu}>{Translation[lang].modif_mdp}</Text>
+                     </TouchableHighlight>
+                     <TouchableHighlight  onPress={()=>this.navigate('ProductAlerts')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].alertes}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight  onPress={()=>this.navigate('ViewClassifieds')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].mes_annonces}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight  onPress={()=>this.navigate('ViewNegociations')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].nego}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight  onPress={()=>this.navigate('ViewConnections')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].mises_en_rel}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight  onPress={()=>this.navigate('History')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].factures}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight  onPress={()=>this.navigate('EditAccount')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].modif_compte}</Text>
                      </TouchableHighlight>
 
@@ -214,6 +228,51 @@ export default class ContenuMenu extends Component {
                name: 'Benefits',
                component: Benefits,
             })
+         }else if (property==='AccountInformation') {
+            navigator.push({
+               name: 'AccountInformation',
+               component: AccountInformation,
+            })
+         }else if (property==='PasswordUpdate') {
+            navigator.push({
+               name: 'PasswordUpdate',
+               component: PasswordUpdate,
+            })
+         }else if (property==='ProductAlerts') {
+            navigator.push({
+               name: 'ProductAlerts',
+               component: ProductAlerts,
+            })
+
+         }else if (property==='ViewClassifieds') {
+            navigator.push({
+               name: 'ViewClassifieds',
+               component: ViewClassifieds,
+            })
+
+         }else if (property==='ViewNegociations') {
+            navigator.push({
+               name: 'ViewNegociations',
+               component: ViewNegociations,
+            })
+         }else if (property==='ViewConnections') {
+            navigator.push({
+               name: 'ViewConnections',
+               component: ViewConnections,
+            })
+
+         }else if (property==='History') {
+            navigator.push({
+               name: 'History',
+               component: History,
+            })
+
+         }else if (property==='EditAccount') {
+            navigator.push({
+               name: 'EditAccount',
+               component: EditAccount,
+            })
+        
          }else if (property==='CreateClassified') {
             navigator.push({
                name: 'CreateClassified',
