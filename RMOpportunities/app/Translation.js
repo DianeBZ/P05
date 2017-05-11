@@ -274,7 +274,17 @@ export default{
       "reuse_step3_1":"Il est prévu que l’économie circulaire se démocratise totalement dans les années à venir.",
       "reuse_step3_2":"La plupart des entreprises utiliseront alors des services simples et performants comme RMOpportunities pour limiter la production de déchets et pour optimiser leurs gestions des stocks.",
       "reuse_step3_3":"Alors n'attendez plus, suivez le mouvement et entrez dans l'ère du partage et de l'optimisation de la gestion des ressources grâce à notre plateforme.",
-
+	
+	"lentreprise":"L'entreprise",
+	"statutG":"Co-fondateur et Président",
+	  "statutGa":"Co-fondateur et Directeur général",
+	  "diplome":"Ingénieurs diplomés de Telecom Saint-Etienne",
+	  "statutC":"Administrateur",
+	  "exPoste":"Ex Directeur Général d'ISOCHEM ", 
+	  "a_propos1":"'Raw Material Opportunities' signifie littéralement 'les opportunités liées aux matières premières'. Le concept part d'une simple constatation : bien que la plupart des entreprises travaillent en flux tendu, il arrive que celles-ci accumulent des stocks dormants.",
+	  "a_propos2":"Cette accumulation peut être liée à plusieurs facteurs comme par exemple le changement d'une norme au sein du pays de l'entreprise ou au sein de l'Europe. Ces stocks deviennent alors un poids pour l'entreprise qui va la plupart du temps être obligée de payer pour les détruire.",
+	  "a_propos3":"Avec RMOpportunities nous souhaitons aider les entreprises à valoriser ces stocks dormants. Au lieu de payer pour les faire détruire, notre plateforme leur permet de se faire rémunérer. D'autres entreprises pourront alors profiter de ces stocks à des prix très compétitifs.",
+	  "a_propos4":"Le but de la place de marché créée par RMOpportunities est de rendre l'industrie chimique moins gourmande en ressources en promouvant l'économie circulaire.",
    },
    en: {
       "compte": "My Account",
@@ -549,5 +559,16 @@ export default{
       "reuse_step3_1":"It is evaluated that the circular economy will greatly develop in the years to come.",
       "reuse_step3_2":"Most companies will be using simple and efficient services such as RMOpportunities in order to limit the production of wastes and to optimize their stock managements.",
       "reuse_step3_3":"Don't wait any longer, join the movement and step in the era of sharing and optimization thanks to our platform!",
+	  
+	  "lentreprise":"The company",
+	  "statutG":"Co-founder & President",
+	  "statutGa":"Co-founder & CEO",
+	  "diplome":"Engineers who graduated from Telecom Saint-Etienne",
+	  "statutC":"Administrator",
+	  "exPoste":"Ex-CEO of ISOCHEM",
+	  "a_propos1":"It stands for 'Raw Material Opportunities'. The concept comes from a simple fact : even though most of companies try to manage their stocks just-in-time, sometimes stocks become surplus stocks. ",
+	  "a_propos2":"This can be caused by several factors such as a change in the standards in the country of the company or in Europe. Theses surplus become a weight for the companies and most of the time the latter will have to destroy them. Destruction of chemical raw materials costs money. ",
+	  "a_propos3":"With RMOpportunities we wish to help companies value their surplus. Instead of losing money to destroy them, our web platform makes it possible for them to actually earn money. Buyers will also be able to buy stocks at the best rates on the market.",
+	  "a_propos4":"The web market place created by RMOpportunities intends to save earth resources thanks to the circular economy.",
    }
 }

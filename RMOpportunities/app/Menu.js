@@ -26,6 +26,7 @@ import ProductAlerts from './ProductAlerts';
 import ViewClassifieds from './ViewClassifieds';
 import ViewConnections from './ViewConnections';
 import ViewNegociations from './ViewNegociations';
+import Company from'./Company';
 
 var width = Dimensions.get('window').width;
 
@@ -72,8 +73,8 @@ export default class ContenuMenu extends Component {
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].a_propos}</Text>
-                     <TouchableHighlight >
-                        <Text style={styles.sousTitreMenu}>{Translation[lang].equipe}</Text>
+                     <TouchableHighlight onPress={()=>this.navigate('Company')}>
+                        <Text style={styles.sousTitreMenu}>{Translation[lang].lentreprise}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight >
                         <Text style={styles.sousTitreMenu}>{Translation[lang].soutiens}</Text>
@@ -299,6 +300,11 @@ export default class ContenuMenu extends Component {
             navigator.push({
                name: 'Reuse',
                component: Reuse,
+            })
+         }else if (property==='Company') {
+            navigator.push({
+               name: 'Company',
+               component: Company,
             })
          }
       }
