@@ -138,7 +138,7 @@ export default class HomePage extends Component {
 				name: 'Connection',
 				component: Connection,
 				params:{
-      }
+				}
 			})
 		}
 	};
