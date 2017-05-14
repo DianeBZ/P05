@@ -268,6 +268,21 @@ Nous sommes motivés à l'idée de rendre le monde meilleur tout en générant d
       "voir_compte": "Voir mon compte",
       "voir_demande":"Voir les demandes",
       "voir_offres": "Voir les offres",
+	  
+	   "press_title":"Ce qu'en dit la presse",
+	  "info_chimie":"RMOpportunities propose de valoriser les stocks dormants des usines",
+	"eclaira":"RMOpportunities grande gagnante du concours LaFabrique Aviva",
+	"cci_paris":"Moteur d'innovation et Développement durable dans la chimie",
+	"telecom":"RMOpportunities remporte le grand prix du challenge startup AVIVA",
+	
+	"confidence1":"Ils nous font",
+	"confidence2":"confiance",
+	"supporters1":"Ils nous",
+	"supporters2":"supportent",
+	"axelera":"Pôle de compétitivité Chimie-environnement",
+	"uic":"Organisation professionnelle de la chimie en Ile-de-France",
+	"ufcc":"Union Française du Commerce Chimique",
+	"usein":"Incubateur de l'Université Jean-Monnet de Saint-Etienne",
    },
    en: {
 	  "a_propos1":"It stands for 'Raw Material Opportunities'. The concept comes from a simple fact : even though most of companies try to manage their stocks just-in-time, sometimes stocks become surplus stocks. ",
@@ -540,5 +555,21 @@ We are motivated by the possibility to improve the world resources consumption w
       "voir_compte": "View my account",
       "voir_demande":"See demands",
       "voir_offres": "See offers",
+	  
+	  "press_title":"What the press says",
+	  "info_cimie":"RMOpportunities offers to value the unused stocks of chemical factories and companies",
+	  "eclaira":"RMOpportunities winner of the first edition of LaFabrique contest by Aviva",
+	  "cci_paris":"Chemical innovation and sustainable development driven by RMOpportunities",
+	  "telecom":"RMOpportunities wins the grand prize of the startup contest AVIVA",
+	  
+	"confidence1":"They trust us",
+	"confidence2":"",
+	"supporters1":"They support us",
+	"supporters2":"",
+	
+	"axelera":"Cluster for the chemical and environmental sectors",
+	"uic":"French professional organization of chemistry in Ile-de-France",
+	"ufcc":"French Union for Chemical Trade",
+	"usein":"University Jean-Monnet Incubator - Saint-Etienne",
    }
 }

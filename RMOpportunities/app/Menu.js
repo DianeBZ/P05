@@ -30,6 +30,8 @@ import Company from'./Company';
 import Contact from './Contact';
 import Manifeste from './Manifeste';
 import Pricing from './Pricing';
+import Press from'./Press';
+import Supporters from'./Supporters';
 
 var width = Dimensions.get('window').width;
 
@@ -79,10 +81,10 @@ export default class ContenuMenu extends Component {
                      <TouchableHighlight onPress={()=>this.navigate('Company')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].lentreprise}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Supporters')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].soutiens}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Press')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].presse}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight >
@@ -323,6 +325,16 @@ export default class ContenuMenu extends Component {
             navigator.push({
                name: 'Manifeste',
                component: Manifeste,
+            })
+         }else if (property==='Press') {
+            navigator.push({
+               name: 'Press',
+               component: Press,
+            })
+         }else if (property==='Supporters') {
+            navigator.push({
+               name: 'Supporters',
+               component: Supporters,
             })
          }
       }
