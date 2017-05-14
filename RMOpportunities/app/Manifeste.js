@@ -14,11 +14,9 @@ export default class Manifeste extends Component{
 				<ScrollView style={styles.scrollView}>
 					<Text style={styles.titleManifeste}>{Translation[lang].manifeste}</Text>
 					<Text style={styles.manifesteText}>{Translation[lang].manifesteText}</Text>
-					<TouchableHighlight onPress={this._onPressRegister}>
+					<TouchableHighlight style={{marginTop:20, marginBottom:20}} onPress={this._onPressRegister} underlayColor='#F2F2F2'>
 						<Text style={styles.manifesteRegister}>{Translation[lang].manifesteRegister}</Text>
 					</TouchableHighlight>
-					<Text />
-					<Text />
 				</ScrollView>
 				);
 		}
@@ -49,18 +47,22 @@ const styles = StyleSheet.create({
 	scrollView:{
 		height:height,
 		width:width,
+        backgroundColor:'#f2f2f2',
 	},
 	titleManifeste:{
-		fontSize:30,
+		fontSize:32,
 		marginTop:width*0.2,
 		marginBottom:width*0.05,
 		textAlign:'center',
+        color:"#000000"
 	},
 	manifesteText:{
 		textAlign:'center',
+        color:"#000000"
 	},
 	manifesteRegister:{
 		textAlign:'center',
-		color: '#a4d147',
+		color: '#A4D04A',
+        fontSize: 16,
 	},
 });

@@ -27,6 +27,9 @@ import ViewClassifieds from './ViewClassifieds';
 import ViewConnections from './ViewConnections';
 import ViewNegociations from './ViewNegociations';
 import Company from'./Company';
+import Contact from './Contact';
+import Manifeste from './Manifeste';
+import Pricing from './Pricing';
 
 var width = Dimensions.get('window').width;
 
@@ -88,10 +91,10 @@ export default class ContenuMenu extends Component {
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].decouvrir}</Text>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Manifeste')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].manifeste}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Pricing')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].tarifs}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight >
@@ -99,7 +102,7 @@ export default class ContenuMenu extends Component {
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Contact')}>
                         <Text style={styles.titreMenu}>{Translation[lang].contact}</Text>
                      </TouchableHighlight>
 
@@ -180,10 +183,10 @@ export default class ContenuMenu extends Component {
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].decouvrir}</Text>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Manifeste')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].manifeste}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('Pricing')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].tarifs}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight >
@@ -305,6 +308,21 @@ export default class ContenuMenu extends Component {
             navigator.push({
                name: 'Company',
                component: Company,
+            })
+         }else if (property==='Contact') {
+            navigator.push({
+               name: 'Contact',
+               component: Contact,
+            })
+         }else if (property==='Pricing') {
+            navigator.push({
+               name: 'Pricing',
+               component: Pricing,
+            })
+         }else if (property==='Manifeste') {
+            navigator.push({
+               name: 'Manifeste',
+               component: Manifeste,
             })
          }
       }

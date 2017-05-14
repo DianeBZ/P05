@@ -97,10 +97,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F2F2F2',
   },
   containerMain: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F2F2F2',
   flexGrow: 0,
   flexShrink: 0,
   justifyContent: 'center',
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   alignSelf: 'center',
   },
   containerText: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F2F2F2',
   flexGrow: 0,
   flexShrink: 0,
   justifyContent: 'center',

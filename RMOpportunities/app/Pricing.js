@@ -16,7 +16,7 @@ export default class Pricing extends Component{
 					<Image source={require('../img/Pricing.jpg')} style={styles.imagePricing} />
 					
 					<View style={styles.view}>
-						<TouchableHighlight onPress={this._onPressContact} style={[styles.button, {width: width*0.5,backgroundColor:'#A4D04A', justifyContent:'center'}]} underlayColor="rgb(138,183,46)">
+						<TouchableHighlight onPress={this._onPressContact} style={{width: width*0.5,backgroundColor:'#A4D04A', justifyContent:'center', borderRadius:5,}} underlayColor="rgb(138,183,46)">
 							<Text style={styles.buttonText}>{Translation[lang].contactUs}</Text>
 						</TouchableHighlight>
 					</View>
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
+        margin: 10,
 	},
 	imagePricing:{
 		height:1200,
@@ -72,10 +73,10 @@ const styles = StyleSheet.create({
 		alignSelf: 'center',
     },
 	titlePricing:{
-		fontSize:30,
+		fontSize:32,
 		marginTop:width*0.2,
 		marginBottom:width*0.05,
 		textAlign:'center',
-		color:"#333333",
+       color: '#000000',
 	},
 });
