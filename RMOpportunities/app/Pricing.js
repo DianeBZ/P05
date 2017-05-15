@@ -13,8 +13,16 @@ export default class Pricing extends Component{
 		 return(
 				<ScrollView style={styles.scrollView}>
 					<Text style={styles.titlePricing}>{Translation[lang].pricing}</Text>
-					<Image source={require('../img/Pricing.jpg')} style={styles.imagePricing} />
-					
+					{(() => {
+						if(lang=='fr')
+							return(
+									<Image source={require('../img/Pricing_fr.jpg')} style={styles.imagePricing} />
+								  );
+						else
+							return(
+									<Image source={require('../img/Pricing_en.jpg')} style={styles.imagePricing} />
+								  );
+					})()}
 					<View style={styles.view}>
 						<TouchableHighlight onPress={this._onPressContact} style={{width: width*0.5,backgroundColor:'#A4D04A', justifyContent:'center', borderRadius:5,}} underlayColor="rgb(138,183,46)">
 							<Text style={styles.buttonText}>{Translation[lang].contactUs}</Text>
@@ -62,7 +70,7 @@ const styles = StyleSheet.create({
         margin: 10,
 	},
 	imagePricing:{
-		height:1200,
+		height:1230,
 		width:width,
 	},
 	buttonText:{
