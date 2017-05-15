@@ -30,8 +30,10 @@ import Company from'./Company';
 import Contact from './Contact';
 import Manifeste from './Manifeste';
 import Pricing from './Pricing';
+import FAQ from './FAQ';
 import Press from'./Press';
 import Supporters from'./Supporters';
+
 
 var width = Dimensions.get('window').width;
 
@@ -99,7 +101,7 @@ export default class ContenuMenu extends Component {
                      <TouchableHighlight onPress={()=>this.navigate('Pricing')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].tarifs}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('FAQ')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].faq}</Text>
                      </TouchableHighlight>
 
@@ -191,7 +193,7 @@ export default class ContenuMenu extends Component {
                      <TouchableHighlight onPress={()=>this.navigate('Pricing')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].tarifs}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight >
+                     <TouchableHighlight onPress={()=>this.navigate('FAQ')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].faq}</Text>
                      </TouchableHighlight>
 
@@ -278,7 +280,7 @@ export default class ContenuMenu extends Component {
                name: 'EditAccount',
                component: EditAccount,
             })
-        
+
          }else if (property==='CreateClassified') {
             navigator.push({
                name: 'CreateClassified',
@@ -320,6 +322,11 @@ export default class ContenuMenu extends Component {
             navigator.push({
                name: 'Pricing',
                component: Pricing,
+            })
+         }else if (property==='FAQ') {
+            navigator.push({
+               name: 'FAQ',
+               component: FAQ,
             })
          }else if (property==='Manifeste') {
             navigator.push({
