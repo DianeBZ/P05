@@ -188,6 +188,21 @@ Nous sommes motivés à l'idée de rendre le monde meilleur tout en générant d
       "qtte":"Quantité",
       "qtte_souh":"Quantité souhaitée",
       "qa_title":"Foire aux questions",
+      "question1":"Qu'est-ce que RMOpportunities ?",
+      "question2":"Comment fonctionne l'anonymat sur la plateforme ?",
+      "question3":"Comment assurer la traçabilité des produits sur le site ?",
+      "question4":"Comment m'assurer de la qualité des matières premières disponibles ?",
+      "question5":"Que puis-je vendre sur la plateforme ?",
+      "question6":"Comment trouver un produit sur la plateforme ?",
+      "question7":"Comment fixer mon prix de vente ?",
+      "question8":"Puis-je négocier sur la plateforme ?",
+      "question9":"Qui s'occupe du transport des marchandises ?",
+      "question10":"Que faire si l'acheteur ou le vendeur se rétracte après avoir été mis en relation ?",
+      "question11":"Que faire si les stocks achetés sur votre site sont de mauvaise qualité ?",
+      "question12":"Pourquoi s'inscrire sur le site ?",
+      "question13":"Comment est facturé le service fourni par RMOpportunities?",
+      "question14":"Comment trouver un acheteur sur la plateforme ?",
+      "question15":"omment trouver un vendeur sur la plateforme ?",
       "react": "Reactifs",
       "recherche": "Recherche",
       "representant":"Représentant",
@@ -270,13 +285,13 @@ Nous sommes motivés à l'idée de rendre le monde meilleur tout en générant d
       "voir_compte": "Voir mon compte",
       "voir_demande":"Voir les demandes",
       "voir_offres": "Voir les offres",
-	  
+
 	   "press_title":"Ce qu'en dit la presse",
 	  "info_chimie":"RMOpportunities propose de valoriser les stocks dormants des usines",
 	"eclaira":"RMOpportunities grande gagnante du concours LaFabrique Aviva",
 	"cci_paris":"Moteur d'innovation et Développement durable dans la chimie",
 	"telecom":"RMOpportunities remporte le grand prix du challenge startup AVIVA",
-	
+
 	"confidence1":"Ils nous font",
 	"confidence2":"confiance",
 	"supporters1":"Ils nous",
@@ -559,18 +574,18 @@ We are motivated by the possibility to improve the world resources consumption w
       "voir_compte": "View my account",
       "voir_demande":"See demands",
       "voir_offres": "See offers",
-	  
+
 	  "press_title":"What the press says",
 	  "info_cimie":"RMOpportunities offers to value the unused stocks of chemical factories and companies",
 	  "eclaira":"RMOpportunities winner of the first edition of LaFabrique contest by Aviva",
 	  "cci_paris":"Chemical innovation and sustainable development driven by RMOpportunities",
 	  "telecom":"RMOpportunities wins the grand prize of the startup contest AVIVA",
-	  
+
 	"confidence1":"They trust us",
 	"confidence2":"",
 	"supporters1":"They support us",
 	"supporters2":"",
-	
+
 	"axelera":"Cluster for the chemical and environmental sectors",
 	"uic":"French professional organization of chemistry in Ile-de-France",
 	"ufcc":"French Union for Chemical Trade",
