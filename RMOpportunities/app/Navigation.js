@@ -47,7 +47,7 @@ export default class Navigation extends React.Component {
        BackAndroid.addEventListener('closeDrawer', this.closeDrawer);
       this._drawer.open()
    };
-   
+
    render() {
       let pic1 = require('../img/logo_rmo.png');
       let pic2 = require('../img/menuButton.png');
