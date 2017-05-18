@@ -12,17 +12,15 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
 
 import Translation from './Translation';
-
 let step1='false';
 let step2='false';
 let step3='false';
 
-
-export default class Sell extends Component {
+export default class Buy extends Component {
    constructor(props) {
 		super(props);
 	}
@@ -37,10 +35,10 @@ export default class Sell extends Component {
                   colors={['#185177', '#F6D092']}
                   style={styles.gradient}>
                   <View style={styles.headerIcon}>
-                     <Image source={require('../img/sell.png')} style = {styles.logoLeft} />
+                     <Image source={require('../img/buy.png')} style = {styles.logoLeft} />
                   </View>
                   <Text style={styles.title}>
-                     {Translation[lang].sell_title}
+                     {Translation[lang].buy_title}
                   </Text>
                   <View style={styles.headerIcon}>
                      <Image source={require('../img/checklist.png')} style = {styles.logoRight} />
@@ -53,7 +51,7 @@ export default class Sell extends Component {
                   </View>
                   <TouchableHighlight onPress={this._onPressStep1}>
                      <Text style={styles.stepTitle}>
-                        {Translation[lang].step} 1 : {Translation[lang].sell_step1_title}
+                        {Translation[lang].step} 1 : {Translation[lang].buy_step1_title}
                      </Text>
                   </TouchableHighlight>
                </View>
@@ -66,19 +64,13 @@ export default class Sell extends Component {
                            return(
                               <View style={styles.containerMain}>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step1_1}
+                                    {Translation[lang].buy_step1_1}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step1_2}
+                                    {Translation[lang].buy_step1_2}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step1_3}
-                                 </Text>
-                                 <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step1_4}
-                                 </Text>
-                                 <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step1_5}
+                                    {Translation[lang].buy_step1_3}
                                  </Text>
                               </View>
                            );
@@ -91,7 +83,7 @@ export default class Sell extends Component {
                   </View>
                   <TouchableHighlight onPress={this._onPressStep2}>
                      <Text style={styles.stepTitle}>
-                        {Translation[lang].step} 2 : {Translation[lang].sell_step2_title}
+                        {Translation[lang].step} 2 : {Translation[lang].buy_step2_title}
                      </Text>
                   </TouchableHighlight>
                </View>
@@ -104,16 +96,13 @@ export default class Sell extends Component {
                            return(
                               <View style={styles.containerMain}>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step2_1}
+                                    {Translation[lang].buy_step2_1}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step2_2}
+                                    {Translation[lang].buy_step2_2}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step2_3}
-                                 </Text>
-                                 <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step2_4}
+                                    {Translation[lang].buy_step2_3}
                                  </Text>
                               </View>
                            );
@@ -126,7 +115,7 @@ export default class Sell extends Component {
                   </View>
                   <TouchableHighlight onPress={this._onPressStep3}>
                      <Text style={styles.stepTitle}>
-                        {Translation[lang].step} 3 : {Translation[lang].sell_step3_title}
+                        {Translation[lang].step} 3 : {Translation[lang].buy_step3_title}
                      </Text>
                   </TouchableHighlight>
                </View>
@@ -139,19 +128,16 @@ export default class Sell extends Component {
                            return(
                               <View style={styles.containerMain}>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step3_1}
+                                    {Translation[lang].buy_step3_1}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step3_2}
+                                    {Translation[lang].buy_step3_2}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step3_3}
+                                    {Translation[lang].buy_step3_3}
                                  </Text>
                                  <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step3_4}
-                                 </Text>
-                                 <Text style={styles.instructions}>
-                                    {Translation[lang].sell_step3_5}
+                                    {Translation[lang].buy_step3_4}
                                  </Text>
                               </View>
                            );
@@ -161,9 +147,10 @@ export default class Sell extends Component {
                </View>
             </ScrollView>
          </View>
+
       );
    }
-   
+
    onBackAndroid = () => {
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {
@@ -174,7 +161,7 @@ export default class Sell extends Component {
 			return false;
 		}
   };
-   
+
    _onPressStep1 = () =>{
       if(step1 === 'true'){
          step1 = 'false';
@@ -212,11 +199,11 @@ export default class Sell extends Component {
 }
 const styles = StyleSheet.create({
    container: {
-      marginTop:heightWindow*0.08,
+      marginTop:height*0.08,
       flex:1,
    },
    gradient:{
-      width: widthWindow,
+      width: width,
       flexDirection:'row',
       paddingTop:15,
       paddingBottom:15
@@ -226,7 +213,7 @@ const styles = StyleSheet.create({
       marginBottom:15,
    },
    headerIcon: {
-      width:widthWindow/4,
+      width:width/4,
       alignItems:'center',
       alignSelf:'center',
    },
@@ -236,7 +223,7 @@ const styles = StyleSheet.create({
       height: 70,
    },
    title: {
-      width:widthWindow/2,
+      width:width/2,
       fontSize: 25,
       textAlign: 'center',
       color: '#333333',
@@ -246,7 +233,7 @@ const styles = StyleSheet.create({
       height: 70,
    },
    containerMain: {
-      width: widthWindow,
+      width: width,
       justifyContent:'center',
       alignItems:'center',
       marginRight:5,
@@ -259,17 +246,17 @@ const styles = StyleSheet.create({
       color: '#000000',
    },
    instructions: {
-      width:widthWindow*9/10,
+      width:width*9/10,
       fontSize: 15,
       color: '#000000',
       marginBottom: 5,
    },
    containerStep: {
-      width:widthWindow,
+      width:width,
       flexDirection:'row',
    },
    containerTitle: {
-      width:widthWindow,
+      width:width,
       flexDirection:'row',
       minHeight:30,
    },
@@ -281,4 +268,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = Sell;
+module.exports = Buy;

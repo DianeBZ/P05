@@ -110,9 +110,10 @@ const styles = StyleSheet.create({
    },
    title: {
       width:width/2,
-      fontSize: 25,
+      fontSize: 30,
       textAlign: 'center',
       color: '#333333',
+      marginTop:15,
    },
    logoRight:{
       width: 70,
@@ -136,11 +137,5 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       alignSelf: 'center',
    },
-   titlePricing:{
-      fontSize:32,
-      marginTop:width*0.2,
-      marginBottom:width*0.05,
-      textAlign:'center',
-      color: '#000000',
-   },
+
 });

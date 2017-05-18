@@ -2,42 +2,61 @@ import React, { Component } from 'react';
 import { Text, Image, StyleSheet, View, ScrollView, Dimensions, TouchableHighlight, BackAndroid, Navigator,} from 'react-native';
 
 import Translation from './Translation';
-import SigningUp from './SigningUp';
+import Contact from './Contact';
 import LinearGradient from 'react-native-linear-gradient';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-export default class Manifeste extends Component{
+export default class Pricing extends Component{
    render(){
       BackAndroid.addEventListener('Back',this.onBackAndroid);
       return(
          <View style={styles.container}>
-            <View style={styles.header} >
+            <View style={styles.header}>
                <LinearGradient
                   start={{x: 0.0, y: 1.0}} end={{x: 1.0, y: 1.0}}
                   locations={[0,1.0]}
                   colors={['#185177', '#F6D092']}
                   style={styles.gradient}>
                   <View style={styles.headerIcon}>
-                     <Image source={require('../img/recycle.png')} style = {styles.logoLeft} />
+                     <Image source={require('../img/invoice.png')} style = {styles.logoLeft} />
                   </View>
                   <Text style={styles.title}>
-                     {Translation[lang].manifeste}
+                     {Translation[lang].pricing}
                   </Text>
                   <View style={styles.headerIcon}>
-                     <Image source={require('../img/sprout.png')} style = {styles.logoRight} />
+                     <Image source={require('../img/medal.png')} style = {styles.logoRight} />
                   </View>
                </LinearGradient>
             </View>
-            <View style={styles.containerMain}>
-               <ScrollView >
-                  <Text style={styles.manifesteText}>{Translation[lang].manifesteText}</Text>
-                  <TouchableHighlight style={{marginTop:20, marginBottom:20}} onPress={this._onPressRegister} underlayColor='#F2F2F2'>
-                     <Text style={styles.manifesteRegister}>{Translation[lang].manifesteRegister}</Text>
+            <ScrollView >
+               <View style={styles.containerMain}>
+
+
+                  {(() => {
+                     if(lang==='fr')
+                     return(
+                        <View style={styles.containerMain}>
+                           <Image source={require('../img/Pricing_fr.jpg')} style={styles.imagePricing} />
+                        </View>
+                     );
+                     else
+                     return(
+                        <View style={styles.containerMain}>
+                           <Image source={require('../img/Pricing_en.jpg')} style={styles.imagePricing} />
+                        </View>
+                     );
+                  })()}
+
+                  <TouchableHighlight onPress={this._onPressContact} style={{width: width*0.5,backgroundColor:'#A4D04A', justifyContent:'center', borderRadius:5,}} underlayColor="rgb(138,183,46)">
+                     <Text style={styles.buttonText}>{Translation[lang].contactUs}</Text>
                   </TouchableHighlight>
-               </ScrollView>
-            </View>
+               </View>
+
+
+
+            </ScrollView>
          </View>
       );
    }
@@ -52,13 +71,13 @@ export default class Manifeste extends Component{
       }
    };
 
-   _onPressRegister = () => {
+   _onPressContact = () => {
       BackAndroid.removeEventListener('Back', this.onBackAndroid);
       const { navigator } = this.props;
       if (navigator) {
          navigator.push({
-            name: 'SigningUp',
-            component: SigningUp,
+            name: 'Contact',
+            component: Contact,
          })
       }
    };
@@ -91,9 +110,10 @@ const styles = StyleSheet.create({
    },
    title: {
       width:width/2,
-      fontSize: 25,
+      fontSize: 30,
       textAlign: 'center',
       color: '#333333',
+      marginTop:15,
    },
    logoRight:{
       width: 70,
@@ -103,16 +123,19 @@ const styles = StyleSheet.create({
       width: width,
       justifyContent:'center',
       alignItems:'center',
-      marginRight:5,
+      marginRight:10,
       marginBottom:15,
    },
-   manifesteText:{
-      textAlign:'center',
-      color:"#000000"
+   imagePricing:{
+      height:1230,
+      width:width,
    },
-   manifesteRegister:{
-      textAlign:'center',
-      color: '#A4D04A',
-      fontSize: 16,
+   buttonText:{
+      color: "white",
+      textAlign: "center",
+      fontSize: 20,
+      alignItems: 'center',
+      alignSelf: 'center',
    },
+
 });
