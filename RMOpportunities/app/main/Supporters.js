@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { Text, Image, StyleSheet, View,ScrollView, Dimensions, TouchableHighlight, BackAndroid} from 'react-native';
+import { Text, Image, StyleSheet, View,ScrollView, Dimensions, TouchableHighlight, BackAndroid,Linking,} from 'react-native';
 
 import Translation from './Translation';
 
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+
+var axelera = 'http://www.axelera.org/';
+var uic = 'http://www.uic-idf.fr/';
+var ufcc = 'http://www.ufcc.fr/';
+var useIn = 'https://usein.univ-st-etienne.fr/';
 
 export default class Company extends Component {
   render() {
@@ -36,24 +41,32 @@ export default class Company extends Component {
 			<View style={styles.separation}></View>
 			<View style={styles.containerH}>
 				<View style = {styles.decoupageS}>
+				<TouchableHighlight onPress={this._onPressAxelera}>
 					<Image source={require('../img/axelera.png')} style = {styles.logoAxe} />
+				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>Axelera</Text>
 					<Text style = {styles.texteCarreau}>{Translation[lang].axelera}</Text>
 				</View>
 				<View style = {styles.decoupageS}>
+				<TouchableHighlight onPress={this._onPressUic}>
 					<Image source={require('../img/uic-idf.png')} style = {styles.logoUIC} />
+				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>UIC Ile-de-France </Text>
 					<Text style = {styles.texteCarreau}>{Translation[lang].uic}</Text>
 				</View>
 			</View>
 			<View style={styles.containerH}>
 				<View style = {styles.decoupageS}>
+				<TouchableHighlight onPress={this._onPressUfcc}>
 					<Image source={require('../img/ufcc.png')} style = {styles.logoBASF} />
+				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>UFCC </Text>
 					<Text style = {styles.texteCarreau}>{Translation[lang].ufcc}</Text>
 				</View>
 				<View style = {styles.decoupageS}>
+				<TouchableHighlight onPress={this._onPressUseIn}>
 					<Image source={require('../img/usein.png')} style = {styles.logoUse} />
+				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>Use'In </Text>
 					<Text style = {styles.texteCarreau}>{Translation[lang].usein}</Text>
 				</View>
@@ -72,6 +85,18 @@ export default class Company extends Component {
 			return false;
 		}
   };
+    _onPressAxelera = () => {
+	Linking.openURL(axelera).catch(err => console.error('An error occurred', err));
+ };
+   _onPressUic = () => {
+	Linking.openURL(uic).catch(err => console.error('An error occurred', err));
+ };
+   _onPressUfcc = () => {
+	Linking.openURL(ufcc).catch(err => console.error('An error occurred', err));
+ };
+   _onPressUseIn = () => {
+	Linking.openURL(useIn).catch(err => console.error('An error occurred', err));
+ };
 }
 
 const styles = StyleSheet.create({
