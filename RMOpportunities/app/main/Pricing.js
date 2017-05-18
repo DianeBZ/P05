@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
    container: {
       marginTop:height*0.08,
       flex:1,
+      backgroundColor:"#F2F2F2",
    },
    gradient:{
       width: width,
@@ -123,7 +124,6 @@ const styles = StyleSheet.create({
       width: width,
       justifyContent:'center',
       alignItems:'center',
-      marginRight:10,
       marginBottom:15,
    },
    imagePricing:{

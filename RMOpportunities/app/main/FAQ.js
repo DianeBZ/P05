@@ -502,8 +502,12 @@ export default class FAQ extends Component {
    }
  };
  _onPressQuestion=(index)=>{
-    answerOpen[changeRow]='false';
-    answerOpen[index]='true';
+     if (answerOpen[index]==='true'){
+         answerOpen[index]='false';
+     }else{
+        answerOpen[changeRow]='false';
+        answerOpen[index]='true';
+     }
     this.forceUpdate();
     changeRow=index;
     //answerOpen[index]='false';

@@ -28,7 +28,6 @@ export default class Sell extends Component {
    render() {
        BackAndroid.addEventListener('Back',this.onBackAndroid);
       return (
-	  <ScrollView>
          <View style={styles.container}>
             <View style={styles.header} >
                <LinearGradient
@@ -47,52 +46,53 @@ export default class Sell extends Component {
                   </View>
                </LinearGradient>
 			</View>
-			<View style={styles.containerV}>
-				<View style={styles.element1}>
-				<TouchableHighlight onPress={this._onPressInfoChimie}>
-					<Image source={require('../img/info-chimie.png')} style = {styles.pictureI} />
-				</TouchableHighlight>
-				</View>
-				<View style={styles.element2}>
-					<Text style={styles.name}>Info chimie magazine </Text>
-					<Text style={styles.teamText}>{Translation[lang].info_chimie}</Text>
-				</View>
-			</View>
-			<View style={styles.containerV}>
-				<View style={styles.element1}>
-				<TouchableHighlight onPress={this._onPressEclaira}>
-					<Image source={require('../img/eclaira.png')} style = {styles.pictureE} />
-				</TouchableHighlight>
-				</View>
-				<View style={styles.element2}>
-					<Text style={styles.name}>Eclaira  </Text>
-					<Text style={styles.teamText}>{Translation[lang].eclaira}</Text>
-				</View>
-			</View>
-			<View style={styles.containerV}>
-				<View style={styles.element1}>
-				<TouchableHighlight onPress={this._onPressCciParis}>
-					<Image source={require('../img/cci-paris.png')} style = {styles.pictureC} />
-				</TouchableHighlight>
-				</View>
-				<View style={styles.element2}>
-					<Text style={styles.name}>CCI Paris Ile de France </Text>
-					<Text style={styles.teamText}>{Translation[lang].cci_paris}</Text>
-				</View>
-			</View>
-			<View style={styles.containerV}>
-				<View style={styles.elementT}>
-				<TouchableHighlight onPress={this._onPressTelecom}>
-					<Image source={require('../img/telecom.png')} style = {styles.pictureT} />
-				</TouchableHighlight>
-				</View>
-				<View style={styles.element2}>
-					<Text style={styles.name}>Télécom Saint-Etienne  </Text>
-					<Text style={styles.teamText}>{Translation[lang].telecom}</Text>
-				</View>
-			</View>
-		</View>
-	</ScrollView>	
+            <ScrollView>
+                <View style={styles.containerV}>
+                    <View style={styles.element1}>
+                    <TouchableHighlight onPress={this._onPressInfoChimie}>
+                        <Image source={require('../img/info-chimie.png')} style = {styles.pictureI} />
+                    </TouchableHighlight>
+                    </View>
+                    <View style={styles.element2}>
+                        <Text style={styles.name}>Info chimie magazine </Text>
+                        <Text style={styles.teamText}>{Translation[lang].info_chimie}</Text>
+                    </View>
+                </View>
+                <View style={styles.containerV}>
+                    <View style={styles.element1}>
+                    <TouchableHighlight onPress={this._onPressEclaira}>
+                        <Image source={require('../img/eclaira.png')} style = {styles.pictureE} />
+                    </TouchableHighlight>
+                    </View>
+                    <View style={styles.element2}>
+                        <Text style={styles.name}>Eclaira  </Text>
+                        <Text style={styles.teamText}>{Translation[lang].eclaira}</Text>
+                    </View>
+                </View>
+                <View style={styles.containerV}>
+                    <View style={styles.element1}>
+                    <TouchableHighlight onPress={this._onPressCciParis}>
+                        <Image source={require('../img/cci-paris.png')} style = {styles.pictureC} />
+                    </TouchableHighlight>
+                    </View>
+                    <View style={styles.element2}>
+                        <Text style={styles.name}>CCI Paris Ile de France </Text>
+                        <Text style={styles.teamText}>{Translation[lang].cci_paris}</Text>
+                    </View>
+                </View>
+                <View style={styles.containerV}>
+                    <View style={styles.elementT}>
+                    <TouchableHighlight onPress={this._onPressTelecom}>
+                        <Image source={require('../img/telecom.png')} style = {styles.pictureT} />
+                    </TouchableHighlight>
+                    </View>
+                    <View style={styles.element2}>
+                        <Text style={styles.name}>Télécom Saint-Etienne  </Text>
+                        <Text style={styles.teamText}>{Translation[lang].telecom}</Text>
+                    </View>
+                </View>
+            </ScrollView>	
+        </View>
 	
 	);
 }

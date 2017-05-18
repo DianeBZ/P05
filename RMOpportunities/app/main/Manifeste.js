@@ -30,14 +30,14 @@ export default class Manifeste extends Component{
                   </View>
                </LinearGradient>
             </View>
-            <View style={styles.containerMain}>
-               <ScrollView >
-                  <Text style={styles.manifesteText}>{Translation[lang].manifesteText}</Text>
-                  <TouchableHighlight style={{marginTop:20, marginBottom:20}} onPress={this._onPressRegister} underlayColor='#F2F2F2'>
-                     <Text style={styles.manifesteRegister}>{Translation[lang].manifesteRegister}</Text>
-                  </TouchableHighlight>
-               </ScrollView>
-            </View>
+            <ScrollView>
+                <View style={styles.containerMain}>
+                    <Text style={styles.manifesteText}>{Translation[lang].manifesteText}</Text>
+                    <TouchableHighlight style={{marginTop:20, marginBottom:20}} onPress={this._onPressRegister} underlayColor='#F2F2F2'>
+                       <Text style={styles.manifesteRegister}>{Translation[lang].manifesteRegister}</Text>
+                    </TouchableHighlight>
+                </View>
+            </ScrollView>
          </View>
       );
    }
