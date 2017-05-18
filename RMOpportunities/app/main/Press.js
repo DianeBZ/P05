@@ -8,13 +8,17 @@ import {
    ScrollView,
    TouchableHighlight,
    BackAndroid,
+   Linking,
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
 var width= Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
-
+var infoChimie = 'http://www.industrie.com/chimie/rmopportunities-propose-de-valoriser-les-stocks-dormants-des-usines,71171';
+var eclaira = 'http://www.eclaira.org/articles/h/rmopportunities-grande-gagnante-du-concours-lafabrique-aviva.html';
+var cciParis = 'http://www.cci-paris-idf.fr/sites/default/files/crocis/pdf/documents/enjeux-184.pdf';
+var telecom = 'https://www.telecom-st-etienne.fr/rmopportunities-remporte-challenge-startup-aviva/';
 import Translation from './Translation';
 
 export default class Sell extends Component {
@@ -45,7 +49,9 @@ export default class Sell extends Component {
 			</View>
 			<View style={styles.containerV}>
 				<View style={styles.element1}>
+				<TouchableHighlight onPress={this._onPressInfoChimie}>
 					<Image source={require('../img/info-chimie.png')} style = {styles.pictureI} />
+				</TouchableHighlight>
 				</View>
 				<View style={styles.element2}>
 					<Text style={styles.name}>Info chimie magazine </Text>
@@ -54,7 +60,9 @@ export default class Sell extends Component {
 			</View>
 			<View style={styles.containerV}>
 				<View style={styles.element1}>
+				<TouchableHighlight onPress={this._onPressEclaira}>
 					<Image source={require('../img/eclaira.png')} style = {styles.pictureE} />
+				</TouchableHighlight>
 				</View>
 				<View style={styles.element2}>
 					<Text style={styles.name}>Eclaira  </Text>
@@ -63,7 +71,9 @@ export default class Sell extends Component {
 			</View>
 			<View style={styles.containerV}>
 				<View style={styles.element1}>
+				<TouchableHighlight onPress={this._onPressCciParis}>
 					<Image source={require('../img/cci-paris.png')} style = {styles.pictureC} />
+				</TouchableHighlight>
 				</View>
 				<View style={styles.element2}>
 					<Text style={styles.name}>CCI Paris Ile de France </Text>
@@ -72,7 +82,9 @@ export default class Sell extends Component {
 			</View>
 			<View style={styles.containerV}>
 				<View style={styles.elementT}>
+				<TouchableHighlight onPress={this._onPressTelecom}>
 					<Image source={require('../img/telecom.png')} style = {styles.pictureT} />
+				</TouchableHighlight>
 				</View>
 				<View style={styles.element2}>
 					<Text style={styles.name}>Télécom Saint-Etienne  </Text>
@@ -94,6 +106,18 @@ onBackAndroid = () => {
 			return false;
 		}
   };
+_onPressInfoChimie = () => {
+	Linking.openURL(infoChimie).catch(err => console.error('An error occurred', err));
+};
+_onPressEclaira = () => {
+	Linking.openURL(eclaira).catch(err => console.error('An error occurred', err));
+};
+_onPressCciParis = () => {
+	Linking.openURL(cciParis).catch(err => console.error('An error occurred', err));
+};
+_onPressTelecom = () => {
+	Linking.openURL(telecom).catch(err => console.error('An error occurred', err));
+};
 }
 
 const styles = StyleSheet.create({
