@@ -18,6 +18,8 @@ var height = Dimensions.get('window').height;
 var dataSourceVp = null;
 var dataSourceAp = null;
 
+// When you are not login, you will see nothing in the main table.
+// And you will see your informations after you logged in.
 export default class ViewNegociations extends Component {
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
@@ -91,6 +93,7 @@ export default class ViewNegociations extends Component {
   };
 }
 
+// Styles sheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,

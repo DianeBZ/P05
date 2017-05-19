@@ -8,6 +8,10 @@ import LinearGradient from 'react-native-linear-gradient';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
+// Page manifesteRegister
+// You will see the main content in "ScrollView".
+// _onPressRegister: go to the page of "SigningUp" 
+// when you clicked "Registre".
 export default class Manifeste extends Component{
    render(){
       BackAndroid.addEventListener('Back',this.onBackAndroid);

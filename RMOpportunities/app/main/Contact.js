@@ -5,12 +5,16 @@ import Translation from './Translation';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+// Links of contacts
 var mailTo = 'mailto:contact@rmopportunities.eu';
 var LinkLinkedIn = 'https://linkedin.com/company/rmopportunities';
 var LinkFacebook = 'https://facebook.com/rmopportunities';
 var LinkTwitter = 'https://twitter.com/rmopportunities';
 var telePhone = 'tel:+33764087304';
 
+// 4 touchable highlight are the four buttons of contacting.
+// Those 4 funcs "_onPress..." will only run your browser or
+// your client of mail of Android. 
 export default class Contact extends Component{
  render(){
 		 BackAndroid.addEventListener('Back',this.onBackAndroid);
@@ -73,6 +77,7 @@ export default class Contact extends Component{
  };
 }
 
+// Styles sheet
 const styles = StyleSheet.create({
 	container: {
 			flex: 1,

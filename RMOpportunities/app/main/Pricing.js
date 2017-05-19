@@ -8,6 +8,10 @@ import LinearGradient from 'react-native-linear-gradient';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
+// Page of Pricing
+// Here, we display the main content of page 
+// with a picture in the component "ScrollView".
+// _onPressContact: go to the page "Contact" when you clicked "Contact" 
 export default class Pricing extends Component{
    render(){
       BackAndroid.addEventListener('Back',this.onBackAndroid);
@@ -83,6 +87,7 @@ export default class Pricing extends Component{
    };
 }
 
+// Styles sheet
 const styles = StyleSheet.create({
    container: {
       marginTop:height*0.08,
