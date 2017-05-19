@@ -56,7 +56,7 @@ export default class LogOutButton extends Component {
     },
 	touchableButton:{
 	  marginTop: 5,
-	  marginRight: 10,
+	  marginRight: 6,
       width: width*0.11,
       height: height*0.06,
 	  backgroundColor: '#F2F2F2',
