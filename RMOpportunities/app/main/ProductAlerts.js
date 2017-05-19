@@ -20,7 +20,7 @@ export default class ProductAlerts extends Component{
     this.state = {text: ''};
   }
     search= () =>{
-      alert(this.state.text+' a été bien ajouté');
+      alert(this.state.text+ Translation[lang].bien_ajouté);
     }
   render(){
 	BackAndroid.addEventListener('Back',this.onBackAndroid);

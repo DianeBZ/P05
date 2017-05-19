@@ -22,12 +22,12 @@ export default class PasswordUpdate extends Component{
   }
   enregistrerPress=()=>{
     if(this.state.passAcien==''||this.state.passChange==''||this.state.passChangeRepete=='')
-      Alert.alert('Veuillez remplir toutes les cases');
+      Alert.alert(Translation[lang].chgt_mdp);
     else if (this.state.passChange!=this.state.passChangeRepete) {
-      Alert.alert('verifiez si votre nouveau mot de passe est même que celui répété');
+      Alert.alert(Translation[lang].chgt_mdp_text);
     }
     else {
-      Alert.alert('le mot de passe a été bien modifié');
+      Alert.alert(Translation[lang].chgt_mdp_ok);
     }
   }
   render(){

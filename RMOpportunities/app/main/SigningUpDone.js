@@ -10,6 +10,8 @@ import {
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
+import Translation from './Translation';
+
 export default class SigningUpDone extends Component {
   render() 
   {
@@ -17,21 +19,21 @@ export default class SigningUpDone extends Component {
       <View style={styles.container1}>
 		<View style={{height:height*0.08}}/>
         <Text style={styles.titre}>
-			Inscription réussie !
+			{Translation[lang].inscription_réussie}
 		</Text>
 		<View style={styles.subContainer}>
 			<Text style={styles.bienvenue}>
-				Bienvenue sur RMOpportunities
+				{Translation[lang].bienvenue_RMO}
 			</Text>
 			<View style={styles.sContainerPre}>
 				<Text style={styles.presentation}>
-					Achetez et vendez des surplus de stocks de produits chimiques
+					{Translation[lang].achetez_vendez}
 				</Text>
 			</View>
 			<View style={styles.sContainerBouton}>
             <TouchableHighlight style={[styles.button, {width: width *0.25, backgroundColor:'#A4D04A'}]} onPress={this._onPressBouton} underlayColor="rgb(138,183,46)">
               <Text style={styles.buttonText}>
-				Accueil
+				  {Translation[lang].accueil}
               </Text>
             </TouchableHighlight>
           </View>
@@ -98,6 +100,6 @@ const styles = StyleSheet.create({
   buttonText:{
         color: "white",
         textAlign: "center",
-        fontSize: 20,
+        fontSize: 18,
     }
 });

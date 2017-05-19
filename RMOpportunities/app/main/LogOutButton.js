@@ -10,6 +10,7 @@ import {
   Alert,
   DeviceEventEmitter,
 } from 'react-native';
+
 import Translation from './Translation';
 
 var width = Dimensions.get('window').width;
@@ -31,11 +32,11 @@ export default class LogOutButton extends Component {
 
     onPressDeconnexion = () => {
 		Alert.alert(
-			'Deconnexion',
-			'Voulez-vous vraiment vous déconnecter?',
+		Translation[lang].deconnexion,
+			Translation[lang].deconnexion_text,
 			[
-				{text:'Oui',onPress: () => {connection=0;DeviceEventEmitter.emit('nvBar');}},
-				{text:'Non',onPress: () => {}},
+				{text:Translation[lang].oui,onPress: () => {connection=0;DeviceEventEmitter.emit('nvBar');}},
+				{text:Translation[lang].non,onPress: () => {}},
 			],
 			)
   	};
