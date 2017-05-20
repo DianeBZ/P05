@@ -204,11 +204,11 @@ export default class Reuse extends Component {
 }
 const styles = StyleSheet.create({
    container: {
-      marginTop:heightWindow*0.08,
+      marginTop:height*0.08,
       flex:1,
    },
    gradient:{
-      width: widthWindow,
+      width: width,
       flexDirection:'row',
       paddingTop:15,
       paddingBottom:15
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
       marginBottom:15,
    },
    headerIcon: {
-      width:widthWindow/4,
+      width:width/4,
       alignItems:'center',
       alignSelf:'center',
    },
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
       height: 70,
    },
    title: {
-      width:widthWindow/2,
+      width:width/2,
       fontSize: 25,
       textAlign: 'center',
       color: '#333333',
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
       height: 70,
    },
    containerMain: {
-      width: widthWindow,
+      width: width,
       justifyContent:'center',
       alignItems:'center',
       marginRight:5,
@@ -251,17 +251,17 @@ const styles = StyleSheet.create({
       color: '#000000',
    },
    instructions: {
-      width:widthWindow*9/10,
+      width:width*9/10,
       fontSize: 15,
       color: '#000000',
       marginBottom: 5,
    },
    containerStep: {
-      width:widthWindow,
+      width:width,
       flexDirection:'row',
    },
    containerTitle: {
-      width:widthWindow,
+      width:width,
       flexDirection:'row',
       minHeight:30,
    },
