@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 106.72,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#F2F2F2",
+        "flexDirection": "column",
+        "flexGrow": 0,
+        "flexShrink": 0,
+        "height": 1187.26,
+        "justifyContent": "center",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#F2F2F2",
+          "flexDirection": "column",
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "height": 493.58,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 40,
+            "margin": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        History
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 15,
+            "marginBottom": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        View your invoices
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+          "height": 160.07999999999998,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 160.07999999999998,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 172.5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Commission amount
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 160.07999999999998,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 172.5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Billing date
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 160.07999999999998,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 172.5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Payment date
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 160.07999999999998,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 172.5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Link
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#F2F2F2",
+          "borderColor": "#CCC",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "height": 506.92,
+          "justifyContent": "center",
+          "margin": 10,
+          "padding": 5,
+          "width": 710,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        No invoice available
+      </Text>
+    </View>
+  </View>
+</View>
+`;

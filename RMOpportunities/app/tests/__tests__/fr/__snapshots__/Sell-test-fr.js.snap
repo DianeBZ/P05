@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "marginTop": 106.72,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 15,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4279783799,
+          4294365330,
+        ]
+      }
+      end={
+        Object {
+          "x": 1,
+          "y": 1,
+        }
+      }
+      locations={
+        Array [
+          0,
+          1,
+        ]
+      }
+      start={
+        Object {
+          "x": 0,
+          "y": 1,
+        }
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 15,
+          "paddingTop": 15,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "transform": Array [
+                Object {
+                  "rotate": "-25deg",
+                },
+              ],
+              "width": 70,
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 25,
+            "textAlign": "center",
+            "width": 375,
+          }
+        }
+      >
+        Conseils pour les vendeurs
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "width": 70,
+            }
+          }
+        />
+      </View>
+    </BVLinearGradient>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+              }
+            }
+          >
+            Etape
+             1 : 
+            Avant de mettre en vente
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+              }
+            }
+          >
+            Etape
+             2 : 
+            Vendre un produit
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+              }
+            }
+          >
+            Etape
+             3 : 
+            Après la vente
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

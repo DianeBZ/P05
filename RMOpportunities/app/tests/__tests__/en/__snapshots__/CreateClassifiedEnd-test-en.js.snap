@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": 106.72,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F2F2F2",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 40,
+          "marginTop": 112.5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Thank you !
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 300,
+          "marginTop": 112.5,
+          "width": 300,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "margin": 37.5,
+          "marginTop": 75,
+        }
+      }
+    >
+      Offer successfully created, it will be controlled by our team as soon as possible.
+    </Text>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "backgroundColor": "#A4D04A",
+            "borderRadius": 5,
+            "height": 67.5,
+            "justifyContent": "center",
+            "marginTop": 5,
+            "width": 375,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Back to home page
+      </Text>
+    </View>
+  </View>
+</View>
+`;

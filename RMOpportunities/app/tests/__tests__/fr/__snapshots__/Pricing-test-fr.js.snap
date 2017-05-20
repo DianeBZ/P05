@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "marginTop": 106.72,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 15,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4279783799,
+          4294365330,
+        ]
+      }
+      end={
+        Object {
+          "x": 1,
+          "y": 1,
+        }
+      }
+      locations={
+        Array [
+          0,
+          1,
+        ]
+      }
+      start={
+        Object {
+          "x": 0,
+          "y": 1,
+        }
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 15,
+          "paddingTop": 15,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "transform": Array [
+                Object {
+                  "rotate": "-25deg",
+                },
+              ],
+              "width": 70,
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 30,
+            "marginTop": 15,
+            "textAlign": "center",
+            "width": 375,
+          }
+        }
+      >
+        Nos tarifs
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "width": 70,
+            }
+          }
+        />
+      </View>
+    </BVLinearGradient>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginBottom": 15,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "width": 750,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 1230,
+                "width": 750,
+              }
+            }
+          />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "backgroundColor": "#A4D04A",
+                "borderRadius": 5,
+                "justifyContent": "center",
+                "width": 375,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "color": "white",
+                "fontSize": 20,
+                "textAlign": "center",
+              }
+            }
+          >
+            Contactez-nous
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

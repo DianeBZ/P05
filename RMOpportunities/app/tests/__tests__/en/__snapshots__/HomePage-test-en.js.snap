@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F5FCFF",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 1334,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "flexDirection": "column",
+              "flexGrow": 0,
+              "flexShrink": 0,
+              "height": 350,
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flexDirection": "column",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": 66.7,
+                "justifyContent": "center",
+                "width": 525,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "padding": 5,
+                }
+              }
+            >
+              <RCTPicker
+                items={
+                  Array [
+                    Object {
+                      "label": "All categories",
+                      "textColor": undefined,
+                      "value": "tlc",
+                    },
+                    Object {
+                      "label": "Products for cosmetics, flavorings and fragrances",
+                      "textColor": undefined,
+                      "value": "Pcos",
+                    },
+                    Object {
+                      "label": "Solvents",
+                      "textColor": undefined,
+                      "value": "sol",
+                    },
+                    Object {
+                      "label": "Regenerated solvents",
+                      "textColor": undefined,
+                      "value": "sol_r",
+                    },
+                    Object {
+                      "label": "Reagents",
+                      "textColor": undefined,
+                      "value": "rea",
+                    },
+                    Object {
+                      "label": "Catalysts",
+                      "textColor": undefined,
+                      "value": "cat",
+                    },
+                    Object {
+                      "label": "Chemical specialties",
+                      "textColor": undefined,
+                      "value": "spe",
+                    },
+                    Object {
+                      "label": "Intermediates",
+                      "textColor": undefined,
+                      "value": "int",
+                    },
+                    Object {
+                      "label": "Simple intermediates",
+                      "textColor": undefined,
+                      "value": "int_s",
+                    },
+                    Object {
+                      "label": "Acids",
+                      "textColor": undefined,
+                      "value": "aci",
+                    },
+                    Object {
+                      "label": "Bases",
+                      "textColor": undefined,
+                      "value": "bas",
+                    },
+                    Object {
+                      "label": "Amino acids",
+                      "textColor": undefined,
+                      "value": "aci_a",
+                    },
+                    Object {
+                      "label": "Vitamins",
+                      "textColor": undefined,
+                      "value": "vit",
+                    },
+                    Object {
+                      "label": "Others",
+                      "textColor": undefined,
+                      "value": "aut",
+                    },
+                  ]
+                }
+                onChange={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                selectedIndex={0}
+                style={
+                  Array [
+                    Object {
+                      "height": 216,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignSelf": "center",
+                "flexDirection": "column",
+                "height": 93.38000000000001,
+                "justifyContent": "center",
+                "width": 525,
+              }
+            }
+          >
+            <TextInput
+              editable={true}
+              maxLength={40}
+              onChangeText={[Function]}
+              placeholder="search by name, CAS number"
+              style={
+                Object {
+                  "backgroundColor": "#a9a9a9",
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "flexDirection": "column",
+                "height": 66.7,
+                "justifyContent": "center",
+                "width": 525,
+              }
+            }
+          >
+            <View
+              accessibilityComponentType={undefined}
+              accessibilityLabel={undefined}
+              accessibilityTraits={undefined}
+              accessible={true}
+              hasTVPreferredFocus={undefined}
+              hitSlop={undefined}
+              isTVSelectable={true}
+              onLayout={undefined}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  Object {
+                    "backgroundColor": "#A4D04A",
+                    "height": 66.7,
+                    "justifyContent": "center",
+                    "width": 525,
+                  },
+                ]
+              }
+              testID={undefined}
+              tvParallaxProperties={undefined}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Search
+              </Text>
+            </View>
+          </View>
+        </View>
+      </Image>
+    </View>
+  </View>
+</RCTScrollView>
+`;

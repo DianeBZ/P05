@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginTop": 133.4,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Ils nous font
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 25,
+            "textAlign": "center",
+          }
+        }
+      >
+        confiance
+      </Text>
+      <View
+        style={
+          Object {
+            "borderTopColor": "#A4D04A",
+            "borderTopWidth": 2,
+            "marginBottom": 1,
+            "marginLeft": 20,
+            "marginRight": 20,
+            "marginTop": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 52.50000000000001,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 187.5,
+                "width": 225,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "margin": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Direct Chimie
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 52.50000000000001,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 150,
+                "width": 187.5,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "margin": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            BASF
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "margin": 52.50000000000001,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 75,
+              "width": 225,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "margin": 15,
+              "textAlign": "center",
+            }
+          }
+        >
+          Kimibiz
+        </Text>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Ils nous
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 25,
+            "textAlign": "center",
+          }
+        }
+      >
+        supportent
+      </Text>
+      <View
+        style={
+          Object {
+            "borderTopColor": "#A4D04A",
+            "borderTopWidth": 2,
+            "marginBottom": 1,
+            "marginLeft": 20,
+            "marginRight": 20,
+            "marginTop": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 400.2,
+              "justifyContent": "center",
+              "marginTop": 52.50000000000001,
+              "width": 375,
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 52.50000000000001,
+                  "width": 300,
+                }
+              }
+            />
+          </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginTop": 37.5,
+                "textAlign": "center",
+              }
+            }
+          >
+            Axelera
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "margin": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Pôle de compétitivité Chimie-environnement
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 400.2,
+              "justifyContent": "center",
+              "marginTop": 52.50000000000001,
+              "width": 375,
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 135,
+                  "width": 202.5,
+                }
+              }
+            />
+          </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginTop": 37.5,
+                "textAlign": "center",
+              }
+            }
+          >
+            UIC Ile-de-France 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "margin": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Organisation professionnelle de la chimie en Ile-de-France
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 400.2,
+              "justifyContent": "center",
+              "marginTop": 52.50000000000001,
+              "width": 375,
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 150,
+                  "width": 187.5,
+                }
+              }
+            />
+          </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginTop": 37.5,
+                "textAlign": "center",
+              }
+            }
+          >
+            UFCC 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "margin": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Union Française du Commerce Chimique
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 400.2,
+              "justifyContent": "center",
+              "marginTop": 52.50000000000001,
+              "width": 375,
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 112.5,
+                  "width": 292.5,
+                }
+              }
+            />
+          </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginTop": 37.5,
+                "textAlign": "center",
+              }
+            }
+          >
+            Use'In 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "margin": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Incubateur de l'Université Jean-Monnet de Saint-Etienne
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

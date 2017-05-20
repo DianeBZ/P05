@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "marginTop": 106.72,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 15,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4279783799,
+          4294365330,
+        ]
+      }
+      end={
+        Object {
+          "x": 1,
+          "y": 1,
+        }
+      }
+      locations={
+        Array [
+          0,
+          1,
+        ]
+      }
+      start={
+        Object {
+          "x": 0,
+          "y": 1,
+        }
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 15,
+          "paddingTop": 15,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "transform": Array [
+                Object {
+                  "rotate": "-25deg",
+                },
+              ],
+              "width": 70,
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 30,
+            "textAlign": "center",
+            "width": 375,
+          }
+        }
+      >
+        Notre manifeste
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "width": 70,
+            }
+          }
+        />
+      </View>
+    </BVLinearGradient>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginBottom": 15,
+            "marginRight": 5,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#000000",
+              "textAlign": "center",
+            }
+          }
+        >
+          Chez RMOpportunities, nous pensons que les ressources disponibles sur Terre sont trop importantes pour être gâchées. Nous croyons en la possibilité d’une deuxième vie pour un produit grâce notamment à l’économie circulaire qui rend l’utilisation des matières premières optimales grâce aux solutions que nous avons créées.
+          						
+          RMOpportunities offre d’un côté, une nouvelle façon aux entreprises de se libérer de leur stock de matières premières chimiques qui n’entrent plus dans le processus de production. Ceci permet d’améliorer leur empreinte écologique tout en réalisant d’importantes économies en évitant de devoir détruire des stocks encore utilisables. D'un autre côté nous aidons des entreprises en recherche de produits chimiques à s’en procurer à des prix très inférieurs au marché grâce à la valorisation de produits non utilisés. Notre ambition est d’offrir aux entreprises une politique zéro déchet pour leurs matières premières chimiques.
+          						
+          RMOpportunities se veut devenir le leader de la mise en relation pour la redistribution de produits chimiques en contribuant à la transformation de l’économie vers le modèle circulaire qui est écoresponsable.
+          						
+          Nous sommes motivés à l'idée de rendre le monde meilleur tout en générant des gains pour les entreprises. Si vous voulez acheter ou vendre des produits chimiques tout en protégeant l’environnement.
+          
+        </Text>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "marginBottom": 20,
+                "marginTop": 20,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#A4D04A",
+                "fontSize": 16,
+                "textAlign": "center",
+              }
+            }
+          >
+            Rejoignez-nous
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

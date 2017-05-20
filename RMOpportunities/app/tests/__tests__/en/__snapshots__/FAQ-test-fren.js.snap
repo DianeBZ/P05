@@ -1,0 +1,1499 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "marginTop": 106.72,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 15,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4279850107,
+          4294957211,
+        ]
+      }
+      end={
+        Object {
+          "x": 1,
+          "y": 1,
+        }
+      }
+      locations={
+        Array [
+          0,
+          1,
+        ]
+      }
+      start={
+        Object {
+          "x": 0,
+          "y": 1,
+        }
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 15,
+          "paddingTop": 15,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "transform": Array [
+                Object {
+                  "rotate": "-25deg",
+                },
+              ],
+              "width": 70,
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 25,
+            "textAlign": "center",
+            "width": 375,
+          }
+        }
+      >
+        Frequently Asked Questions
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "width": 187.5,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 70,
+              "width": 70,
+            }
+          }
+        />
+      </View>
+    </BVLinearGradient>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            What is RMOpportunities ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How does the anonymity work on the platform ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How to ensure the traceability of the stocks ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How do you garantee the quality of the stocks ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            What can I sell on the platform ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How to find a particular product on the platform ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How should I evaluate the initial price of my products ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            Can I negotiate on the platform ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            Who is in charge of transportation ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            What if the seller or the buyer finally retracts after having been introduced ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            What if the quality of stocks purchased from a company after being introduced on the platform is not satisfying ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            Why register on the platform ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How is billed the service provided by RMOpportunities ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How to find a buyer on the platform ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "minHeight": 30,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+          >
+            How to find a seller ?
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#185177",
+              "marginLeft": 15,
+              "width": 5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
+              "marginRight": 5,
+              "width": 750,
+            }
+          }
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

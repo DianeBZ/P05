@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "justifyContent": "flex-start",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 106.72,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": 32,
+        "marginBottom": 15,
+        "marginTop": 15,
+        "textAlign": "center",
+      }
+    }
+  >
+    Successful registration !
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#A4D04A",
+          "fontSize": 25,
+          "fontWeight": "bold",
+          "margin": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      Welcome to RMOpportunities
+    </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#A4D04A",
+          "height": 213.44,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Buy and sell your surplus stocks or raw chemical materials
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Array [
+              Object {
+                "borderRadius": 5,
+                "height": 66.7,
+                "justifyContent": "center",
+                "marginTop": 20,
+              },
+              Object {
+                "backgroundColor": "#A4D04A",
+                "width": 187.5,
+              },
+            ],
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Homepage
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

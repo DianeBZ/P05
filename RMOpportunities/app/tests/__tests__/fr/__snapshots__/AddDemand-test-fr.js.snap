@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 106.72,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F2F2F2",
+          "width": 750,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+            "fontSize": 32,
+            "marginBottom": 10,
+            "marginTop": 15,
+            "textAlign": "center",
+          }
+        }
+      >
+        Ajouter une demande
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "height": 1334,
+            "width": 750,
+          }
+        }
+      >
+        <RCTScrollView>
+          <View>
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "width": 750,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderColor": "#A4D04A",
+                      "borderWidth": 1,
+                      "height": 66.7,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#000000",
+                        "fontSize": 22,
+                        "marginLeft": 15,
+                        "marginRight": 15,
+                      }
+                    }
+                  >
+                    Etape 1: Informations produit
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#F2F2F2",
+                      "borderColor": "#A4D04A",
+                      "borderWidth": 1,
+                      "height": 66.7,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#000000",
+                        "fontSize": 22,
+                        "marginLeft": 15,
+                        "marginRight": 15,
+                      }
+                    }
+                  >
+                    2
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#F2F2F2",
+                      "flex": 1,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <TextInput
+                  onChangeText={[Function]}
+                  placeholder="Numéro d'indentification (CAS ou EINECS)*"
+                  style={
+                    Object {
+                      "borderColor": "#000000",
+                      "borderWidth": 1,
+                      "color": "grey",
+                      "height": 75,
+                      "marginTop": 15,
+                      "width": 637.5,
+                    }
+                  }
+                  underlineColorAndroid="transparent"
+                  value={undefined}
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <TextInput
+                    onChangeText={[Function]}
+                    placeholder="Nom du produit*"
+                    style={
+                      Array [
+                        Object {
+                          "borderColor": "#000000",
+                          "borderWidth": 1,
+                          "color": "grey",
+                          "height": 75,
+                          "marginLeft": 37.5,
+                          "marginRight": 37.5,
+                          "marginTop": 15,
+                          "width": 262.5,
+                        },
+                        Object {
+                          "width": 300,
+                        },
+                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                  <TextInput
+                    onChangeText={[Function]}
+                    placeholder="Numéro REACH"
+                    style={
+                      Object {
+                        "borderColor": "#000000",
+                        "borderWidth": 1,
+                        "color": "grey",
+                        "height": 75,
+                        "marginLeft": 37.5,
+                        "marginRight": 37.5,
+                        "marginTop": 15,
+                        "width": 262.5,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <TextInput
+                    onChangeText={[Function]}
+                    placeholder="Nomenclature douanière"
+                    style={
+                      Array [
+                        Object {
+                          "borderColor": "#000000",
+                          "borderWidth": 1,
+                          "color": "grey",
+                          "height": 75,
+                          "marginLeft": 37.5,
+                          "marginRight": 37.5,
+                          "marginTop": 15,
+                          "width": 262.5,
+                        },
+                        Object {
+                          "width": 300,
+                        },
+                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value={undefined}
+                  />
+                  <TextInput
+                    onChangeText={[Function]}
+                    placeholder="Catégorie*"
+                    style={
+                      Object {
+                        "borderColor": "#000000",
+                        "borderWidth": 1,
+                        "color": "grey",
+                        "height": 75,
+                        "marginLeft": 37.5,
+                        "marginRight": 37.5,
+                        "marginTop": 15,
+                        "width": 262.5,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      Array [
+                        Object {
+                          "borderRadius": 5,
+                          "height": 67.5,
+                          "justifyContent": "center",
+                          "marginTop": 20,
+                        },
+                        Object {
+                          "backgroundColor": "#A4D04A",
+                          "width": 375,
+                        },
+                      ],
+                    ]
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 20,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Suivant
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

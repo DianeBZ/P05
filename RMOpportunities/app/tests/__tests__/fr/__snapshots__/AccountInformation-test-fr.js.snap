@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 106.72,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#F2F2F2",
+        "flexDirection": "column",
+        "flexGrow": 0,
+        "flexShrink": 0,
+        "height": 1187.26,
+        "justifyContent": "center",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#F2F2F2",
+          "flexDirection": "column",
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "height": 373.52000000000004,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 40,
+            "margin": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Informations
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 15,
+            "marginBottom": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Visionner les informations relatives à votre compte
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "justifyContent": "flex-start",
+          "marginLeft": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 20,
+            "textAlign": "left",
+          }
+        }
+      >
+        Entreprise
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F2F2F2",
+          "borderColor": "#CCC",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 306.82,
+          "margin": 5,
+          "padding": 5,
+          "width": 710,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Object {
+              "flex": 1,
+              "justifyContent": "space-around",
+            }
+          }
+          dataSource={
+            ListViewDataSource {
+              "items": 3,
+            }
+          }
+          renderRow={[Function]}
+          renderScrollComponent={[Function]}
+        >
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Dénomination
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Adresse
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Numéro de TVAintracommunautaire
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1.8,
+          }
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "justifyContent": "space-around",
+            }
+          }
+          dataSource={
+            ListViewDataSource {
+              "items": 3,
+            }
+          }
+          renderRow={[Function]}
+          renderScrollComponent={[Function]}
+        >
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              NULL1
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              NULL2
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              NULL3
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "justifyContent": "flex-start",
+          "marginLeft": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 20,
+            "textAlign": "left",
+          }
+        }
+      >
+        Représentant
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F2F2F2",
+          "borderColor": "#CCC",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 306.82,
+          "margin": 5,
+          "padding": 5,
+          "width": 710,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Object {
+              "flex": 1,
+              "justifyContent": "space-around",
+            }
+          }
+          dataSource={
+            ListViewDataSource {
+              "items": 3,
+            }
+          }
+          renderRow={[Function]}
+          renderScrollComponent={[Function]}
+        >
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Nom
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Adresse email
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Numéro de téléphone
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1.8,
+          }
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "justifyContent": "space-around",
+            }
+          }
+          dataSource={
+            ListViewDataSource {
+              "items": 3,
+            }
+          }
+          renderRow={[Function]}
+          renderScrollComponent={[Function]}
+        >
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              NULL1
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              NULL2
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              NULL3
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </View>
+</View>
+`;

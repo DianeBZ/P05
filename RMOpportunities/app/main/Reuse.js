@@ -10,13 +10,16 @@ import {
    BackAndroid,
 } from 'react-native';
 
-import LinearGradient from 'react-native-linear-gradient';
-
-var widthWindow = Dimensions.get('window').width;
-var heightWindow = Dimensions.get('window').height;
-
 import Translation from './Translation';
 
+// Object to display a gradient in a view
+import LinearGradient from 'react-native-linear-gradient';
+
+var width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
+
+
+// Variables to display only one step at the same time
 let step1='false';
 let step2='false';
 let step3='false';
@@ -24,10 +27,10 @@ let step3='false';
 
 export default class Reuse extends Component {
    constructor(props) {
-		super(props);
-	}
+      super(props);
+   }
    render() {
-       BackAndroid.addEventListener('Back',this.onBackAndroid);
+      BackAndroid.addEventListener('Back',this.onBackAndroid);
       return (
          <View style={styles.container}>
             <View style={styles.header} >
@@ -154,15 +157,15 @@ export default class Reuse extends Component {
    }
 
    onBackAndroid = () => {
-		const { navigator } = this.props;
-		if (navigator && navigator.getCurrentRoutes().length > 1) {
-			BackAndroid.removeEventListener('Back', this.onBackAndroid);
-			navigator.pop();
-			return true;
-		} else {
-			return false;
-		}
-  };
+      const { navigator } = this.props;
+      if (navigator && navigator.getCurrentRoutes().length > 1) {
+         BackAndroid.removeEventListener('Back', this.onBackAndroid);
+         navigator.pop();
+         return true;
+      } else {
+         return false;
+      }
+   };
 
    _onPressStep1 = () =>{
       if(step1 === 'true'){
@@ -196,7 +199,7 @@ export default class Reuse extends Component {
    };
    _onLangChange = (key: string, value: string) => {
       lang = value;
-     this.forceUpdate();
+      this.forceUpdate();
    };
 }
 const styles = StyleSheet.create({

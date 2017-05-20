@@ -1,7 +1,10 @@
+
+// File to describe a photo picker which is used in PhotoPicker.js file
+
 import ImagePicker from 'react-native-image-picker';
 
-import Trad from './traduction';
-var lang = 'en';
+import Trad from './Translation';
+
 
 var options = {
   title: Trad[lang].choix_img,

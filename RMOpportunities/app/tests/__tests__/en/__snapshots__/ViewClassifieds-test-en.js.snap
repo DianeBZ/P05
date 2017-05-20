@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 106.72,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#F2F2F2",
+        "flexDirection": "column",
+        "flexGrow": 0,
+        "flexShrink": 0,
+        "height": 1187.26,
+        "justifyContent": "center",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#F2F2F2",
+          "flexDirection": "column",
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "height": 333.5,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 40,
+            "margin": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        My classifieds
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 15,
+            "marginBottom": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        View your online offers
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 20,
+            "textAlign": "left",
+          }
+        }
+      >
+        Offers
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+          "height": 80.03999999999999,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 80.03999999999999,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 375,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Registry number (CAS or EC)
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 80.03999999999999,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 225,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Creation date
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 80.03999999999999,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 105.00000000000001,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Link
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#F2F2F2",
+          "borderColor": "#CCC",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "height": 253.46,
+          "justifyContent": "center",
+          "margin": 5,
+          "padding": 5,
+          "width": 710,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        No offer available
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "fontSize": 20,
+            "textAlign": "left",
+          }
+        }
+      >
+        Demandes
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+          "height": 80.03999999999999,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 80.03999999999999,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 375,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Registry number (CAS or EC)
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 80.03999999999999,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 225,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Creation date
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#CCC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 80.03999999999999,
+            "justifyContent": "center",
+            "margin": 3,
+            "padding": 5,
+            "width": 105.00000000000001,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Link
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#F2F2F2",
+          "borderColor": "#CCC",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "height": 253.46,
+          "justifyContent": "center",
+          "margin": 5,
+          "padding": 5,
+          "width": 710,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        No offer available
+      </Text>
+    </View>
+  </View>
+</View>
+`;

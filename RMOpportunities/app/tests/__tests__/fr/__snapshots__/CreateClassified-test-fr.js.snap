@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": 106.72,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F2F2F2",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#000000",
+          "fontSize": 32,
+          "marginBottom": 10,
+          "marginTop": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      Créer une annonce
+    </Text>
+  </View>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "margin": 40.019999999999996,
+          "textAlign": "center",
+        }
+      }
+    >
+      Commencer à vendre vos produits
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#A4D04A",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "marginBottom": 15,
+          "marginTop": 20,
+          "textAlign": "center",
+        }
+      }
+    >
+      Vous pouvez déposer une annonce pour des produits qui n'ont jamais été utilisés et dont l'emballage n'a jamais été ouvert. Une fois le dépôt effectué, notre équipe va vérifier les informations avant de mettre en ligne le ou les produits.
+       
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "column",
+          "margin": 52.50000000000001,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 80,
+            "margin": 37.5,
+            "width": 70,
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "#A4D04A",
+              "borderRadius": 5,
+              "height": 133.4,
+              "justifyContent": "center",
+              "width": 225,
+            },
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Ajouter une demande
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "column",
+          "margin": 52.50000000000001,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 80,
+            "margin": 37.5,
+            "width": 70,
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "#A4D04A",
+              "borderRadius": 5,
+              "height": 133.4,
+              "justifyContent": "center",
+              "width": 225,
+            },
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Ajouter une offre
+           
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

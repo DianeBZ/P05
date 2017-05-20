@@ -1,0 +1,378 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView>
+  <View>
+    <View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 30,
+              "marginBottom": 37.5,
+              "marginTop": 150,
+              "textAlign": "center",
+            }
+          }
+        >
+          L'entreprise
+        </Text>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={Object {}}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#A4D04A",
+                  "fontSize": 22,
+                  "fontStyle": "italic",
+                  "fontWeight": "bold",
+                  "marginLeft": 37.5,
+                }
+              }
+            >
+              A Propos
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "borderTopColor": "#A4D04A",
+              "borderTopWidth": 2,
+              "marginBottom": 30,
+              "marginLeft": 37.5,
+              "marginRight": 37.5,
+              "marginTop": 10,
+            }
+          }
+        />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={Object {}}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#A4D04A",
+                  "fontSize": 22,
+                  "fontStyle": "italic",
+                  "fontWeight": "bold",
+                  "marginLeft": 37.5,
+                }
+              }
+            >
+              L'équipe
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "borderTopColor": "#A4D04A",
+              "borderTopWidth": 2,
+              "marginBottom": 30,
+              "marginLeft": 37.5,
+              "marginRight": 37.5,
+              "marginTop": 10,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginLeft": 22.5,
+              "marginRight": 22.5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 225,
+                "width": 225,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 225,
+                  "width": 225,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 225,
+                "justifyContent": "center",
+                "margin": 7.5,
+                "width": 450,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Grégoire Willmann
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+               
+              Co-fondateur et Président
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Ingénieurs diplomés de Telecom Saint-Etienne
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginLeft": 22.5,
+              "marginRight": 22.5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 225,
+                "justifyContent": "center",
+                "margin": 7.5,
+                "width": 450,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Gabriel Calmels
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+               
+              Co-fondateur et Directeur général
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Ingénieurs diplomés de Telecom Saint-Etienne
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "height": 225,
+                "width": 225,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 225,
+                  "width": 225,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginLeft": 22.5,
+              "marginRight": 22.5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 225,
+                "width": 225,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 225,
+                  "width": 225,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 225,
+                "justifyContent": "center",
+                "margin": 7.5,
+                "width": 450,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Christian Rodié
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Administrateur
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Ex Directeur Général d'ISOCHEM 
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
