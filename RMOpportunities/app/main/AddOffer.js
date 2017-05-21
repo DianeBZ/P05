@@ -161,12 +161,22 @@ class AddOfferSteps extends Component{
                                 <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Translation[lang].ville_codep + star} onChangeText={(ville) => this.setState({ville})} value={this.state.ville}/>
                             </View>
                         </View>
+                        <View style={{alignItems:'center', marginLeft:10, marginRight:10, marginTop:20}}>
+						<Text numberOfLines={4}>
+                            <Text style={{color:'#000000'}}>{Translation[lang].texte_cgu1}</Text>
+							<Text selectable={true} style={{color:'#A4D04A'}}>{Translation[lang].texte_cgu2}</Text>
+							<Text style={{color:'#000000'}}>{Translation[lang].texte_cgu3}</Text>
+						</Text>
+                        </View>
                         <View style={{flexDirection:'row', justifyContent:'center', marginBottom: 30}}>
-                            <TouchableHighlight onPress={this._changeStep} style={[styles.button, {width: width *0.4, backgroundColor:'white', borderWidth:1, borderColor:'#A4D04A'}]}>
+                            <TouchableHighlight onPress={this._changeStep} style={[styles.button, {width: width *0.27, backgroundColor:'white', borderWidth:1, borderColor:'#A4D04A'}]} underlayColor="#FFFFFF">
                                 <Text style={{color:'#A4D04A', fontSize:20, textAlign:'center'}}>{Translation[lang].precedent}</Text>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={this._onPressSuivant2} style={[styles.button, {width: width *0.4, backgroundColor:'#A4D04A', marginLeft:10}]} underlayColor="rgb(138,183,46)">
-                                <Text style={styles.buttonText}>{Translation[lang].suivant}</Text>
+                            <TouchableHighlight onPress={this._onPressTerminer} style={[styles.button, {width: width *0.27, backgroundColor:'#A4D04A', marginLeft:10}]} underlayColor="rgb(138,183,46)">
+                                <Text style={styles.buttonText}>{Translation[lang].terminer}</Text>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={this._onPressAnnuler} style={[styles.button, {width: width *0.27, backgroundColor:"rgb(223,83,79)", marginLeft:10}]} underlayColor="rgb(172,41,37)">
+                                <Text style={styles.buttonText}>{Translation[lang].annuler}</Text>
                             </TouchableHighlight>
                         </View>
                     </View>
@@ -181,7 +191,34 @@ class AddOfferSteps extends Component{
         step1 = !step1;
         step2 = !step2;
         this.forceUpdate();
-    };        
+    }; 
+
+    _onPressAnnuler = () =>
+    {
+        step1 = !step1;
+        step2 = !step2;
+        this.setState({
+            numID:'',
+            nom:'',
+            numReach:'',
+            nomenc:'',
+            categorie:'',
+            description:'',
+            qte:'',
+            unite:'',
+            prixUnit:'',
+            contenant:'',
+            paysOrigine:'',
+            paysStock:'',
+            ville:'',
+            jour:'',
+            mois:'',
+            year:'',
+        });
+        selected_cat = 'choose';
+        selected_cont = 'cont';
+        this.forceUpdate();
+    }
 }
 
 export default class AddOffer extends Component{
