@@ -12,9 +12,9 @@ import SigningUpThreeSteps from './SigningUpThreeSteps';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
-
+// this page is used to let user to sign up by his Linkedin account or directly
 export default class SigningUp extends Component {
-
+  // this function will be called when pressing the button'sign up with Linkedin'
   _onPressBouton(){
     console.log('press Linkedin');
   }
@@ -63,6 +63,7 @@ export default class SigningUp extends Component {
       return false;
     }
   };
+// this function will be called when pressing 'Sign Up in ThreeSteps' and the current page will be 'SigningUpThreeSteps'.
 
   onPressInscription = () => {
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);

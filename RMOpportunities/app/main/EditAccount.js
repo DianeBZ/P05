@@ -52,7 +52,8 @@ export default class EditAccount extends Component{
 
     contactPress=()=>{
 
-    }
+    }// this function will be called after pressing the email adress,in the future
+    // there will be a page to let user send issues about updating the account to the company. 
   onBackAndroid = () => {
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {

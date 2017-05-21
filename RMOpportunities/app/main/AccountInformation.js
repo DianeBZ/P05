@@ -23,7 +23,8 @@ export default class AccountInformation extends Component {
   var ds1 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   var ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
   var ds3 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-  
+  // datasources are account information showed in the list.ListView will use these things to show these in a list format
+  // In the future,these datas would be delivered by the remote
   this.state = {
 	dataSource1: ds1.cloneWithRows([Translation[lang].denomination, Translation[lang].adresse , Translation[lang].num_tva_inter]),
     dataSource2: ds1.cloneWithRows(['NULL1', 'NULL2',"NULL3"]),
@@ -31,7 +32,7 @@ export default class AccountInformation extends Component {
   };
 
 }
-	  
+
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
@@ -97,7 +98,7 @@ export default class AccountInformation extends Component {
 
     );
   }
-  
+
   onBackAndroid = () => {
 		const { navigator } = this.props;
 		if (navigator && navigator.getCurrentRoutes().length > 1) {

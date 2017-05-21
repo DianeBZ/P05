@@ -14,11 +14,10 @@ import Translation from './Translation';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 var star = '*';
-
 export default class PasswordUpdate extends Component{
   constructor(props) {
     super(props);
-    this.state = {passAcien: '',passChange:'',passChangeRepete:''};
+    this.state = {passAcien: '',passChange:'',passChangeRepete:''};// three variables which save the old password,new password and repeted password
   }
   enregistrerPress=()=>{
     if(this.state.passAcien==''||this.state.passChange==''||this.state.passChangeRepete=='')
@@ -29,7 +28,7 @@ export default class PasswordUpdate extends Component{
     else {
       Alert.alert(Translation[lang].chgt_mdp_ok);
     }
-  }
+  }// functions to inform the user when change of the password is realised successfully or not because of some mistakes
   render(){
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(

@@ -22,6 +22,7 @@ import Translation from './Translation';
 
 let answerOpen=['false','false','false','false','false','false','false','false'
 ,'false','false','false','false','false','false','false'];
+// when an answer appears below its question,the corresponding element of answerOpen turns to be 'true'
 let changeRow=0;
 
 
@@ -511,7 +512,7 @@ export default class FAQ extends Component {
     this.forceUpdate();
     changeRow=index;
     //answerOpen[index]='false';
- };
+ };// close the answer which was opened ,open the answer whose question is clicked
  _goToAbout=()=>{
    BackAndroid.removeEventListener('Back', this.onBackAndroid);
  	const { navigator } = this.props;
@@ -521,7 +522,7 @@ export default class FAQ extends Component {
          component: Company,
        })
      }
- };
+ };// a link to the page company when clicking the green word 'about'.
 
  _goToPricing=()=>{
    BackAndroid.removeEventListener('Back', this.onBackAndroid);
@@ -532,7 +533,7 @@ export default class FAQ extends Component {
          component: Pricing,
        })
      }
- };
+ };// a link to the page pricing when clicking the green word 'pricing'
 }
 
 const styles = StyleSheet.create({

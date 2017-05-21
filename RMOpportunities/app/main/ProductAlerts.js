@@ -18,10 +18,10 @@ export default class ProductAlerts extends Component{
   constructor(props) {
     super(props);
     this.state = {text: ''};
-  }
+  }// 'text' is the content(registry number) inputed by the user
     search= () =>{
       alert(this.state.text+ Translation[lang].bien_ajouté);
-    }
+    }// inform the user that the alert is added successfully
   render(){
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
