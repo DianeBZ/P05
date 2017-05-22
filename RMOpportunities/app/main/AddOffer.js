@@ -16,14 +16,18 @@ import ProductConnection from './AddProductConnection';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 var star = '*';
+//Variables used to decide which step is rendered
 var step1 = true;
 var step2 = false;
+//Variables used to decide which value is selected in pickers
 var selected_cat = 'choose';
 var selected_cont = 'cont';
+var selected_unit = 'unit';
 
 class AddOfferSteps extends Component{
     constructor(props){
         super(props);
+        //States that will receive the value entered in textinput
         this.state = {
             numID:'',
             nom:'',
@@ -43,16 +47,22 @@ class AddOfferSteps extends Component{
             year:'',
         }
     }
-    
+    //Function controlling the category picker
     onCatChange = (key: string, value: string) => {
 		selected_cat = value;
         this.state.categorie = value;
 		this.forceUpdate();
 	};
-    
+    //Function controlling the container picker
     onContChange = (key: string, value: string) => {
 		selected_cont = value;
         this.state.contenant = value;
+		this.forceUpdate();
+	};
+    //Function controlling the unity picker
+    onUnitChange = (key: string, value: string) => {
+		selected_unit = value;
+        this.state.unite = value;
 		this.forceUpdate();
 	};
     
@@ -127,14 +137,32 @@ class AddOfferSteps extends Component{
                             </View>
                             <View style={{flexDirection:'row'}}>
                                 <TextInput style={[styles.textToFill, {width:width*0.2}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].qtte + star} onChangeText={(qte) => this.setState({qte})} value={this.state.qte}/>
-                                <TextInput style={[styles.textToFill, {width:width*0.2}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].unite + star} onChangeText={(unite) => this.setState({unite})} value={this.state.unite}/>                                
+                                <View style={[styles.viewPicker, {width:width*0.35}]}>     
+                                    <Picker style={{color:'grey', marginTop:0}} selectedValue={selected_unit} onValueChange={this.onUnitChange.bind(this,'value')}> 
+                                        <Picker.Item label={Translation[lang].unite + star} value='unit' /> 
+                                        <Picker.Item label="L" value="L" />
+                                        <Picker.Item label="m3" value="m3" />
+                                        <Picker.Item label="mL" value="mL" />
+                                        <Picker.Item label="cL" value="cL" />
+                                        <Picker.Item label="gal" value="gal" />
+                                        <Picker.Item label="fl oz" value="fl oz" />
+                                        <Picker.Item label="in3" value="in3" />
+                                        <Picker.Item label="t" value="t" />
+                                        <Picker.Item label="kg" value="kg" />
+                                        <Picker.Item label="g" value="g" />
+                                        <Picker.Item label="cg" value="cg" />
+                                        <Picker.Item label="mg" value="mg" />
+                                        <Picker.Item label="oz" value="oz" /> 
+                                        <Picker.Item label="lb" value="lb" /> 
+                                    </Picker>
+                                </View>                                
                                 <TextInput style={[styles.textToFill, {width:width*0.3, marginLeft:20}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].prix_unit + star} onChangeText={(prixUnit) => this.setState({prixUnit})} value={this.state.prixUnit}/> 
                             </View>
                             <View><Text style={{fontSize:16, color:'#000000', marginTop:15}}>{Translation[lang].date_exp}</Text></View>
                             <View style={{flexDirection:'row'}}>
-                                <TextInput style={[styles.textToFill, {width:width*0.1}]} underlineColorAndroid={'transparent'} placeholder="1" onChangeText={(jour) => this.setState({jour})} value={this.state.jour}/>
-                                <TextInput style={[styles.textToFill, {width:width*0.3, marginLeft:10}]} underlineColorAndroid={'transparent'} placeholder="janvier" onChangeText={(mois) => this.setState({mois})} value={this.state.mois}/>
-                                <TextInput style={[styles.textToFill, {width:width*0.2, marginLeft:10}]} underlineColorAndroid={'transparent'} placeholder="2017" onChangeText={(year) => this.setState({year})} value={this.state.year}/>
+                                <TextInput style={[styles.textToFill, {width:width*0.1}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].day + star} onChangeText={(jour) => this.setState({jour})} value={this.state.jour}/>
+                                <TextInput style={[styles.textToFill, {width:width*0.3, marginLeft:10}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].month + star} onChangeText={(mois) => this.setState({mois})} value={this.state.mois}/>
+                                <TextInput style={[styles.textToFill, {width:width*0.2, marginLeft:10}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].year + star} onChangeText={(year) => this.setState({year})} value={this.state.year}/>
                             </View>
                             <View>
                                 <View style={[styles.viewPicker, {width:width*0.8}]}>     
@@ -172,10 +200,10 @@ class AddOfferSteps extends Component{
                             <TouchableHighlight onPress={this._changeStep} style={[styles.button, {width: width *0.27, backgroundColor:'white', borderWidth:1, borderColor:'#A4D04A'}]} underlayColor="#FFFFFF">
                                 <Text style={{color:'#A4D04A', fontSize:20, textAlign:'center'}}>{Translation[lang].precedent}</Text>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={this._onPressTerminer} style={[styles.button, {width: width *0.27, backgroundColor:'#A4D04A', marginLeft:10}]} underlayColor="rgb(138,183,46)">
+                            <TouchableHighlight onPress={this._onPressEnd} style={[styles.button, {width: width *0.27, backgroundColor:'#A4D04A', marginLeft:10}]} underlayColor="rgb(138,183,46)">
                                 <Text style={styles.buttonText}>{Translation[lang].terminer}</Text>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={this._onPressAnnuler} style={[styles.button, {width: width *0.27, backgroundColor:"rgb(223,83,79)", marginLeft:10}]} underlayColor="rgb(172,41,37)">
+                            <TouchableHighlight onPress={this._onPressCancel} style={[styles.button, {width: width *0.27, backgroundColor:"rgb(223,83,79)", marginLeft:10}]} underlayColor="rgb(172,41,37)">
                                 <Text style={styles.buttonText}>{Translation[lang].annuler}</Text>
                             </TouchableHighlight>
                         </View>
@@ -186,14 +214,14 @@ class AddOfferSteps extends Component{
         </View>
         );
     }
-    
+    //Function used when changing step (touching numbers or pressing next/previous)
     _changeStep = () =>{
         step1 = !step1;
         step2 = !step2;
         this.forceUpdate();
     }; 
-
-    _onPressAnnuler = () =>
+    //Function used when pressing cancel. Going back to step1 and erase every value entered
+    _onPressCancel = () =>
     {
         step1 = !step1;
         step2 = !step2;
@@ -217,12 +245,13 @@ class AddOfferSteps extends Component{
         });
         selected_cat = 'choose';
         selected_cont = 'cont';
+        selected_unit = 'unit';
         this.forceUpdate();
     }
 }
 
 export default class AddOffer extends Component{
-    
+    //Function called when the component is updating. If the user logs out, the page rendered will be 'ProductConnection'
     componentWillUpdate(){
         if (connection===0){
             const {navigator} = this.props;

@@ -15,16 +15,20 @@ import DemandConnection from './AddDemandConnection';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
-var selected_cat = 'choose';
+var star = '*';
+//Variables used to decide which step is rendered
 var Step1 = true;
 var Step2 = false;
-var star = "*";
+//Variable used to decide which value is selected in pickers
+var selected_cat = 'choose';
+var selected_unit = 'unit';
 
 class MenuAddDemand extends Component
 {
     constructor(props)
 	{
         super(props);
+        //States that will receive the value entered in textinput
         this.state = 
 		{
             numID : '',
@@ -37,13 +41,18 @@ class MenuAddDemand extends Component
             unity: '',
         };
     }
-    
+    //Function controlling the category picker
     onCatChange = (key: string, value: string) => {
 		selected_cat = value;
         this.state.categorie = value;
 		this.forceUpdate();
 	};
-    
+    //Function controlling the unity picker
+    onUnitChange = (key: string, value: string) => {
+		selected_unit = value;
+        this.state.unity = value;
+		this.forceUpdate();
+	};
 	render(){
         return(
         <ScrollView>
@@ -122,7 +131,25 @@ class MenuAddDemand extends Component
 						</Text>
 						<View style={{flexDirection:'row'}}>
                                 <TextInput style={[styles.textToFill, {width:width*0.3, marginBottom:20, marginRight:5, marginLeft: width*0.1}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].qtte} onChangeText={(quantity) => this.setState({quantity})} value={this.state.quantity}/>
-                                <TextInput style={[styles.textToFill, {width:width*0.2, marginBottom:20}]} underlineColorAndroid={'transparent'} placeholder={Translation[lang].unite} onChangeText={(unity) => this.setState({unity})} value={this.state.unity}/>                                 
+                                <View style={[styles.viewPicker, {width:width*0.35}]}>     
+                                    <Picker style={{color:'grey', marginTop:0}} selectedValue={selected_unit} onValueChange={this.onUnitChange.bind(this,'value')}> 
+                                        <Picker.Item label={Translation[lang].unite + star} value='unit' /> 
+                                        <Picker.Item label="L" value="L" />
+                                        <Picker.Item label="m3" value="m3" />
+                                        <Picker.Item label="mL" value="mL" />
+                                        <Picker.Item label="cL" value="cL" />
+                                        <Picker.Item label="gal" value="gal" />
+                                        <Picker.Item label="fl oz" value="fl oz" />
+                                        <Picker.Item label="in3" value="in3" />
+                                        <Picker.Item label="t" value="t" />
+                                        <Picker.Item label="kg" value="kg" />
+                                        <Picker.Item label="g" value="g" />
+                                        <Picker.Item label="cg" value="cg" />
+                                        <Picker.Item label="mg" value="mg" />
+                                        <Picker.Item label="oz" value="oz" /> 
+                                        <Picker.Item label="lb" value="lb" /> 
+                                    </Picker>
+                                </View>                                
                         </View>
                        
 						<View style={{alignItems:'center', marginLeft:10, marginRight:10}}>
@@ -140,7 +167,7 @@ class MenuAddDemand extends Component
                             <TouchableHighlight onPress={this._onPressSuivant2} style={[styles.button, {width: width *0.27, backgroundColor:'#A4D04A', marginLeft:10}]} underlayColor="rgb(138,183,46)">
                                 <Text style={styles.buttonText}>{Translation[lang].terminer}</Text>
                             </TouchableHighlight>
-							<TouchableHighlight onPress={this._onPressAnnuler} style={[styles.button, {width: width *0.27, backgroundColor:"rgb(223,83,79)", marginLeft:10}]} underlayColor="rgb(172,41,37)">
+							<TouchableHighlight onPress={this._onPressCancel} style={[styles.button, {width: width *0.27, backgroundColor:"rgb(223,83,79)", marginLeft:10}]} underlayColor="rgb(172,41,37)">
                                 <Text style={styles.buttonText}>{Translation[lang].annuler}</Text>
                             </TouchableHighlight>
 						</View>
@@ -152,15 +179,15 @@ class MenuAddDemand extends Component
         </ScrollView>
         );
     }
-	
+	//Function used when changing step (touching numbers or pressing next/previous)
 	_changeStep = () =>
 	{
         Step1 = !Step1;
         Step2 = !Step2;
         this.forceUpdate();
     };
-    
-    _onPressAnnuler = () =>
+    //Function used when pressing cancel. Going back to step1 and erase every value entered
+    _onPressCancel = () =>
     {
         Step1 = !Step1;
         Step2 = !Step2;
@@ -175,12 +202,13 @@ class MenuAddDemand extends Component
             unity: '',
         });
         selected_cat = 'choose';
+        selected_unit = 'unit';
         this.forceUpdate();
     }
 }
 	
 export default class AddDemand extends Component{
-    
+    //Function called when the component is updating. If the user logs out, the page rendered will be 'DemandConnection'
     componentWillUpdate(){
         if (connection===0){
             const {navigator} = this.props;
