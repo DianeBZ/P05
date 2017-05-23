@@ -31,6 +31,7 @@ export default class Offers extends Component {
 		</View>
   );
  }
+ // function used to call 'OfferInformation' page
 onPressOffreDetaillee = () => {
 	  BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		const { navigator } = this.props;

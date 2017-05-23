@@ -6,15 +6,15 @@ import Translation from './Translation';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
+// Variable used to decide which information is rendered
 var valorize = 'false';
 var price = 'false';
 var time = 'false';
 var visibility = 'false';
 var environment = 'false';
 
-
+// function used to manage dispaying of information 
 class BlockFunction extends Component{
-
  render(){
      return(
        <View>
@@ -274,7 +274,7 @@ class BlockFunction extends Component{
      );
  }
 
-
+// function used to change value of variables (touching title/square)
 _onPressValoriserStocks = () =>{
  if(valorize === 'true'){
    valorize = 'false';

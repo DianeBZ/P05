@@ -7,6 +7,7 @@ import Translation from './Translation';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
+// link to supporters web site
 var axelera = 'http://www.axelera.org/';
 var uic = 'http://www.uic-idf.fr/';
 var ufcc = 'http://www.ufcc.fr/';
@@ -85,18 +86,20 @@ export default class Company extends Component {
 			return false;
 		}
   };
-    _onPressAxelera = () => {
-	Linking.openURL(axelera).catch(err => console.error('An error occurred', err));
- };
-   _onPressUic = () => {
-	Linking.openURL(uic).catch(err => console.error('An error occurred', err));
- };
-   _onPressUfcc = () => {
-	Linking.openURL(ufcc).catch(err => console.error('An error occurred', err));
- };
-   _onPressUseIn = () => {
-	Linking.openURL(useIn).catch(err => console.error('An error occurred', err));
- };
+  
+  // functions used to open supporters web site
+	_onPressAxelera = () => {
+		Linking.openURL(axelera).catch(err => console.error('An error occurred', err));
+	};
+	_onPressUic = () => {
+		Linking.openURL(uic).catch(err => console.error('An error occurred', err));
+	};
+	_onPressUfcc = () => {
+		Linking.openURL(ufcc).catch(err => console.error('An error occurred', err));
+	};
+	_onPressUseIn = () => {
+		Linking.openURL(useIn).catch(err => console.error('An error occurred', err));
+	};
 }
 
 const styles = StyleSheet.create({

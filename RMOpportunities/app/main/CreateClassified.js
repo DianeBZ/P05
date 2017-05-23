@@ -45,6 +45,9 @@ export default class CreateClassified extends Component {
         </View>
     );
   }
+  // function used to call : 
+  // 'AddDemandConnection' if user is not connected : the user can sign in and add a demand
+  // 'AddDemand' if user is connected
 	onButtonPressDemande = () => {
 	 BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 	const { navigator } = this.props;
@@ -62,6 +65,9 @@ export default class CreateClassified extends Component {
         }
 	}
   };
+  // function used to call : 
+  // 'AddProductConnection' if user is not connected : the user can sign in and add an offer
+  // 'AddOffer' if user is connected
   onButtonPressProduit = () => {
      BackAndroid.removeEventListener('Exit',this.onBackAndroid);
     const { navigator } = this.props;

@@ -50,6 +50,7 @@ export default class OffersCategory extends Component {
 		</View>
 	);
   }
+  // function used to call 'Offers' page
   onPressTTCategories = () => {
 	  BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		const { navigator } = this.props;

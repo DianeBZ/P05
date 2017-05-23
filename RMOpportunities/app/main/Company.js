@@ -3,12 +3,14 @@ import { Text, Image, StyleSheet, View,ScrollView, Dimensions, TouchableHighligh
 
 import Translation from './Translation';
 
-
+// Variable used to decide which information is rendered
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
+// Variable used to decide which information is rendered
+// if about is true, we display company information
+// if about is false, we display team information
 var about = 'false';
-var team = 'false';
 
 class BlockFunction extends Component{
  render(){
@@ -34,7 +36,7 @@ class BlockFunction extends Component{
 
 					<Text style={styles.aboutText}>{Translation[lang].a_propos4}</Text>
 				</View>
-				<TouchableHighlight onPress={this._onPressTeam}>
+				<TouchableHighlight onPress={this._onPressAbout}>
 					<View style={styles.titleStyle}>
 						<Text style={styles.title}>{Translation[lang].equipe}</Text>
 					</View>
@@ -52,7 +54,7 @@ class BlockFunction extends Component{
 					</View>
 				</TouchableHighlight>
 				<View style={styles.separation}></View>
-				<TouchableHighlight onPress={this._onPressTeam}>
+				<TouchableHighlight onPress={this._onPressAbout}>
 					<View style={styles.titleStyle}>
 						<Text style={styles.title}>{Translation[lang].equipe}</Text>
 					</View>
@@ -96,25 +98,16 @@ class BlockFunction extends Component{
    </View>
  );
  }
- _onPressAbout = () =>{
+ // function used to change value of variables (touching title)
+_onPressAbout = () =>{
  if(about === 'true'){
    about = 'false';
  }else{
    about ='true';
-   team = 'false';
  }
  this.forceUpdate();
 };
 
- _onPressTeam = () =>{
- if(team === 'true'){
-   team = 'false';
- }else{
-   team ='true';
-   about = 'false';
- }
- this.forceUpdate();
-};
 }
 export default class Company extends Component {
   render() {

@@ -12,9 +12,11 @@ import {
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-
+// size of screen
 var width= Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+
+// link to the article about RMOpportinuties
 var infoChimie = 'http://www.industrie.com/chimie/rmopportunities-propose-de-valoriser-les-stocks-dormants-des-usines,71171';
 var eclaira = 'http://www.eclaira.org/articles/h/rmopportunities-grande-gagnante-du-concours-lafabrique-aviva.html';
 var cciParis = 'http://www.cci-paris-idf.fr/sites/default/files/crocis/pdf/documents/enjeux-184.pdf';
@@ -106,6 +108,8 @@ onBackAndroid = () => {
 			return false;
 		}
   };
+  
+// functions used to open articles
 _onPressInfoChimie = () => {
 	Linking.openURL(infoChimie).catch(err => console.error('An error occurred', err));
 };

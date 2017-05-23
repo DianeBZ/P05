@@ -24,6 +24,7 @@ export default class CreateClassifiedEnd extends Component {
 		</View>
 	);
   }
+  // function used to call home page
   onPressAccueil = () => {
     BackAndroid.removeEventListener('Exit',this.onBackAndroid);
     const { navigator } = this.props;

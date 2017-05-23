@@ -6,6 +6,7 @@ var height = Dimensions.get('window').height;
 
 import Connection from './Connection';
 
+// Variable used to decide which information is rendered
 var product = 'false';
 var info = 'false';
 var description = 'false';
@@ -187,11 +188,11 @@ export default class OfferInformation extends Component {
 			else
 				return(
 					<View style={styles.containerButton}>
-					<TouchableHighlight onPress={this._onPressPlusInfoC} style={[styles.button, {backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+					<TouchableHighlight style={[styles.button, {backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
 							<Text style={styles.buttonText}>Plus d information </Text>
 					</TouchableHighlight>
 					<View style={styles.espace}></View>
-					<TouchableHighlight onPress={this._onPressNegociationC} style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
+					<TouchableHighlight style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
 							<Text style={styles.buttonText}>Commencer les négociations</Text>
 					</TouchableHighlight>
 			</View>
@@ -200,6 +201,7 @@ export default class OfferInformation extends Component {
 		</ScrollView>
 	);
   }
+ // function used to call 'connection', to enable user to sign in
 _onPressNC = () => {
 	BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 	const { navigator } = this.props;
@@ -210,26 +212,8 @@ _onPressNC = () => {
 		})
 	}
 };
-_onPressPlusInfoC = () => {
-	BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-	const { navigator } = this.props;
-	if (navigator) {
-		navigator.push({
-			name: 'Connection',
-			component: Connection,
-		})
-	}
-};
-_onPressNegociationC = () => {
-	BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-	const { navigator } = this.props;
-	if (navigator) {
-		navigator.push({
-			name: 'Connection',
-			component: Connection,
-		})
-	}
-};
+
+ // function used to change value of variables (touching title)
 _onPressProduit = () =>{
  if(product === 'true'){
    product = 'false';
