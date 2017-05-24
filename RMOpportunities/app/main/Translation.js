@@ -1,4 +1,5 @@
 export default{
+ //each key has its translation in english and french so the user can add any word using {Translation[lang].key} instead of it in the right place
    fr: {
 	  "a_propos1":"'Raw Material Opportunities' signifie littéralement 'les opportunités liées aux matières premières'. Le concept part d'une simple constatation : bien que la plupart des entreprises travaillent en flux tendu, il arrive que celles-ci accumulent des stocks dormants.",
 	  "a_propos2":"Cette accumulation peut être liée à plusieurs facteurs comme par exemple le changement d'une norme au sein du pays de l'entreprise ou au sein de l'Europe. Ces stocks deviennent alors un poids pour l'entreprise qui va la plupart du temps être obligée de payer pour les détruire.",
@@ -32,7 +33,8 @@ export default{
       "annuler": "Annuler",
       "annuler":"Annuler",
       "aucun_achat":"Aucun achat",
-      "aucune_ann":"Aucune annonce de offre disponible",
+      "aucune_off":"Aucune offre disponible",
+      "aucune_dem":"Aucune demande disponible",
       "aucune_fact":"Aucune facture disponible.",
       "aucune_rel_achat1":"Aucune mise en relation pour",
       "aucune_rel_achat2":"l'achat de produits.",
@@ -80,7 +82,7 @@ export default{
       "conteneur": "Conteneur",
       "cosm": "Produits pour la cosmétique, les arômes et parfums",
       "creer_ann":"Créer une annonce",
-      "date_crea":"Date de creation",
+      "date_crea":"Date de création",
       "date_exp": "Date d'expiration (DLU/DLC)",
       "date_fact":"Date de facturation",
       "date_paie":"Date de paiement",
@@ -356,7 +358,8 @@ Nous sommes motivés à l'idée de rendre le monde meilleur tout en générant d
       "annuler": "Cancel",
       "annuler":"Cancel",
       "aucun_achat":"No purchases",
-      "aucune_ann":"No offer available",
+      "aucune_off":"No offer available",
+      "aucune_dem":"No demand available",
       "aucune_fact":"No invoice available",
       "aucune_rel_achat1":"No purchased",
       "aucune_rel_achat2":"products.",

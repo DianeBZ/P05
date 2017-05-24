@@ -8,7 +8,7 @@ var p = "!";
 import Connection from './Connection';
 import SigningUp from './SigningUp';
 import Translation from './Translation';
-
+//Page rendered when you want to add an offer but you are not logged in
 export default class AddProductConnection extends Component {
 
   render() {
@@ -34,10 +34,7 @@ export default class AddProductConnection extends Component {
     );
   }
   onPressConnexion = () => {
-		// let _this = this;
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-		// Create router and push page 'Connexion' into stack,
-		// this will lead us to page 'Connexion'.
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({

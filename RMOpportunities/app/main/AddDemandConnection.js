@@ -8,7 +8,7 @@ var p = "!";
 import Connection from './Connection';
 import SigningUp from './SigningUp';
 import Translation from './Translation';
-
+//Page rendered when you want to add a demand but you are not logged in
 export default class AddDemandConnectioon extends Component {
 
   render() {
@@ -34,10 +34,9 @@ export default class AddDemandConnectioon extends Component {
     );
   }
   onPressConnexion = () => {
-		// let _this = this;
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-		// Create router and push page 'Connexion' into stack,
-		// this will lead us to page 'Connexion'.
+		// Create router and push page 'Connection' into stack,
+		// this will lead us to page 'Connection'.
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({

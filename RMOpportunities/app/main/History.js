@@ -14,9 +14,9 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise 
-//the display of the list of factures when we need.
+//the display of the list of invoices when we need.
 var dataSource = null;
-
+//Renders a list of invoices
 export default class History extends Component {
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);

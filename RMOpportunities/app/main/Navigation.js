@@ -1,7 +1,8 @@
 //Basic file, we start from here. But in this file,
 //we just create 1 navigator. The default page of the
-//navigator is 'HomePage'(import HomePage from './app/HomePage';)
-//It means that when we run our app, it will strat from 'HomePage'.
+//navigator is 'HomePage'(import HomePage from './HomePage';)
+//It means that when we run our app, it will start from 'HomePage'.
+//The navigator contains a navigationBar that will be rendered on every page called by the navigator
 import {
    View,
    Navigator,
@@ -14,9 +15,6 @@ import {
 } from 'react-native';
 import React from 'react';
 import Drawer from 'react-native-drawer';
-// You change './app/page1' to look the pages that you wrote.
-// For example, you want to look page 10, so you change the under
-// string from './app/page1' to './app/page10'
 import Menu from './Menu';
 import HomePage from './HomePage';
 import LogOutButton from './LogOutButton';
@@ -25,7 +23,7 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 global.connection = 0;//this is a global value which determines if the state is connected or not(0:not connected,1:connected).
-global.lang = 'fr';
+global.lang = 'fr';//this is a global value which determines the language chosen('fr':french, 'en':english).
 
 // In generation, you shouldn't change the contents which are under this comment.
 export default class Navigation extends React.Component {
@@ -35,8 +33,8 @@ export default class Navigation extends React.Component {
 
    componentDidMount(){
 	   DeviceEventEmitter.addListener('nvBar',this.update);
-   }// add a event listener which will execute this.update() fonction in order to
-    // update the look of page1 when receiving the signal'nvBar'.
+   }// add a event listener which will execute this.update() function in order to
+    // update the look of the page when receiving the signal'nvBar'.
 
    closeDrawer = () => {
        BackAndroid.removeEventListener('closeDrawer',this.closeDrawer);

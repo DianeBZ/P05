@@ -16,30 +16,33 @@ import AddDemand from './AddDemand';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
-
+//Page to log in
 export default class Connection extends Component {
   constructor(props){
 	  super(props);
   }
-
-  _onPressButton= () => {
+    //Function called when pressing one of the buttons. For the moment, we don't use any real account so we are automatically logged in no matter what is typed
+    _onPressLogIn= () => {
 	connection=1;
 	DeviceEventEmitter.emit('nvBar');
-  // // emit the signal'nvBar' when the bouton is clicked.A listener in page1 will react
+   //emit the signal'nvBar' when the button is clicked. A listener in Navigation.js will react
     const { navigator } = this.props;
     var length = navigator.getCurrentRoutes().length;
     if (navigator && length > 1) {
       BackAndroid.removeEventListener('backToIndex', this.onBackAndroid);
+      //If we come from the page AddDemandConnection we replace this page in the list of routes by AddDemand after the connection and we pop on it
       if (navigator.getCurrentRoutes()[length-2].name === 'AddDemandConnection'){
           navigator.replacePreviousAndPop({
                 name: 'AddDemand',
                 component: AddDemand,
             })
+      //If we come from the page AddProductConnection we replace this page in the list of routes by AddOffer after the connection and we pop on it
       }else if (navigator.getCurrentRoutes()[length-2].name === 'AddProductConnection'){
           navigator.replacePreviousAndPop({
                 name: 'AddOffer',
                 component: AddOffer,
             })
+      //If we come from HomePage we just pop on it
       }else{
         navigator.pop();
       }
@@ -64,11 +67,11 @@ export default class Connection extends Component {
                 <Text style={{color:'grey', marginTop:20}}>
                     {Translation[lang].mdp_oublie}
                 </Text>
-                <TouchableHighlight onPress={this._onPressButton.bind(this)} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+                <TouchableHighlight onPress={this._onPressLogIn.bind(this)} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
                     <Text style={styles.buttonText}>{Translation[lang].se_co}</Text>
                 </TouchableHighlight>
                 <Text style={{color:'grey', marginTop:20}}>{Translation[lang].ou}</Text>
-                <TouchableHighlight onPress={this._onPressButton} style={[styles.button, {width: width *0.75, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
+                <TouchableHighlight onPress={this._onPressLogIn} style={[styles.button, {width: width *0.75, backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
                     <Text style={styles.buttonText}>{Translation[lang].co_linkedin}</Text>
                 </TouchableHighlight>
             </View>
@@ -90,7 +93,6 @@ export default class Connection extends Component {
 }
 
 const styles = StyleSheet.create({
-  // bleu : '#485FD1'
    window:{
        width: width,
        height: height*0.93,

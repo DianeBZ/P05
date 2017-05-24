@@ -13,10 +13,10 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise
-//the display of the list of factures when we need.
+//the display of the list of classifieds when we need.
 var dataSourceOffers = null;
 var dataSourceDemands = null;
-
+//Renders a list of offers and demands 
 export default class ViewClassifieds extends Component {
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
@@ -65,7 +65,7 @@ export default class ViewClassifieds extends Component {
 					return (
 						<View style = {styles.containerOffres}>
 							<Text>
-								{Translation[lang].aucune_ann}
+								{Translation[lang].aucune_off}
 							</Text>
 						</View>
 					);
@@ -103,7 +103,7 @@ export default class ViewClassifieds extends Component {
 					return (
 						<View style = {styles.containerDemandes}>
 							<Text>
-								{Translation[lang].aucune_ann}
+								{Translation[lang].aucune_dem}
 							</Text>
 						</View>
 					);

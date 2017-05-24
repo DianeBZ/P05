@@ -26,10 +26,6 @@ var selected = 'tlc';
 var textInput = 'TextInput';
 
 export default class HomePage extends Component {
-	// Init this class and add 1 boolean value to check
-	// if the user logined. We check this because when
-	// users logined succesufully, two buttons should be hidden
-	// in this page.
 	constructor(props) {
 		super(props);
 	}
@@ -44,7 +40,7 @@ export default class HomePage extends Component {
 				<View style={styles.container}>
 					<Image source={require('../img/warehouse.jpg')} style={styles.imageBackground}>
 						{(() => {
-						// If user logined?
+						// If user logged in?
 						if (connection == 1)
 							return (
 								<View style={styles.containerButton} />
@@ -52,10 +48,10 @@ export default class HomePage extends Component {
 						else
 							return (
 								<View style={styles.containerButton}>
-                                    <TouchableHighlight onPress={this.onPressConnexion} style={[styles.button, {width: width*0.5, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
+                                    <TouchableHighlight onPress={this.onPressConnection} style={[styles.button, {width: width*0.5, backgroundColor:'#FFFFFF'}]} underlayColor="rgb(247,247,247)">
                                         <Text style={[styles.buttonText, {color:'black'}]}>{Translation[lang].connexion}</Text>
                                     </TouchableHighlight>
-                                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width*0.5, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
+                                    <TouchableHighlight onPress={this.onPressSigningUp} style={[styles.button, {width: width*0.5, backgroundColor:'rgb(71,95,209)'}]} underlayColor="rgb(44,67,177)">
                                         <Text style={styles.buttonText}>{Translation[lang].inscription}</Text>
                                     </TouchableHighlight>
 								</View>
@@ -108,9 +104,9 @@ export default class HomePage extends Component {
         lang = value;
 		this.forceUpdate();
     };
-	//Get the key words from user's choice.(catagories)
+	//Get the key words from user's choice.(categories)
 	onValueChange = (key: string, value: string) => {
-		// This value (selectedKey) is same as the catagorie selected.
+		// This value (selected) is same as the category selected.
 		selected = value;
 		this.forceUpdate();
 	};
@@ -127,24 +123,23 @@ export default class HomePage extends Component {
 		return true;
 	};
 
-	onPressConnexion = () => {
-		let _this = this;
+	onPressConnection = () => {
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
-		// Create router and push page 'Connexion' into stack,
-		// this will lead us to page 'Connexion'.
+		// Create router and push page 'Connection' into stack,
+		// this will lead us to page 'Connection'.
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
 				name: 'Connection',
 				component: Connection,
-				params:{
-				}
 			})
 		}
 	};
 
-  onPressInscription = () => {
+  onPressSigningUp = () => {
     BackAndroid.removeEventListener('Exit',this.onBackAndroid);
+    // Create router and push page 'Connection' into stack,
+	// this will lead us to page 'Connection'.
     const { navigator } = this.props;
     if (navigator) {
       navigator.push({

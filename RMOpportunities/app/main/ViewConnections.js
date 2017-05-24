@@ -13,10 +13,10 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 //We change this and add some foncs to realise
-//the display of the list of factures when we need.
+//the display of the list of connections when we need.
 var dataSourceVp = null;
 var dataSourceAp = null;
-
+//Renders a list of products 
 export default class MesAnnonces extends Component {
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);

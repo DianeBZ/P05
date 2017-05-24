@@ -36,16 +36,16 @@ import Supporters from'./Supporters';
 
 
 var width = Dimensions.get('window').width;
-
+//Will be contained in the navigationBar drawer.
+//Allow to navigate to others pages of the app
 export default class ContenuMenu extends Component {
    render() {
-      //BackAndroid.addEventListener('closeDrawer', this.onBackAndroid);
       return (
          <ScrollView style={{backgroundColor:'white'}}>
             {(() => {
+                //User logged in?
                if (connection == 0)
                return (
-                  // Non Connecté
                   <View>
 
                      <TouchableHighlight onPress={()=>this.navigate('Benefits')} >
@@ -127,7 +127,6 @@ export default class ContenuMenu extends Component {
                );
                else
                return(
-                  // Connecté
                   <View>
                      <View style={styles.separation}></View>
                      <TouchableHighlight onPress={this.onPressInscription} >
@@ -221,12 +220,13 @@ export default class ContenuMenu extends Component {
       BackAndroid.removeEventListener('closeDrawer', this.onBackAndroid);
       this.props.closeDrawer();
    };
+   //When the user want to change the language, whe change the global variable and we emit 'nvBar' to update the page
    _onLangChange = (key: string, value: string) => {
       lang = value;
       this.props.closeDrawer();
       DeviceEventEmitter.emit('nvBar');
    };
-
+    //Function that will change the rendered page depending on what the user touched
    navigate(property) {
       this.props.closeDrawer();
       const { navigator } = this.props.navigator.refs;
