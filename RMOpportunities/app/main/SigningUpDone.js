@@ -41,11 +41,11 @@ export default class SigningUpDone extends Component {
       </View>
     );
   }
-  
+  //Navigation for this page
   _onPressBouton = () => {
       const { navigator } = this.props;
         if (navigator) {
-            navigator.popToTop();
+            navigator.popToTop(); // Pop to the first scene in the stack, unmounting every other scene
         }
   }
 }

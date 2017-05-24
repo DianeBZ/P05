@@ -30,6 +30,7 @@ export default class LogOutButton extends Component {
       );
     }
 
+	// a pop up appears when the user wants to log out from his account asking him if he is sure
     onPressDeconnexion = () => {
 		Alert.alert(
 		Translation[lang].deconnexion,
