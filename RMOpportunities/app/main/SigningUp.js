@@ -8,13 +8,13 @@ import {
   Dimensions,
 } from 'react-native';
 import Translation from './Translation';
-import SigningUpThreeSteps from './SigningUpThreeSteps';
+import SigningUpTwoSteps from './SigningUpTwoSteps';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 // this page is used to let user to sign up by his Linkedin account or directly
 export default class SigningUp extends Component {
-  // this function will be called when pressing the button'sign up with Linkedin'
+  // this function will be called when pressing the button sign up with Linkedin
   _onPressBouton(){
     console.log('press Linkedin');
   }
@@ -44,7 +44,7 @@ export default class SigningUp extends Component {
             </Text>
             <TouchableHighlight style={[styles.button, {width: width *0.85, backgroundColor:'#A4D04A'}]} onPress={this.onPressInscription} underlayColor="rgb(138,183,46)">
               <Text style={styles.buttonText}>
-                  {Translation[lang].ins3etapes}
+                  {Translation[lang].ins2etapes}
               </Text>
             </TouchableHighlight>
           </View>
@@ -63,15 +63,15 @@ export default class SigningUp extends Component {
       return false;
     }
   };
-// this function will be called when pressing 'Sign Up in ThreeSteps' and the current page will be 'SigningUpThreeSteps'.
+// this function will be called when pressing 'Sign Up in 2 Steps' and the current page will be 'SigningUpTwoSteps'.
 
   onPressInscription = () => {
 		BackAndroid.removeEventListener('Exit',this.onBackAndroid);
 		const { navigator } = this.props;
 		if (navigator) {
 			navigator.push({
-				name: 'SigningUpThreeSteps',
-				component: SigningUpThreeSteps,
+				name: 'SigningUpTwoSteps',
+				component: SigningUpTwoSteps,
 			})
 		}
 	};

@@ -21,24 +21,24 @@ export default class Contact extends Component{
 		 return(
 				<View style={styles.container}>
 					<View style={styles.containerButton}>
-						<TouchableHighlight onPress={this._onPressMail}>
+						<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressMail}>
 							<Image source={require('../img/mail.png')} style={styles.imageButton} />
 						</TouchableHighlight>
 						
-						<TouchableHighlight onPress={this._onPressTwitter}>
+						<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressTwitter}>
 							<Image source={require('../img/twitter.png')} style={styles.imageButton} />
 						</TouchableHighlight>
 						
-						<TouchableHighlight onPress={this._onPressFacebook}>
+						<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressFacebook}>
 							<Image source={require('../img/facebook.png')} style={styles.imageButton} />
 						</TouchableHighlight>
 						
-						<TouchableHighlight onPress={this._onPressLinkedin}>
+						<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressLinkedin}>
 							<Image source={require('../img/linkedin.png')} style={styles.imageButton} />
 						</TouchableHighlight>
 					</View>
 					
-					<TouchableHighlight onPress={this._onPressTel}>
+					<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressTel}>
 						<Text>+33 (0) 7 64 08 73 04</Text>
 					</TouchableHighlight>
 				</View>
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
 			justifyContent: 'center',
 			alignItems: 'center',
 			flexDirection: 'column',
+            backgroundColor:'#F2F2F2',
 	},
 	containerButton: {
 			flexGrow: 0,

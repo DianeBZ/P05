@@ -19,7 +19,14 @@ var heightWindow = Dimensions.get('window').height;
 var dataSource = null;
 
 export default class EditAccount extends Component{
-
+    //Function called when the component is updating. If the user logs out, we go back to HomePage
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            navigator.popToTop();
+        }
+    }
+    
   render(){
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
@@ -39,7 +46,7 @@ export default class EditAccount extends Component{
                   {Translation[lang].contact_text}
               </Text>
             </View>
-            <TouchableHighlight style={{marginTop:10}}>
+            <TouchableHighlight underlayColor="#F2F2F2" style={{marginTop:10}}>
               <Text style={{fontSize:20,color:'#A4D04A'}} onPress={this.contactPress.bind(this)}>
                 {Translation[lang].mail_contact}
               </Text>

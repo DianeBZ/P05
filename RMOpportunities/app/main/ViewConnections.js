@@ -18,6 +18,14 @@ var dataSourceVp = null;
 var dataSourceAp = null;
 //Renders a list of products 
 export default class MesAnnonces extends Component {
+  //Function called when the component is updating. If the user logs out, we go back to HomePage
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            navigator.popToTop();
+        }
+    }
+  
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (

@@ -22,6 +22,15 @@ export default class ProductAlerts extends Component{
     search= () =>{
       alert(this.state.text+ Translation[lang].bien_ajouté);
     }// inform the user that the alert is added successfully
+  
+  //Function called when the component is updating. If the user logs out, we go back to HomePage
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            navigator.popToTop();
+        }
+    }
+  
   render(){
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
@@ -41,8 +50,8 @@ export default class ProductAlerts extends Component{
             placeholder={Translation[lang].num_id}
             onChangeText={(text) => this.setState({text})}
             />
-            <TouchableHighlight style={styles.bouton}>
-              <Text style={{fontSize:height*0.03,color:'white'}} onPress={this.search.bind(this)}>
+            <TouchableHighlight underlayColor="rgb(138,183,46)" style={styles.bouton} onPress={this.search.bind(this)}>
+              <Text style={{fontSize:height*0.03,color:'white'}}>
 				  {Translation[lang].aj}
               </Text>
             </TouchableHighlight>

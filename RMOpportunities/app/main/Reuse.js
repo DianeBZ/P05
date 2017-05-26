@@ -18,12 +18,10 @@ import LinearGradient from 'react-native-linear-gradient';
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
-
 // Variables to display only one step at the same time
 let step1='false';
 let step2='false';
 let step3='false';
-
 
 export default class Reuse extends Component {
    constructor(props) {
@@ -54,7 +52,7 @@ export default class Reuse extends Component {
                <View style={styles.containerTitle}>
                   <View style={styles.separation}>
                   </View>
-                  <TouchableHighlight onPress={this._onPressStep1}>
+                  <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressStep1}>
                      <Text style={styles.stepTitle}>
                         {Translation[lang].reuse_step1_title}
                      </Text>
@@ -86,7 +84,7 @@ export default class Reuse extends Component {
                <View style={styles.containerTitle}>
                   <View style={styles.separation}>
                   </View>
-                  <TouchableHighlight onPress={this._onPressStep2}>
+                  <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressStep2}>
                      <Text style={styles.stepTitle}>
                         {Translation[lang].reuse_step2_title}
                      </Text>
@@ -121,7 +119,7 @@ export default class Reuse extends Component {
                <View style={styles.containerTitle}>
                   <View style={styles.separation}>
                   </View>
-                  <TouchableHighlight onPress={this._onPressStep3}>
+                  <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressStep3}>
                      <Text style={styles.stepTitle}>
                         {Translation[lang].reuse_step3_title}
                      </Text>
@@ -166,7 +164,7 @@ export default class Reuse extends Component {
          return false;
       }
    };
-
+       //Shows or hide step1 depending on his previous state
    _onPressStep1 = () =>{
       if(step1 === 'true'){
          step1 = 'false';
@@ -177,6 +175,7 @@ export default class Reuse extends Component {
       }
       this.forceUpdate();
    };
+      //Shows or hide step2 depending on his previous state
    _onPressStep2 = () =>{
       if(step2 === 'true'){
          step2 = 'false';
@@ -187,6 +186,7 @@ export default class Reuse extends Component {
       }
       this.forceUpdate();
    };
+      //Shows or hide step3 depending on his previous state
    _onPressStep3 = () =>{
       if(step3 === 'true'){
          step3 = 'false';
@@ -197,15 +197,12 @@ export default class Reuse extends Component {
       }
       this.forceUpdate();
    };
-   _onLangChange = (key: string, value: string) => {
-      lang = value;
-      this.forceUpdate();
-   };
 }
 const styles = StyleSheet.create({
    container: {
       marginTop:height*0.08,
       flex:1,
+      backgroundColor:"#F2F2F2",
    },
    gradient:{
       width: width,
@@ -272,5 +269,3 @@ const styles = StyleSheet.create({
    },
 
 });
-
-module.exports = Reuse;

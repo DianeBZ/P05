@@ -17,7 +17,7 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
 let pic=require('../img/deconnexion.png');
-
+//Button appearing in the navigationBar when logged in
 export default class LogOutButton extends Component {
 
   render() {

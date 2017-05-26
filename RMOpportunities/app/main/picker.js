@@ -34,5 +34,3 @@ let pick = (cb) => {
     }
   });
 }
-
-module.exports = pick;

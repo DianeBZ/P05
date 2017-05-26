@@ -15,7 +15,7 @@ export default class OfferInformation extends Component {
   render() {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
-		<ScrollView>
+		<ScrollView style={{backgroundColor:'#F2F2F2'}}>
 			<View style={{height:height*0.08}}/>
 			<View style={styles.corps}>
 				<Text style={styles.titre}>Benzoate de sodium</Text>
@@ -29,7 +29,7 @@ export default class OfferInformation extends Component {
              return(
 				<View>
 					<View>
-						<TouchableHighlight onPress={this._onPressProduit}>
+						<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressProduit}>
 							<Text style={styles.sousTitre2}>Produit</Text>
 						</TouchableHighlight>
 						<View style={styles.separation}></View>
@@ -52,11 +52,11 @@ export default class OfferInformation extends Component {
 							</View>
 						</View>
 					</View>
-					<TouchableHighlight onPress={this._onPressInfo}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressInfo}>
 						<Text style={styles.sousTitre2}>Informations complémentaires </Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
-					<TouchableHighlight onPress={this._onPressDescription}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressDescription}>
 						<Text style={styles.sousTitre2}>Description</Text>
 					</TouchableHighlight>	
 					<View style={styles.separation}></View>
@@ -66,11 +66,11 @@ export default class OfferInformation extends Component {
            }else if(info === 'true'){
              return(
 			 <View>
-					<TouchableHighlight onPress={this._onPressProduit}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressProduit}>
 						<Text style={styles.sousTitre2}>Produit</Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
-					<TouchableHighlight onPress={this._onPressInfo}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressInfo}>
 						<Text style={styles.sousTitre2}>Informations complémentaires </Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
@@ -104,7 +104,7 @@ export default class OfferInformation extends Component {
 								{(() => {
 									if (connection === 0)
 										return (
-											<TouchableHighlight onPress={this._onPressNC}>
+											<TouchableHighlight underlayColor="rgb(138,183,46)" onPress={this._onPressNC}>
 												<Text style={[styles.info, {color:'#A4D04A'}]}>Se connecter</Text>
 											</TouchableHighlight>
 										);
@@ -128,7 +128,7 @@ export default class OfferInformation extends Component {
 								</View>
 							</View>
 						</View>
-					<TouchableHighlight onPress={this._onPressDescription}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressDescription}>
 						<Text style={styles.sousTitre2}>Description</Text>
 					</TouchableHighlight>	
 					<View style={styles.separation}></View>
@@ -137,15 +137,15 @@ export default class OfferInformation extends Component {
            }else if(description === 'true'){
              return(
 				<View>
-					<TouchableHighlight onPress={this._onPressProduit}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressProduit}>
 						<Text style={styles.sousTitre2}>Produit</Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
-					<TouchableHighlight onPress={this._onPressInfo}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressInfo}>
 						<Text style={styles.sousTitre2}>Informations complémentaires </Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
-					<TouchableHighlight onPress={this._onPressDescription}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressDescription}>
 						<Text style={styles.sousTitre2}>Description</Text>
 					</TouchableHighlight>	
 					<View style={styles.separation}></View>
@@ -155,15 +155,15 @@ export default class OfferInformation extends Component {
            }else{
                return(
 				<View>
-					<TouchableHighlight onPress={this._onPressProduit}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressProduit}>
 						<Text style={styles.sousTitre}>Produit</Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
-					<TouchableHighlight onPress={this._onPressInfo}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressInfo}>
 						<Text style={styles.sousTitre}>Informations complémentaires </Text>
 					</TouchableHighlight>
 					<View style={styles.separation}></View>
-					<TouchableHighlight onPress={this._onPressDescription}>
+					<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressDescription}>
 						<Text style={styles.sousTitre}>Description</Text>
 					</TouchableHighlight>	
 					<View style={styles.separation}></View>
@@ -180,7 +180,7 @@ export default class OfferInformation extends Component {
 							<Text style={styles.buttonText}>Plus d information </Text>
 					</TouchableHighlight>
 					<View style={styles.espace}></View>
-					<TouchableHighlight onPress={this._onPressNC} style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
+					<TouchableHighlight onPress={this._onPressNC} style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
 							<Text style={styles.buttonText}>Commencer les négociations</Text>
 					</TouchableHighlight>
 			</View>
@@ -192,7 +192,7 @@ export default class OfferInformation extends Component {
 							<Text style={styles.buttonText}>Plus d information </Text>
 					</TouchableHighlight>
 					<View style={styles.espace}></View>
-					<TouchableHighlight style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(138,183,46)">
+					<TouchableHighlight style={[styles.button, {backgroundColor:'rgb(0,160,220)'}]} underlayColor="rgb(0,140,201)">
 							<Text style={styles.buttonText}>Commencer les négociations</Text>
 					</TouchableHighlight>
 			</View>

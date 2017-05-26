@@ -21,6 +21,14 @@ var dataSourceAp = null;
 // When you are not login, you will see nothing in the main table.
 // And you will see your informations after you logged in.
 export default class ViewNegociations extends Component {
+    //Function called when the component is updating. If the user logs out, we go back to HomePage
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            navigator.popToTop();
+        }
+    }
+    
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (

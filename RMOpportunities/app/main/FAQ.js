@@ -57,7 +57,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(0)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(0)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question1}
                    </Text>
@@ -75,7 +75,7 @@ export default class FAQ extends Component {
                                 <Text style={styles.textLineWithButton}>
                                     {Translation[lang].q1_answer_1}
                                 </Text>
-                                <TouchableHighlight onPress={this._goToAbout}>
+                                <TouchableHighlight underlayColor="#F2F2F2" onPress={this._goToAbout}>
                                   <Text style={styles.textButton}>
                                       {Translation[lang].q1_answer_2}
                                   </Text>
@@ -97,7 +97,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(1)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(1)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question2}
                    </Text>
@@ -124,7 +124,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(2)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(2)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question3}
                    </Text>
@@ -151,7 +151,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(3)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(3)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question4}
                    </Text>
@@ -178,7 +178,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(4)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(4)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question5}
                    </Text>
@@ -206,7 +206,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(5)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(5)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question6}
                    </Text>
@@ -233,7 +233,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(6)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(6)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question7}
                    </Text>
@@ -260,7 +260,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(7)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(7)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question8}
                    </Text>
@@ -287,7 +287,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(8)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(8)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question9}
                    </Text>
@@ -314,7 +314,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(9)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(9)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question10}
                    </Text>
@@ -341,7 +341,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(10)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(10)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question11}
                    </Text>
@@ -368,7 +368,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(11)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(11)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question12}
                    </Text>
@@ -395,7 +395,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(12)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(12)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question13}
                    </Text>
@@ -416,7 +416,7 @@ export default class FAQ extends Component {
                                  <Text style={styles.textLineWithButton}>
                                      {Translation[lang].q13_answer_2}
                                  </Text>
-                                 <TouchableHighlight onPress={this._goToPricing}>
+                                 <TouchableHighlight underlayColor="F2F2F2" onPress={this._goToPricing}>
                                    <Text style={styles.textButton}>
                                        {Translation[lang].q13_answer_3}
                                    </Text>
@@ -433,7 +433,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(13)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(13)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question14}
                    </Text>
@@ -460,7 +460,7 @@ export default class FAQ extends Component {
              <View style={styles.containerTitle}>
                 <View style={styles.separation}>
                 </View>
-                <TouchableHighlight onPress={()=>this._onPressQuestion(14)}>
+                <TouchableHighlight underlayColor='#F2F2F2' onPress={()=>this._onPressQuestion(14)}>
                    <Text style={styles.stepTitle}>
                       {Translation[lang].question15}
                    </Text>
@@ -540,6 +540,7 @@ const styles = StyleSheet.create({
    container: {
       marginTop:heightWindow*0.08,
       flex:1,
+      backgroundColor:"#F2F2F2",
    },
    gradient:{
       width: widthWindow,
@@ -621,5 +622,3 @@ const styles = StyleSheet.create({
      fontSize:15,
    },
 });
-
-module.exports = FAQ;

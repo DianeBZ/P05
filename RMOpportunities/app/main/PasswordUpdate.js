@@ -29,6 +29,15 @@ export default class PasswordUpdate extends Component{
       Alert.alert(Translation[lang].chgt_mdp_ok);
     }
   }// functions to inform the user when change of the password is realised successfully or not because of some mistakes
+  
+  //Function called when the component is updating. If the user logs out, we go back to HomePage
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            navigator.popToTop();
+        }
+    }
+  
   render(){
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
@@ -69,7 +78,7 @@ export default class PasswordUpdate extends Component{
               onChange={(passChangeRepete)=>this.setState({passChangeRepete})}
               />
             </View>
-            <TouchableHighlight style={styles.bouton} onPress={this.enregistrerPress.bind(this)}>
+            <TouchableHighlight underlayColor="rgb(138,183,46)" style={styles.bouton} onPress={this.enregistrerPress.bind(this)}>
               <Text style={{fontSize:height*0.03,color:'white'}}>
 				  {Translation[lang].enregistrer}
               </Text>

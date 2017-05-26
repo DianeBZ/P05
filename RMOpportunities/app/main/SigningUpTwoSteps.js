@@ -15,9 +15,9 @@ import SigningUpDone from './SigningUpDone'
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 var star = '*';
-var clickedOn1 = 'false';
-var clickedOn2 = 'false';
-var clickedOn3 = 'false';
+// Variables to display only one step at the same time
+var step1 = 'false';
+var step2 = 'false';
 
 class SigningUpSteps extends Component{
     constructor(props){
@@ -41,10 +41,10 @@ class SigningUpSteps extends Component{
         return(
         <View>
             {(()=>{
-                if(clickedOn1==='true'){
+                if(step1==='true'){
                     return(
                         <View>
-                        <TouchableHighlight onPress={this._onPressInfoEntreprise} style={styles.inscription} underlayColor='#FFFFFF'>
+                        <TouchableHighlight onPress={this._onPressStep1} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 1 </Text>
                             <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_entr}</Text>
@@ -67,29 +67,24 @@ class SigningUpSteps extends Component{
                             <TextInput style={styles.textToFill} underlineColorAndroid={'transparent'} placeholder={Translation[lang].tva} onChangeText={(VATnumber) => this.setState({VATnumber})} value={this.state.VATnumber}/>
                           </View>
                         </View>
-                        <TouchableHighlight onPress={this._onPressInfoContact} style={styles.inscription} underlayColor='#FFFFFF'>
+                        <TouchableHighlight onPress={this._onPressStep2} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 2 </Text>
                             <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_contact}</Text>
                         </View>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
-                        <View style={{flexDirection:'row'}}>
-                            <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].cgu}</Text>
                         </View>
-                    </TouchableHighlight>
-                        </View>);
-                }else if (clickedOn2==='true'){
+                    );
+                }else if (step2==='true'){
                     return(
                         <View>
-                        <TouchableHighlight onPress={this._onPressInfoEntreprise}style={styles.inscription} underlayColor='#FFFFFF'>
+                        <TouchableHighlight onPress={this._onPressStep1}style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 1 </Text>
                             <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_entr}</Text>
                         </View>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={this._onPressInfoContact} style={styles.inscription} underlayColor='#FFFFFF'>
+                        <TouchableHighlight onPress={this._onPressStep2} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 2 </Text>
                             <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_contact}</Text>
@@ -107,63 +102,21 @@ class SigningUpSteps extends Component{
                             </View>
                           </View>
                         </View>
-                        <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
-                        <View style={{flexDirection:'row'}}>
-                            <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].cgu}</Text>
-                        </View>
-                        </TouchableHighlight>
-                        </View>
-                    );
-                }else if (clickedOn3==='true'){
-                    return(
-                        <View>
-                        <TouchableHighlight onPress={this._onPressInfoEntreprise} style={styles.inscription} underlayColor='#FFFFFF'>
-                        <View style={{flexDirection:'row'}}>
-                            <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 1 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_entr}</Text>
-                        </View>
-                        </TouchableHighlight>
-                        <TouchableHighlight onPress={this._onPressInfoContact} style={styles.inscription} underlayColor='#FFFFFF'>
-                        <View style={{flexDirection:'row'}}>
-                            <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 2 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_contact}</Text>
-                        </View>
-                        </TouchableHighlight>
-                        <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
-                        <View style={{flexDirection:'row'}}>
-                            <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].cgu}</Text>
-                        </View>
-                        </TouchableHighlight>
-                        <View style={{alignItems:'center', width:width*0.9}}>
-                        <Text numberOfLines={4}>
-                            <Text style={{color:'#000000'}}>{Translation[lang].texte_cgu1}</Text>
-                            <Text style={{color:'#A4D04A'}}>{Translation[lang].texte_cgu2}</Text>
-                            <Text style={{color:'#000000'}}>{Translation[lang].texte_cgu3}</Text>
-                        </Text>
-                        </View>
                         </View>
                     );
                 } else {
                     return(
                         <View>
-                        <TouchableHighlight onPress={this._onPressInfoEntreprise} style={styles.inscription} underlayColor='#FFFFFF'>
+                        <TouchableHighlight onPress={this._onPressStep1} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 1 </Text>
                             <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_entr}</Text>
                         </View>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={this._onPressInfoContact} style={styles.inscription} underlayColor='#FFFFFF'>
+                        <TouchableHighlight onPress={this._onPressStep2} style={styles.inscription} underlayColor='#FFFFFF'>
                         <View style={{flexDirection:'row'}}>
                             <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 2 </Text>
                             <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].info_contact}</Text>
-                        </View>
-                        </TouchableHighlight>
-                        <TouchableHighlight onPress={this._onPressCondit} style={styles.inscription} underlayColor='#FFFFFF'>
-                        <View style={{flexDirection:'row'}}>
-                            <Text style={{color:"#A4D04A", fontWeight:'bold', fontSize:24}}> 3 </Text>
-                            <Text style={{color:'#000000', fontSize:24}}>{Translation[lang].cgu}</Text>
                         </View>
                         </TouchableHighlight>
                         </View>
@@ -174,41 +127,28 @@ class SigningUpSteps extends Component{
         );
     }
     
-    _onPressInfoEntreprise = () =>{
-    if(clickedOn1 === 'true'){
-      clickedOn1 = 'false';
+    _onPressStep1 = () =>{
+    if(step1 === 'true'){
+      step1 = 'false';
     }else{
-      clickedOn1 = 'true';
-      clickedOn2 = 'false';
-      clickedOn3 = 'false';
+      step1 = 'true';
+      step2 = 'false';
     }
     this.forceUpdate();
   };
   
-  _onPressInfoContact = () =>{
-    if(clickedOn2 === 'true'){
-      clickedOn2 = 'false';
+  _onPressStep2 = () =>{
+    if(step2 === 'true'){
+      step2 = 'false';
     }else{
-      clickedOn2 = 'true';
-      clickedOn1 = 'false';
-      clickedOn3 = 'false';
-    }
-    this.forceUpdate();
-  };
-  
-  _onPressCondit = () =>{
-    if(clickedOn3 === 'true'){
-      clickedOn3 = 'false';
-    }else{
-      clickedOn3 = 'true';
-      clickedOn2 = 'false';
-      clickedOn1 = 'false';
+      step2 = 'true';
+      step1 = 'false';
     }
     this.forceUpdate();
   };
 }
 
-export default class SigningUpThreeSteps extends Component {
+export default class SigningUpTwoSteps extends Component {
     render(){
         BackAndroid.addEventListener('Back',this.onBackAndroid);
         return(
@@ -220,9 +160,16 @@ export default class SigningUpThreeSteps extends Component {
                 </Text>
                 <View style={styles.mainWindow}>
                     <SigningUpSteps/>
-                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)">
+                    <TouchableHighlight onPress={this.onPressInscription} style={[styles.button, {width: width *0.5, backgroundColor:'#A4D04A', marginBottom:20}]} underlayColor="rgb(138,183,46)">
                         <Text style={styles.buttonText}>{Translation[lang].sinscrire}</Text>
                     </TouchableHighlight>
+                    <View style={{alignItems:'center', width:width*0.9}}>
+                        <Text numberOfLines={4}>
+                            <Text style={{color:'#000000'}}>{Translation[lang].texte_cgu1}</Text>
+                            <Text style={{color:'#A4D04A'}}>{Translation[lang].texte_cgu2}</Text>
+                            <Text style={{color:'#000000'}}>{Translation[lang].texte_cgu3}</Text>
+                        </Text>
+                    </View>
                 </View>
             </View>
         </View>

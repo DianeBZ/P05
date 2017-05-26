@@ -48,7 +48,7 @@ export default class ContenuMenu extends Component {
                return (
                   <View>
 
-                     <TouchableHighlight onPress={()=>this.navigate('Benefits')} >
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Benefits')} >
                         <Text style={styles.titreMenu}>{Translation[lang].pk}</Text>
                      </TouchableHighlight>
                      <View style={styles.separation}></View>
@@ -56,37 +56,37 @@ export default class ContenuMenu extends Component {
                      <TouchableHighlight>
                         <Text style={styles.titreMenu}>{Translation[lang].annonces}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('OffersCategory')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('OffersCategory')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].voir_offres}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].voir_demande}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('CreateClassified')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('CreateClassified')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].aj_annonce}</Text>
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].conseils}</Text>
-                     <TouchableHighlight  onPress={()=>this.navigate('Buy')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('Buy')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].acheter}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('Sell')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('Sell')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].vendre}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('Reuse')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('Reuse')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].reutil}</Text>
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].a_propos}</Text>
-                     <TouchableHighlight onPress={()=>this.navigate('Company')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Company')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].lentreprise}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('Supporters')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Supporters')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].soutiens}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('Press')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Press')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].presse}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight >
@@ -95,18 +95,18 @@ export default class ContenuMenu extends Component {
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].decouvrir}</Text>
-                     <TouchableHighlight onPress={()=>this.navigate('Manifeste')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Manifeste')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].manifeste}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('Pricing')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Pricing')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].tarifs}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('FAQ')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('FAQ')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].faq}</Text>
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
-                     <TouchableHighlight onPress={()=>this.navigate('Contact')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Contact')}>
                         <Text style={styles.titreMenu}>{Translation[lang].contact}</Text>
                      </TouchableHighlight>
 
@@ -129,70 +129,70 @@ export default class ContenuMenu extends Component {
                return(
                   <View>
                      <View style={styles.separation}></View>
-                     <TouchableHighlight onPress={this.onPressInscription} >
+                     <TouchableHighlight>
                         <Text style={styles.titreMenu}>{Translation[lang].compte}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('AccountInformation')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('AccountInformation')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].voir_compte}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('PasswordUpdate')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('PasswordUpdate')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].modif_mdp}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('ProductAlerts')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('ProductAlerts')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].alertes}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('ViewClassifieds')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('ViewClassifieds')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].mes_annonces}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('ViewNegociations')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('ViewNegociations')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].nego}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('ViewConnections')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('ViewConnections')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].mises_en_rel}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('History')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('History')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].factures}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('EditAccount')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('EditAccount')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].modif_compte}</Text>
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
 
-                     <TouchableHighlight onPress={this._onPressBouton}>
+                     <TouchableHighlight>
                         <Text style={styles.titreMenu}>{Translation[lang].annonces}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('OffersCategory')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('OffersCategory')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].voir_offres}</Text>
                      </TouchableHighlight>
                      <TouchableHighlight>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].voir_demande}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('CreateClassified')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('CreateClassified')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].aj_annonce}</Text>
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].conseils}</Text>
-                     <TouchableHighlight  onPress={()=>this.navigate('Buy')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('Buy')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].acheter}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('Sell')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('Sell')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].vendre}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight  onPress={()=>this.navigate('Reuse')}>
+                     <TouchableHighlight underlayColor="#FFFFFF"  onPress={()=>this.navigate('Reuse')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].reutil}</Text>
                      </TouchableHighlight>
 
                      <View style={styles.separation}></View>
                      <Text style={styles.titreMenu}>{Translation[lang].decouvrir}</Text>
-                     <TouchableHighlight onPress={()=>this.navigate('Manifeste')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Manifeste')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].manifeste}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('Pricing')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('Pricing')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].tarifs}</Text>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={()=>this.navigate('FAQ')}>
+                     <TouchableHighlight underlayColor="#FFFFFF" onPress={()=>this.navigate('FAQ')}>
                         <Text style={styles.sousTitreMenu}>{Translation[lang].faq}</Text>
                      </TouchableHighlight>
 

@@ -23,7 +23,7 @@ class BlockFunction extends Component{
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressValoriserStocks}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressValueStocks}>
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
@@ -32,7 +32,7 @@ class BlockFunction extends Component{
                        <Text style = {styles.cliqueTexte}>{Translation[lang].text_val_stock}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressPrix}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressRates}>
                      <View style = {styles.cliqueDecoupageStatique}>
                        <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
@@ -40,20 +40,20 @@ class BlockFunction extends Component{
                    </TouchableHighlight>
                  </View>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressTemps}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressTime}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressVisibilite}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressVisibility}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
                      <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
-                 <TouchableHighlight onPress={this._onPressEnvironnement}>
+                 <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressEnvironment}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
                    <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
@@ -65,13 +65,13 @@ class BlockFunction extends Component{
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressValoriserStocks}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressValueStocks}>
                      <View style = {styles.cliqueDecoupageStatique}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressPrix}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressRates}>
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
@@ -82,20 +82,20 @@ class BlockFunction extends Component{
                    </TouchableHighlight>
                  </View>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressTemps}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressTime}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressVisibilite}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressVisibility}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
                      <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
-                 <TouchableHighlight onPress={this._onPressEnvironnement}>
+                 <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressEnvironment}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
                    <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
@@ -107,13 +107,13 @@ class BlockFunction extends Component{
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressValoriserStocks}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressValueStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressPrix}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressRates}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
@@ -121,7 +121,7 @@ class BlockFunction extends Component{
                    </TouchableHighlight>
                  </View>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressTemps}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressTime}>
                      <View style = {styles.cliqueDecoupage}>
                        <View style = {styles.cliqueTitre}>
                          <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
@@ -130,14 +130,14 @@ class BlockFunction extends Component{
                        <Text style = {styles.cliqueTexte}>{Translation[lang].text_gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressVisibilite}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressVisibility}>
                    <View style = {styles.cliqueDecoupageStatique}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
                      <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
-                 <TouchableHighlight onPress={this._onPressEnvironnement}>
+                 <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressEnvironment}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
                    <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
@@ -149,13 +149,13 @@ class BlockFunction extends Component{
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressValoriserStocks}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressValueStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressPrix}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressRates}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
@@ -163,13 +163,13 @@ class BlockFunction extends Component{
                    </TouchableHighlight>
                  </View>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressTemps}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressTime}>
                      <View style = {styles.cliqueDecoupageStatique}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressVisibilite}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressVisibility}>
                    <View style = {styles.cliqueDecoupage}>
                      <View style = {styles.cliqueTitre}>
                        <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
@@ -179,7 +179,7 @@ class BlockFunction extends Component{
                    </View>
                    </TouchableHighlight>
                  </View>
-                 <TouchableHighlight onPress={this._onPressEnvironnement}>
+                 <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressEnvironment}>
                  <View style = {styles.decoupage}>
                    <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
                    <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
@@ -191,13 +191,13 @@ class BlockFunction extends Component{
              return(
                <View style={styles.containerV}>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressValoriserStocks}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressValueStocks}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressPrix}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressRates}>
                      <View style = {styles.decoupage}>
                          <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
                          <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
@@ -205,20 +205,20 @@ class BlockFunction extends Component{
                    </TouchableHighlight>
                  </View>
                  <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressTemps}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressTime}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                    </TouchableHighlight>
-                   <TouchableHighlight onPress={this._onPressVisibilite}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressVisibility}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
                      <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                    </View>
                    </TouchableHighlight>
                  </View>
-                 <TouchableHighlight onPress={this._onPressEnvironnement}>
+                 <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressEnvironment}>
                  <View style = {[styles.cliqueDecoupage, {marginBottom: width *0.1}]}>
                    <View style = {styles.cliqueTitre}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
@@ -233,13 +233,13 @@ class BlockFunction extends Component{
                return(
                  <View style={styles.containerV}>
                    <View style={styles.containerH}>
-                     <TouchableHighlight onPress={this._onPressValoriserStocks}>
+                     <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressValueStocks}>
                        <View style = {styles.decoupage}>
                            <Image source={require('../img/valoriser.png')} style = {styles.logoBloque} />
                            <Text style = {styles.texteCarreau}>{Translation[lang].val_stock}</Text>
                        </View>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={this._onPressPrix}>
+                     <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressRates}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/prix.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].meill_prix}</Text>
@@ -247,20 +247,20 @@ class BlockFunction extends Component{
                      </TouchableHighlight>
                    </View>
                    <View style={styles.containerH}>
-                   <TouchableHighlight onPress={this._onPressTemps}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressTime}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/temps.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].gagner_tps}</Text>
                      </View>
                      </TouchableHighlight>
-                     <TouchableHighlight onPress={this._onPressVisibilite}>
+                     <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressVisibility}>
                      <View style = {styles.decoupage}>
                        <Image source={require('../img/visibilite.png')} style = {styles.logoBloque} />
                        <Text style = {styles.texteCarreau}>{Translation[lang].gde_visib}</Text>
                      </View>
                      </TouchableHighlight>
                    </View>
-                   <TouchableHighlight onPress={this._onPressEnvironnement}>
+                   <TouchableHighlight underlayColor='#A4D04A' onPress={this._onPressEnvironment}>
                    <View style = {styles.decoupage}>
                      <Image source={require('../img/environnement.png')} style = {styles.logoBloque} />
                      <Text style = {styles.texteCarreau}>{Translation[lang].prot_env}</Text>
@@ -275,7 +275,7 @@ class BlockFunction extends Component{
  }
 
 // function used to change value of variables (touching title/square)
-_onPressValoriserStocks = () =>{
+_onPressValueStocks = () =>{
  if(valorize === 'true'){
    valorize = 'false';
  }else{
@@ -287,7 +287,7 @@ _onPressValoriserStocks = () =>{
  }
  this.forceUpdate();
 };
-_onPressPrix = () =>{
+_onPressRates = () =>{
  if(price === 'true'){
    price = 'false';
  }else{
@@ -299,7 +299,7 @@ _onPressPrix = () =>{
  }
  this.forceUpdate();
 };
-_onPressTemps = () =>{
+_onPressTime = () =>{
  if(time === 'true'){
    time = 'false';
  }else{
@@ -311,7 +311,7 @@ _onPressTemps = () =>{
  }
  this.forceUpdate();
 };
-_onPressVisibilite = () =>{
+_onPressVisibility = () =>{
  if(visibility === 'true'){
    visibility = 'false';
  }else{
@@ -323,7 +323,7 @@ _onPressVisibilite = () =>{
  }
  this.forceUpdate();
 };
-_onPressEnvironnement = () =>{
+_onPressEnvironment = () =>{
  if(environment === 'true'){
    environment = 'false';
  }else{

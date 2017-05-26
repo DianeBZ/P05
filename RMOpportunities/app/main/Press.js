@@ -51,7 +51,7 @@ export default class Sell extends Component {
             <ScrollView>
                 <View style={styles.containerV}>
                     <View style={styles.element1}>
-                    <TouchableHighlight onPress={this._onPressInfoChimie}>
+                    <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressInfoChimie}>
                         <Image source={require('../img/info-chimie.png')} style = {styles.pictureI} />
                     </TouchableHighlight>
                     </View>
@@ -62,7 +62,7 @@ export default class Sell extends Component {
                 </View>
                 <View style={styles.containerV}>
                     <View style={styles.element1}>
-                    <TouchableHighlight onPress={this._onPressEclaira}>
+                    <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressEclaira}>
                         <Image source={require('../img/eclaira.png')} style = {styles.pictureE} />
                     </TouchableHighlight>
                     </View>
@@ -73,7 +73,7 @@ export default class Sell extends Component {
                 </View>
                 <View style={styles.containerV}>
                     <View style={styles.element1}>
-                    <TouchableHighlight onPress={this._onPressCciParis}>
+                    <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressCciParis}>
                         <Image source={require('../img/cci-paris.png')} style = {styles.pictureC} />
                     </TouchableHighlight>
                     </View>
@@ -84,7 +84,7 @@ export default class Sell extends Component {
                 </View>
                 <View style={styles.containerV}>
                     <View style={styles.elementT}>
-                    <TouchableHighlight onPress={this._onPressTelecom}>
+                    <TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressTelecom}>
                         <Image source={require('../img/telecom.png')} style = {styles.pictureT} />
                     </TouchableHighlight>
                     </View>
@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
    container: {
       marginTop:height*0.08,
       flex:1,
+      backgroundColor:"#F2F2F2",
    },
    gradient:{
       width: width,

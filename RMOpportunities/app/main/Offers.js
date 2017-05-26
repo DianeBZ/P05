@@ -11,13 +11,13 @@ export default class Offers extends Component {
   render() {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
-		<View>
+		<View style={{backgroundColor:"#F2F2F2", flex:1}}>
 			<View style={{height:height*0.08}}/>
 			<View style={styles.titre}>
 				<Text style={styles.textTitre}> Toutes catégories </Text>
 			</View>
 			<View style = {styles.tableau}>
-				<TouchableHighlight onPress={this.onPressOffreDetaillee} style={styles.button}>
+				<TouchableHighlight underlayColor='#A4D04A' onPress={this.onPressOffreDetaillee} style={styles.button}>
 					<View>
 						<Text style={styles.buttonText}>Benzoate de sodium</Text>
 						<Text style={styles.buttonText}>001-42-5</Text>

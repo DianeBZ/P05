@@ -10,10 +10,10 @@ export default class OffersCategory extends Component {
   render() {
       BackAndroid.addEventListener('Back',this.onBackAndroid);
     return(
-		<View>
+		<View style={{backgroundColor:"#F2F2F2", flex:1}}>
 			<View style={{height:height*0.08}}/>
 			<View style = {styles.tableau}>
-				<TouchableHighlight onPress={this.onPressTTCategories} style={[styles.button, { backgroundColor:'#A4D04A'}]} underlayColor="rgb(138,183,46)" >
+				<TouchableHighlight onPress={this.onPressTTCategories} style={[styles.button, { backgroundColor:'#A4D04A', borderTopRightRadius:5, borderTopLeftRadius:5}]} underlayColor="rgb(138,183,46)" >
 					<Text style={styles.buttonTextTTCategorie}>Toutes catégories </Text>
 				</TouchableHighlight>
 				<View style={styles.button}>
@@ -43,7 +43,7 @@ export default class OffersCategory extends Component {
 				<View style={styles.button}>
 					<Text style={styles.buttonText}>Bases</Text>
 				</View>
-				<View style={styles.button}>
+				<View style={[styles.button, {borderBottomWidth:1, borderBottomRightRadius:5, borderBottomLeftRadius:5}]}>
 					<Text style={styles.buttonText}>Acides aminés</Text>
 				</View>
 			</View>
@@ -78,15 +78,16 @@ export default class OffersCategory extends Component {
 
 const styles = StyleSheet.create({
 	tableau:{
-		marginTop: width*0.1,
+		marginTop: height*0.04,
 		alignItems : 'center',
 		justifyContent:'center',
 	},
 	button:{
-    height: width*0.11,
-    width: width *0.8,
-    borderRadius:5,
+    height: height*0.07,
+    width: width *0.9,
 	borderWidth: 0.5,
+    borderLeftWidth:1,
+    borderRightWidth:1,
 	borderColor:'#A4D04A',
     justifyContent:'center',
   },

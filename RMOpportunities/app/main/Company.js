@@ -15,14 +15,14 @@ var about = 'false';
 class BlockFunction extends Component{
  render(){
      return(
-       <View>
+       <View style={{backgroundColor:"#F2F2F2"}}>
        {(() => {
            if (about==='true'){
              return(
 			 <View>
 				<Text style={styles.titleCompany2}>{Translation[lang].lentreprise}</Text>
-				<TouchableHighlight onPress={this._onPressAbout}>
-					<View style={styles.titleStyle}>
+				<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressAbout}>
+					<View>
 						<Text style={styles.title}>{Translation[lang].a_propos}</Text>
 					</View>
 				</TouchableHighlight>
@@ -36,8 +36,8 @@ class BlockFunction extends Component{
 
 					<Text style={styles.aboutText}>{Translation[lang].a_propos4}</Text>
 				</View>
-				<TouchableHighlight onPress={this._onPressAbout}>
-					<View style={styles.titleStyle}>
+				<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressAbout}>
+					<View>
 						<Text style={styles.title}>{Translation[lang].equipe}</Text>
 					</View>
 				</TouchableHighlight>
@@ -48,14 +48,14 @@ class BlockFunction extends Component{
              return(
 			 <View>
 				<Text style={styles.titleCompany2}>{Translation[lang].lentreprise}</Text>
-				<TouchableHighlight onPress={this._onPressAbout}>
-					<View style={styles.titleStyle}>
+				<TouchableHighlight underlayColor='#F2F2F2' onPress={this._onPressAbout}>
+					<View>
 						<Text style={styles.title}>{Translation[lang].a_propos}</Text>
 					</View>
 				</TouchableHighlight>
 				<View style={styles.separation}></View>
-				<TouchableHighlight onPress={this._onPressAbout}>
-					<View style={styles.titleStyle}>
+				<TouchableHighlight underlayColor='#F2F2F2'>
+					<View>
 						<Text style={styles.title}>{Translation[lang].equipe}</Text>
 					</View>
 				</TouchableHighlight>
@@ -114,7 +114,7 @@ export default class Company extends Component {
     BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
       <ScrollView>
-		
+        <View style={{height: height * 0.08}}/>
 		<BlockFunction/>
      </ScrollView>
     );
@@ -132,18 +132,12 @@ export default class Company extends Component {
 }
 
 const styles = StyleSheet.create({
-	titleCompany:{
-		fontSize:30,
-		margin:width*0.2,
-		textAlign:'center',
-	},
 	titleCompany2:{
-		fontSize:30,
-		marginTop:width*0.2,
-		marginBottom:width*0.05,
+		fontSize:32,
+        color:'#000000',
+        marginTop: 15,
+        marginBottom: 10,
 		textAlign:'center',
-	},
-	titleStyle:{
 	},
 	title:{
 		color:'#A4D04A',

@@ -3,7 +3,6 @@ import { Text, Image, StyleSheet, View,ScrollView, Dimensions, TouchableHighligh
 
 import Translation from './Translation';
 
-
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 
@@ -18,6 +17,7 @@ export default class Company extends Component {
     BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
       <ScrollView>
+        <View style={{height:height*0.08}}/>
 		<View style={styles.container}>
 			<Text style={styles.title1}>{Translation[lang].confidence1}</Text>
 			<Text style={styles.title2}>{Translation[lang].confidence2}</Text>
@@ -42,14 +42,14 @@ export default class Company extends Component {
 			<View style={styles.separation}></View>
 			<View style={styles.containerH}>
 				<View style = {styles.decoupageS}>
-				<TouchableHighlight onPress={this._onPressAxelera}>
+				<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressAxelera}>
 					<Image source={require('../img/axelera.png')} style = {styles.logoAxe} />
 				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>Axelera</Text>
 					<Text style = {styles.texteCarreau}>{Translation[lang].axelera}</Text>
 				</View>
 				<View style = {styles.decoupageS}>
-				<TouchableHighlight onPress={this._onPressUic}>
+				<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressUic}>
 					<Image source={require('../img/uic-idf.png')} style = {styles.logoUIC} />
 				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>UIC Ile-de-France </Text>
@@ -58,14 +58,14 @@ export default class Company extends Component {
 			</View>
 			<View style={styles.containerH}>
 				<View style = {styles.decoupageS}>
-				<TouchableHighlight onPress={this._onPressUfcc}>
+				<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressUfcc}>
 					<Image source={require('../img/ufcc.png')} style = {styles.logoBASF} />
 				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>UFCC </Text>
 					<Text style = {styles.texteCarreau}>{Translation[lang].ufcc}</Text>
 				</View>
 				<View style = {styles.decoupageS}>
-				<TouchableHighlight onPress={this._onPressUseIn}>
+				<TouchableHighlight underlayColor="#F2F2F2" onPress={this._onPressUseIn}>
 					<Image source={require('../img/usein.png')} style = {styles.logoUse} />
 				</TouchableHighlight>
 					<Text style = {styles.titreCarreau}>Use'In </Text>
@@ -104,8 +104,8 @@ export default class Company extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-      marginTop:height*0.1,
       flex:1,
+      backgroundColor:"#F2F2F2",
    },
    
    separation:{

@@ -18,6 +18,14 @@ var dataSourceOffers = null;
 var dataSourceDemands = null;
 //Renders a list of offers and demands 
 export default class ViewClassifieds extends Component {
+    //Function called when the component is updating. If the user logs out, we go back to HomePage
+    componentWillUpdate(){
+        if (connection===0){
+            const {navigator} = this.props;
+            navigator.popToTop();
+        }
+    }
+    
   render() {
 	BackAndroid.addEventListener('Back',this.onBackAndroid);
     return (
@@ -133,13 +141,10 @@ const styles = StyleSheet.create({
   },
   containerMain: {
     backgroundColor: '#F2F2F2',
-	flexGrow: 0,
-	flexShrink: 0,
 	justifyContent: 'center',
 	alignItems: 'center',
 	flexDirection: 'column',
 	width: width,
-	height: height * 0.89,
 	alignSelf: 'center',
   },
   containerText: {
