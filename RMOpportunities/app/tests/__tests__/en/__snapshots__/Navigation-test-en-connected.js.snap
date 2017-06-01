@@ -526,10 +526,10 @@ exports[`renders correctly 1`] = `
                     "backgroundColor": "transparent",
                   },
                   Object {
-                    "height": 80.03999999999999,
-                    "marginRight": 5,
-                    "marginTop": 9,
-                    "width": 82.5,
+                    "height": 66.7,
+                    "marginRight": 9,
+                    "marginTop": 8,
+                    "width": 75,
                   },
                 ]
               }
@@ -540,8 +540,8 @@ exports[`renders correctly 1`] = `
                 source={1}
                 style={
                   Object {
-                    "height": 60.03,
-                    "width": 60,
+                    "height": 66.7,
+                    "width": 75,
                   }
                 }
               />
