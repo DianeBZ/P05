@@ -187,73 +187,6 @@ exports[`renders correctly 1`] = `
               </Text>
             </View>
           </View>
-          <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
-            accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
-            isTVSelectable={true}
-            onLayout={undefined}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                },
-                Object {
-                  "alignItems": "flex-start",
-                  "backgroundColor": "#FFFFFF",
-                  "marginTop": 20,
-                  "width": 712.5,
-                },
-              ]
-            }
-            testID={undefined}
-            tvParallaxProperties={undefined}
-          >
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#A4D04A",
-                    "fontSize": 24,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                 3 
-              </Text>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontSize": 24,
-                  }
-                }
-              >
-                General terms and conditions
-              </Text>
-            </View>
-          </View>
         </View>
       </View>
       <View
@@ -285,6 +218,7 @@ exports[`renders correctly 1`] = `
               },
               Object {
                 "backgroundColor": "#A4D04A",
+                "marginBottom": 20,
                 "width": 375,
               },
             ],
@@ -306,6 +240,58 @@ exports[`renders correctly 1`] = `
           }
         >
           Get started
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "width": 675,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          numberOfLines={4}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+              }
+            }
+          >
+            By continuing you acknowledge that you have read the 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#A4D04A",
+              }
+            }
+          >
+             General terms and conditions of RMOpportunities
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+              }
+            }
+          >
+            , that the informations entered are correct and that you will update them if necessary.
+          </Text>
         </Text>
       </View>
     </View>

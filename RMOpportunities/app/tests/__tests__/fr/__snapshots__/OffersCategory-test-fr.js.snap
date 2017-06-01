@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Object {
@@ -14,7 +21,7 @@ exports[`renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "justifyContent": "center",
-        "marginTop": 75,
+        "marginTop": 53.36,
       }
     }
   >
@@ -41,14 +48,17 @@ exports[`renders correctly 1`] = `
           Array [
             Object {
               "borderColor": "#A4D04A",
-              "borderRadius": 5,
+              "borderLeftWidth": 1,
+              "borderRightWidth": 1,
               "borderWidth": 0.5,
-              "height": 82.5,
+              "height": 93.38000000000001,
               "justifyContent": "center",
-              "width": 600,
+              "width": 675,
             },
             Object {
               "backgroundColor": "#A4D04A",
+              "borderTopLeftRadius": 5,
+              "borderTopRightRadius": 5,
             },
           ],
         ]
@@ -75,11 +85,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -101,11 +112,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -127,11 +139,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -153,11 +166,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -179,11 +193,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -205,11 +220,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -231,11 +247,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -257,11 +274,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -283,11 +301,12 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "borderColor": "#A4D04A",
-          "borderRadius": 5,
+          "borderLeftWidth": 1,
+          "borderRightWidth": 1,
           "borderWidth": 0.5,
-          "height": 82.5,
+          "height": 93.38000000000001,
           "justifyContent": "center",
-          "width": 600,
+          "width": 675,
         }
       }
     >
@@ -307,14 +326,22 @@ exports[`renders correctly 1`] = `
     </View>
     <View
       style={
-        Object {
-          "borderColor": "#A4D04A",
-          "borderRadius": 5,
-          "borderWidth": 0.5,
-          "height": 82.5,
-          "justifyContent": "center",
-          "width": 600,
-        }
+        Array [
+          Object {
+            "borderColor": "#A4D04A",
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "borderWidth": 0.5,
+            "height": 93.38000000000001,
+            "justifyContent": "center",
+            "width": 675,
+          },
+          Object {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderBottomWidth": 1,
+          },
+        ]
       }
     >
       <Text

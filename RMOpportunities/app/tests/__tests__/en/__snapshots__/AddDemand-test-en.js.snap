@@ -40,7 +40,6 @@ exports[`renders correctly 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
-            "height": 1334,
             "width": 750,
           }
         }
@@ -60,9 +59,12 @@ exports[`renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "borderColor": "#A4D04A",
                       "borderWidth": 1,
-                      "height": 66.7,
+                      "height": 80.03999999999999,
+                      "justifyContent": "center",
+                      "width": 675,
                     }
                   }
                 >
@@ -85,10 +87,13 @@ exports[`renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#F2F2F2",
                       "borderColor": "#A4D04A",
                       "borderWidth": 1,
-                      "height": 66.7,
+                      "height": 80.03999999999999,
+                      "justifyContent": "center",
+                      "width": 75,
                     }
                   }
                 >
@@ -96,12 +101,11 @@ exports[`renders correctly 1`] = `
                     accessible={true}
                     allowFontScaling={true}
                     ellipsizeMode="tail"
+                    onPress={[Function]}
                     style={
                       Object {
                         "color": "#000000",
                         "fontSize": 22,
-                        "marginLeft": 15,
-                        "marginRight": 15,
                       }
                     }
                   >
@@ -120,7 +124,7 @@ exports[`renders correctly 1`] = `
               <View
                 style={
                   Object {
-                    "alignItems": "center",
+                    "alignItems": "flex-start",
                   }
                 }
               >
@@ -128,22 +132,29 @@ exports[`renders correctly 1`] = `
                   onChangeText={[Function]}
                   placeholder="Registry number (CAS or EC)*"
                   style={
-                    Object {
-                      "borderColor": "#000000",
-                      "borderWidth": 1,
-                      "color": "grey",
-                      "height": 75,
-                      "marginTop": 15,
-                      "width": 637.5,
-                    }
+                    Array [
+                      Object {
+                        "borderColor": "#000000",
+                        "borderRadius": 3,
+                        "borderWidth": 1,
+                        "color": "grey",
+                        "height": 106.72,
+                        "marginTop": 15,
+                        "width": 600,
+                      },
+                      Object {
+                        "marginLeft": 75,
+                      },
+                    ]
                   }
                   underlineColorAndroid="transparent"
-                  value={undefined}
+                  value=""
                 />
                 <View
                   style={
                     Object {
                       "flexDirection": "row",
+                      "marginLeft": 75,
                     }
                   }
                 >
@@ -154,13 +165,12 @@ exports[`renders correctly 1`] = `
                       Array [
                         Object {
                           "borderColor": "#000000",
+                          "borderRadius": 3,
                           "borderWidth": 1,
                           "color": "grey",
-                          "height": 75,
-                          "marginLeft": 37.5,
-                          "marginRight": 37.5,
+                          "height": 106.72,
                           "marginTop": 15,
-                          "width": 262.5,
+                          "width": 600,
                         },
                         Object {
                           "width": 300,
@@ -174,28 +184,27 @@ exports[`renders correctly 1`] = `
                     onChangeText={[Function]}
                     placeholder="REACH Number"
                     style={
-                      Object {
-                        "borderColor": "#000000",
-                        "borderWidth": 1,
-                        "color": "grey",
-                        "height": 75,
-                        "marginLeft": 37.5,
-                        "marginRight": 37.5,
-                        "marginTop": 15,
-                        "width": 262.5,
-                      }
+                      Array [
+                        Object {
+                          "borderColor": "#000000",
+                          "borderRadius": 3,
+                          "borderWidth": 1,
+                          "color": "grey",
+                          "height": 106.72,
+                          "marginTop": 15,
+                          "width": 600,
+                        },
+                        Object {
+                          "marginLeft": 37.5,
+                          "width": 262.5,
+                        },
+                      ]
                     }
                     underlineColorAndroid="transparent"
                     value=""
                   />
                 </View>
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                    }
-                  }
-                >
+                <View>
                   <TextInput
                     onChangeText={[Function]}
                     placeholder="Customs naming"
@@ -203,46 +212,147 @@ exports[`renders correctly 1`] = `
                       Array [
                         Object {
                           "borderColor": "#000000",
+                          "borderRadius": 3,
                           "borderWidth": 1,
                           "color": "grey",
-                          "height": 75,
-                          "marginLeft": 37.5,
-                          "marginRight": 37.5,
+                          "height": 106.72,
                           "marginTop": 15,
-                          "width": 262.5,
+                          "width": 600,
                         },
                         Object {
-                          "width": 300,
+                          "marginLeft": 75,
+                          "width": 375,
                         },
                       ]
                     }
                     underlineColorAndroid="transparent"
-                    value={undefined}
-                  />
-                  <TextInput
-                    onChangeText={[Function]}
-                    placeholder="Category*"
-                    style={
-                      Object {
-                        "borderColor": "#000000",
-                        "borderWidth": 1,
-                        "color": "grey",
-                        "height": 75,
-                        "marginLeft": 37.5,
-                        "marginRight": 37.5,
-                        "marginTop": 15,
-                        "width": 262.5,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
                     value=""
                   />
+                </View>
+                <View>
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "borderColor": "#000000",
+                          "borderRadius": 3,
+                          "borderWidth": 1,
+                          "height": 106.72,
+                          "marginTop": 15,
+                          "width": 600,
+                        },
+                        Object {
+                          "marginLeft": 75,
+                          "width": 600,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "color": "grey",
+                          "marginTop": 0,
+                        }
+                      }
+                    >
+                      <RCTPicker
+                        items={
+                          Array [
+                            Object {
+                              "label": "Choose a category",
+                              "textColor": undefined,
+                              "value": "choose",
+                            },
+                            Object {
+                              "label": "Products for cosmetics, flavorings and fragrances",
+                              "textColor": undefined,
+                              "value": "Products for cosmetics, flavorings and fragrances",
+                            },
+                            Object {
+                              "label": "Solvents",
+                              "textColor": undefined,
+                              "value": "Solvents",
+                            },
+                            Object {
+                              "label": "Regenerated solvents",
+                              "textColor": undefined,
+                              "value": "Regenerated solvents",
+                            },
+                            Object {
+                              "label": "Reagents",
+                              "textColor": undefined,
+                              "value": "Reagents",
+                            },
+                            Object {
+                              "label": "Catalysts",
+                              "textColor": undefined,
+                              "value": "Catalysts",
+                            },
+                            Object {
+                              "label": "Chemical specialties",
+                              "textColor": undefined,
+                              "value": "Chemical specialties",
+                            },
+                            Object {
+                              "label": "Intermediates",
+                              "textColor": undefined,
+                              "value": "Intermediates",
+                            },
+                            Object {
+                              "label": "Simple intermediates",
+                              "textColor": undefined,
+                              "value": "Simple intermediates",
+                            },
+                            Object {
+                              "label": "Acids",
+                              "textColor": undefined,
+                              "value": "Acids",
+                            },
+                            Object {
+                              "label": "Bases",
+                              "textColor": undefined,
+                              "value": "Bases",
+                            },
+                            Object {
+                              "label": "Amino acids",
+                              "textColor": undefined,
+                              "value": "Amino acids",
+                            },
+                            Object {
+                              "label": "Vitamins",
+                              "textColor": undefined,
+                              "value": "Vitamins",
+                            },
+                            Object {
+                              "label": "Others",
+                              "textColor": undefined,
+                              "value": "Others",
+                            },
+                          ]
+                        }
+                        onChange={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        selectedIndex={0}
+                        style={
+                          Array [
+                            Object {
+                              "height": 216,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
                     "alignItems": "center",
+                    "marginBottom": 400.2,
                   }
                 }
               >
@@ -269,7 +379,7 @@ exports[`renders correctly 1`] = `
                       Array [
                         Object {
                           "borderRadius": 5,
-                          "height": 67.5,
+                          "height": 66.7,
                           "justifyContent": "center",
                           "marginTop": 20,
                         },

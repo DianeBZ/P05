@@ -189,7 +189,7 @@ exports[`renders correctly 1`] = `
             }
           }
         >
-          Sign up in 3 steps
+          Sign up in 2 steps
         </Text>
       </View>
     </View>

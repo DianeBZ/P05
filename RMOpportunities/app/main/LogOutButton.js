@@ -52,15 +52,14 @@ export default class LogOutButton extends Component {
       width:width*0.07,
     },
 	icone:{
-      width: width*0.11,
-      height: height*0.06,
+      width: width*0.08,
+      height: height*0.045,
     },
 	touchableButton:{
-	  marginTop: 5,
-	  marginRight: 6,
+	  marginTop: 9,
+	  marginRight: 5,
       width: width*0.11,
       height: height*0.06,
-	  backgroundColor: '#F2F2F2',
+	  
 	}
 });
-

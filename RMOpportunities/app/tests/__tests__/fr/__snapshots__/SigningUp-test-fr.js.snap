@@ -189,7 +189,7 @@ exports[`renders correctly 1`] = `
             }
           }
         >
-          Démarrer l'inscription en 3 étapes
+          Démarrer l'inscription en 2 étapes
         </Text>
       </View>
     </View>

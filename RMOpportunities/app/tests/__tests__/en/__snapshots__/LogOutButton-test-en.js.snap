@@ -4,6 +4,7 @@ exports[`renders correctly 1`] = `
 <View
   style={
     Object {
+      "backgroundColor": "#F2F2F2",
       "flex": 1,
       "marginTop": 106.72,
     }

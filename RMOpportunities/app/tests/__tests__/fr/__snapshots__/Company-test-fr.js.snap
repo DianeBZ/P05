@@ -3,7 +3,20 @@
 exports[`renders correctly 1`] = `
 <RCTScrollView>
   <View>
-    <View>
+    <View
+      style={
+        Object {
+          "height": 106.72,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F2F2F2",
+        }
+      }
+    >
       <View>
         <Text
           accessible={true}
@@ -11,9 +24,10 @@ exports[`renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "fontSize": 30,
-              "marginBottom": 37.5,
-              "marginTop": 150,
+              "color": "#000000",
+              "fontSize": 32,
+              "marginBottom": 10,
+              "marginTop": 15,
               "textAlign": "center",
             }
           }
@@ -46,9 +60,7 @@ exports[`renders correctly 1`] = `
           testID={undefined}
           tvParallaxProperties={undefined}
         >
-          <View
-            style={Object {}}
-          >
+          <View>
             <Text
               accessible={true}
               allowFontScaling={true}
@@ -105,9 +117,7 @@ exports[`renders correctly 1`] = `
           testID={undefined}
           tvParallaxProperties={undefined}
         >
-          <View
-            style={Object {}}
-          >
+          <View>
             <Text
               accessible={true}
               allowFontScaling={true}
